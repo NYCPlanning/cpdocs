@@ -42,12 +42,12 @@
         }, 
         {
             "location": "/cpdb/", 
-            "text": "Overview\n\n\nSchema\n\n\nguid\n - Some explanation of this column\n\n\ngeom\n - The Vector geometries for the \nproject sites\n associated with this capital project, should be of multipoint, multipolyline, or multipolygon", 
+            "text": "Overview\n\n\nHello happy Tuesday\n\n\nSchema\n\n\nguid\n - Some explanation of this column\n\n\ngeom\n - The Vector geometries for the \nproject sites\n associated with this capital project, should be of multipoint, multipolyline, or multipolygon", 
             "title": "Captial Planning Database (cbdb)"
         }, 
         {
             "location": "/cpdb/#overview", 
-            "text": "", 
+            "text": "Hello happy Tuesday", 
             "title": "Overview"
         }, 
         {
