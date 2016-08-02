@@ -1,0 +1,6 @@
+site_name: Capital Planning Docs
+pages:
+- Home: index.md
+- About: about.md
+- Captial Planning Database (cbdb): cpdb.md
+theme: readthedocs
