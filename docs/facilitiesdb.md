@@ -509,7 +509,7 @@ The following datasets were used to populate the Facilities Database.
 |                                         | |
 | --------------------------------- | ------------------------------------------------------- |
 | Description | Blah blah blah description from Socrata including limitations|
-| Notes | There were 678 out of 1,516 records in this dataset which did not have valid addresses. Since they could not be geocoded, they were exlcuded from the database. |
+| Notes | There were 683 out of 1,516 records in this dataset which did not have valid addresses. Since they could not be geocoded, they were exlcuded from the database. |
 | Facility Types | K-12 Public Schools; Universities |
 | Data Format Type | CSV with Coordinates |
 | Data Link | https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8 |
