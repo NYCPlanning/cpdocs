@@ -10,14 +10,14 @@ The Facilities Database (FacDB), a data product produced by the New York City (N
 
 This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. 
 
-Currently, FacDB aggregates and synthesizes data sourced from _ agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.
+Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.
 
 Historically, these records were updated only once per year. Beginning with this latest September _, 2016 release, the database is being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as possible. 85% of the data sources are open datasets that agencies publish independently. 
 
 ### Overview
 | General information |
 | :------------: | ------------- |
-| Name | |
+| Dataset Name | "Facilities Database "|
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
 | Data format | GeoJSON, Shapefile, CSV |
 | Projection | WGS84 |
@@ -101,6 +101,7 @@ Additional information for certain facility types can be joined in using relatio
 | Data Type | datatype | Format of the raw data received from the source. Examples: Shapefile, List of Addresses, or CSV with Coordinates. |
 | Data Refresh Means | refreshmeans | The method for updating the records from this source dataset. |
 | Data Refresh Frequency | refreshfrequency | The frequency of scheduled updates based on how frequently the source data is updated. |
+| Processing Flag | processingflag | A text flag which indicates how the record was geoprocessed to fill in all required information, including geocoding and spatial joins. |
 | Building ID | buildingid | The ID of the building that the school is within. |
 | Building Name | buildingname | The name of the school(s) within the building. |
 | Organization Level | schoolorganizationlevel | The Organization Level of the school. |
@@ -123,249 +124,685 @@ Additional information for certain facility types can be joined in using relatio
 Since all facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on Github (LINK).
 
 **Assembly.**
-First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original classification provided by the agency, but there are also cases where the source description 
+First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
 
 **Geoprocessing.**
-Many records are provided with only addresses, no coordinates, and visa versa. Records without coordinates are geocoded using the address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then run the BBL through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN.
+Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with GeoClient using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.
 
-**Final Cleanup.**
+**Final Formatting Cleanup.**
 A few final scipts are run at the end to recapitalize acronoyms, calculate and fill in remaining x, y coordinates, and exclude any facility records outside the NYC boundary.
 
+**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.
 
-### Source Data
+## Source Data
 
 The following datasets were used to populate the Facilities Database.
 
 ### Department of Design and Construction (DDC)
 DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.
 
-##### Infrastructure projects
-|               |                                    |
-| --------------------------------- | ------------------------------------------------------- |
-| Name | DDC Capital Projects Infrastructure Projects |
-| Description | Line shapefile capturing past, present, and planned infrastructure project, primarily capturing DOT and DEP projects | 
-| Agency | DDC |
-| Data Format | Shapefile |
-| Update Frequency | Weekly |
-| Update Means | Weekly data exchange with DDC |
-| Date Updated | 2/19/2016 |
-| Date Received | 2/22/2016 |
-| Notes | This dataset acts as the primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources | 
+------
 
-##### Public buildings projects
-|               |                                    |
-| --------------------------------- | ------------------------------------------------------- |
-| Name | DDC Capital Projects Public Buildings |
-| Description | Point shapefile capturing past, present, and planned public buildings projects | 
-| Agency | DDC | 
-| Data Format | Shapefile |
-| Update Frequency | Weekly |
-| Update Means | Weekly data exchange with DDC |
-| Date Updated | 2/19/2016 |
-| Date Received | 2/22/2016 |
-| Notes | This dataset acts as the primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources | 
+### Amtrak (Amtrak)
 
-### REMEMBER TO INSERT DATA SOURCES FOR RECORDS MIGRATED FROM SFPSD!
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | Amtrak |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Brooklyn Bridge Park Corporation (BBPC)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | BBPC |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Food Bank for New York City (FBNYC)
+
+| | |
+| -- | -- |
+| Dataset Name | "FBNYC Food Pantry Soup Kitchen List 8-5-16" |
+| Agency Abbreviation | FBNYC |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Quarterly |
+| Update Means | Request file from agency |
+| Date Updated | 8/5/16 |
+| Date Received | 8/5/16 |
+| Notes | |
+
+### Federal Bureau of Prisons (FBOP)
+
+| | |
+| -- | -- |
+| Dataset Name | "Our Locations" |
+| Agency Abbreviation | FBOP |
+| Data Format | Addresses |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+### Hudson River Park Trust (HRPT)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | HRPT |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Metropolitan Transportation Authority - Long Island Railroad (MTA-LIRR)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | MTA-LIRR |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Metropolitan Transportation Authority - Metro North (MTA-MN)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | MTA-MN |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Metropolitan Transportation Authority - New York City Transit (MTA-NYCT)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | MTA-NYCT |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
 
 ### New York City Administration for Childrens Services (NYCACS)
 
-	-- datesourcereceived
-	'2016-07-20',
-	-- datesourceupdated
-	'2016-07-20',
-	-- datecreated
-	'2016-07-20',
-	-- dateedited
-	'2016-07-20',
-	-- agencysource
-	'NYCACS',
-	-- sourcedatasetname
-	'Contractor Data',
-	-- linkdata
-	'NA',
-	-- linkdownload
-	'NA',
-	-- datatype
-	'CSV with Coordinates',
-	-- refreshmeans
-	'Request file from agency',
-	-- refreshfrequency
-	'Annually',
+| | |
+| -- | -- |
+| Dataset Name | "Contractor Data" |
+| Agency Abbreviation | NYCACS |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Annually |
+| Update Means | Request file from agency |
+| Date Updated | 7/20/16 |
+| Date Received | 7/20/16 |
+| Notes | |
 
 ### New York City Business Integrity Commission (NYCBIC)
 
-	-- datesourcereceived
-	'2016-07-01',
-	-- datesourceupdated
-	'2014-09-05',
-	-- datecreated
-	'2016-08-01',
-	-- dateedited
-	'2016-08-01',
-	-- agencysource
-	'NYCBIC',
-	-- sourcedatasetname
-	'Approved licensees and registrants for trade waste',
-	-- linkdata
-	'https://data.cityofnewyork.us/Business/Approved-licensees/7atx-5a3s',
-	-- linkdownload
-	'https://data.cityofnewyork.us/api/views/7atx-5a3s/rows.csv?accessType=DOWNLOAD',
-	-- datatype
-	'CSV with Coordinates',
-	-- refreshmeans
-	'Pull from NYC Open Data',
-	-- refreshfrequency
-	'Nightly pull',
+| | |
+| -- | -- |
+| Dataset Name | "Approved licensees and registrants for trade waste" |
+| Agency Abbreviation | NYCBIC |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYC Open Data |
+| Date Updated | 9/5/14 |
+| Date Received | 7/1/16 |
+| Notes | |
 
 ### New York City Department of Consumer Affairs (NYCDCA)
 
-	-- datesourcereceived
-	'2016-08-01',
-	-- datesourceupdated
-	'2016-06-24',
-	-- datecreated
-	'2016-08-01',
-	-- dateedited
-	'2016-08-01',
-	-- agencysource
-	'NYCDCA',
-	-- sourcedatasetname
-	'Legally Operating Businesses',
-	-- linkdata
-	'https://data.cityofnewyork.us/Business/Legally-Operating-Businesses/w7w3-xahh',
-	-- linkdownload
-	'https://data.cityofnewyork.us/api/views/w7w3-xahh/rows.csv?accessType=DOWNLOAD',
-	-- datatype
-	'CSV with Address',
-	-- refreshmeans
-	'Geocode - Pull from NYC Open Data',
-	-- refreshfrequency
-	'Nightly pull',
 
-### Fire Department of New York (NYCFDNY)
+| | |
+| -- | -- |
+| Dataset Name | "Legally Operating Businesses" |
+| Agency Abbreviation | NYCDCA |
+| Data Format | CSV with Address |
+| Update Frequency | Nightly pull |
+| Update Means | Geocode - Pull from NYC Open Data |
+| Date Updated | 6/24/16 |
+| Date Received | 8/1/16 |
+| Notes | |
 
-	-- datesourcereceived
-	'2016-08-20',
-	-- datesourceupdated
-	'2016-08-20',
-	-- datecreated
-	'2016-09-01',
-	-- dateedited
-	'2016-09-01',
-	-- agencysource
-	'NYCDCAS',
-	-- sourcedatasetname
-	'Gazetteer 2016',
-	-- linkdata
-	'NA',
-	-- linkdownload
-	'NA',
-	-- datatype
-	'CSV with Address',
-	-- refreshmeans
-	'Geocode - Request from Agency',
-	-- refreshfrequency
-	'Annually',
+### New York City Department of Citywide Administrative Services (NYCDCAS)
 
-### New York Police Department (NYCNYPD)
+Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New York (NYCFDNY) and New York Police Department (NYCNYPD).
 
-	-- datesourcereceived
-	'2016-08-20',
-	-- datesourceupdated
-	'2016-08-20',
-	-- datecreated
-	'2016-09-01',
-	-- dateedited
-	'2016-09-01',
-	-- agencysource
-	'NYCDCAS',
-	-- sourcedatasetname
-	'Gazetteer 2016',
-	-- linkdata
-	'NA',
-	-- linkdownload
-	'NA',
-	-- datatype
-	'CSV with Address',
-	-- refreshmeans
-	'Geocode - Request from Agency',
-	-- refreshfrequency
-	'Annually',
+| | |
+| -- | -- |
+| Dataset Name | "Gazetteer 2016" |
+| Agency Abbreviation | NYCDCAS |
+| Data Format | CSV with Address |
+| Update Frequency | Annually |
+| Update Means | Geocode - Request from Agency |
+| Date Updated | 8/20/16 |
+| Date Received | 8/20/16 |
+| Notes | |
 
 ### New York City Department of Cultural Affairs (NYCDCLA)
 
-	-- datesourcereceived
-	'2016-08-01',
-	-- datesourceupdated
-	'2016-03-22',
-	-- datecreated
-	'2016-08-01',
-	-- dateedited
-	'2016-08-01',
-	-- agencysource
-	'NYCDCLA',
-	-- sourcedatasetname
-	'DCLA Cultural Organizations',
-	-- linkdata
-	'https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32',
-	-- linkdownload
-	'https://data.cityofnewyork.us/api/views/u35m-9t32/rows.csv?accessType=DOWNLOAD',
-	-- datatype
-	'CSV with Address',
-	-- refreshmeans
-	'Geocode - Pull from NYC Open Data',
-	-- refreshfrequency
-	'Nightly pull',
+| | |
+| -- | -- |
+| Dataset Name | "DCLA Cultural Organizations" |
+| Agency Abbreviation | NYCDCLA |
+| Data Format | CSV with Address |
+| Update Frequency | Nightly pull |
+| Update Means | Geocode - Pull from NYC Open Data |
+| Date Updated | 3/22/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Department of Environmental Protection (NYCDEP)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | NYCDEP |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
 
 ### New York City Department for the Aging (NYCDFTA)
 
-	-- datesourcereceived
-	'2016-08-01',
-	-- datesourceupdated
-	'2016-07-15',
-	-- datecreated
-	'2016-08-01',
-	-- dateedited
-	'2016-08-01',
-	-- agencysource
-	'NYCDFTA',
-	-- sourcedatasetname
-	'DFTA Contracts',
-	-- linkdata
-	'https://data.cityofnewyork.us/Social-Services/DFTA-Contracts/6j6t-3ixh',
-	-- linkdownload
-	'https://data.cityofnewyork.us/api/views/6j6t-3ixh/rows.csv?accessType=DOWNLOAD',
-	-- datatype
-	'CSV with Address',
-	-- refreshmeans
-	'Geocode - Pull from NYC Open Data',
-	-- refreshfrequency
-	'Weekly',
+| | |
+| -- | -- |
+| Dataset Name | "DFTA Contracts" |
+| Agency Abbreviation | NYCDFTA |
+| Data Format | CSV with Address |
+| Update Frequency | Weekly |
+| Update Means | Geocode - Pull from NYC Open Data |
+| Date Updated | 7/15/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Department of Corrections (NYCDOC)
+
+| | |
+| -- | -- |
+| Dataset Name | "Correction Facilities Locations" |
+| Agency Abbreviation | NYCDOC |
+| Data Format | Addresses |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
 
 ### New York City Department of Education (NYCDOE)
 
-	-- datesourcereceived
-	'2016-08-01',
-	-- datesourceupdated
-	'2016-08-01',
-	-- datecreated
-	'2016-08-01',
-	-- dateedited
-	'2016-08-01',
-	-- agencysource
-	'NYCDOE',
-	-- sourcedatasetname
-	'Routes',
-	-- linkdata
-	'https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm',
-	-- linkdownload
-	'https://data.cityofnewyork.us/api/views/8yac-vygm/rows.csv?accessType=DOWNLOAD',
-	-- datatype
-	'CSV with Coordinates',
-	-- refreshmeans
-	'Pull from NYC Open Data',
-	-- refreshfrequency
-	'Monthly',
+| | |
+| -- | -- |
+| Dataset Name | "2014-2015 Blue Book - for CEQR Analysis" |
+| Agency Abbreviation | NYCDOE |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Annually |
+| Update Means | Request file from agency |
+| Date Updated | 7/20/16 |
+| Date Received | 7/20/16 |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "Routes" |
+| Agency Abbreviation | NYCDOE |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Monthly |
+| Update Means | Pull from NYC Open Data |
+| Date Updated | 8/1/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "Universal Pre-K (UPK) School Locations" |
+| Agency Abbreviation | NYCDOE |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Monthly |
+| Update Means | Pull from NYC Open Data |
+| Date Updated | 1/15/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Department of Health and Mental Hygiene (NYCDOHMH)
+
+| | |
+| -- | -- |
+| Dataset Name | "DOHMH Childcare Center Inspections" |
+| Agency Abbreviation | NYCDOHMH |
+| Data Format | CSV with Addresses |
+| Update Frequency | Weekly |
+| Update Means | Geocode - Pull from NYC Open Data |
+| Date Updated | 7/28/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Department of Transportation (NYCDOT)
+
+| | |
+| -- | -- |
+| Dataset Name | "Municipal Parking Facilities" |
+| Agency Abbreviation | NYCDOT |
+| Data Format | Webmap |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+
+| | |
+| -- | -- |
+| Dataset Name | "Plaza Program" |
+| Agency Abbreviation | NYCDOT |
+| Data Format | Shapefile |
+| Update Frequency | Annually |
+| Update Means | Request file from agency |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | NYCDOT |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Department of Parks and Recreation (NYCDPR)
+
+| | |
+| -- | -- |
+| Dataset Name | "Parks Parks Properties" |
+| Agency Abbreviation | NYCDPR |
+| Data Format | Shapefile |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYC Open Data |
+| Date Updated | 7/27/16 |
+| Date Received | 7/27/16 |
+| Notes | |
+
+### New York City Department of Sanitation (NYCDSNY)
+
+| | |
+| -- | -- |
+| Dataset Name | "DSNY_select_facs_07262916" |
+| Agency Abbreviation | NYCDSNY |
+| Data Format | Shapefile |
+| Update Frequency | Annually |
+| Update Means | Request file from agency |
+| Date Updated | 7/26/16 |
+| Date Received | 7/26/16 |
+| Notes | |
+
+### New York City Housing Authority (NYCHA)
+
+| | |
+| -- | -- |
+| Dataset Name | "NYCHA PSA (Police Service Areas)" |
+| Agency Abbreviation | NYCHA |
+| Data Format | Shapefile |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYC Open Data |
+| Date Updated | 9/5/14 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Health and Hospitals Corporation (NYCHHC)
+
+| | |
+| -- | -- |
+| Dataset Name | "Health and Hospitals Corporation (HHC) Facilities" |
+| Agency Abbreviation | NYCHHC |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYC Open Data |
+| Date Updated | 9/5/14 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York City Department of Health and Human Services (NYCHHS)
+
+| | |
+| -- | -- |
+| Dataset Name | "HHS Accelerator - Contracts" |
+| Agency Abbreviation | NYCHHS |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Manual download |
+| Date Updated | 7/26/16 |
+| Date Received | 7/26/16 |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "HHS Accelerator - Financials" |
+| Agency Abbreviation | NYCHHS |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Manual download |
+| Date Updated | 7/26/16 |
+| Date Received | 7/26/16 |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "HHS Accelerator - Proposals" |
+| Agency Abbreviation | NYCHHS |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Manual download |
+| Date Updated | 7/26/16 |
+| Date Received | 7/26/16 |
+| Notes | |
+
+### New York City Mayor's of Management and Budget (NYCOMB)
+
+| | |
+| -- | -- |
+| Dataset Name | "District Resource Statement" |
+| Agency Abbreviation | NYCOMB |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Annually |
+| Update Means | Request from Agency |
+| Date Updated | 6/30/16 |
+| Date Received | 6/30/16 |
+| Notes | |
+
+### New York State Unified Court System (NYCOURTS)
+
+| | |
+| -- | -- |
+| Dataset Name | "The Courts" |
+| Agency Abbreviation | NYCOURTS |
+| Data Format | Addresses |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+### New York State Department of Environmental Conservation (NYSDEC)
+
+| | |
+| -- | -- |
+| Dataset Name | ""Lands - Under the Care" |
+| Agency Abbreviation | Custody |
+| Data Format | and Control of DEC" |
+| Update Frequency | NYSDEC |
+| Update Means | Shapefile |
+| Date Updated | Nightly pull |
+| Date Received | Pull from NYState GIS Clearinghouse |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "Solid Waste Management Facilities" |
+| Agency Abbreviation | NYSDEC |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 3/1/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York State Department of Corrections and Community Supervision (NYSDOCCS)
+
+| | |
+| -- | -- |
+| Dataset Name | "Facility Listing" |
+| Agency Abbreviation | NYSDOCCS |
+| Data Format | Addresses |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+### New York State Department of Health (NYSDOH)
+
+| | |
+| -- | -- |
+| Dataset Name | "Health Facility General Information" |
+| Agency Abbreviation | NYSDOH |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 7/28/16 |
+| Date Received | 7/28/16 |
+| Notes | |
+
+## ADD nursing home bed count data
+
+### New York State Department of Transportation (NYSDOT)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | NYSDOT |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York State Education Department (NYSED)
+
+| | |
+| -- | -- |
+| Dataset Name | "LIstings - Active Institutions with GIS coordinates and OITS Accuracy Code" |
+| Agency Abbreviation | NYSED |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Manual download |
+| Date Updated | 7/26/16 |
+| Date Received | 7/26/16 |
+| Notes | |
+
+## ADD enrollment datasets
+
+### New York State Office of Alcoholism and Substance Abuse Services (NYSOASAS)
+
+| | |
+| -- | -- |
+| Dataset Name | "List of NYC Programs" |
+| Agency Abbreviation | NYSOASAS |
+| Data Format | CSV with Addresses |
+| Update Frequency | Quarterly |
+| Update Means | Request file from agency |
+| Date Updated | 8/9/16 |
+| Date Received | 8/9/16 |
+| Notes | |
+
+### New York State Office of Children and Family Services (NYSOCFS)
+
+| | |
+| -- | -- |
+| Dataset Name | "Facilities" |
+| Agency Abbreviation | NYSOCFS |
+| Data Format | Addresses |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+### New York State Office of Mental Health (NYSOMH)
+
+| | |
+| -- | -- |
+| Dataset Name | "Local Mental Health Programs" |
+| Agency Abbreviation | NYSOMH |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 7/16/16 |
+| Date Received | 7/16/16 |
+| Notes | |
+
+### New York State Office of Parks, Recreation and Historic Preservation (NYSOPRHP)
+
+| | |
+| -- | -- |
+| Dataset Name | "National Register of Historic Places" |
+| Agency Abbreviation | NYSOPRHP |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 12/18/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "State Park Facility Points" |
+| Agency Abbreviation | NYSOPRHP |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 12/18/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### New York State Office for People With Developmental Disabilities (NYSOPWDD)
+
+| | |
+| -- | -- |
+| Dataset Name | "Directory of Developmental Disabilities Service Provider Agencies" |
+| Agency Abbreviation | NYSOPWDD |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 12/22/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Port Authority of New York and New Jersey (PANYNJ)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | PANYNJ |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Roosevelt Island Operating Corporation (RIOC)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | RIOC |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### Trust for Governors Island (TGI)
+
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | TGI |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### United States Courts (USCOURTS)
+
+| | |
+| -- | -- |
+| Dataset Name | "Court Locator Results" |
+| Agency Abbreviation | USCOURTS |
+| Data Format | Addresses |
+| Update Frequency | Annually |
+| Update Means | Manual copy and paste |
+| Date Updated | 7/1/16 |
+| Date Received | 7/1/16 |
+| Notes | |
+
+### United States Department of Transportation (USDOT)
+
+| | |
+| -- | -- |
+| Dataset Name | "Airports" |
+| Agency Abbreviation | USDOT |
+| Data Format | Shapefile |
+| Update Frequency | Annually |
+| Update Means | Pull from US DOT |
+| Date Updated | 8/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+| | |
+| -- | -- |
+| Dataset Name | "U.S. Army Corps of Engineers Ports" |
+| Agency Abbreviation | USDOT |
+| Data Format | Shapefile |
+| Update Frequency | Annually |
+| Update Means | Pull from US DOT |
+| Date Updated | 8/1/15 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+### United States National Parks Service (USNPS)
+
+| | |
+| -- | -- |
+| Dataset Name | "Administrative Boundaries of National Park System Units" |
+| Agency Abbreviation | USNPS |
+| Data Format | Shapefile |
+| Update Frequency | Nightly pull |
+| Update Means | Pull from USNPS |
+| Date Updated | 6/30/16 |
+| Date Received | 8/1/16 |
+| Notes | |
+
+
+##Limitations and Disclaimers
+The FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.
+
+If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov).
 
 
 
