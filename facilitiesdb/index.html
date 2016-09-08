@@ -8,7 +8,7 @@
   
   
   
-  <title>Facilities Database - Capital Planning Docs</title>
+  <title>Facilities Database (facdb) - Capital Planning Docs</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,7 +23,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Facilities Database";
+    var mkdocs_page_name = "Facilities Database (facdb)";
     var mkdocs_page_input_path = "facilitiesdb.md";
     var mkdocs_page_url = "/facilitiesdb/";
   </script>
@@ -77,81 +77,27 @@
           
             <li>
     <li class="toctree-l1 current">
-        <a class="current" href="./">Facilities Database</a>
+        <a class="current" href="./">Facilities Database (facdb)</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#overview">Overview</a></li>
+                <li class="toctree-l3"><a href="#facilities-database">Facilities Database</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#schema-and-dictionary">Schema and Dictionary</a></li>
+                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#data-sources">Data Sources</a></li>
+                    <li><a class="toctree-l4" href="#database-structure">Database structure</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-source-acs">Data Source: ACS</a></li>
+                    <li><a class="toctree-l4" href="#data-dictionary">Data Dictionary</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-source-bic">Data Source: BIC</a></li>
+                    <li><a class="toctree-l4" href="#methodology">Methodology</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-source-dca">Data Source: DCA</a></li>
+                    <li><a class="toctree-l4" href="#source-data">Source Data</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-source-dcla">Data Source: DCLA</a></li>
+                    <li><a class="toctree-l4" href="#add-nursing-home-bed-count-data">ADD nursing home bed count data</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-source-dcp">Data Source: DCP</a></li>
+                    <li><a class="toctree-l4" href="#add-enrollment-datasets">ADD enrollment datasets</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-source-dfta">Data Source: DFTA</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-doc">Data Source: DOC</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-doe">Data Source: DOE</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-dohmh">Data Source: DOHMH</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-doitt">Data Source: DOITT</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-dot">Data Source: DOT</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-dpr">Data Source: DPR</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-dsny">Data Source: DSNY</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-fdny">Data Source: FDNY</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-federal-bop">Data Source: Federal BOP</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-hhc">Data Source: HHC</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-hhs">Data Source: HHS</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nycha">Data Source: NYCHA</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-dec">Data Source: NYState DEC</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-department-of-corrections-and-community-supervision">Data Source: NYState Department of Corrections and Community Supervision</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-doh">Data Source: NYState DOH</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-dot">Data Source: NYState DOT</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-ed">Data Source: NYState Ed</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-oasas">Data Source: NYState OASAS</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-oc">Data Source: NYState OC</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-omh">Data Source: NYState OMH</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-opr">Data Source: NYState OPR</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-opwdd">Data Source: NYState OPWDD</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-parks">Data Source: NYState Parks</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-nystate-unified-court-system">Data Source: NYState Unified Court System</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-us-courts">Data Source: US Courts</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-source-us-dot">Data Source: US DOT</a></li>
+                    <li><a class="toctree-l4" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
                 
             
             </ul>
@@ -181,7 +127,7 @@
     
       
     
-    <li>Facilities Database</li>
+    <li>Facilities Database (facdb)</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -191,15 +137,443 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="overview">Overview</h3>
-<p>Hello happy Tuesday</p>
-<h3 id="schema-and-dictionary">Schema and Dictionary</h3>
-<p><code>guid</code> - Some explanation of this column</p>
-<p><code>geom</code> - The Vector geometries for the <em>project sites</em> associated with this capital project, should be of multipoint, multipolyline, or multipolygon</p>
-<h2 id="data-sources">Data Sources</h2>
+                <h1 id="facilities-database">Facilities Database</h1>
+<p>The Facilities Database (FacDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning Division, captures the location, type, and capacity of public and private facilities ranging across six domains:</p>
+<ul>
+<li>Health Care and Human Services</li>
+<li>Youth, Education, and Child Welfare</li>
+<li>Public Safety, Emergency Services, and Administration of Justice</li>
+<li>Core Infrastructure and Transportation</li>
+<li>Parks, Cultural, and Other Community Facilities</li>
+<li>Administration of Government</li>
+</ul>
+<p>This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. </p>
+<p>Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.</p>
+<p>Historically, these records were updated only once per year. Beginning with this latest September _, 2016 release, the database is being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as possible. 85% of the data sources are open datasets that agencies publish independently. </p>
+<h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th>General information</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Facilities Database "</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management</td>
+</tr>
+<tr>
+<td>Data format</td>
+<td>GeoJSON, Shapefile, CSV</td>
+</tr>
+<tr>
+<td>Projection</td>
+<td>WGS84</td>
+</tr>
+<tr>
+<td>Date last updated</td>
+<td>09/12/16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="database-structure">Database structure</h2>
+<p>Two tables compose FacDB:</p>
+<ul>
+<li>Facilities with Geolocations - Primary Table</li>
+<li>Facilities That Could Not Be Geocoded - </li>
+<li>Relational tables....</li>
+</ul>
+<p>Since most datasets did not include an identifying facility ID, the NEED TO FINISH</p>
+<p>Additional information for certain facility types can be joined in using relational tables and the Global Unique Identifier.</p>
+<h2 id="data-dictionary">Data Dictionary</h2>
+<h5 id="facilities">Facilities</h5>
+<table>
+<thead>
+<tr>
+<th>Field Alias</th>
+<th>Field Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Unique Identifier</td>
+<td>guid</td>
+<td>Universal Unique Identifier.  When a row is added to the table the guid is automatically generated, enabling database replication.</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>id</td>
+<td>An alpha numeric unique identifier created and maintained by the database admin that is X number of characters long and a concatenation of A, B, and C.</td>
+</tr>
+<tr>
+<td>Old ID</td>
+<td>idold</td>
+<td>Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD.</td>
+</tr>
+<tr>
+<td>Agency ID</td>
+<td>idagency</td>
+<td>Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset.</td>
+</tr>
+<tr>
+<td>Facility Name</td>
+<td>facilityname</td>
+<td>The name of the facility in proper case.</td>
+</tr>
+<tr>
+<td>Address Number</td>
+<td>addressnumber</td>
+<td>The address number of where the facility is located. Generated by GeoSupport when not provided in the source data.</td>
+</tr>
+<tr>
+<td>Street Name</td>
+<td>streetname</td>
+<td>The name of the street where the facility is located. Generated by GeoSupport.</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>address</td>
+<td>The concatenated value of AddressNum and StreetName of where the facility is located.</td>
+</tr>
+<tr>
+<td>City</td>
+<td>city</td>
+<td>The name of the addressed city where the facility is located. Generated by GeoSupport.</td>
+</tr>
+<tr>
+<td>Borough</td>
+<td>borough</td>
+<td>The full name the borough the facility is within.</td>
+</tr>
+<tr>
+<td>Borough Code</td>
+<td>boroughcode</td>
+<td>The number value representing the borough the facility is within.</td>
+</tr>
+<tr>
+<td>ZIP Code</td>
+<td>zipcode</td>
+<td>The ZIP Code the facility is within.</td>
+</tr>
+<tr>
+<td>BBL</td>
+<td>bbl</td>
+<td>The BBL(s) the facility is located on.</td>
+</tr>
+<tr>
+<td>BIN</td>
+<td>bin</td>
+<td>The BIN(s) the facility is located on.</td>
+</tr>
+<tr>
+<td>Park ID</td>
+<td>parkid</td>
+<td>The Park ID(s) associated with the facility.</td>
+</tr>
+<tr>
+<td>X Coordinate</td>
+<td>xcoord</td>
+<td>The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+</tr>
+<tr>
+<td>Y Coordinate</td>
+<td>ycoord</td>
+<td>The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+</tr>
+<tr>
+<td>Latitude</td>
+<td>latitude</td>
+<td>The latitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+</tr>
+<tr>
+<td>Longitude</td>
+<td>longitude</td>
+<td>The longitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+</tr>
+<tr>
+<td>Facility Type</td>
+<td>facilitytype</td>
+<td>The value representing the facility type, the most granular category of facilities.</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>domain</td>
+<td>The value representing the facility domain, the broadest category.</td>
+</tr>
+<tr>
+<td>Facility Group</td>
+<td>facilitygroup</td>
+<td>The value representing the group type, the second broadest category.</td>
+</tr>
+<tr>
+<td>Facility Sub-Group</td>
+<td>facilitysubgroup</td>
+<td>The value representing the subgroup type.</td>
+</tr>
+<tr>
+<td>Agency Classification 1</td>
+<td>agencyclass1</td>
+<td>The unmodified classification or descriptor of the facility record provided in the source data. Depending on the user's needs, these descriptors may provide additional details not captured in the Facility Type.</td>
+</tr>
+<tr>
+<td>Agency Classification 2</td>
+<td>agencyclass2</td>
+<td>An additional unmodified classification or descriptor of the facility record provided in the source data.</td>
+</tr>
+<tr>
+<td>COLP Primary Use Type</td>
+<td>colpusetype</td>
+<td>The Primary Use Type provided for the facility in the City Owned and Leased Properties (COLP) dataset.</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>capacity</td>
+<td>How many of capacity type/unit the facility is intended to hold.</td>
+</tr>
+<tr>
+<td>Utilization</td>
+<td>utilization</td>
+<td>How many of capacity type/unit are being utilized at the facility.</td>
+</tr>
+<tr>
+<td>Capacity Type</td>
+<td>capacitytype</td>
+<td>The value representing the unit type of capacity, such as beds, visitors, seats, etc.</td>
+</tr>
+<tr>
+<td>Utilization Rate</td>
+<td>utilizationrate</td>
+<td>The ratio of the of utilization over the total facility capacity.</td>
+</tr>
+<tr>
+<td>Area</td>
+<td>area</td>
+<td>The total area of the site measured in the Area Type unit.</td>
+</tr>
+<tr>
+<td>Area Type</td>
+<td>areatype</td>
+<td>The unit of measurement for Area.</td>
+</tr>
+<tr>
+<td>Service Area</td>
+<td>servicearea</td>
+<td>Indicates if the facility serves a regional or local population, which is determined by the Facility Type of facility according to Fair Share guidelines.  Value is calculated based on Facility Type.</td>
+</tr>
+<tr>
+<td>Operator Type</td>
+<td>operatortype</td>
+<td>Indicates whether the operating entity is public or non-public.</td>
+</tr>
+<tr>
+<td>Operator Name</td>
+<td>operatorname</td>
+<td>The name of the operating entity.</td>
+</tr>
+<tr>
+<td>Operator Abbreviation</td>
+<td>operatorabbrev</td>
+<td>Abbreviation for the operating entity.</td>
+</tr>
+<tr>
+<td>Oversight Agency</td>
+<td>oversightagency</td>
+<td>The name of the agency overseeing the facility.</td>
+</tr>
+<tr>
+<td>Overight Abbreviation</td>
+<td>oversightabbrev</td>
+<td>Abbreviation for the oversight agency.</td>
+</tr>
+<tr>
+<td>Date Active</td>
+<td>dateactive</td>
+<td>The date the facility became active in the database.</td>
+</tr>
+<tr>
+<td>Date Inactive</td>
+<td>dateinactive</td>
+<td>The date the facility became inactive in the database.</td>
+</tr>
+<tr>
+<td>Inactive Status</td>
+<td>inactivestatus</td>
+<td>The value indicating the status of the facility, whether it is in operation or not in operation.  Value is calculated based on DateInactive.  If DateInactive is not NULL then Status is Inactive.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>tags</td>
+<td>A series of tags classifying the facility.</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>notes</td>
+<td>A space for the database admin to include any freestyle notes about the record.</td>
+</tr>
+<tr>
+<td>Date Source Data Received</td>
+<td>datesourcereceived</td>
+<td>The date the source data was received from the parent agency.</td>
+</tr>
+<tr>
+<td>Date Source Data Updated</td>
+<td>datesourceupdated</td>
+<td>The date the source data was updated within the parent database.</td>
+</tr>
+<tr>
+<td>Date Created</td>
+<td>datecreated</td>
+<td>The date the record was created.</td>
+</tr>
+<tr>
+<td>Date Edited</td>
+<td>dateedited</td>
+<td>The date the record was edited.</td>
+</tr>
+<tr>
+<td>Creator</td>
+<td>creator</td>
+<td>The user who created the record.</td>
+</tr>
+<tr>
+<td>Editor</td>
+<td>editor</td>
+<td>The user who last edited the record.</td>
+</tr>
+<tr>
+<td>Geom</td>
+<td>geom</td>
+<td>How the feature is spatially represented.</td>
+</tr>
+<tr>
+<td>Agency Source</td>
+<td>agencysource</td>
+<td>The Agency whose data was used as the source for the record.</td>
+</tr>
+<tr>
+<td>Source Dataset Name</td>
+<td>sourcedatasetname</td>
+<td>The name of the dataset the record came from.</td>
+</tr>
+<tr>
+<td>Link to Data</td>
+<td>linkdata</td>
+<td>Link to view and/or description of data.</td>
+</tr>
+<tr>
+<td>Link to Direct Download</td>
+<td>linkdownload</td>
+<td>Link to directly download data.</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>datatype</td>
+<td>Format of the raw data received from the source. Examples: Shapefile, List of Addresses, or CSV with Coordinates.</td>
+</tr>
+<tr>
+<td>Data Refresh Means</td>
+<td>refreshmeans</td>
+<td>The method for updating the records from this source dataset.</td>
+</tr>
+<tr>
+<td>Data Refresh Frequency</td>
+<td>refreshfrequency</td>
+<td>The frequency of scheduled updates based on how frequently the source data is updated.</td>
+</tr>
+<tr>
+<td>Processing Flag</td>
+<td>processingflag</td>
+<td>A text flag which indicates how the record was geoprocessed to fill in all required information, including geocoding and spatial joins.</td>
+</tr>
+<tr>
+<td>Building ID</td>
+<td>buildingid</td>
+<td>The ID of the building that the school is within.</td>
+</tr>
+<tr>
+<td>Building Name</td>
+<td>buildingname</td>
+<td>The name of the school(s) within the building.</td>
+</tr>
+<tr>
+<td>Organization Level</td>
+<td>schoolorganizationlevel</td>
+<td>The Organization Level of the school.</td>
+</tr>
+<tr>
+<td>Children</td>
+<td>children</td>
+<td>Indicates if the facility serves children, which are persons that are 12 years old or younger.</td>
+</tr>
+<tr>
+<td>Youth</td>
+<td>youth</td>
+<td>Indicates if the facility serves youth, which are persons that are 13 years old or less than 18 years old.</td>
+</tr>
+<tr>
+<td>Seniors</td>
+<td>senior</td>
+<td>Indicates if the facility serves seniors, which are persons that are 65 years old or older.</td>
+</tr>
+<tr>
+<td>Families</td>
+<td>family</td>
+<td>Indicates if the facility serves familes, which are groups of persons that span multiple age cohorts.</td>
+</tr>
+<tr>
+<td>Disabilities</td>
+<td>disabilities</td>
+<td>Indicates if the facility serves persons with disabilities.</td>
+</tr>
+<tr>
+<td>Dropouts</td>
+<td>dropouts</td>
+<td>Indicates if the facility serves dropouts.</td>
+</tr>
+<tr>
+<td>Unemployed</td>
+<td>unemployed</td>
+<td>Indicates if the facility serves unemployed persons.</td>
+</tr>
+<tr>
+<td>Homeless</td>
+<td>homeless</td>
+<td>Indicates if the facility serves homeless persons.</td>
+</tr>
+<tr>
+<td>Immigrants</td>
+<td>immigrants</td>
+<td>Indicates if the facility serves immigrants.</td>
+</tr>
+<tr>
+<td>Group Quarters</td>
+<td>groupquarters</td>
+<td>Indicates if the facility contains group living quarters.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="methodology">Methodology</h2>
+<h3 id="data-processing">Data Processing</h3>
+<p>Since all facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on Github (LINK).</p>
+<p><strong>Assembly.</strong>
+First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.</p>
+<p><strong>Geoprocessing.</strong>
+Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with GeoClient using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.</p>
+<p><strong>Final Formatting Cleanup.</strong>
+A few final scipts are run at the end to recapitalize acronoyms, calculate and fill in remaining x, y coordinates, and exclude any facility records outside the NYC boundary.</p>
+<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.</p>
+<h2 id="source-data">Source Data</h2>
 <p>The following datasets were used to populate the Facilities Database.</p>
-<h3 id="data-source-acs">Data Source: ACS</h3>
-<h5 id="dataset-contractor-data">Dataset: Contractor Data</h5>
+<h3 id="department-of-design-and-construction-ddc">Department of Design and Construction (DDC)</h3>
+<p>DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.</p>
+<hr />
+<h3 id="amtrak-amtrak">Amtrak (Amtrak)</h3>
 <table>
 <thead>
 <tr>
@@ -209,361 +583,40 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td>Agency Abbreviation</td>
+<td>Amtrak</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Request file from agency</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-20</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-20</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-bic">Data Source: BIC</h3>
-<h5 id="dataset-approved-licensees-and-registrants-for-trade-waste">Dataset: Approved licensees and registrants for trade waste</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Business/Approved-licensees/7atx-5a3s</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/7atx-5a3s/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2014-09-05</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dca">Data Source: DCA</h3>
-<h5 id="dataset-legally-operating-businesses">Dataset: Legally Operating Businesses</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Address</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Business/Legally-Operating-Businesses/w7w3-xahh</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/w7w3-xahh/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-06-24</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dcla">Data Source: DCLA</h3>
-<h5 id="dataset-dcla-cultural-organizations">Dataset: DCLA Cultural Organizations</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Address</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/u35m-9t32/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-03-22</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dcp">Data Source: DCP</h3>
-<h5 id="dataset-selected-facilities-and-program-sites-database">Dataset: Selected Facilities and Program Sites Database</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>Shapefile</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>(blank)</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>(blank)</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>(blank)</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>(blank)</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>(blank)</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>(blank)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dfta">Data Source: DFTA</h3>
-<h5 id="dataset-dfta-contracts">Dataset: DFTA Contracts</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Address</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Social-Services/DFTA-Contracts/6j6t-3ixh</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/6j6t-3ixh/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Weekly</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-15</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-28</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-doc">Data Source: DOC</h3>
-<h5 id="dataset-correction-facilities-locations">Dataset: Correction Facilities Locations</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Addresses</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://www1.nyc.gov/site/doc/about/facilities-locations.page</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
+<td>Update Frequency</td>
 <td>NA</td>
 </tr>
 <tr>
-<td>Refresh Means</td>
-<td>Geocode - Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
+<td>Update Means</td>
+<td>NA</td>
 </tr>
 <tr>
 <td>Date Updated</td>
-<td>Unknown</td>
+<td>3/1/15</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-01</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="data-source-doe">Data Source: DOE</h3>
-<h5 id="dataset-routes">Dataset: Routes</h5>
+<h3 id="brooklyn-bridge-park-corporation-bbpc">Brooklyn Bridge Park Corporation (BBPC)</h3>
 <table>
 <thead>
 <tr>
@@ -573,410 +626,126 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>BBPC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
 </tr>
 <tr>
 <td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="food-bank-for-new-york-city-fbnyc">Food Bank for New York City (FBNYC)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"FBNYC Food Pantry Soup Kitchen List 8-5-16"</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
+<td>Agency Abbreviation</td>
+<td>FBNYC</td>
 </tr>
 <tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>CSV with Coordinates</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/8yac-vygm/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Monthly</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-01</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h5 id="dataset-universal-pre-k-upk-school-locations">Dataset: Universal Pre-K (UPK) School Locations</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/kiyv-ks3f/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-01-15</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dohmh">Data Source: DOHMH</h3>
-<h5 id="dataset-dohmh-childcare-center-inspections">Dataset: DOHMH Childcare Center Inspections</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Addresses</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Health/DOHMH-Childcare-Center-Inspections/dsg6-ifza</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/dsg6-ifza/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-28</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-28</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-doitt">Data Source: DOITT</h3>
-<h5 id="dataset-library">Dataset: Library</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Shapefile</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Business/Library/p4pf-fyc4</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/geospatial/p4pf-fyc4?method=export&amp;format=Shapefile</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-06-22</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dot">Data Source: DOT</h3>
-<h5 id="dataset-municipal-parking-facilities">Dataset: Municipal Parking Facilities</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Webmap</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://www.nyc.gov/html/dot/html/motorist/parkinglist.shtml</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h5 id="dataset-plaza-program">Dataset: Plaza Program</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Shapefile</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Request file from agency</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dpr">Data Source: DPR</h3>
-<h5 id="dataset-parks-properties">Dataset: Parks Properties</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Shapefile</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>FTP</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Request file from agency</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
+<td>Update Frequency</td>
 <td>Quarterly</td>
 </tr>
 <tr>
-<td>Date Updated</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-dsny">Data Source: DSNY</h3>
-<h5 id="dataset-dsny_select_facs_07262916">Dataset: DSNY_select_facs_07262916</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Shapefile</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
+<td>Update Means</td>
 <td>Request file from agency</td>
 </tr>
 <tr>
-<td>Refresh Frequency</td>
+<td>Date Updated</td>
+<td>8/5/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/5/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="federal-bureau-of-prisons-fbop">Federal Bureau of Prisons (FBOP)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Our Locations"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>FBOP</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
 <td>Annually</td>
 </tr>
 <tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
 <td>Date Updated</td>
-<td>2016-07-26</td>
+<td>7/1/16</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-26</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h5 id="dataset-special-waste-drop-off-sites">Dataset: Special Waste Drop-off Sites</h5>
+<h3 id="hudson-river-park-trust-hrpt">Hudson River Park Trust (HRPT)</h3>
 <table>
 <thead>
 <tr>
@@ -986,49 +755,212 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>HRPT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
 </tr>
 <tr>
 <td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="metropolitan-transportation-authority-long-island-railroad-mta-lirr">Metropolitan Transportation Authority - Long Island Railroad (MTA-LIRR)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
+<td>Agency Abbreviation</td>
+<td>MTA-LIRR</td>
 </tr>
 <tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="metropolitan-transportation-authority-metro-north-mta-mn">Metropolitan Transportation Authority - Metro North (MTA-MN)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>MTA-MN</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="metropolitan-transportation-authority-new-york-city-transit-mta-nyct">Metropolitan Transportation Authority - New York City Transit (MTA-NYCT)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>MTA-NYCT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-administration-for-childrens-services-nycacs">New York City Administration for Childrens Services (NYCACS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Contractor Data"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCACS</td>
+</tr>
+<tr>
+<td>Data Format</td>
 <td>CSV with Coordinates</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Environment/Special-Waste-Drop-off-Sites/a34j-ihvy</td>
+<td>Update Frequency</td>
+<td>Annually</td>
 </tr>
 <tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/a34j-ihvy/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
+<td>Update Means</td>
+<td>Request file from agency</td>
 </tr>
 <tr>
 <td>Date Updated</td>
-<td>2014-09-05</td>
+<td>7/20/16</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-01</td>
+<td>7/20/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="data-source-fdny">Data Source: FDNY</h3>
-<h5 id="dataset-fdny-firehouse-listing">Dataset: FDNY Firehouse Listing</h5>
+<h3 id="new-york-city-business-integrity-commission-nycbic">New York City Business Integrity Commission (NYCBIC)</h3>
 <table>
 <thead>
 <tr>
@@ -1038,49 +970,40 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Approved licensees and registrants for trade waste"</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td>Agency Abbreviation</td>
+<td>NYCBIC</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>CSV with Coordinates</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Public-Safety/FDNY-Firehouse-Listing/hc8x-tcnd</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/pg99-2ihy/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
+<td>Update Frequency</td>
 <td>Nightly pull</td>
 </tr>
 <tr>
+<td>Update Means</td>
+<td>Pull from NYC Open Data</td>
+</tr>
+<tr>
 <td>Date Updated</td>
-<td>2014-09-05</td>
+<td>9/5/14</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-01</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="data-source-federal-bop">Data Source: Federal BOP</h3>
-<h5 id="dataset-our-locations">Dataset: Our Locations</h5>
+<h3 id="new-york-city-department-of-consumer-affairs-nycdca">New York City Department of Consumer Affairs (NYCDCA)</h3>
 <table>
 <thead>
 <tr>
@@ -1090,49 +1013,468 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Legally Operating Businesses"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDCA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Address</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Geocode - Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>6/24/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
 </tr>
 <tr>
 <td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-citywide-administrative-services-nycdcas">New York City Department of Citywide Administrative Services (NYCDCAS)</h3>
+<p>Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New York (NYCFDNY) and New York Police Department (NYCNYPD).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Gazetteer 2016"</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
+<td>Agency Abbreviation</td>
+<td>NYCDCAS</td>
 </tr>
 <tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
+<td>CSV with Address</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Geocode - Request from Agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>8/20/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/20/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-cultural-affairs-nycdcla">New York City Department of Cultural Affairs (NYCDCLA)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"DCLA Cultural Organizations"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDCLA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Address</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Geocode - Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/22/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-environmental-protection-nycdep">New York City Department of Environmental Protection (NYCDEP)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDEP</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-for-the-aging-nycdfta">New York City Department for the Aging (NYCDFTA)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"DFTA Contracts"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDFTA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Address</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Geocode - Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/15/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-corrections-nycdoc">New York City Department of Corrections (NYCDOC)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Correction Facilities Locations"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDOC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-education-nycdoe">New York City Department of Education (NYCDOE)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"2014-2015 Blue Book - for CEQR Analysis"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDOE</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Request file from agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/20/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/20/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Routes"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDOE</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Universal Pre-K (UPK) School Locations"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDOE</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>1/15/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-health-and-mental-hygiene-nycdohmh">New York City Department of Health and Mental Hygiene (NYCDOHMH)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"DOHMH Childcare Center Inspections"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDOHMH</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Geocode - Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/28/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-transportation-nycdot">New York City Department of Transportation (NYCDOT)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Municipal Parking Facilities"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
 <td>Webmap</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>https://www.bop.gov/locations/map.jsp#</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
+<td>Update Frequency</td>
 <td>Annually</td>
 </tr>
 <tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
 <td>Date Updated</td>
-<td>Unknown</td>
+<td>7/1/16</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-01</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="data-source-hhc">Data Source: HHC</h3>
-<h5 id="dataset-health-and-hospitals-corporation-hhc-facilities">Dataset: Health and Hospitals Corporation (HHC) Facilities</h5>
 <table>
 <thead>
 <tr>
@@ -1142,516 +1484,39 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Plaza Program"</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td>Agency Abbreviation</td>
+<td>NYCDOT</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/views/f7b6-v6v3/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2014-09-05</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-hhs">Data Source: HHS</h3>
-<h5 id="dataset-hhs-accelerator">Dataset: HHS Accelerator</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from HHS Accelerator</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>TBD</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nycha">Data Source: NYCHA</h3>
-<h5 id="dataset-nycha-psa-police-service-areas">Dataset: NYCHA PSA (Police Service Areas)</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>Shapefile</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>https://data.cityofnewyork.us/Housing-Development/NYCHA-PSA-Police-Service-Areas-/72wx-vdjr</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.cityofnewyork.us/api/geospatial/72wx-vdjr?method=export&amp;format=Shapefile</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYC Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2014-09-05</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-dec">Data Source: NYState DEC</h3>
-<h5 id="dataset-lands-under-the-care-custody-and-control-of-dec">Dataset: Lands - Under the Care, Custody, and Control of DEC</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Shapefile</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1114</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>http://gis.ny.gov/gisdata/data/ds_1114/DEC_lands.zip</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState GIS Clearinghouse</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-03-01</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h5 id="dataset-solid-waste-management-facilities">Dataset: Solid Waste Management Facilities</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.ny.gov/Energy-Environment/Solid-Waste-Management-Facilities/2fni-raj8</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.ny.gov/api/views/2fni-raj8/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-01-19</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-department-of-corrections-and-community-supervision">Data Source: NYState Department of Corrections and Community Supervision</h3>
-<h5 id="dataset-facility-listing">Dataset: Facility Listing</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Addresses</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://www.doccs.ny.gov/faclist.html</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
+<td>Update Frequency</td>
 <td>Annually</td>
 </tr>
 <tr>
-<td>Date Updated</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-doh">Data Source: NYState DOH</h3>
-<h5 id="dataset-health-facility-general-information">Dataset: Health Facility General Information</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://health.data.ny.gov/Health/Health-Facility-General-Information/vn5v-hh5r</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://health.data.ny.gov/api/views/vn5v-hh5r/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Weekly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-28</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-28</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-dot">Data Source: NYState DOT</h3>
-<h5 id="dataset-thruway-commuter-park-and-ride-lots-map">Dataset: Thruway Commuter Park and Ride Lots Map</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.ny.gov/Transportation/Thruway-Commuter-Park-and-Ride-Lots-Map/aezw-c77m</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.ny.gov/api/views/aezw-c77m/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2015-10-12</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-ed">Data Source: NYState Ed</h3>
-<h5 id="dataset-listings-active-institutions-with-gis-coordinates-and-oits-accuracy-code">Dataset: LIstings - Active Institutions with GIS coordinates and OITS Accuracy Code</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&amp;bi_cPath=dvtb&amp;numberLocale=en_US&amp;source=dvtb&amp;gotoNthPage=1&amp;bi_tool=rt&amp;event=bi_showTool&amp;bi_rownavdv=s25&amp;stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNNayFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D214928944?bi_origin=dvtb&amp;bi_cPath=dvtb&amp;numberLocale=en_US&amp;source=dvtb&amp;gotoNthPage=1&amp;bi_tool=rt&amp;event=bi_showTool&amp;bi_rownavdv=s25&amp;stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNNayFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Query and manually download</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-28</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-28</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-oasas">Data Source: NYState OASAS</h3>
-<h5 id="dataset-blank">Dataset: (blank)</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>(blank)</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
+<td>Update Means</td>
 <td>Request file from agency</td>
 </tr>
 <tr>
-<td>Refresh Frequency</td>
-<td>TBD</td>
-</tr>
-<tr>
 <td>Date Updated</td>
-<td>0</td>
+<td>7/1/16</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>0</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="data-source-nystate-oc">Data Source: NYState OC</h3>
-<h5 id="dataset-facilities">Dataset: Facilities</h5>
 <table>
 <thead>
 <tr>
@@ -1661,361 +1526,40 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td>Agency Abbreviation</td>
+<td>NYCDOT</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Addresses</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://ocfs.ny.gov/main/rehab/regionalListing1.asp</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Geocode - Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-omh">Data Source: NYState OMH</h3>
-<h5 id="dataset-local-mental-health-programs">Dataset: Local Mental Health Programs</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were 683 out of 1,516 records in this dataset which did not have valid addresses. Since they could not be geocoded, they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.ny.gov/api/views/6nvr-tbv8/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-07-16</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-28</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-opr">Data Source: NYState OPR</h3>
-<h5 id="dataset-state-park-facility-points">Dataset: State Park Facility Points</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.ny.gov/Recreation/State-Park-Facility-Points/9uuk-x7vh</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.ny.gov/api/views/9uuk-x7vh/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-02-04</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-opwdd">Data Source: NYState OPWDD</h3>
-<h5 id="dataset-directory-of-developmental-disabilities-service-provider-agencies">Dataset: Directory of Developmental Disabilities Service Provider Agencies</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>CSV with Coordinates</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://data.ny.gov/Human-Services/Directory-of-Developmental-Disabilities-Service-Pr/ieqx-cqyk</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://data.ny.gov/api/views/ieqx-cqyk/rows.csv?accessType=DOWNLOAD</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NYState Open Data</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2015-12-22</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-28</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-parks">Data Source: NYState Parks</h3>
-<h5 id="dataset-administrative-boundaries-of-national-park-system-units">Dataset: Administrative Boundaries of National Park System Units</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>Shapefile</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>https://irma.nps.gov/DataStore/Reference/Profile/2225713</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>https://irma.nps.gov/DataStore/DownloadFile/551558</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from NPS</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Nightly pull</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2016-06-30</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-nystate-unified-court-system">Data Source: NYState Unified Court System</h3>
-<h5 id="dataset-the-courts">Dataset: The Courts</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Addresses</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://www.nycourts.gov/courts/index.shtml</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
+<td>Update Frequency</td>
 <td>NA</td>
 </tr>
 <tr>
-<td>Refresh Means</td>
-<td>Geocode - Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2016-07-01</td>
-</tr>
-</tbody>
-</table>
-<h3 id="data-source-us-courts">Data Source: US Courts</h3>
-<h5 id="dataset-court-locator-results">Dataset: Court Locator Results</h5>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
-</tr>
-<tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
-<td>Addresses</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>http://www.uscourts.gov/court-locator/city/New%20York/state/NY</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
+<td>Update Means</td>
 <td>NA</td>
 </tr>
 <tr>
-<td>Refresh Means</td>
-<td>Geocode - Manual copy and paste</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
 <td>Date Updated</td>
-<td>Unknown</td>
+<td>3/1/15</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-01</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="data-source-us-dot">Data Source: US DOT</h3>
-<h5 id="dataset-us-army-corps-of-engineers-ports">Dataset:  U.S. Army Corps of Engineers Ports</h5>
+<h3 id="new-york-city-department-of-parks-and-recreation-nycdpr">New York City Department of Parks and Recreation (NYCDPR)</h3>
 <table>
 <thead>
 <tr>
@@ -2025,48 +1569,1112 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"Parks Parks Properties"</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td>Agency Abbreviation</td>
+<td>NYCDPR</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>Shapefile</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point</td>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
 </tr>
 <tr>
-<td>Direct Download Link</td>
-<td>http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/AdditionalAttachmentFiles/ports.zip</td>
+<td>Update Means</td>
+<td>Pull from NYC Open Data</td>
 </tr>
 <tr>
-<td>Refresh Means</td>
+<td>Date Updated</td>
+<td>7/27/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/27/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-sanitation-nycdsny">New York City Department of Sanitation (NYCDSNY)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"DSNY_select_facs_07262916"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCDSNY</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Request file from agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-housing-authority-nycha">New York City Housing Authority (NYCHA)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"NYCHA PSA (Police Service Areas)"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCHA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>9/5/14</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-health-and-hospitals-corporation-nychhc">New York City Health and Hospitals Corporation (NYCHHC)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Health and Hospitals Corporation (HHC) Facilities"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCHHC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYC Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>9/5/14</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-department-of-health-and-human-services-nychhs">New York City Department of Health and Human Services (NYCHHS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"HHS Accelerator - Contracts"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCHHS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual download</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"HHS Accelerator - Financials"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCHHS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual download</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"HHS Accelerator - Proposals"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCHHS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual download</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-city-mayors-of-management-and-budget-nycomb">New York City Mayor's of Management and Budget (NYCOMB)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"District Resource Statement"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCOMB</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Request from Agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>6/30/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>6/30/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-unified-court-system-nycourts">New York State Unified Court System (NYCOURTS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"The Courts"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYCOURTS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-department-of-environmental-conservation-nysdec">New York State Department of Environmental Conservation (NYSDEC)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>""Lands - Under the Care"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>Custody</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>and Control of DEC"</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NYSDEC</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>Pull from NYState GIS Clearinghouse</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Solid Waste Management Facilities"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSDEC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYState Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-department-of-corrections-and-community-supervision-nysdoccs">New York State Department of Corrections and Community Supervision (NYSDOCCS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Facility Listing"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSDOCCS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-department-of-health-nysdoh">New York State Department of Health (NYSDOH)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Health Facility General Information"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSDOH</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYState Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/28/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/28/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-nursing-home-bed-count-data">ADD nursing home bed count data</h2>
+<h3 id="new-york-state-department-of-transportation-nysdot">New York State Department of Transportation (NYSDOT)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSDOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-education-department-nysed">New York State Education Department (NYSED)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"LIstings - Active Institutions with GIS coordinates and OITS Accuracy Code"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSED</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual download</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/26/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-enrollment-datasets">ADD enrollment datasets</h2>
+<h3 id="new-york-state-office-of-alcoholism-and-substance-abuse-services-nysoasas">New York State Office of Alcoholism and Substance Abuse Services (NYSOASAS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"List of NYC Programs"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSOASAS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Request file from agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>8/9/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/9/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-office-of-children-and-family-services-nysocfs">New York State Office of Children and Family Services (NYSOCFS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Facilities"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSOCFS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-office-of-mental-health-nysomh">New York State Office of Mental Health (NYSOMH)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Local Mental Health Programs"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSOMH</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYState Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/16/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/16/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-office-of-parks-recreation-and-historic-preservation-nysoprhp">New York State Office of Parks, Recreation and Historic Preservation (NYSOPRHP)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"National Register of Historic Places"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSOPRHP</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYState Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>12/18/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"State Park Facility Points"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSOPRHP</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYState Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>12/18/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-york-state-office-for-people-with-developmental-disabilities-nysopwdd">New York State Office for People With Developmental Disabilities (NYSOPWDD)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Directory of Developmental Disabilities Service Provider Agencies"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>NYSOPWDD</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV with Coordinates</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from NYState Open Data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>12/22/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="port-authority-of-new-york-and-new-jersey-panynj">Port Authority of New York and New Jersey (PANYNJ)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>PANYNJ</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="roosevelt-island-operating-corporation-rioc">Roosevelt Island Operating Corporation (RIOC)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>RIOC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="trust-for-governors-island-tgi">Trust for Governors Island (TGI)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Selected Facilities and Program Sites Database"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>TGI</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/15</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="united-states-courts-uscourts">United States Courts (USCOURTS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Court Locator Results"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>USCOURTS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Addresses</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Manual copy and paste</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="united-states-department-of-transportation-usdot">United States Department of Transportation (USDOT)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Airports"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>USDOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
 <td>Pull from US DOT</td>
 </tr>
 <tr>
-<td>Refresh Frequency</td>
-<td>Annually</td>
-</tr>
-<tr>
 <td>Date Updated</td>
-<td>2015-08-01</td>
+<td>8/1/15</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-28</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h5 id="dataset-airports">Dataset: Airports</h5>
 <table>
 <thead>
 <tr>
@@ -2076,47 +2684,85 @@
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Blah blah blah description from Socrata including limitations</td>
+<td>Dataset Name</td>
+<td>"U.S. Army Corps of Engineers Ports"</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>There were records in this dataset which did not have valid addresses that could be geocoded, so they were exlcuded from the database.</td>
+<td>Agency Abbreviation</td>
+<td>USDOT</td>
 </tr>
 <tr>
-<td>Facility Types</td>
-<td>K-12 Public Schools; Universities</td>
-</tr>
-<tr>
-<td>Data Format Type</td>
+<td>Data Format</td>
 <td>Shapefile</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td>http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point</td>
-</tr>
-<tr>
-<td>Direct Download Link</td>
-<td>http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/AdditionalAttachmentFiles/airports.zip</td>
-</tr>
-<tr>
-<td>Refresh Means</td>
-<td>Pull from US DOT</td>
-</tr>
-<tr>
-<td>Refresh Frequency</td>
+<td>Update Frequency</td>
 <td>Annually</td>
 </tr>
 <tr>
+<td>Update Means</td>
+<td>Pull from US DOT</td>
+</tr>
+<tr>
 <td>Date Updated</td>
-<td>2015-08-01</td>
+<td>8/1/15</td>
 </tr>
 <tr>
 <td>Date Received</td>
-<td>2016-07-28</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h3 id="united-states-national-parks-service-usnps">United States National Parks Service (USNPS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"Administrative Boundaries of National Park System Units"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>USNPS</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Nightly pull</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pull from USNPS</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>6/30/16</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/16</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
+<p>The FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
+<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a>.</p>
               
             </div>
           </div>
