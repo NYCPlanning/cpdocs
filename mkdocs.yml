@@ -3,5 +3,5 @@ pages:
 - Home: index.md
 - About: about.md
 - Captial Planning Database (cbdb): cpdb.md
-- Facilities Database: facilitiesdb.md
+- Facilities Database (facdb): facilitiesdb.md
 theme: readthedocs
