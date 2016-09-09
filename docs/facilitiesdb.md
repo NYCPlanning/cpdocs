@@ -12,7 +12,7 @@ This data resource provides agencies and communities with easy access to data an
 
 Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.
 
-Historically, these records were updated only once per year. Beginning with this latest September _, 2016 release, the database is being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as possible. 85% of the data sources are open datasets that agencies publish independently. 
+Historically, these records were updated only once per year. Beginning with this latest September _, 2016 release, the database is being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as the source data. 85% of the data sources are open datasets that agencies publish independently.
 
 ### Overview
 | General information |
@@ -31,12 +31,9 @@ Two tables compose FacDB:
 * Facilities That Could Not Be Geocoded - 
 * Relational tables....
 
-Since most datasets did not include an identifying facility ID, the NEED TO FINISH
+NEED TO FINISH
 
 Additional information for certain facility types can be joined in using relational tables and the Global Unique Identifier.
-
-
-
 
 
 ## Data Dictionary
@@ -121,7 +118,7 @@ Additional information for certain facility types can be joined in using relatio
 
 ### Data Processing
 
-Since all facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on Github (LINK).
+Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page.](https://github.com/NYCPlanning/scripts/tree/master/facilities-database/assembly).
 
 **Assembly.**
 First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
@@ -129,19 +126,11 @@ First, the desired columns in the source data get mapped to the columns in FacDB
 **Geoprocessing.**
 Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with GeoClient using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.
 
-**Final Formatting Cleanup.**
-A few final scipts are run at the end to recapitalize acronoyms, calculate and fill in remaining x, y coordinates, and exclude any facility records outside the NYC boundary.
-
 **Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.
 
 ## Source Data
 
 The following datasets were used to populate the Facilities Database.
-
-### Department of Design and Construction (DDC)
-DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.
-
-------
 
 ### Amtrak (Amtrak)
 
