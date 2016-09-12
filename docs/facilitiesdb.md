@@ -31,7 +31,7 @@ We are constantly looking for ways to improve and add additional value to the da
 The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
 
 | Domain | Facility Group | Facility Subgroup |
-| | :-- | :-- | :-- |
+| :-- | :-- | :-- |
 | Administration of Government | Offices | Offices |
 | Administration of Government | Other Property | Miscellaneous Use |
 | Administration of Government | Other Property | No Use |
