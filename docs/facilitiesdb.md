@@ -8,11 +8,13 @@ The Facilities Database (FacDB), a data product produced by the New York City (N
 * Parks, Cultural, and Other Community Facilities
 * Administration of Government
 
-This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. 
+This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. The facilities which are included are valuable for planning purposes because of the valuable social services they provide and their role in land use typology which impacts activity in the neighborhood. For example parking lots and garages (including commerical garages) are captured both because they are a resource that residents and visitors use and because they could indicate increased vehicular traffic in the area.
 
-Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.
+Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the [Overview](https://nycplanning.github.io/cpdocs/facilitiesdb/#overview).
 
-Historically, these records were updated only once per year in DCP's Selected Facilities and Program Sites Database which is now being retired. Beginning with this September _, 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as the source data. 85% of the data sources are open datasets that agencies publish independently.
+Historically, these records were updated only once per year in DCP's Selected Facilities and Program Sites Database which is now being retired. Beginning with this September _, 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets once per month, so that the database will capture and incorporate any changes in the source data. 85% of the data sources are open datasets that agencies publish independently.
+
+We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov) with any suggestions.
 
 ### Overview
 
@@ -23,6 +25,68 @@ Historically, these records were updated only once per year in DCP's Selected Fa
 | Data format | GeoJSON, Shapefile, CSV |
 | Projection | WGS84 |
 | Date last updated | 09/12/16 |
+
+#### Facilities Classification Heirarchy
+
+The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
+
+| Domain | Facility Group | Facility Subgroup |
+| | :-- | :-- | :-- |
+| Administration of Government | Offices | Offices |
+| Administration of Government | Other Property | Miscellaneous Use |
+| Administration of Government | Other Property | No Use |
+| Administration of Government | Other Property | Undeveloped |
+| Administration of Government | Parking, Maintenance, and Storage | Maintenance |
+| Administration of Government | Parking, Maintenance, and Storage | Parking |
+| Administration of Government | Parking, Maintenance, and Storage | Storage |
+| Core Infrastructure and Transportation | Transportation | Airports and Heliports |
+| Core Infrastructure and Transportation | Transportation | Bus Depots and Terminals |
+| Core Infrastructure and Transportation | Transportation | Parking Lots and Garages |
+| Core Infrastructure and Transportation | Transportation | Ports and Ferry Landings |
+| Core Infrastructure and Transportation | Transportation | Rail Yards and Maintenance |
+| Core Infrastructure and Transportation | Wastewater and Waste Management | Solid Waste Processing |
+| Core Infrastructure and Transportation | Wastewater and Waste Management | Solid Waste Transfer and Carting |
+| Core Infrastructure and Transportation | Wastewater and Waste Management | Wastewater Treatment Plant |
+| Health Care and Human Services | Health Care | Chemical Dependency |
+| Health Care and Human Services | Health Care | Hospitals and Clinics |
+| Health Care and Human Services | Health Care | Mental Health |
+| Health Care and Human Services | Health Care | Other Health Care |
+| Health Care and Human Services | Health Care | Residential Health Care |
+| Health Care and Human Services | Human Services | Housing and Homeless Services |
+| Health Care and Human Services | Human Services | Legal and Intervention Services |
+| Health Care and Human Services | Human Services | Programs for People with Disabilities |
+| Health Care and Human Services | Human Services | Senior Services |
+| Health Care and Human Services | Human Services | Soup Kitchens and Food Pantries |
+| Health Care and Human Services | Human Services | Workforce Development |
+| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Cultural Institutions |
+| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Historical Societies |
+| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Museums |
+| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Other Cultural Institutions |
+| Parks, Cultural, and Other Community Facilities | Historical Sites | Historical Sites |
+| Parks, Cultural, and Other Community Facilities | Libraries | Academic Libraries |
+| Parks, Cultural, and Other Community Facilities | Libraries | Public Libraries |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Cemetery |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Gardens |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Parks |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Preserves and Conservation Areas |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Recreation and Waterfront Sites |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Streetscapes, Plazas, and Malls |
+| Public Safety, Emergency Services, and Administration of Justice | Emergency Services | Emergency Services |
+| Public Safety, Emergency Services, and Administration of Justice | Justice and Corrections | Courthouses and Judicial |
+| Public Safety, Emergency Services, and Administration of Justice | Justice and Corrections | Detention and Correctional |
+| Public Safety, Emergency Services, and Administration of Justice | Public Safety | Police Services |
+| Youth, Education, and Child Welfare | Camps | Camps |
+| Youth, Education, and Child Welfare | Child Welfare | Child Nutrition |
+| Youth, Education, and Child Welfare | Childcare | Childcare |
+| Youth, Education, and Child Welfare | Childrens Services | Childrens Services |
+| Youth, Education, and Child Welfare | Schools | Colleges or Universities |
+| Youth, Education, and Child Welfare | Schools | Non-public Schools |
+| Youth, Education, and Child Welfare | Schools | Other Schools Serving Students with Disabilities |
+| Youth, Education, and Child Welfare | Schools | Preschools |
+| Youth, Education, and Child Welfare | Schools | Proprietary Schools |
+| Youth, Education, and Child Welfare | Schools | Public Schools |
+| Youth, Education, and Child Welfare | Youth Services | Youth Services |
+
 
 
 ## Limitations and Disclaimers
@@ -125,7 +189,7 @@ The following table lists and defines each of the fields presented in the Facili
 
 ## Source Data
 
-The following datasets were used to populate the Facilities Database.
+The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated once a month to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.
 
 ### Amtrak (Amtrak)
 
@@ -783,15 +847,9 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Notes | |
 
 ## Database structure
-Two tables compose FacDB:
 
-* Facilities with Geolocations - Primary Table
-* Facilities That Could Not Be Geocoded - 
-* Relational tables....
+Currently the database consists of two tables. One table contains all the geocoded records with spatial data, and one with the records which could not be geocoded.
 
-NEED TO FINISH
-
-Additional information for certain facility types can be joined in using relational tables and the Global Unique Identifier.
-
+In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For exmaple, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.
 
 
