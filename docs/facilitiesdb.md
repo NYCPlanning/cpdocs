@@ -1,3 +1,5 @@
+![alt text](https://github.com/NYCPlanning/logo/blob/master/dcp_logo_772.png "NYC Planning")
+
 # City Planning Facilities Database
 The Facilities Database (FacDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning Division, captures the location, type, and capacity of public and private facilities ranging across six domains:
 
@@ -26,7 +28,7 @@ We are constantly looking for ways to improve and add additional value to the da
 | Projection | WGS84 |
 | Date last updated | 09/12/16 |
 
-#### Facilities Classification Heirarchy
+##### Facilities Classification Heirarchy
 
 The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
 
@@ -95,6 +97,8 @@ The FacDB is only as good as the source data it aggregates. Currently, FacDB is 
 
 If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov).
 
+
+
 ## Methodology
 
 ### Data Processing
@@ -108,6 +112,8 @@ First, the desired columns in the source data get mapped to the columns in FacDB
 Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with GeoClient using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.
 
 **Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.
+
+
 
 ## Data Dictionary
 
@@ -186,6 +192,8 @@ The following table lists and defines each of the fields presented in the Facili
 | Homeless | homeless | Indicates if the facility serves homeless persons. |
 | Immigrants | immigrants | Indicates if the facility serves immigrants. |
 | Group Quarters | groupquarters | Indicates if the facility contains group living quarters. |
+
+
 
 ## Source Data
 
@@ -845,6 +853,8 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Date Updated | 6/30/16 |
 | Date Received | 8/1/16 |
 | Notes | |
+
+
 
 ## Database structure
 
