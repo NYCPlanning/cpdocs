@@ -147,9 +147,10 @@
 <li>Parks, Cultural, and Other Community Facilities</li>
 <li>Administration of Government</li>
 </ul>
-<p>This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. </p>
-<p>Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.</p>
-<p>Historically, these records were updated only once per year in DCP's Selected Facilities and Program Sites Database which is now being retired. Beginning with this September _, 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as the source data. 85% of the data sources are open datasets that agencies publish independently.</p>
+<p>This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. The facilities which are included are valuable for planning purposes because of the valuable social services they provide and their role in land use typology which impacts activity in the neighborhood. For example parking lots and garages (including commerical garages) are captured both because they are a resource that residents and visitors use and because they could indicate increased vehicular traffic in the area.</p>
+<p>Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the <a href="https://nycplanning.github.io/cpdocs/facilitiesdb/#overview">Overview</a>.</p>
+<p>Historically, these records were updated only once per year in DCP's Selected Facilities and Program Sites Database which is now being retired. Beginning with this September _, 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets once per month, so that the database will capture and incorporate any changes in the source data. 85% of the data sources are open datasets that agencies publish independently.</p>
+<p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a> with any suggestions.</p>
 <h3 id="overview">Overview</h3>
 <table>
 <thead>
@@ -178,6 +179,344 @@
 <tr>
 <td>Date last updated</td>
 <td>09/12/16</td>
+</tr>
+</tbody>
+</table>
+<h4 id="facilities-classification-heirarchy">Facilities Classification Heirarchy</h4>
+<p>The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.</p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Facility Group</th>
+<th>Facility Subgroup</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Administration of Government</td>
+<td>Offices</td>
+<td>Offices</td>
+<td></td>
+</tr>
+<tr>
+<td>Administration of Government</td>
+<td>Other Property</td>
+<td>Miscellaneous Use</td>
+<td></td>
+</tr>
+<tr>
+<td>Administration of Government</td>
+<td>Other Property</td>
+<td>No Use</td>
+<td></td>
+</tr>
+<tr>
+<td>Administration of Government</td>
+<td>Other Property</td>
+<td>Undeveloped</td>
+<td></td>
+</tr>
+<tr>
+<td>Administration of Government</td>
+<td>Parking, Maintenance, and Storage</td>
+<td>Maintenance</td>
+<td></td>
+</tr>
+<tr>
+<td>Administration of Government</td>
+<td>Parking, Maintenance, and Storage</td>
+<td>Parking</td>
+<td></td>
+</tr>
+<tr>
+<td>Administration of Government</td>
+<td>Parking, Maintenance, and Storage</td>
+<td>Storage</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Transportation</td>
+<td>Airports and Heliports</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Transportation</td>
+<td>Bus Depots and Terminals</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Transportation</td>
+<td>Parking Lots and Garages</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Transportation</td>
+<td>Ports and Ferry Landings</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Transportation</td>
+<td>Rail Yards and Maintenance</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Wastewater and Waste Management</td>
+<td>Solid Waste Processing</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Wastewater and Waste Management</td>
+<td>Solid Waste Transfer and Carting</td>
+<td></td>
+</tr>
+<tr>
+<td>Core Infrastructure and Transportation</td>
+<td>Wastewater and Waste Management</td>
+<td>Wastewater Treatment Plant</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Health Care</td>
+<td>Chemical Dependency</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Health Care</td>
+<td>Hospitals and Clinics</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Health Care</td>
+<td>Mental Health</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Health Care</td>
+<td>Other Health Care</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Health Care</td>
+<td>Residential Health Care</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Human Services</td>
+<td>Housing and Homeless Services</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Human Services</td>
+<td>Legal and Intervention Services</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Human Services</td>
+<td>Programs for People with Disabilities</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Human Services</td>
+<td>Senior Services</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Human Services</td>
+<td>Soup Kitchens and Food Pantries</td>
+<td></td>
+</tr>
+<tr>
+<td>Health Care and Human Services</td>
+<td>Human Services</td>
+<td>Workforce Development</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Cultural Institutions</td>
+<td>Cultural Institutions</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Cultural Institutions</td>
+<td>Historical Societies</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Cultural Institutions</td>
+<td>Museums</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Cultural Institutions</td>
+<td>Other Cultural Institutions</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Historical Sites</td>
+<td>Historical Sites</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Libraries</td>
+<td>Academic Libraries</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Libraries</td>
+<td>Public Libraries</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Parks and Plazas</td>
+<td>Cemetery</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Parks and Plazas</td>
+<td>Gardens</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Parks and Plazas</td>
+<td>Parks</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Parks and Plazas</td>
+<td>Preserves and Conservation Areas</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Parks and Plazas</td>
+<td>Recreation and Waterfront Sites</td>
+<td></td>
+</tr>
+<tr>
+<td>Parks, Cultural, and Other Community Facilities</td>
+<td>Parks and Plazas</td>
+<td>Streetscapes, Plazas, and Malls</td>
+<td></td>
+</tr>
+<tr>
+<td>Public Safety, Emergency Services, and Administration of Justice</td>
+<td>Emergency Services</td>
+<td>Emergency Services</td>
+<td></td>
+</tr>
+<tr>
+<td>Public Safety, Emergency Services, and Administration of Justice</td>
+<td>Justice and Corrections</td>
+<td>Courthouses and Judicial</td>
+<td></td>
+</tr>
+<tr>
+<td>Public Safety, Emergency Services, and Administration of Justice</td>
+<td>Justice and Corrections</td>
+<td>Detention and Correctional</td>
+<td></td>
+</tr>
+<tr>
+<td>Public Safety, Emergency Services, and Administration of Justice</td>
+<td>Public Safety</td>
+<td>Police Services</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Camps</td>
+<td>Camps</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Child Welfare</td>
+<td>Child Nutrition</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Childcare</td>
+<td>Childcare</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Childrens Services</td>
+<td>Childrens Services</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Schools</td>
+<td>Colleges or Universities</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Schools</td>
+<td>Non-public Schools</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Schools</td>
+<td>Other Schools Serving Students with Disabilities</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Schools</td>
+<td>Preschools</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Schools</td>
+<td>Proprietary Schools</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Schools</td>
+<td>Public Schools</td>
+<td></td>
+</tr>
+<tr>
+<td>Youth, Education, and Child Welfare</td>
+<td>Youth Services</td>
+<td>Youth Services</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -561,7 +900,7 @@ Many of the source datasets only provide addresses, no coordinates, and visa ver
 </tbody>
 </table>
 <h2 id="source-data">Source Data</h2>
-<p>The following datasets were used to populate the Facilities Database.</p>
+<p>The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated once a month to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.</p>
 <h3 id="amtrak-amtrak">Amtrak (Amtrak)</h3>
 <table>
 <thead>
@@ -2750,14 +3089,8 @@ Many of the source datasets only provide addresses, no coordinates, and visa ver
 </tbody>
 </table>
 <h2 id="database-structure">Database structure</h2>
-<p>Two tables compose FacDB:</p>
-<ul>
-<li>Facilities with Geolocations - Primary Table</li>
-<li>Facilities That Could Not Be Geocoded - </li>
-<li>Relational tables....</li>
-</ul>
-<p>NEED TO FINISH</p>
-<p>Additional information for certain facility types can be joined in using relational tables and the Global Unique Identifier.</p>
+<p>Currently the database consists of two tables. One table contains all the geocoded records with spatial data, and one with the records which could not be geocoded.</p>
+<p>In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For exmaple, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.</p>
               
             </div>
           </div>
