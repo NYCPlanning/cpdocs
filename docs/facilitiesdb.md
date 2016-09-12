@@ -1,4 +1,4 @@
-# Facilities Database
+# City Planning Facilities Database
 The Facilities Database (FacDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning Division, captures the location, type, and capacity of public and private facilities ranging across six domains:
 
 * Health Care and Human Services
@@ -12,9 +12,10 @@ This data resource provides agencies and communities with easy access to data an
 
 Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility types is provided in the Data Dictionary.
 
-Historically, these records were updated only once per year. Beginning with this latest September _, 2016 release, the database is being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as the source data. 85% of the data sources are open datasets that agencies publish independently.
+Historically, these records were updated only once per year in DCP's Selected Facilities and Program Sites Database which is now being retired. Beginning with this September _, 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets twice per month, so that the database will be as up-to-date as the source data. 85% of the data sources are open datasets that agencies publish independently.
 
 ### Overview
+
 | General information |
 | :------------: | ------------- |
 | Dataset Name | "Facilities Database "|
@@ -24,21 +25,30 @@ Historically, these records were updated only once per year. Beginning with this
 | Date last updated | 09/12/16 |
 
 
-## Database structure
-Two tables compose FacDB:
+## Limitations and Disclaimers
 
-* Facilities with Geolocations - Primary Table
-* Facilities That Could Not Be Geocoded - 
-* Relational tables....
+The FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.
 
-NEED TO FINISH
+If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov).
 
-Additional information for certain facility types can be joined in using relational tables and the Global Unique Identifier.
+## Methodology
 
+### Data Processing
+
+Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page](https://github.com/NYCPlanning/scripts/tree/master/facilities-database/assembly).
+
+**Assembly.**
+First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
+
+**Geoprocessing.**
+Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with GeoClient using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.
+
+**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.
 
 ## Data Dictionary
 
-##### Facilities
+The following table lists and defines each of the fields presented in the Facilities Database as they are organized in the database from left to right.
+
 | Field Alias | Field Name | Description |
 | :------------------- | :------------------- | :------------------------------------------------------ |
 | Global Unique Identifier | guid | Universal Unique Identifier.  When a row is added to the table the guid is automatically generated, enabling database replication. |
@@ -112,21 +122,6 @@ Additional information for certain facility types can be joined in using relatio
 | Homeless | homeless | Indicates if the facility serves homeless persons. |
 | Immigrants | immigrants | Indicates if the facility serves immigrants. |
 | Group Quarters | groupquarters | Indicates if the facility contains group living quarters. |
-
-
-## Methodology
-
-### Data Processing
-
-Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page.](https://github.com/NYCPlanning/scripts/tree/master/facilities-database/assembly).
-
-**Assembly.**
-First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
-
-**Geoprocessing.**
-Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with GeoClient using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.
-
-**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.
 
 ## Source Data
 
@@ -787,11 +782,16 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Date Received | 8/1/16 |
 | Notes | |
 
+## Database structure
+Two tables compose FacDB:
 
-##Limitations and Disclaimers
-The FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.
+* Facilities with Geolocations - Primary Table
+* Facilities That Could Not Be Geocoded - 
+* Relational tables....
 
-If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov).
+NEED TO FINISH
+
+Additional information for certain facility types can be joined in using relational tables and the Global Unique Identifier.
 
 
 
