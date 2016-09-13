@@ -138,12 +138,23 @@ code.cs, code.c {
 }
 
 /*Custom DCP Styles*/
-wy-side-nav-search {
-    z-index: 200;
-    background-color: #D96B27;
-    text-align: center;
-    padding: 0.809em;
-    display: block;
-    color: #fcfcfc;
-    margin-bottom: 0.809em;
+.wy-side-nav-search>a {
+    color: #000000;
+}
+
+.wy-side-nav-search {
+    background-color: #e3e3e3;
+    border-right: solid 1px #c9c9c9;
+}
+
+.icon-home:before {
+    height: 56px;
+    width: 65px;
+    background-image: url(https://nycplanning.github.io/cpdb-explore/img/logo_80.png);
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    top: -5px;
+    content: "";
 }

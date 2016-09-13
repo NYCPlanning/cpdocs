@@ -12,7 +12,7 @@ This data resource provides agencies and communities with easy access to data an
 
 Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility categories is provided in the [Overview](https://nycplanning.github.io/cpdocs/facilitiesdb/#overview).
 
-Historically, these records were updated only once per year in DCP's Selected Facilities and Program Sites Database which is now being retired. Beginning with this September _, 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets once per month, so that the database will capture and incorporate any changes in the source data. 85% of the data sources are open datasets that agencies publish independently.
+Historically, these records were updated only once per year in DCP's [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) which is now being retired. Beginning with this September 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets once per month, so that the database will capture and incorporate any changes in the source data. 85% of the data sources are open datasets that agencies publish independently.
 
 We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov) with any suggestions.
 
@@ -22,13 +22,11 @@ We are constantly looking for ways to improve and add additional value to the da
 | :------------: | ------------- |
 | Dataset Name | "Facilities Database "|
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
-| Data format | GeoJSON, Shapefile, CSV |
+| Data format | [Shapefile](), [CSV](), [Webmap]() |
 | Projection | WGS84 |
 | Date last updated | 09/12/16 |
 
-##### Facilities Classification Heirarchy
-
-The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
+**Facilities Classification Heirarchy**. The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
 
 | Domain | Facility Group | Facility Subgroup |
 | :-- | :-- | :-- |
@@ -109,7 +107,7 @@ First, the desired columns in the source data get mapped to the columns in FacDB
 **Geoprocessing.**
 Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.
 
-**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database. In this release, _ duplicate records were removed.
+**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database.
 
 
 
@@ -161,6 +159,7 @@ The following table lists and defines each of the fields presented in the Facili
 | Date Inactive | dateinactive | The date the facility became inactive in the database. |
 | Inactive Status | inactivestatus | The value indicating the status of the facility, whether it is in operation or not in operation.  Value is calculated based on DateInactive.  If DateInactive is not NULL then Status is Inactive. |
 | Tags | tags | A series of tags classifying the facility. |
+| Data Link |  |
 | Notes | notes | A space for the database admin to include any freestyle notes about the record. |
 | Date Source Data Received | datesourcereceived | The date the source data was received from the parent agency. |
 | Date Source Data Updated | datesourceupdated | The date the source data was updated within the parent database. |
@@ -197,32 +196,6 @@ The following table lists and defines each of the fields presented in the Facili
 
 The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated once a month to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.
 
-### Amtrak (Amtrak)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | Amtrak |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
-### Brooklyn Bridge Park Corporation (BBPC)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | BBPC |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
 ### Food Bank for New York City (FBNYC)
 
 | | |
@@ -234,6 +207,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | Update Means | Request file from agency |
 | Date Updated | 8/5/16 |
 | Date Received | 8/5/16 |
+| Data Link | None |
 | Notes | |
 
 ### Federal Bureau of Prisons (FBOP)
@@ -247,58 +221,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
-| Notes | |
-
-### Hudson River Park Trust (HRPT)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | HRPT |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
-### Metropolitan Transportation Authority - Long Island Railroad (MTA-LIRR)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | MTA-LIRR |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
-### Metropolitan Transportation Authority - Metro North (MTA-MN)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | MTA-MN |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
-### Metropolitan Transportation Authority - New York City Transit (MTA-NYCT)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | MTA-NYCT |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
+| Data Link | https://www.bop.gov/locations/map.jsp# |
 | Notes | |
 
 ### New York City Administration for Childrens Services (NYCACS)
@@ -312,6 +235,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | Update Means | Request file from agency |
 | Date Updated | 7/20/16 |
 | Date Received | 7/20/16 |
+| Data Link | None |
 | Notes | |
 
 ### New York City Business Integrity Commission (NYCBIC)
@@ -325,6 +249,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | Update Means | Pull from NYC Open Data |
 | Date Updated | 9/5/14 |
 | Date Received | 7/1/16 |
+| Data Link | https://data.cityofnewyork.us/Business/Approved-licensees/7atx-5a3s |
 | Notes | |
 
 ### New York City Department of Consumer Affairs (NYCDCA)
@@ -339,11 +264,25 @@ The following datasets were used to populate the Facilities Database. The data s
 | Update Means | Geocode - Pull from NYC Open Data |
 | Date Updated | 6/24/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Business/Legally-Operating-Businesses/w7w3-xahh |
 | Notes | |
 
-### New York City Department of Citywide Administrative Services (NYCDCAS)
+### New York City Department of City Planning (NYCDCP)
 
-Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New York (NYCFDNY) and New York Police Department (NYCNYPD).
+| | |
+| -- | -- |
+| Dataset Name | "Selected Facilities and Program Sites Database" |
+| Agency Abbreviation | NYCDCP |
+| Data Format | Shapefile |
+| Update Frequency | NA |
+| Update Means | NA |
+| Date Updated | 3/1/15 |
+| Date Received | 3/1/15 |
+| Data Link | http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page |
+| Notes | Data was obtained from DCP's Selected Facilities and Program Sites Database (2015 release) for Amtrak, Brooklyn Bridge Park Corporation (BBPC), Hudson River Park Trust (HRPT), Metropolitan Transportation Authority (MTA-LIRR, MTA-MN, MTA-NYCT), New York City Department of Environmental Protection (NYCDEP), New York State Department of Transportation (NYSDOT), Port Authority of New York and New Jersey (PANYNJ bus terminals only), Roosevelt Island Operating Corporation (RIOC), and Trust for Governors Island (TGI) facility records. These reocrds were used because these facility types have not had any turnover or change in the past year. |
+
+
+### New York City Department of Citywide Administrative Services (NYCDCAS)
 
 | | |
 | -- | -- |
@@ -354,7 +293,8 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Geocode - Request from Agency |
 | Date Updated | 8/20/16 |
 | Date Received | 8/20/16 |
-| Notes | |
+| Data Link | None |
+| Notes | Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New York (NYCFDNY) and New York Police Department (NYCNYPD). Once the 2016 update of [COLP](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-colp.page) is released, COLP will be used as the source dataset instead. |
 
 ### New York City Department of Cultural Affairs (NYCDCLA)
 
@@ -367,21 +307,8 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Geocode - Pull from NYC Open Data |
 | Date Updated | 3/22/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32 |
 | Notes | |
-
-### New York City Department of Environmental Protection (NYCDEP)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | NYCDEP |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
 
 ### New York City Department for the Aging (NYCDFTA)
 
@@ -394,6 +321,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Geocode - Pull from NYC Open Data |
 | Date Updated | 7/15/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Social-Services/DFTA-Contracts/6j6t-3ixh |
 | Notes | |
 
 ### New York City Department of Corrections (NYCDOC)
@@ -407,6 +335,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
+| Data Link | http://www1.nyc.gov/site/doc/about/facilities-locations.page |
 | Notes | |
 
 ### New York City Department of Education (NYCDOE)
@@ -420,6 +349,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Request file from agency |
 | Date Updated | 7/20/16 |
 | Date Received | 7/20/16 |
+| Data Link | None |
 | Notes | |
 
 | | |
@@ -431,6 +361,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYC Open Data |
 | Date Updated | 8/1/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm |
 | Notes | |
 
 | | |
@@ -442,6 +373,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYC Open Data |
 | Date Updated | 1/15/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f |
 | Notes | |
 
 ### New York City Department of Health and Mental Hygiene (NYCDOHMH)
@@ -455,6 +387,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Geocode - Pull from NYC Open Data |
 | Date Updated | 7/28/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Health/DOHMH-Childcare-Center-Inspections/dsg6-ifza |
 | Notes | |
 
 ### New York City Department of Transportation (NYCDOT)
@@ -468,6 +401,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
+| Data Link | http://www.nyc.gov/html/dot/html/motorist/parkinglist.shtml |
 | Notes | |
 
 
@@ -480,18 +414,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Request file from agency |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
-| Notes | |
-
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | NYCDOT |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
+| Data Link | None |
 | Notes | |
 
 ### New York City Department of Parks and Recreation (NYCDPR)
@@ -505,6 +428,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYC Open Data |
 | Date Updated | 7/27/16 |
 | Date Received | 7/27/16 |
+| Data Link | https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7 |
 | Notes | |
 
 ### New York City Department of Sanitation (NYCDSNY)
@@ -518,6 +442,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Request file from agency |
 | Date Updated | 7/26/16 |
 | Date Received | 7/26/16 |
+| Data Link | None |
 | Notes | |
 
 ### New York City Housing Authority (NYCHA)
@@ -531,6 +456,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYC Open Data |
 | Date Updated | 9/5/14 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Housing-Development/NYCHA-PSA-Police-Service-Areas-/72wx-vdjr |
 | Notes | |
 
 ### New York City Health and Hospitals Corporation (NYCHHC)
@@ -544,6 +470,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYC Open Data |
 | Date Updated | 9/5/14 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3 |
 | Notes | |
 
 ### New York City Department of Health and Human Services (NYCHHS)
@@ -557,7 +484,8 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual download |
 | Date Updated | 7/26/16 |
 | Date Received | 7/26/16 |
-| Notes | |
+| Data Link | None |
+| Notes | HHS is planning to publish this dataset online soon. |
 
 | | |
 | -- | -- |
@@ -568,7 +496,8 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual download |
 | Date Updated | 7/26/16 |
 | Date Received | 7/26/16 |
-| Notes | |
+| Data Link | None |
+| Notes | HHS is planning to publish this dataset online soon. |
 
 | | |
 | -- | -- |
@@ -579,7 +508,8 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual download |
 | Date Updated | 7/26/16 |
 | Date Received | 7/26/16 |
-| Notes | |
+| Data Link | None |
+| Notes | HHS is planning to publish this dataset online soon. |
 
 ### New York City Mayor's of Management and Budget (NYCOMB)
 
@@ -592,6 +522,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Request from Agency |
 | Date Updated | 6/30/16 |
 | Date Received | 6/30/16 |
+| Data Link | None |
 | Notes | |
 
 ### New York State Unified Court System (NYCOURTS)
@@ -605,19 +536,21 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
+| Data Link | http://www.uscourts.gov/court-locator/city/New%20York/state/NY |
 | Notes | |
 
 ### New York State Department of Environmental Conservation (NYSDEC)
 
 | | |
 | -- | -- |
-| Dataset Name | ""Lands - Under the Care" |
-| Agency Abbreviation | Custody |
-| Data Format | and Control of DEC" |
+| Dataset Name | "Lands - Under the Care, Custody, and Control of DEC" |
+| Agency Abbreviation | NYSDEC |
+| Data Format | Shapefile |
 | Update Frequency | NYSDEC |
-| Update Means | Shapefile |
-| Date Updated | Nightly pull |
-| Date Received | Pull from NYState GIS Clearinghouse |
+| Update Means | Pull from NYState GIS Clearinghouse |
+| Date Updated | 3/1/16 |
+| Date Received | 8/1/16 |
+| Data Link | http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1114 |
 | Notes | |
 
 | | |
@@ -629,6 +562,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYState Open Data |
 | Date Updated | 3/1/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.ny.gov/Energy-Environment/Solid-Waste-Management-Facilities/2fni-raj8 |
 | Notes | |
 
 ### New York State Department of Corrections and Community Supervision (NYSDOCCS)
@@ -642,6 +576,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
+| Data Link | http://www.doccs.ny.gov/faclist.html |
 | Notes | |
 
 ### New York State Department of Health (NYSDOH)
@@ -655,21 +590,19 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYState Open Data |
 | Date Updated | 7/28/16 |
 | Date Received | 7/28/16 |
+| Data Link | https://health.data.ny.gov/Health/Health-Facility-General-Information/vn5v-hh5r |
 | Notes | |
-
-## ADD nursing home bed count data
-
-### New York State Department of Transportation (NYSDOT)
 
 | | |
 | -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | NYSDOT |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
+| Dataset Name | "Nursing Home Weekly Bed Census: Last Submission" |
+| Agency Abbreviation | NYSDOH |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Weekly pull |
+| Update Means | Pull from NYState Open Data |
+| Date Updated | 7/28/16 |
+| Date Received | 7/28/16 |
+| Data Link | https://health.data.ny.gov/Health/Nursing-Home-Weekly-Bed-Census-Last-Submission/izta-vnpq/data |
 | Notes | |
 
 ### New York State Education Department (NYSED)
@@ -683,9 +616,20 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual download |
 | Date Updated | 7/26/16 |
 | Date Received | 7/26/16 |
+| Data Link | https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&bi_cPath=dvtb&numberLocale=en_US&source=dvtb&gotoNthPage=1&bi_tool=rt&event=bi_showTool&bi_rownavdv=s25&stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNNayFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D |
 | Notes | |
 
-## ADD enrollment datasets
+| | |
+| -- | -- |
+| Dataset Name | "2015-2016 Nonpublic Enrollment by Grade" |
+| Agency Abbreviation | NYSED |
+| Data Format | CSV with Coordinates |
+| Update Frequency | Annually |
+| Update Means | Manual download |
+| Date Updated | 7/26/16 |
+| Date Received | 7/26/16 |
+| Data Link | http://www.p12.nysed.gov/irs/statistics/nonpublic/ |
+| Notes | |
 
 ### New York State Office of Alcoholism and Substance Abuse Services (NYSOASAS)
 
@@ -694,10 +638,11 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Dataset Name | "List of NYC Programs" |
 | Agency Abbreviation | NYSOASAS |
 | Data Format | CSV with Addresses |
-| Update Frequency | Quarterly |
+| Update Frequency | Monthly |
 | Update Means | Request file from agency |
 | Date Updated | 8/9/16 |
 | Date Received | 8/9/16 |
+| Data Link | None |
 | Notes | |
 
 ### New York State Office of Children and Family Services (NYSOCFS)
@@ -711,6 +656,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
+| Data Link | http://ocfs.ny.gov/main/rehab/regionalListing1.asp |
 | Notes | |
 
 ### New York State Office of Mental Health (NYSOMH)
@@ -724,6 +670,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYState Open Data |
 | Date Updated | 7/16/16 |
 | Date Received | 7/16/16 |
+| Data Link | https://www.omh.ny.gov/omhweb/aboutomh/omh_facility.html |
 | Notes | |
 
 ### New York State Office of Parks, Recreation and Historic Preservation (NYSOPRHP)
@@ -737,6 +684,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYState Open Data |
 | Date Updated | 12/18/15 |
 | Date Received | 8/1/16 |
+| Data Link |https://irma.nps.gov/DataStore/Reference/Profile/2225713  |
 | Notes | |
 
 | | |
@@ -748,6 +696,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYState Open Data |
 | Date Updated | 12/18/15 |
 | Date Received | 8/1/16 |
+| Data Link | https://data.ny.gov/Recreation/State-Park-Facility-Points/9uuk-x7vh |
 | Notes | |
 
 ### New York State Office for People With Developmental Disabilities (NYSOPWDD)
@@ -761,45 +710,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from NYState Open Data |
 | Date Updated | 12/22/15 |
 | Date Received | 8/1/16 |
-| Notes | |
-
-### Port Authority of New York and New Jersey (PANYNJ)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | PANYNJ |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
-### Roosevelt Island Operating Corporation (RIOC)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | RIOC |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
-| Notes | |
-
-### Trust for Governors Island (TGI)
-
-| | |
-| -- | -- |
-| Dataset Name | "Selected Facilities and Program Sites Database" |
-| Agency Abbreviation | TGI |
-| Data Format | Shapefile |
-| Update Frequency | NA |
-| Update Means | NA |
-| Date Updated | 3/1/15 |
-| Date Received | 8/1/16 |
+| Data Link | https://data.ny.gov/Human-Services/Directory-of-Developmental-Disabilities-Service-Pr/ieqx-cqyk |
 | Notes | |
 
 ### United States Courts (USCOURTS)
@@ -813,6 +724,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Manual copy and paste |
 | Date Updated | 7/1/16 |
 | Date Received | 7/1/16 |
+| Data Link | http://www.uscourts.gov/court-locator/city/New%20York/state/NY |
 | Notes | |
 
 ### United States Department of Transportation (USDOT)
@@ -826,6 +738,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from US DOT |
 | Date Updated | 8/1/15 |
 | Date Received | 8/1/16 |
+| Data Link | http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point |
 | Notes | |
 
 | | |
@@ -837,6 +750,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from US DOT |
 | Date Updated | 8/1/15 |
 | Date Received | 8/1/16 |
+| Data Link | http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point |
 | Notes | |
 
 ### United States National Parks Service (USNPS)
@@ -850,6 +764,7 @@ Data was obtained from DCAS's 2016 Gazetteer requests for Fire Department of New
 | Update Means | Pull from USNPS |
 | Date Updated | 6/30/16 |
 | Date Received | 8/1/16 |
+| Data Link | https://irma.nps.gov/DataStore/Reference/Profile/2225713 |
 | Notes | |
 
 
