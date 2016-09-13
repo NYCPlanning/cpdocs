@@ -1,7 +1,6 @@
 site_name: Capital Planning Docs
 pages:
 - Home: index.md
-- About: about.md
-- Captial Planning Database (cbdb): cpdb.md
-- Facilities Database (facdb): facilitiesdb.md
+- Facilities Database (facdb): facdb.md
 theme: readthedocs
+theme_dir: custom_theme
