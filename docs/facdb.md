@@ -640,8 +640,8 @@ The following datasets were used to populate the Facilities Database. The data s
 | Data Format | CSV with Addresses |
 | Update Frequency | Monthly |
 | Update Means | Request file from agency |
-| Date Updated | 8/9/16 |
-| Date Received | 8/9/16 |
+| Date Updated | 10/14/16 |
+| Date Received | 10/01/16 |
 | Data Link | None |
 | Notes | |
 
