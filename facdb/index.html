@@ -132,7 +132,7 @@
 <p>This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. The facilities which are included are valuable for planning purposes because of the social services they provide and their role in land use typology which impacts activity in the neighborhood. For example parking lots and garages (including commerical garages) are captured in the database, both because they are an asset that residents and visitors use and because they could indicate increased vehicular traffic in the area.</p>
 <p>Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility categories is provided in the <a href="https://nycplanning.github.io/cpdocs/facilitiesdb/#overview">Overview</a>.</p>
 <p>Historically, these records were updated only once per year in DCP's <a href="http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page">Selected Facilities and Program Sites Database</a> which is now being retired. Beginning with this September 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets once per month, so that the database will capture and incorporate any changes in the source data. 85% of the data sources are open datasets that agencies publish independently.</p>
-<p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a> with any suggestions.</p>
+<p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a> with any suggestions.</p>
 <h3 id="overview">Overview</h3>
 <table>
 <thead>
@@ -152,7 +152,7 @@
 </tr>
 <tr>
 <td>Data format</td>
-<td><a href="">Shapefile</a>, <a href="">CSV</a>, <a href="">Webmap</a></td>
+<td><a href="http://cpp.capitalplanning.nyc/facilities">Webmap</a>, <a href="">Shapefile</a>, <a href="">CSV</a></td>
 </tr>
 <tr>
 <td>Projection</td>
@@ -160,7 +160,7 @@
 </tr>
 <tr>
 <td>Date last updated</td>
-<td>09/12/16</td>
+<td>10/14/16</td>
 </tr>
 </tbody>
 </table>
@@ -497,7 +497,7 @@
 </table>
 <h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
 <p>The FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
-<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a>.</p>
+<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a>.</p>
 <h2 id="methodology">Methodology</h2>
 <h3 id="data-processing">Data Processing</h3>
 <p>Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the <a href="https://github.com/NYCPlanning/scripts/tree/master/facilities-database/assembly">NYC Planning GitHub page</a>.</p>
@@ -506,6 +506,41 @@ First, the desired columns in the source data get mapped to the columns in FacDB
 <p><strong>Geoprocessing.</strong>
 Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and then the BBL is run through GeoClient to get the address and other location related details like Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was then run through GeoClient to fill in missing information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.</p>
 <p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database.</p>
+<p>The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Data Processing Flag</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>address2geom_borough</td>
+<td>Geometry, BBL, BIN, and zipcode were generated by NYC GeoClient using address and county or borough provided by agency.</td>
+</tr>
+<tr>
+<td>address2geom_zipcode</td>
+<td>Geometry, BBL, BIN, and borough were generated by NYC GeoClient using address and zip code provided by agency.</td>
+</tr>
+<tr>
+<td>bbljoin</td>
+<td>Geometry and address were provided by agency but without a BBL. BBL was obtained by doing a spatial join with MapPLUTO</td>
+</tr>
+<tr>
+<td>bbljoin2address</td>
+<td>Geometry was provided by agency but without an address or BBL. BBL and address were obtained by doing a spatial join with MapPLUTO</td>
+</tr>
+<tr>
+<td>bbljoin_closest</td>
+<td>Geometry was provided by agency without a BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record.</td>
+</tr>
+<tr>
+<td>bbljoin2address_closest</td>
+<td>Geometry was provided by agency without an address or BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="data-dictionary">Data Dictionary</h2>
 <p>The following table lists and defines each of the fields presented in the Facilities Database as they are organized in the database from left to right.</p>
 <table>
@@ -525,7 +560,7 @@ Many of the source datasets only provide addresses, no coordinates, and visa ver
 <tr>
 <td>ID</td>
 <td>id</td>
-<td>An alpha numeric unique identifier created and maintained by the database admin that is X number of characters long and a concatenation of A, B, and C.</td>
+<td>An alpha numeric unique identifier created and maintained by the database admin that is a concatenation of agencysource, oversightabbrev, idagency, facilityname, addressnumber, agencyclass1, and agencyclass2.</td>
 </tr>
 <tr>
 <td>Old ID</td>
