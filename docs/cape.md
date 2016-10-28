@@ -76,14 +76,14 @@ The following table lists and defines each of the fields presented in CAPE as th
 | Construction Start Date | constart | Actual or expected date of construction starting. | Agency |
 | Construction End Date | conend | Actual or expected date of construction ending. | Agency |
 | Fiscal Year Construction Complete | fyconend | Actual or expected fiscal year of construction ending.  Valid formats: YYYY | Agency |
-| Contact | contact | Contact name and number for the person responsible	 for managing the project. | Agency |
+| Contact | contact | Contact name and number for the person responsible		 for managing the project. | Agency |
 | Source | source | Acronym of the agency that supplied the dataset from which the record was derived | DCP |
 | Source Dataset | sourcedata | Name of the source dataset where the record was derived. | DCP |
 | Source Link | sourcelink | Hyperlink to the raw data from which the record was derived. | DCP |
 | Geometry | geom | The geometry of the project. Can be multipoint, multiline, or multipoly | Agency or DCP | 
 
 ## Source Data
-The following datasets were used to populate CAPE.  The data sources that are publisehd online as open data are automatically downloaded and integrated at regular intervals.  The database it regularly checked thoroughly to identify problems with the update processes or major changes to the source data. 
+The following datasets were used to populate CAPE.  The data sources that are publisehd online as open data are automatically downloaded and integrated at regular intervals.  The database is regularly checked thoroughly to identify problems with the update processes or major changes to the source data. 
 
 ### Department of Design and Construction (DDC)
 DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.
@@ -119,40 +119,40 @@ DDC is the City's primary capital construction manager; therefore, DDC centrally
 ##### Street reconstruction projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | DOT Capital Projects Street Reconstruction |
-| Description | Line shapefile capturing present and planned locations of DOT sponsored street reconstruction and improvement projects | 
-| Agency | DOT | 
+| Name | "DOT Capital Projects Street Reconstruction" |
+| Agency Abbreviation | DOT | 
 | Data Format | Shapefile |
 | Update Frequency | Three times per year |
-| Update Means | Automatic data pulls from DOT's capital projects map |
+| Update Means | Pulls from DOT's capital projects map |
 | Date Updated  | 3/1/2016 |
 | Date Received | 3/1/2016 |
+| Data Link | |
 | Notes | | 
 
 ##### Intersection projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | DOT Capital Projects Intersections |
-| Description | Point shapefile capturing present and planned locations of DOT sponsored projects occurring at intersections | 
-| Agency | DOT | 
+| Name | "DOT Capital Projects Intersections" |
+| Agency Abbreviation | DOT | 
 | Data Format | Shapefile |
 | Update Frequency | Three times per year |
-| Update Means | Automatic data pulls from DOT's capital projects map |
+| Update Means | Pulls from DOT's capital projects map |
 | Date Updated  | 3/1/2016 |
 | Date Received | 3/1/2016 |
+| Data Link | |
 | Notes | | 
 
 ##### Bridge projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | DOT Capital Projects Bridges |
-| Description | Point shapefile capturing present and planned locations of DOT sponsored projects occurring on bridges | 
-| Agency | DOT | 
+| Name | "DOT Capital Projects Bridges" |
+| Agency Abbreviation | DOT | 
 | Data Format | Shapefile |
 | Update Frequency | Three times per year |
-| Update Means | Automatic data pulls from DOT's capital projects map |
+| Update Means | Request file from agency |
 | Date Updated | 3/18/2016 |
 | Date Received | 3/18/2016 |
+| Data Link | |
 | Notes | | 
 
 ### Department of Parks and Recreation (DPR)
@@ -160,72 +160,62 @@ DDC is the City's primary capital construction manager; therefore, DDC centrally
 ##### Parks projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | DPR Capital Project Tracker |
-| Description | XML file from NYC Open Data capturing present and planned locations of DPR sponsored capital projects | 
-| Agency | DPR | 
+| Name | "DPR Capital Project Tracker"|
+| Agency Abbreviation | DPR | 
 | Data Format | XML |
-| Data Link | https://www.nycgovparks.org/bigapps/DPR_CapitalProjectTracker_001.xml |
 | Update Frequency | Daily |
-| Update Means | Automatic weekly pulls from DPR's Capital Projects Tracker |
+| Update Means | Pulls from DPR's Capital Projects Tracker |
 | Date Updated | 4/9/2015 |
 | Date Received| 2/10/2016 |
+| Data Link | https://www.nycgovparks.org/bigapps/DPR_CapitalProjectTracker_001.xml |
 | Notes | | 
 
 ### School Construction Authority (SCA)
-SCA plans, manages, and executes all capital projects related to NYC public schools including the construction of new school and the renovations of existing schools.
+SCA plans, manages, and executes all capital projects related to NYC public schools including the construction of new schools and the renovations of existing schools.
 
 ##### Capacity projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | SCA Capital Projects Capacity |
-| Description | SCA's capital projects that involve the construction of a school or the expansion of a school to increase the capacity of a school district or school respectively | 
-| Agency | SCA | 
+| Name | "SCA Capital Projects Capacity" |
+| Agency Abbreviation | SCA | 
 | Data Format | CSV |
-| Data Link | |
 | Update Frequency | Annually |
 | Update Means | Systematic transformation of SCA data |
 | Date Updated | 7/1/2016 |
 | Date Received| 7/1/2016 |
-| notes | These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV that could later be imported into CPDB | 
+| Data Link | |
+| Notes | These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV | 
 
 ##### Investment projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | SCA Capital Projects Investments |
-| Description | SCA's capital projects that improve schools, such as laboratory upgrades | 
-| Agency | SCA | 
+| Name | "SCA Capital Projects Investments" |
+| Agency Abbreviation | SCA | 
 | Data Format | CSV |
-| Data Link | |
 | Update Frequency | Annually |
 | Update Means | Systematic transformation of SCA data |
 | Date Updated | 7/1/2016 |
 | Date Received| 7/1/2016 |
-| notes | These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV that could later be imported into CPDB |
+| Data Link | |
+| Notes | These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV |
 
 ### Office of Recovery and Resiliency (ORR)
-ORR works wit agencies, advocates, partnerships, and industries to advance long-term plans for growth and resiliency by improving the City's physical infrastructure, economy, and quality of life.
+ORR works with agencies, partners, advocates, and industries to advance long-term plans for growth and resiliency by improving the City's physical infrastructure, economy, and quality of life.
 
 ##### Capital projects
 |               |                                    |
 | --------------------------------- | ------------------------------------------------------- |
-| Name | ORR Capital Projects |
-| Description | ORR's capital projects that involve the construction of a school or the expansion of a school to increase the capacity of a school district or school respectively | 
-| Agency | ORR | 
+| Name | "ORR Capital Projects" |
+| Agency Abbreviation | ORR | 
 | Data Format | Shapefile |
 | Data Link | https://maps.nyc.gov/resiliency/ |
 | Update Frequency |  |
 | Update Means | Automatic data pulls from ORR's capital projects map |
 | Date Updated | |
 | Date Received| 8/1/2016 |
-| notes | | 
+| Notes | | 
 
 ## Database structure
-Three tables compose CPDB: Projects, Sites, and Budget.
-
-A project is defined as an investment or series of investments made by a capital agency.  A project can span multiple sites and can be funded by multiple funding sources, but all other attributes, such as cost and timeline, remain constant.  The projects data is composed of data derived from the source datasets.
-
-A site is a single location where a project or portion of a project is taking place.  Many sites can makeup one project, but each project occurring at a single site is reflected as an individual record in the sites table.
-
-The budget is each line item from the City's Financial Management System (FMS).  FMS tracks the City's budget and spend.  If an FMS ID is provided for a project it can be linked an FMS line item.
+Currently, CAPE consists of one table.  Each record in the table represents one capital "project."  One "project" can have one or multiple geometries represting the site(s) where the capital project is occurring, but a record can only have one geometry type (MultiPoint or MultiPolygon).  
 
 		
