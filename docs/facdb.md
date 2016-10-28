@@ -1,5 +1,5 @@
 # City Planning Facilities Database
-The Facilities Database (FacDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning Division, captures the location, type, and capacity of public and private facilities ranging across six domains:
+The Facilities Database (FacDB), a data product produced by the New York City Department of City Planning (NYC Planning) Capital Planning team, captures the location, type, and capacity of public and private facilities ranging across six domains:
 
 * Health Care and Human Services
 * Youth, Education, and Child Welfare

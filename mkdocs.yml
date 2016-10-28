@@ -1,6 +1,7 @@
 site_name: Capital Planning Docs
 pages:
 - Home: index.md
-- Facilities Database (facdb): facdb.md
+- Facilities Database (FacDB): facdb.md
+- Capital Projects Explorer (CAPE): cape.md
 theme: readthedocs
 theme_dir: custom_theme
