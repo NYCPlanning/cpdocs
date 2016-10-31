@@ -208,11 +208,11 @@ ORR works with agencies, partners, advocates, and industries to advance long-ter
 | Name | "ORR Capital Projects" |
 | Agency Abbreviation | ORR | 
 | Data Format | Shapefile |
-| Data Link | https://maps.nyc.gov/resiliency/ |
 | Update Frequency |  |
 | Update Means | Automatic data pulls from ORR's capital projects map |
 | Date Updated | |
 | Date Received| 8/1/2016 |
+| Data Link | https://maps.nyc.gov/resiliency/ |
 | Notes | | 
 
 ## Database structure
