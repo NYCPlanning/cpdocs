@@ -38,7 +38,8 @@ For some analyses, it may be appropriate to include likely developments that hav
 ## Methodology, key terms and data dictionary
 ADD EXPLANATION HERE ON EACH
   
-### Methodology ![Image of methodology] (https://github.com/nycplanning/cpdocs/docs/residentialpipeline_methodology_1031.png)
+### Methodology
+![Image of methodology] (https://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/residentialpipeline_methodology_1031.png)
 ### Key terms ![Image of key terms glossary] (https://github.com/nycplanning/cpdocs/docs/residentialpipeline_methodology_1031.png)
 
 ### Full data dictionary
