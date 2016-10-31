@@ -40,8 +40,8 @@ This section provides a visual overview of how input datasets are processed and 
 In addition, there is a "Full data dictionary" which defines every field in the database. This is intended for users seeking a more detailed understanding of the data, particularly those who intend to use it for analyses. 
   
 ### Methodology
-![Image of methodology] (http://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/residentialpipeline_methodology_1031.png)
-### Key terms ![Image of key terms glossary] (http://raw.githubusercontent.com/NYCPlanning/cpdocs/98ccb494a3501a29a7cdc83a1fedbb26753c9894/docs/residentialpipeline_methodology_glossary_1031.png)
+![Image of methodology] (https://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/residentialpipeline_methodology_1031.png)
+### Key terms ![Image of key terms glossary] (https://raw.githubusercontent.com/NYCPlanning/cpdocs/98ccb494a3501a29a7cdc83a1fedbb26753c9894/docs/residentialpipeline_methodology_glossary_1031.png)
 
 ### Full data dictionary
 | Source | Field name  | Description | Name in source, if difference |
