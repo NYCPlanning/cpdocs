@@ -83,3 +83,19 @@ ADD EXPLANATION HERE ON EACH
 |DCP/HPD | hpd_units_supported_total | Total number of HPD-supported units across income levels, including superintendent units; Note: field does not appear in data for projects 2010-2013 but is calculated by DCP from prior 3 fields | Counted Units|
 |HPD | hpd_units_supported_seniors | Number of HPD-supported units for seniors (as subset of total supported units) | Senior Units|
 |HPD | hpd_file | Name of HPD data file where project is listed | n/a|
+
+
+## Sources background
+| Input | Source file name  | Description | Last update | File format |
+| :--------- | :---- | :-- | :-- | :-- |
+DOB Permits | [TBD] | DOB database of all permits, updated with most recent status |  [TBD] |  [TBD] |
+DOB Certificates of Occupancy | COs and TCOs Issued (2010-2016) (8-24-16) | All final and temporary Certificates of Occupancy issued since 2010 | 8/25/2016 | Microsoft Excel, prepared for DCP by DOB |
+HPD Projects | NHMP 2010-2013; HNY 2014-2016 | HPD records for New Construction projects; | 5/20/2016 | Microsoft Excel, 2010-13 data provided to DCP; data since 2014 to be shared quarterly via Open Data |
+
+## Database structure
+Each row in the database represents one DOB permit. In some cases, a single project may have generated multiple permits. Likely duplicates are identified through matching BBL and BIN [TBD]; all duplicates are retained in the database, but only the most recent instance is included in summary analyses. (clarify this a little more)
+
+[TBD] There are aso an additional165 HPD projects where no DOB counterpart was matched. Of these 165, 90 are ‘Projected’ projects and assumed to be unique, i.e., not yet in DOB data. The remaining 175 are completed or under construction, and assumed to have unmatched DOB counterparts, thus they are not included in summary analyses (Unclear how you’re counting them, numbers don’t sum correctly…)
+
+## Feedback
+We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
