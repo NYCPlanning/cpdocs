@@ -35,3 +35,6 @@ DOB data includes permit filings from 2010 through present. Some â€œoutstandingâ
 ### Other data sources
 For some analyses, it may be appropriate to include likely developments that have not yet received permits (e.g., projects where DCP has approved a land use change, or permits that have been filed but not approved). Due to the uncertainty of such developments, they are not included in this version. 
 
+## Methodology & glossary
+![Image of methodology] (G:\13. Community Facilities Planning\4. Housing pipeline\Methodology\residentialpipeline_methodology_1031)
+
