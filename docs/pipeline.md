@@ -87,15 +87,12 @@ In addition, there is a "Full data dictionary" which defines every field in the 
 |HPD | hpd_file | Name of HPD data file where project is listed | n/a|
 
 
-## Sources background
+## Sources detail
 | Input | Source file name  | Description | Last update | File format |
 | :--------- | :---- | :-- | :-- | :-- |
 DOB Permits | [TBD] | DOB database of all permits, updated with most recent status |  [TBD] |  [TBD] |
 DOB Certificates of Occupancy | COs and TCOs Issued (2010-2016) (8-24-16) | All final and temporary Certificates of Occupancy issued since 2010 | 8/25/2016 | Microsoft Excel, prepared for DCP by DOB |
 HPD Projects | NHMP 2010-2013; HNY 2014-2016 | HPD records for New Construction projects; | 5/20/2016 | Microsoft Excel, 2010-13 data provided to DCP; data since 2014 to be shared quarterly via Open Data |
-
-## Database structure
-Each row in the database represents one DOB permit. Where available, permits were appended with CofO data and DCP-calculated information derived from CofOs (e.g., number of incremental units completed per year). Permit/CofO data was then appended with HPD data, where available.
 
 ## Feedback
 We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
