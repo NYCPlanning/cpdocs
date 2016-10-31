@@ -9,7 +9,7 @@ We are constantly seeking feedback on how to improve and make this data resource
 
 ### Overview
 | General information |
-| :------------: | :-------------: |
+| :------------ | :------------- |
 | Dataset name | "Residential Pipeline" |
 | Description | The Residential Pipeline integrates administrative City data on both new construction and building alterations. Currently, it integrates permits and Certificates of Occupancy (CofOs) from the NYC Department of Buildings (DOB), as well as data on affordable housing projects from Housing Preservation and Development (HPD) |
 | Data format | Webmap, GeoJSON, Shapefile, CSV |
