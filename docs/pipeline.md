@@ -40,7 +40,7 @@ ADD EXPLANATION HERE ON EACH
   
 ### Methodology
 ![Image of methodology] (https://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/residentialpipeline_methodology_1031.png)
-### Key terms ![Image of key terms glossary] (https://github.com/nycplanning/cpdocs/docs/residentialpipeline_methodology_1031.png)
+### Key terms ![Image of key terms glossary] (https://raw.githubusercontent.com/NYCPlanning/cpdocs/98ccb494a3501a29a7cdc83a1fedbb26753c9894/docs/residentialpipeline_methodology_glossary_1031.png)
 
 ### Full data dictionary
 | Source | Field name  | Description | Name in source, if difference |
