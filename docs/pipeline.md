@@ -7,10 +7,19 @@ In the coming months, we will pair this product with a Non-Residential Pipeline 
 
 We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
 
-### General information
+## General information
+| Overview |    |
 | :------------: | ------------- |
 | Name | "Residential Pipeline" |
 | Description | The Residential Pipeline integrates administrative City data on both new construction and building alterations. Currently, it integrates permits and Certificates of Occupancy (CofOs) from the NYC Department of Buildings (DOB), as well as data on affordable housing projects from Housing Preservation and Development (HPD) |
 | Format | Webmap, GeoJSON, Shapefile, CSV |
 | Projection | WGS84 |
 | Last updated | 10/31/16 |
+
+## Limitations & disclaimers
+There are a number of known limitations to this dataset and improvements will be made on a continual basis, based on internal reviews and user feedback. 
+### Geocoding and geospatial integration
+* ~99% of DOB permits successfully geocoded using Borough-Block-Lot (BBL), DOB Building Identification number (BIN) and address 
+* ~90% of HPD projects successfully matched with permit using BBL
+* ~90% of geocoded HPD projects successfully matched with BBL permit counterpart
+
