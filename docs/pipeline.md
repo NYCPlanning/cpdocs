@@ -92,9 +92,9 @@ In addition, there is a "Full data dictionary" which defines every field in the 
 ## Sources detail
 | Input | Source file name  | Description | Last update | File format |
 | :--------- | :---- | :-- | :-- | :-- |
-DOB Permits | DOB Doc 01 database| DOB database of ‘Doc 01’s, lead/initial document in permit file |  10//28/16 |  Microsoft Excel; provided to DCP via email |
-DOB Certificates of Occupancy | COs and TCOs Issued (2010-2016) (8-24-16) | All final and temporary Certificates of Occupancy issued since 2010 | 8/24/2016 | Microsoft Excel; provided to DCP via email |
-HPD Projects | NHMP 2010-2013; HNY 2014-2016 | HPD records for New Construction projects; | 5/20/2016 | Microsoft Excel; 2010-13 data provided to DCP via email, data since 2014 to be shared quarterly via Open Data |
+DOB Permits | DOB Doc 01 database| DOB database of ‘Doc 01’s, lead/initial document in permit file |  10/28/16 |  Microsoft Excel; provided to DCP via email |
+DOB Certificates of Occupancy | COs and TCOs Issued (2010-2016) | All final and temporary Certificates of Occupancy issued since 2010 | 9/30/16 | Microsoft Excel; provided to DCP via email |
+HPD Projects | NHMP 2010-2013; HNY 2014-2016 | HPD records for New Construction projects (where financing has closed) | 10/11/2016 | Microsoft Excel; 2010-13 data provided to DCP via email, data since 2014 to be shared quarterly via Open Data |
 
 ## Feedback
 We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
