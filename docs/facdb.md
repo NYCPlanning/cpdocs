@@ -1,5 +1,6 @@
 # City Planning Facilities Database
-The Facilities Database (FacDB), a data product produced by the New York City Department of City Planning (NYC Planning) Capital Planning team, captures the location, type, and capacity of public and private facilities ranging across six domains:
+
+The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across six domains:
 
 * Health Care and Human Services
 * Youth, Education, and Child Welfare
@@ -8,11 +9,12 @@ The Facilities Database (FacDB), a data product produced by the New York City De
 * Parks, Cultural, and Other Community Facilities
 * Administration of Government
 
-This data resource provides agencies and communities with easy access to data and neighborhood context needed for site planning, assessing service delivery, preparing neighborhood plans, or informing capital investment decisions. The facilities and program sites are generally operated, funded, licensed, or certified by a City, State, or Federal government agency. The facilities which are included are valuable for planning purposes because of the social services they provide and their role in land use typology which impacts activity in the neighborhood. For example parking lots and garages (including commerical garages) are captured in the database, both because they are an asset that residents and visitors use and because they could indicate increased vehicular traffic in the area.
+This database and interactive map build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces, and capture the location, type, and capacity of public and private facilities in order to inform holistic neighborhood planning, strategic site selection and service delivery planning, opportunities for interagency and public-private partnerships, community outreach activities, and many other functions across City agencies.
+One goal of this database is to provide a consolidated, authoritative dataset that can serve as a one-stop-shop to planners. More broadly, the intent is to provide the foundation for a more robust data-integration initiative, ensuring interoperability between disparate agencies’ datasets.
 
-Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 31,000 facilities throughout NYC. A full listing of the facility categories is provided in the [Overview](https://nycplanning.github.io/cpdocs/facilitiesdb/#overview).
+City Planning has grouped these facilities according to the following six domains, each with a set of groups, subgroups, and facility types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.
 
-Historically, these records were updated only once per year in DCP's [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) which is now being retired. Beginning with this September 2016 release, the Facilities Database is rebranded and being produced using a revamped approach that relies heavily on automating the collection and transformation of data that agencies already publish. The process has been automated to pull from all available source datasets once per month, so that the database will capture and incorporate any changes in the source data. 85% of the data sources are open datasets that agencies publish independently.
+Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 45,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the [Overview](https://nycplanning.github.io/cpdocs/facilitiesdb/#overview).
 
 We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions.
 
@@ -24,7 +26,7 @@ We are constantly looking for ways to improve and add additional value to the da
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
 | Data format | [Webmap](http://cpp.capitalplanning.nyc/facilities), [Shapefile](), [CSV]() |
 | Projection | WGS84 |
-| Date last updated | 10/14/16 |
+| Date last updated | 11/01/16 |
 
 **Facilities Classification Heirarchy**. The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
 
@@ -88,7 +90,11 @@ We are constantly looking for ways to improve and add additional value to the da
 
 ## Limitations and Disclaimers
 
-The FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.
+FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
+
+**Duplicates.** Please be aware that this beta version of the database also includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these duplicate records and retain the most up-to-date and detailed record.
+
+**Analysis Limitations.** As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.
 
 If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov).
 
