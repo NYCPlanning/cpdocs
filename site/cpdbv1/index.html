@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Capital Projects Explorer - Capital Planning Docs</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Capital Projects Explorer";
+    var mkdocs_page_input_path = "cpdbv1.md";
+    var mkdocs_page_url = "/cpdbv1/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Capital Planning Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../facdb/">Facilities Database (FacDB)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Capital Projects Explorer</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#capital-projects-explorer">Capital Projects Explorer</a></li>
+                
+                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
+                
+                    <li><a class="toctree-l4" href="#methodology">Methodology</a></li>
+                
+                    <li><a class="toctree-l4" href="#data-dictionary">Data Dictionary</a></li>
+                
+                    <li><a class="toctree-l4" href="#source-data">Source Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#database-structure">Database structure</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Capital Planning Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Capital Projects Explorer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="capital-projects-explorer">Capital Projects Explorer</h1>
+<p>The Capital Projects Explorer, a data product produced by the New York City Department of City Planning (NYC Planning) Capital Planning team, integrates dispersed spatial datasets of capital projects published by capital agencies into one database and inclusive data explorer. </p>
+<p>Together these data sources report over 6,000 capital projects that span over a multitude of sites.</p>
+<p>The Capital Projects Explorer’s goal is to act as a starting point for planners exploring what capital projects are taking place within an area, means to identify potential conflicts and synergies among capital projects, and resource for all City agencies to learn more about capital projects by providing easy access to high level information on capital projects.</p>
+<p>The primary function of the Capital Projects Explorer is to enable a user to view all of the capital projects with spatial data collected from the various data sources on one map and explore key data points associated with a capital project.  The explorer facilitates the identification of a capital project and access more detailed information.</p>
+<p>The Capital Projects Explorer as a data resource and explorer can help to better inform neighborhood planning, reducing situations where projects conflict and increase opportunities for interagency coordination. </p>
+<p>We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a> with any suggestions or comments.</p>
+<h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th>General information</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset name</td>
+<td>"Capital Projects Explorer"</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The Capital Projects Explorer captures high-level information on past, present, and planned capital projects in NYC by aggregating spatial data on capital projects published by capital agencies.</td>
+</tr>
+<tr>
+<td>Data format</td>
+<td>Webmap, GeoJSON, Shapefile, CSV</td>
+</tr>
+<tr>
+<td>Projection</td>
+<td>WGS84</td>
+</tr>
+<tr>
+<td>Date last updated</td>
+<td>10/28/16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
+<p>The Capital Projects Explorer is only as good as the source data it aggregates.  Currently, the Capital Projects Explorer is the most comprehensive spatial data resource of past, present, or planned City capital construction sites, but it does claim to capture all historic, current, or future City capital construction sites.  </p>
+<p><b>Duplicates.</b>  Cases of duplicate records exist within the Capital Projects Explorer because some of the source datasets have overlapping content, but different unique identifiers making it difficult to systematically identify and reconcile duplicate records.</p>
+<p><b>Inconsistent data standards.</b>  Capital agencies manage their capital projects data separately and have varying data standards to meet their needs.  Different data standards across source datasets can become problematic when integrating datasets, especially when some key data points are missing from records because these data are not captured in the source data.  Furthermore, source data may have common fields but the values within these fields may be very different.  Therefore, data are reconciled and assumptions are made to normalize data into one data table.  Read more about the data normalization process within the Methodology.</p>
+<p><b>What is a project?</b>  As a result of inconsistent data standards and different project management systems, capital agencies define project differently.  For example, one capital project can span multiple sites across several boroughs based on one agency's system, while another project management system considers a bathroom renovation at one site a capital project.  The inconsistent definition of a capital project and the varying sizes, scopes, and impacts of capital projects has the potential to skew analyses generated from these data.</p>
+<p><b>Completeness.</b>  This dataset does not capture the entirety of NYC's Capital Budget.  The Capital Projects Explorer is built using records from agencies' project management systems, which do not always maintain a link to budget lines, making it impossible to account for the whole Capital Budget.</p>
+<p><b>Different update frequencies</b>  As a result of the different project management systems the data feeding the Capital Projects Explorer are updated at various frequencies, ranging from daily to unknown.  As a result, the freshness of the data in the Capital Projects Explorer varies depending on the data source.</p>
+<p>As a result of these data limitations and inconsistencies the Capital Projects Explorer is not an analysis tool.  It does not report any metrics, and the data should not be used for quantitative analyses.</p>
+<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a>.  For more detailed information on a specific capital project please reach out to the respective managing agency.</p>
+<h2 id="methodology">Methodology</h2>
+<h3 id="data-processing">Data Processing</h3>
+<p>The Capital Projects Explorer aggregates records from numerous datasets designed for different purposes; therefore, the data need to undergo several stages of transformation before being integrated into the single table.  The stages are described below and all of the data processing scripts used are available on the NYC Planning GitHub page.</p>
+<p><b>Assembly.</b>  First, the desired columns in the source data are mapped to the fields in the Capital Projects Explorer's data schema.  Second, the source data values are formatted to match the datatype of the corresponding field.  Next, source data values are standardized before being loaded into the Capital Projects Explorer.  Data standardization mostly occurs in the managing agency, sponsor agency, and current status fields.  Lastly, missing data points are identified and filled in if it is possible to derive the missing values from other existing data attributes.</p>
+<p><b>Geoprocessing.</b>  The format of the source datasets vary.  If the source data are not in a spatial data format spatial data was created for the Capital Projects Explorer.  The process of creating spatial data varies by source dataset but generally it involves joining the source dataset to an existing spatial dataset by a common data attribute.</p>
+<p><b>Duplicate record removal.</b>  Several source datasets have overlapping content.  Duplicate records are identified and reconciled when two or more records shared the same FMS ID.  If two or more records share the same FMS ID the record from the most authoritative data source is kept.  The authoritative ranking of data sources is 1) DDC 2) DOT 3) DPR 4) SCA 5) ORR with DDC being the most authoritative data source.</p>
+<h2 id="data-dictionary">Data Dictionary</h2>
+<p>The following table lists and defines each of the fields presented in the Capital Projects Explorer as they are organized in the database from left to right.</p>
+<table>
+<thead>
+<tr>
+<th>Field Alias</th>
+<th>Field Name</th>
+<th>Description</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random ID</td>
+<td>rid</td>
+<td>Auto incrementing integer that is automatically generated each time a new row is added in the table.</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Capital Planning ID</td>
+<td>cpid</td>
+<td>Unique capital planning ID that concatenates managing agency acronym and project ID.</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Project ID</td>
+<td>projectid</td>
+<td>Project ID as defined by the data source.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>FMS ID</td>
+<td>maprojid</td>
+<td>FMS ID as defined by the data source or as generated by DCP by appending the managing agency code to the beginning of the project ID.  Valid FMS ID format = three digit agency code+' '+project type acronym+project ID.  Example: 805 ARDXYZ123</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>name</td>
+<td>Name of the project.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>descriptio</td>
+<td>Description of the project.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>type</td>
+<td>Type of capital project.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>category</td>
+<td>Category the project is grouped into according to DCP.</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Current Status</td>
+<td>cpstatus</td>
+<td>Current status of the project normalized by DCP.  Valid values are: Cancelled, Complete, Construction, Design, Other, Planning, Procurement, Proposed.</td>
+<td>Agency - DCP standardized</td>
+</tr>
+<tr>
+<td>Agency Project Status</td>
+<td>astatus</td>
+<td>Current status as recorded in the agency's raw data</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Managing Agency</td>
+<td>magency</td>
+<td>Acronym of the government agency managing the project.</td>
+<td>Agency - DCP standardized</td>
+</tr>
+<tr>
+<td>Sponsor Agency</td>
+<td>sagency</td>
+<td>Acronym of the government agency sponsoring or funding the project</td>
+<td>Agency - DCP standardized</td>
+</tr>
+<tr>
+<td>Funding Amount</td>
+<td>fundamount</td>
+<td>Total exact funding amount allocated to or needed for the project</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Minimum Funding</td>
+<td>fundmin</td>
+<td>Minimum funding amount allocated to or needed for the project.  Only for projects that have a minimum and/or maximum funding amount defined</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Maximum Funding</td>
+<td>fundmax</td>
+<td>Maximum funding amount allocated to or needed for the project.  Only for projects that have a minimum and/or maximum funding amount defined</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Funding Status</td>
+<td>fundstatus</td>
+<td>Indicates if the project is funded, underfunded, or not funded</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Funding Source</td>
+<td>fundsource</td>
+<td>Source of any funds for the project</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Construction Start Date</td>
+<td>constart</td>
+<td>Actual or expected date of construction starting.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Construction End Date</td>
+<td>conend</td>
+<td>Actual or expected date of construction ending.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Fiscal Year Construction Complete</td>
+<td>fyconend</td>
+<td>Actual or expected fiscal year of construction ending.  Valid formats: YYYY</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Contact</td>
+<td>contact</td>
+<td>Contact name and number for the person responsible         for managing the project.</td>
+<td>Agency</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>source</td>
+<td>Acronym of the agency that supplied the dataset from which the record was derived</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Source Dataset</td>
+<td>sourcedata</td>
+<td>Name of the source dataset where the record was derived.</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Source Link</td>
+<td>sourcelink</td>
+<td>Hyperlink to the raw data from which the record was derived.</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Geometry</td>
+<td>geom</td>
+<td>The geometry of the project. Can be multipoint, multiline, or multipoly</td>
+<td>Agency or DCP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="source-data">Source Data</h2>
+<p>The following datasets were used to populate the Capital Projects Explorer.  The data sources that are publisehd online as open data are automatically downloaded and integrated at regular intervals.  The database is regularly checked thoroughly to identify problems with the update processes or major changes to the source data. </p>
+<h3 id="department-of-design-and-construction-ddc">Department of Design and Construction (DDC)</h3>
+<p>DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.</p>
+<h5 id="infrastructure-projects">Infrastructure projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"DDC Capital Projects Infrastructure Projects"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DDC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Data exchange with DDC</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>2/19/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>2/22/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>http://maps.nyc.gov/doitt/nycitymap/</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>This dataset acts as a primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources</td>
+</tr>
+</tbody>
+</table>
+<h5 id="public-buildings-projects">Public buildings projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DDC Capital Projects Public Buildings"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DDC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Data exchange with DDC</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>2/19/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>2/22/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>http://maps.nyc.gov/doitt/nycitymap/</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>This dataset acts as a primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources</td>
+</tr>
+</tbody>
+</table>
+<h3 id="department-of-transportation-dot">Department of Transportation (DOT)</h3>
+<h5 id="street-reconstruction-projects">Street reconstruction projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DOT Capital Projects Street Reconstruction"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Three times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pulls from DOT's capital projects map</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="intersection-projects">Intersection projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DOT Capital Projects Intersections"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Three times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pulls from DOT's capital projects map</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="bridge-projects">Bridge projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DOT Capital Projects Bridges"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Three times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Request file from agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/18/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>3/18/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="department-of-parks-and-recreation-dpr">Department of Parks and Recreation (DPR)</h3>
+<h5 id="parks-projects">Parks projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DPR Capital Project Tracker"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DPR</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>XML</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pulls from DPR's Capital Projects Tracker</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>4/9/2015</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>2/10/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>https://www.nycgovparks.org/bigapps/DPR_CapitalProjectTracker_001.xml</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-construction-authority-sca">School Construction Authority (SCA)</h3>
+<p>SCA plans, manages, and executes all capital projects related to NYC public schools including the construction of new schools and the renovations of existing schools.</p>
+<h5 id="capacity-projects">Capacity projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"SCA Capital Projects Capacity"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>SCA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Systematic transformation of SCA data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV</td>
+</tr>
+</tbody>
+</table>
+<h5 id="investment-projects">Investment projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"SCA Capital Projects Investments"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>SCA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Systematic transformation of SCA data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV</td>
+</tr>
+</tbody>
+</table>
+<h3 id="office-of-recovery-and-resiliency-orr">Office of Recovery and Resiliency (ORR)</h3>
+<p>ORR works with agencies, partners, advocates, and industries to advance long-term plans for growth and resiliency by improving the City's physical infrastructure, economy, and quality of life.</p>
+<h5 id="capital-projects">Capital projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"ORR Capital Projects"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>ORR</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td></td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Automatic data pulls from ORR's capital projects map</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td></td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>https://maps.nyc.gov/resiliency/</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="database-structure">Database structure</h2>
+<p>Currently, the Capital Projects Explorer consists of one table.  Each record in the table represents one capital "project."  One "project" can have one or multiple geometries represting the site(s) where the capital project is occurring, but a record can only have one geometry type (MultiPoint or MultiPolygon).  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../facdb/" class="btn btn-neutral" title="Facilities Database (FacDB)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../facdb/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
