@@ -32,32 +32,54 @@ We are constantly looking for ways to improve and add additional value to the da
 
 | Domain | Facility Group | Facility Subgroup | Description |
 | :-- | :-- | :-- | :-- |
-| Administration of Government | Offices | Offices | Offices used by City agencies |
-| Administration of Government | Parking, Maintenance, and Storage | Maintenance | City agency vehicle maintenance sites |
+| Administration of Government | Offices, Training, and Testing | Offices | Offices used by City agencies |
+| Administration of Government | Offices, Training, and Testing | Training and Testing | Training and testing sites used by City agencies |
+| Administration of Government | Other Property | Miscellaneous Use | City property without a categorized use |
+| Administration of Government | Other Property | Properties Leased or Licensed to Non-public Entities | Properties Leased or Licensed to Non-public Entities |
+| Administration of Government | Other Property | Undeveloped or No Use | City property and structures without a designated use |
+| Administration of Government | Parking, Maintenance, and Storage | Custodial | City agency custodial sites |
+| Administration of Government | Parking, Maintenance, and Storage | Maintenance and Garages | City agency garages and vehicle maintenance sites |
 | Administration of Government | Parking, Maintenance, and Storage | Parking | City agency parking lots |
 | Administration of Government | Parking, Maintenance, and Storage | Storage | City agency storage sites |
-| Administration of Government | Other Property | Miscellaneous Use | City property without a categorized use |
-| Administration of Government | Other Property | No Use | City property and structures without a designated use |
-| Administration of Government | Other Property | Undeveloped property | City property that is undeveloped |
+| Core Infrastructure and Transportation | Material Supplies and Markets | Material Supplies | Asphalt plants and other materials processing |
+| Core Infrastructure and Transportation | Material Supplies and Markets | Wholesale Markets | Wholesale food and commercial markets |
+| Core Infrastructure and Transportation | Solid Waste | Solid Waste Processing | Material recovery, composting, landfill gas recovery, and scrap metal processing facilities |
+| Core Infrastructure and Transportation | Solid Waste | Solid Waste Transfer and Carting | Waste carter sites and transfer stations |
+| Core Infrastructure and Transportation | Telecommunications | Telecommunications | Antennas and other telecommunications sites |
 | Core Infrastructure and Transportation | Transportation | Airports and Heliports | Publicly and privately operated airports, heliports, and seaplane bases |
 | Core Infrastructure and Transportation | Transportation | Bus Depots and Terminals | School bus depots, MTA bus depots, and Port Authority bus terminals |
-| Core Infrastructure and Transportation | Transportation | Parking Lots and Garages | Public and commercial parking lots and garages |
+| Core Infrastructure and Transportation | Transportation | Public Parking Lots and Garages | Public parking lots and garages |
+| Core Infrastructure and Transportation | Transportation | Commercial Parking Lots and Garages | Commercial parking lots and garages |
+| Core Infrastructure and Transportation | Transportation | Other Transportation | Other transportation sites |
 | Core Infrastructure and Transportation | Transportation | Ports and Ferry Landings | Ferry landings, cruise terminals, and ports |
 | Core Infrastructure and Transportation | Transportation | Rail Yards and Maintenance | Rail yards and maintenance facilities |
-| Core Infrastructure and Transportation | Wastewater and Waste Management | Solid Waste Processing | Material recovery, composting, landfill gas recovery, and scrap metal processing facilities |
-| Core Infrastructure and Transportation | Wastewater and Waste Management | Solid Waste Transfer and Carting | Waste carter sites and transfer stations |
-| Core Infrastructure and Transportation | Wastewater and Waste Management | Wastewater Treatment Plant | Wastewater treatment plants |
-| Health Care and Human Services | Health Care | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
-| Health Care and Human Services | Health Care | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
-| Health Care and Human Services | Health Care | Mental Health | Inpatient, outpatient, and emergency mental health services |
-| Health Care and Human Services | Health Care | Residential Health Care | Nursing homes, hospice care, and supportive housing |
-| Health Care and Human Services | Health Care | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
-| Health Care and Human Services | Human Services | Housing and Homeless Services | Shelters and homelessness prevention services |
-| Health Care and Human Services | Human Services | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
-| Health Care and Human Services | Human Services | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
-| Health Care and Human Services | Human Services | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
-| Health Care and Human Services | Human Services | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
-| Health Care and Human Services | Human Services | Workforce Development | Workforce 1 Centers and other vocational services for adults |
+| Core Infrastructure and Transportation | Water and Wastewater | Wastewater and Pollution Control | Wastewater treatment plants and other wastewater conveyance and pollution control sites |
+| Core Infrastructure and Transportation | Water and Wastewater | Water Supply | Reservoirs and other water supply related sites |
+| Education, Child Welfare, and Youth | Camps | Camps | Preschool age and all age camps |
+| Education, Child Welfare, and Youth | Child Welfare | Child Nutrition | Summer and year-round child feeding sites |
+| Education, Child Welfare, and Youth | Childcare | Childcare | Group and school-based child care centers for infants, toddlers, and preschoolers |
+| Education, Child Welfare, and Youth | Childrens Services | Childrens Services | Foster care services, preventative care, and juvenile non-secure placement |
+| Education, Child Welfare, and Youth | Schools | Non-public Schools | Private elementary, middle, and high schools |
+| Education, Child Welfare, and Youth | Schools | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
+| Education, Child Welfare, and Youth | Schools | Preschools | Early Learn NYC and Universal Pre-K sites |
+| Education, Child Welfare, and Youth | Schools | Public Schools | Public elementary, middle, and high schools |
+| Education, Child Welfare, and Youth | Youth Services | Youth Services | COMPASS Programs, youth literacy, and youth employment programs |
+| Education, Child Welfare, and Youth | Higher Education | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
+| Education, Child Welfare, and Youth | Vocational and Proprietary Schools | Proprietary Schools | Trade schools and ESL programs |
+| Health and Human Services | Health Care | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
+| Health and Human Services | Health Care | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
+| Health and Human Services | Health Care | Mental Health | Inpatient, outpatient, and emergency mental health services |
+| Health and Human Services | Health Care | Residential Health Care | Nursing homes, hospice care, and supportive housing |
+| Health and Human Services | Health Care | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
+| Health and Human Services | Human Services | Community Centers | Community centers that provide multiple social services at one site |
+| Health and Human Services | Human Services | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
+| Health and Human Services | Human Services | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
+| Health and Human Services | Human Services | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
+| Health and Human Services | Human Services | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
+| Health and Human Services | Human Services | Shelters and Transitional Housing | Homeless shelters and transitional houseing |
+| Health and Human Services | Human Services | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
+| Health and Human Services | Human Services | Workforce Development | Workforce 1 Centers and other vocational services for adults |
+| Parks, Cultural, and Other Community Facilities | Cemeteries | Cemeteries | Cemeteries operated by NYC Parks |
 | Parks, Cultural, and Other Community Facilities | Cultural Institutions | Historical Societies | Historical societies |
 | Parks, Cultural, and Other Community Facilities | Cultural Institutions | Museums | Publicly and privately operated museums |
 | Parks, Cultural, and Other Community Facilities | Cultural Institutions | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers |
@@ -65,26 +87,17 @@ We are constantly looking for ways to improve and add additional value to the da
 | Parks, Cultural, and Other Community Facilities | Libraries | Academic Libraries | Libraries operated by academic institutions |
 | Parks, Cultural, and Other Community Facilities | Libraries | Public Libraries | All public libaries |
 | Parks, Cultural, and Other Community Facilities | Parks and Plazas | Cemeteries | Cemeteries operated by NYC Parks |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Gardens | Community gardens overseen by NYC Parks |
+| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Gardens | Community gardens |
 | Parks, Cultural, and Other Community Facilities | Parks and Plazas | Parks | Flagship parks, community parks, state parks, and city-state parks |
 | Parks, Cultural, and Other Community Facilities | Parks and Plazas | Preserves and Conservation Areas | Nature areas, preserves, wetlands, and state forests |
 | Parks, Cultural, and Other Community Facilities | Parks and Plazas | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
 | Parks, Cultural, and Other Community Facilities | Parks and Plazas | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
-| Public Safety, Emergency Services, and Administration of Justice | Emergency Services | Emergency Services | Firehouses, ambulance stations, training facilites, and others related to providing emergency services |
+| Public Safety, Emergency Services, and Administration of Justice | Emergency Services | Fire Services | Firehouses |
+| Public Safety, Emergency Services, and Administration of Justice | Emergency Services | Other Emergency Services | Ambulance and Emergency Medical Stations |
 | Public Safety, Emergency Services, and Administration of Justice | Justice and Corrections | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
 | Public Safety, Emergency Services, and Administration of Justice | Justice and Corrections | Detention and Correctional | Correctional and dentention centers |
-| Public Safety, Emergency Services, and Administration of Justice | Public Safety | Police Services | Police stations, training facilities, and other support centers |
-| Youth, Education, and Child Welfare | Camps | Camps | Preschool age and all age camps |
-| Youth, Education, and Child Welfare | Child Welfare | Child Nutrition | Summer and year-round child feeding sites |
-| Youth, Education, and Child Welfare | Childcare | Childcare | Group and school-based child care centers for infants, toddlers, and preschoolers |
-| Youth, Education, and Child Welfare | Childrens Services | Childrens Services | Foster care services, preventative care, and juvenile non-secure placement |
-| Youth, Education, and Child Welfare | Schools | Public Schools | Public and charter elementary, middle, and high schools |
-| Youth, Education, and Child Welfare | Schools | Non-public Schools | Private elementary, middle, and high schools |
-| Youth, Education, and Child Welfare | Schools | Preschools | Early Learn NYC and Universal Pre-K sites |
-| Youth, Education, and Child Welfare | Schools | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
-| Youth, Education, and Child Welfare | Schools | Proprietary Schools | ESL schools and trade colleges |
-| Youth, Education, and Child Welfare | Schools | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
-| Youth, Education, and Child Welfare | Youth Services | Youth Services | COMPASS Programs, youth literacy, and youth employment programs |
+| Public Safety, Emergency Services, and Administration of Justice | Public Safety | Other Public Safety | Other public safety related support centers |
+| Public Safety, Emergency Services, and Administration of Justice | Public Safety | Police Services | NYPD and NYCHA police stations |
 
 
 
