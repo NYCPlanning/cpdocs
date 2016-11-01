@@ -11,7 +11,7 @@ We are constantly seeking feedback on how to improve and make this data resource
 | Overview |  |
 | :-- | :-- |
 | Name | "Residential Pipeline" |
-| Description | The Residential Pipeline integrates administrative City data on both new construction and building alterations. Under current methodology, DOB permits are the core dataset around which database is built. Permits are matched with DOB CofOs to determine completion; then, HPD data is then appended (where available) to provide information on the number on City-subsidized, affordable units.  |
+| Description | The Residential Pipeline integrates administrative City data on both new construction and building alterations. Under current methodology, DOB permits are the core dataset around which database is built. Permits are matched with DOB CofOs to determine completion; then, HPD data is then appended (where available) to provide information on the number on City-subsidized, affordable units in each development.  |
 | Format | Webmap, GeoJSON, Shapefile, CSV |
 | Projection | WGS84 |
 | Last updated | 10/31/16 |
@@ -21,21 +21,23 @@ There are a number of known limitations to this dataset and improvements will be
 
 #### Geocoding and geospatial integration
 * ~95% of DOB permits successfully geocoded using Borough-Block-Lot (BBL), DOB Building Identification number (BIN) and address 
-* ~90% of HPD projects successfully matched with permit using BBL. We assume that all HPD projects should have a corresponding DOB permit and failure to find a matching BBL in each dataset indicates errors in BBLs. HPD projects without a match in DOB data are excluded. 
-
-#### Exclusions
-The user-ready version of this dataset excludes likely duplicates and projects with no change in units, as determined by DCP.
-* Duplicates: in some cases, it appeared that multiple permits were generated for a single development. To avoid double-counting, we identified duplicates using the Building Identification Number (BIN) listed in the DOB permit. We have only retained the most recent instance of a given BIN in the database.
-* Projects without change: for some renovations, permits are missing data about existing and/or projected number of units. These have been excluded to avoid skewing analyses. We have also excluded any renovations where the permit description included “No Work”, as these are most likely administrative changes rather than actual construction. [TBD]
+* ~90% of HPD projects successfully matched with permit record, using BBL. We assume that all HPD projects should have a corresponding DOB permit and failure to find a matching BBL in each dataset indicates errors in BBLs. HPD projects without a match in DOB data are thus excluded, as we can assume the permit is included but with the correct BBL.  
 
 #### Expired permits
 DOB data includes permit filings from 2010 through present. Some “outstanding” permits (those without Certificate of Occupancy) may have since expired, however, this is not available in current datasets. Going forward, we will seek to identify and exclude expired permits.
+
+#### Exclusions
+The user-ready version of this dataset excludes likely duplicates and projects with no change in units, as determined by DCP.
+* Duplicates: in some cases, it appeared that multiple permits were generated for a single development. For example, this could occur if an initial permit had administrative errors that were corrected by issuing a new permit. Since the data does not include permit expiration date (per above), we cannot determine if/which permits are outdated. To avoid double-counting, we identified  likely duplicates using the Building Identification Number (BIN) listed in the DOB permit. We have only retained the most recent instance of a given BIN in the database.
+* Projects without change: In some cases, alteration permits are required for administrative reasons rather than actual construction. To prevent such permits from skewing analyses, we have excluded any alteration permits that are missing data about existing and/or projected number of units. 
 
 #### Other data sources
 For some analyses, it may be appropriate to include likely developments that have not yet received permits (e.g., projects where DCP has approved a land use change, or permits that have been filed but not approved). Due to the uncertainty of such developments, they are not included in this version. 
 
 ## Methodology, key terms and data dictionary
-ADD EXPLANATION HERE ON EACH
+This section provides a visual overview of how input datasets are processed and integrated. A glossary of "key terms" accompanies this overview, and is intended to aid casual users in understanding the most important concepts.
+
+In addition, there is a "Full data dictionary" which defines every field in the database. This is intended for users seeking a more detailed understanding of the data, particularly those who intend to use it for analyses. 
   
 ### Methodology
 ![Image of methodology] (https://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/residentialpipeline_methodology_1031.png)
@@ -85,17 +87,12 @@ ADD EXPLANATION HERE ON EACH
 |HPD | hpd_file | Name of HPD data file where project is listed | n/a|
 
 
-## Sources background
+## Sources detail
 | Input | Source file name  | Description | Last update | File format |
 | :--------- | :---- | :-- | :-- | :-- |
 DOB Permits | [TBD] | DOB database of all permits, updated with most recent status |  [TBD] |  [TBD] |
 DOB Certificates of Occupancy | COs and TCOs Issued (2010-2016) (8-24-16) | All final and temporary Certificates of Occupancy issued since 2010 | 8/25/2016 | Microsoft Excel, prepared for DCP by DOB |
 HPD Projects | NHMP 2010-2013; HNY 2014-2016 | HPD records for New Construction projects; | 5/20/2016 | Microsoft Excel, 2010-13 data provided to DCP; data since 2014 to be shared quarterly via Open Data |
-
-## Database structure
-Each row in the database represents one DOB permit. In some cases, a single project may have generated multiple permits. Likely duplicates are identified through matching BBL and BIN [TBD]; all duplicates are retained in the database, but only the most recent instance is included in summary analyses. (clarify this a little more)
-
-[TBD] There are aso an additional165 HPD projects where no DOB counterpart was matched. Of these 165, 90 are ‘Projected’ projects and assumed to be unique, i.e., not yet in DOB data. The remaining 175 are completed or under construction, and assumed to have unmatched DOB counterparts, thus they are not included in summary analyses (Unclear how you’re counting them, numbers don’t sum correctly…)
 
 ## Feedback
 We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
