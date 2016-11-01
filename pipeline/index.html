@@ -197,7 +197,7 @@
 <p>This section provides a visual overview of how input datasets are processed and integrated. A glossary of "key terms" accompanies this overview, and is intended to aid casual users in understanding the most important concepts.</p>
 <p>In addition, there is a "Full data dictionary" which defines every field in the database. This is intended for users seeking a more detailed understanding of the data, particularly those who intend to use it for analyses. </p>
 <h3 id="methodology">Methodology</h3>
-<p><img alt="Image of methodology" src="https://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/pipeline_methodology.jpg" /></p>
+<p><img alt="Image of methodology" src="https://raw.githubusercontent.com/NYCPlanning/cpdocs/a0482d03d8e133cd7e23a4d4619613fe3e90c63c/docs/pipeline_methodology_diagram.jpg" /></p>
 <h3 id="key-terms">Key terms <img alt="Image of key terms glossary" src="https://raw.githubusercontent.com/NYCPlanning/cpdocs/master/docs/pipeline_methodology_terms.jpg" /></h3>
 <h3 id="full-data-dictionary">Full data dictionary</h3>
 <table>
@@ -206,7 +206,7 @@
 <th>Source</th>
 <th>Field name</th>
 <th>Description</th>
-<th>Name in source, if difference</th>
+<th>Name in source, if different</th>
 </tr>
 </thead>
 <tbody>
@@ -224,12 +224,6 @@
 </tr>
 <tr>
 <td>DCP</td>
-<td>address</td>
-<td>Address generated through DCP geocoding [TBD]</td>
-<td>n/a</td>
-</tr>
-<tr>
-<td>DCP</td>
 <td>dcp_pipeline_category</td>
 <td>Field created by DCP to capture record type (Residential new; Residentail renovation; Hotel new; Hotel renovation)</td>
 <td>n/a</td>
@@ -242,85 +236,121 @@
 </tr>
 <tr>
 <td>DCP</td>
-<td>dcp_pipeline_units</td>
-<td>Field created by DCP to determine point size for mapping. If status is Complete, set to Complete incremental units. Otherwise, set to HPD units or Permit incremental units (if HPD n/a)</td>
+<td>dcp_units_complete</td>
+<td>Field created by DCP to capture incremental units completed, after all processing</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>DCP</td>
+<td>dcp_units_outstanding</td>
+<td>Field created by DCP to capture incremental units outstanding, after all processing</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>DCP</td>
+<td>dcp_units_pending</td>
+<td>Field created by DCP to capture incremental units pending permit issuance, after all processing</td>
 <td>n/a</td>
 </tr>
 <tr>
 <td>DCP/DOB</td>
-<td>permit_incremental_units</td>
-<td>Calculated increment between existing and proposed units listed in permit</td>
-<td>n/a</td>
+<td>dob_cofo_date_first</td>
+<td>Field created by DCP to capture date of earliest CofO issued since 2010</td>
+<td>Date Issued</td>
 </tr>
 <tr>
 <td>DCP/DOB</td>
-<td>cofo_incremental_units</td>
-<td>Calculated increment between existing units (listed in permit) and completed units (listed in CofOs)</td>
-<td>n/a</td>
+<td>dob_cofo_date_last</td>
+<td>Field created by DCP to capture date of most recent CofO issued since 2010</td>
+<td>Date Issued</td>
 </tr>
 <tr>
 <td>DCP/DOB</td>
-<td>complete_incremental_units</td>
-<td>Field created by DCP to capture completed incremental units (i.e. CofO incremental units w/ adjustments as needed)</td>
-<td>n/a</td>
-</tr>
-<tr>
-<td>DCP/DOB</td>
-<td>outstanding_incremental_units</td>
-<td>Field created by DCP to capture incremental units where permit issued but no CofO issued OR CofO lists &lt;80% of permit units</td>
-<td>n/a</td>
-</tr>
-<tr>
-<td>DCP/DOB</td>
-<td>permit_pending_incremental_units</td>
-<td>Field created by DCP to capture incremental units where permit application is complete but first permit has not been issued</td>
+<td>dob_cofo_increm_units</td>
+<td>Set of fields created by DCP to capture incremental units completed in each year since 2011. In addition, there is a field to capture incremental units pre-2011 and a field to capture total incremental units completed.</td>
 <td>n/a</td>
 </tr>
 <tr>
 <td>DOB</td>
-<td>dob_jobnumber</td>
+<td>dob_cofo_type_last</td>
+<td>Specificies most recent CofO type (Temporary or Final)</td>
+<td>CertificateType</td>
+</tr>
+<tr>
+<td>DOB</td>
+<td>dob_job_number</td>
 <td>Unique identifier listed in both permits and CofO data</td>
-<td>n/a</td>
+<td>Job Number or Job#</td>
 </tr>
 <tr>
 <td>DOB</td>
-<td>dob_jobtype</td>
-<td>Construction type listed in permits data: new building (NB) vs. major alteration (A1)</td>
-<td>n/a</td>
+<td>dob_permit_address</td>
+<td>Concatenation of house number and street name listed in permit data</td>
+<td>Job Location House Number; Job Location Street Name</td>
 </tr>
 <tr>
 <td>DOB</td>
-<td>dob_exist_occupancy</td>
+<td>dob_permit_bbl</td>
+<td>Concatenation of borough code, block number and lot number listed in permit data</td>
+<td>Borough Digit, Block, Lot</td>
+</tr>
+<tr>
+<td>DOB</td>
+<td>dob_permit_bin</td>
+<td>Building ID number listed in permit data</td>
+<td>BIN number</td>
+</tr>
+<tr>
+<td>DOB</td>
+<td>dob_permit_ exist_occupancy</td>
 <td>Existing occupancy type listed in initial permit application e.g., single vs. mutli-family dwelling</td>
 <td>ex-occ</td>
 </tr>
 <tr>
 <td>DOB</td>
-<td>dob_prop_occupancy</td>
+<td>dob_permit_exist_units</td>
+<td>Existing number of dwelling units listed in initial permit application</td>
+<td>ex-dwell-units</td>
+</tr>
+<tr>
+<td>DCP/DOB</td>
+<td>dob_permit_incremental_units</td>
+<td>Calculated different between existing and proposed units listed in permit</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>DOB</td>
+<td>dob_permit_job_type</td>
+<td>Construction type listed in permits data: new building (NB) vs. major alteration (A1)</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>DOB</td>
+<td>dob_proposed_occupancy</td>
 <td>Proposed occupancy type listed in initial permit application e.g., single vs. mutli-family dwelling</td>
 <td>pr-occ</td>
 </tr>
 <tr>
 <td>DOB</td>
-<td>dob_exist_units</td>
-<td>Existing number of dwelling units listed in initial permit application</td>
-<td>ex-dwell-units</td>
-</tr>
-<tr>
-<td>DOB</td>
-<td>dob_prop_units</td>
+<td>dob_permit_proposed_units</td>
 <td>Proposed number of dwelling units listed in initial permit application</td>
 <td>pr-dwell-units</td>
 </tr>
 <tr>
 <td>DOB</td>
-<td>dob_status</td>
-<td>Most recent permit status, listed in DOB permit data [Add status descriptions]</td>
+<td>dob_permit_status</td>
+<td>Most recent permit status, listed in DOB permit data</td>
 <td>current job status</td>
 </tr>
 <tr>
+<td>DCP/DOB</td>
+<td>dob_permit_status_decode</td>
+<td>Translates DOB status code to either Permitted (status codes Q, R, X) or Permit pending (status codes (D, E, F, G, H, I, J, K, L, M, P)</td>
+<td>n/a</td>
+</tr>
+<tr>
 <td>DOB</td>
-<td>dob_status_date</td>
+<td>dob_permit_status_update</td>
 <td>Date of most recent status update of job/work listed in permit data</td>
 <td>current job status</td>
 </tr>
@@ -337,36 +367,6 @@
 <td># of residential units</td>
 </tr>
 <tr>
-<td>DCP/HPD</td>
-<td>hpd_dcp_adjust</td>
-<td>Flags records that are aggregation of 2 HPD projects at same BBL</td>
-<td>n/a</td>
-</tr>
-<tr>
-<td>HPD</td>
-<td>hpd_total_units</td>
-<td>Total number of units listed in HPD data, incl. supported-affordable and market-rate</td>
-<td>Total Units (Total Start Units for projects 2010-2013)</td>
-</tr>
-<tr>
-<td>HPD</td>
-<td>hpd_project_id</td>
-<td>Unique identifier generated by HPD</td>
-<td>Project ID</td>
-</tr>
-<tr>
-<td>HPD</td>
-<td>hpd_project_name</td>
-<td>Unique project name generated by HPD</td>
-<td>Project Name</td>
-</tr>
-<tr>
-<td>HPD</td>
-<td>hpd_project_start_date</td>
-<td>Official start date listed in HPD data (i.e., date financing is closed)</td>
-<td>Project Start Date</td>
-</tr>
-<tr>
 <td>HPD</td>
 <td>hpd_address</td>
 <td>Concatenation of house number and street name listed in HPD data</td>
@@ -376,49 +376,85 @@
 <td>HPD</td>
 <td>hpd_bbl</td>
 <td>BBL listed in HPD data</td>
-<td>BBL</td>
+<td>n/a</td>
 </tr>
 <tr>
 <td>HPD</td>
 <td>Hpd_building_id</td>
 <td>Unique building identifier gereated by HPD</td>
-<td>Building ID</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>DCP/HPD</td>
+<td>hpd_dcp_adjust</td>
+<td>Flags records that are aggregation of multiple HPD projects at same BBL</td>
+<td>n/a</td>
 </tr>
 <tr>
 <td>HPD</td>
-<td>hpd_units_supported_low_income:0-30%ami</td>
+<td>hpd_file</td>
+<td>Name of HPD data file from which data was obtained</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>HPD</td>
+<td>hpd_project_id</td>
+<td>Unique identifier generated by HPD</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>HPD</td>
+<td>hpd_project_name</td>
+<td>Unique project name generated by HPD</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>HPD</td>
+<td>hpd_project_start_date</td>
+<td>Official start date listed in HPD data (i.e., date financing is closed)</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>HPD</td>
+<td>hpd_units_supported_low_income_0_30_ami</td>
 <td>Number of HPD-supported units for households earning 0-30% of Area Median Income (AMI); Note, n/a for projects 2010-2013</td>
 <td>Extremely Low Income Units (0-30% AMI)</td>
 </tr>
 <tr>
 <td>HPD</td>
-<td>hpd_units_supported_low_income:31-50%ami</td>
+<td>hpd_units_supported_low_income_31_50_ami</td>
 <td>Number of HPD-supported units for households earning 31-50% of Area Median Income (AMI); Note: n/a for projects 2010-2013</td>
 <td>Very Low Income Units (31-50% AMI)</td>
 </tr>
 <tr>
 <td>HPD</td>
-<td>hpd_units_supported_low_income:51-80%ami</td>
+<td>hpd_units_supported_low_income_51_80_ami</td>
 <td>Number of HPD-supported units for households earning 51-80% of Area Median Income (AMI); Note: n/a for projects 2010-2013</td>
 <td>Low Income Units (51-80% AMI)</td>
 </tr>
 <tr>
 <td>DCP/HPD</td>
-<td>hpd_units_supported_low_income_total:0-80%ami</td>
+<td>hpd_units_supported_low_income_total_0_80_ami</td>
 <td>Total number of HPD-supported units for households earning 0-80% of Area Median Income (AMI); Note: field does not appear in data for projects 2014 but is calculated by DCP from prior 3 fields</td>
 <td>Low Income (0 - 80% AMI)</td>
 </tr>
 <tr>
 <td>HPD</td>
-<td>hpd_units_supported_moderate_income:81-120%ami</td>
+<td>hpd_units_supported_moderate_income_81_120_ami</td>
 <td>Number of HPD-supported units for households earning 81-120% of Area Median Income (AMI)</td>
 <td>Moderate Income Units (81-120% AMI)</td>
 </tr>
 <tr>
 <td>HPD</td>
-<td>hpd_units_supported_middle_income:121-165_ami(180%pre-2014)</td>
+<td>hpd_units_supported_middle_income_121-165_ami_180_pre_2014</td>
 <td>Number of HPD-supported units for households earning 121-165% of Area Median Income (AMI); Note: upper bound is 180% for projects 2010-2013</td>
 <td>Middle Income Units (121-165/180% AMI)</td>
+</tr>
+<tr>
+<td>HPD</td>
+<td>hpd_units_supported_seniors</td>
+<td>Number of HPD-supported units for seniors (as subset of total supported units)</td>
+<td>Senior Units</td>
 </tr>
 <tr>
 <td>HPD</td>
@@ -434,15 +470,9 @@
 </tr>
 <tr>
 <td>HPD</td>
-<td>hpd_units_supported_seniors</td>
-<td>Number of HPD-supported units for seniors (as subset of total supported units)</td>
-<td>Senior Units</td>
-</tr>
-<tr>
-<td>HPD</td>
-<td>hpd_file</td>
-<td>Name of HPD data file where project is listed</td>
-<td>n/a</td>
+<td>hpd_units_total</td>
+<td>Total number of units listed in HPD data, incl. supported-affordable and market-rate</td>
+<td>Total Units (Total Start Units for projects 2010-2013)</td>
 </tr>
 </tbody>
 </table>
@@ -460,24 +490,24 @@
 <tbody>
 <tr>
 <td>DOB Permits</td>
-<td>[TBD]</td>
-<td>DOB database of all permits, updated with most recent status</td>
-<td>[TBD]</td>
-<td>[TBD]</td>
+<td>DOB Doc 01 database</td>
+<td>DOB database of ‘Doc 01’s, lead/initial document in permit file</td>
+<td>10/28/16</td>
+<td>Microsoft Excel; provided to DCP via email</td>
 </tr>
 <tr>
 <td>DOB Certificates of Occupancy</td>
-<td>COs and TCOs Issued (2010-2016) (8-24-16)</td>
+<td>COs and TCOs Issued (2010-2016)</td>
 <td>All final and temporary Certificates of Occupancy issued since 2010</td>
-<td>8/25/2016</td>
-<td>Microsoft Excel, prepared for DCP by DOB</td>
+<td>9/30/16</td>
+<td>Microsoft Excel; provided to DCP via email</td>
 </tr>
 <tr>
 <td>HPD Projects</td>
 <td>NHMP 2010-2013; HNY 2014-2016</td>
-<td>HPD records for New Construction projects;</td>
-<td>5/20/2016</td>
-<td>Microsoft Excel, 2010-13 data provided to DCP; data since 2014 to be shared quarterly via Open Data</td>
+<td>HPD records for New Construction projects (where financing has closed)</td>
+<td>10/11/2016</td>
+<td>Microsoft Excel; 2010-13 data provided to DCP via email, data since 2014 to be shared quarterly via Open Data</td>
 </tr>
 </tbody>
 </table>
