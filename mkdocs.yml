@@ -3,7 +3,7 @@ pages:
 - Home: index.md
 - Facilities Database (FacDB): facdb.md
 - Capital Projects Explorer: cpdbv1.md
-- Housing Pipeline: pipeline.md
+- Residential Pipeline: pipeline.md
 theme: readthedocs
 theme_dir: custom_theme
 google_analytics: ['UA-84250233-3', 'auto']
