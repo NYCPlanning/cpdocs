@@ -1,11 +1,9 @@
 # Residential Pipeline
-The Residential Pipeline is a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division. It aims to help City agencies understand the distribution of residential development across time and space, in order to support both capital and operational planning. 
+The Development Pipeline aims to help New York City planners understand changes resulting from building activity, across both time and space. It is currently comprised of data from the Department of Buildings (DOB) and the Department of Housing Preservation and Development (HPD), and includes the most comprehensive picture of new residential development taking place across the five boroughs. DCP will be working over the months to come to add other, non-residential developments to this pipeline, and to integrate other data sources.
 
-The underlying database integrates administrative City data on both new construction and building alterations. Currently, it integrates permits and Certificates of Occupancy (CofOs) from the NYC Department of Buildings (DOB), as well as data on affordable housing projects from Housing Preservation and Development (HPD). Going forward, it will encompass new data from these sources, data gathered from DCP’s land use approval process (ULURP), and other sources if / as identified.
+This product include recently-completed residential development activity (last 5+ years), as well data on developments that are at various stages in the permitting process.  Completed or “partially complete” projects have received Certificates of Occupancy for at least a portion of their permitted units. Permitted sites are those that have received building permits; although not all of these sites will necessarily be built and completed over the next few years, this category is the City’s best predictor of where new housing will be built in the near future. Sites identified in the “permit pending” category demonstrate where developers have completed applications for new building (NB) permits or major alterations (A1) permits that will change the number of residential units in a building; these sites may give a general direction of where developers are seeking to deliver new housing units, but since they have not yet received permits, the certainty of their development cannot be assured.  In addition to the information derived from permits and Certificates of Occupancy, some records are appended with HPD data regarding the number of affordable housing units.
 
-In the coming months, we will pair this product with a Non-Residential Pipeline that provides similar information regarding other types of development (commercial, manufacturing, recreational, etc.). Together, these products will form a comprehensive Development Pipeline. The remainder of this document will focus on the Residential Pipeline, but we welcome users' thoughts on if/how this methodology can be adapted for Non-Residential purposes.    
-
-We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
+Special thanks goes to the NYC Department of Buildings and the Department of Housing Preservation and Development who make their data available for this map. 
 
 ## General information
 | Overview |  |
@@ -20,19 +18,19 @@ We are constantly seeking feedback on how to improve and make this data resource
 There are a number of known limitations to this dataset and improvements will be made on a continual basis, based on internal reviews and user feedback. 
 
 #### Geocoding and geospatial integration
-* ~95% of DOB permits successfully geocoded using Borough-Block-Lot (BBL), DOB Building Identification number (BIN) and address 
-* ~90% of HPD projects successfully matched with permit record, using BBL. We assume that all HPD projects should have a corresponding DOB permit and failure to find a matching BBL in each dataset indicates errors in BBLs. HPD projects without a match in DOB data are thus excluded, as we can assume the permit is included but with the correct BBL.  
+* >95% DOB permits were successfully geocoding using BBL or address. Geocoding ‘rejects’ were researched by DCP but not every site could be verified. 
+* ~75% of HPD records were matched with their corresponding DOB permit using the BBL listed in each dataset. We assume that all HPD projects should have a corresponding DOB permit, and manual research confirms that most un-matched HPD projects list an outdated BBL. Going forward, DCP will work with HPD to improve and integrate this data.   
 
 #### Expired permits
-DOB data includes permit filings from 2010 through present. Some “outstanding” permits (those without Certificate of Occupancy) may have since expired, however, this is not available in current datasets. Going forward, we will seek to identify and exclude expired permits.
+These data include permit filings from 2010 through Q3 2016. Some “outstanding” permits (those without Certificate of Occupancy) may have since expired, however, this information not available in current datasets. Going forward, we will seek to identify and exclude expired permits.
 
 #### Exclusions
-The user-ready version of this dataset excludes likely duplicates and projects with no change in units, as determined by DCP.
+The database excludes likely duplicates and projects with no change in units, as determined by DCP.
 * Duplicates: in some cases, it appeared that multiple permits were generated for a single development. For example, this could occur if an initial permit had administrative errors that were corrected by issuing a new permit. Since the data does not include permit expiration date (per above), we cannot determine if/which permits are outdated. To avoid double-counting, we identified  likely duplicates using the Building Identification Number (BIN) listed in the DOB permit. We have only retained the most recent instance of a given BIN in the database.
-* Projects without change: In some cases, alteration permits are required for administrative reasons rather than actual construction. To prevent such permits from skewing analyses, we have excluded any alteration permits that are missing data about existing and/or projected number of units. 
+* No change in units: In some cases, alteration permits are required for administrative reasons rather than actual construction. To prevent such permits from skewing analyses, we have excluded any alteration permits that are missing data about existing and/or projected number of units. 
 
 #### Other data sources
-For some analyses, it may be appropriate to include likely developments that have not yet received permits (e.g., projects where DCP has approved a land use change, or permits that have been filed but not approved). Due to the uncertainty of such developments, they are not included in this version. 
+For some analyses, it may be appropriate to include likely developments that have not yet received permits (e.g., projects where DCP has approved a land use change, or permits that have been filed but not approved). Due to the uncertainty of such developments, they are not included in this version of the Residential Pipeline.
 
 ## Methodology, key terms and data dictionary
 This section provides a visual overview of how input datasets are processed and integrated. A glossary of "key terms" accompanies this overview, and is intended to aid casual users in understanding the most important concepts.
