@@ -5,5 +5,5 @@ pages:
 - Capital Projects Explorer: cpdbv1.md
 theme: readthedocs
 theme_dir: custom_theme
-google_analytics: ['UA-84250233-3', 'docs.captialplanning.nyc']
+google_analytics: ['UA-84250233-3', 'auto']
 
