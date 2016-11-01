@@ -1,15 +1,11 @@
 # Capital Projects Explorer
-The Capital Projects Explorer, a data product produced by the New York City Department of City Planning (NYC Planning) Capital Planning team, integrates dispersed spatial datasets of capital projects published by capital agencies into one database and inclusive data explorer. 
+The Capital Projects Explorer integrates disparate datasets of capital projects published by capital agencies into one database and map-based data explorer.
 
-Together these data sources report over 6,000 capital projects that span over a multitude of sites.
+The Capital Projects Explorer’s primary purpose is to provide a common operational picture to capital planners and budget staff across City agencies, which can in turn minimize conflicts among different agencies’ capital projects, maximize opportunities for coordinated capital investment planning and funding alignment, and provide a starting point for integrated neighborhood-based planning. This is certainly not a complete map of capital construction sites funded by NYC, but the Capital Projects Explorer is currently the best starting point for exploring capital projects in NYC.
 
-The Capital Projects Explorer’s goal is to act as a starting point for planners exploring what capital projects are taking place within an area, means to identify potential conflicts and synergies among capital projects, and resource for all City agencies to learn more about capital projects by providing easy access to high level information on capital projects.
+Special thanks to the NYC Departments of Parks and Recreation, Transportation, Design and Construction, the School Construction Authority, and the Mayor’s Office of Recovery and Resiliency for publishing spatial data on capital projects.
 
-The primary function of the Capital Projects Explorer is to enable a user to view all of the capital projects with spatial data collected from the various data sources on one map and explore key data points associated with a capital project.  The explorer facilitates the identification of a capital project and access more detailed information.
- 
-The Capital Projects Explorer as a data resource and explorer can help to better inform neighborhood planning, reducing situations where projects conflict and increase opportunities for interagency coordination. 
 
-We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions or comments.
 
 ### Overview
 | General information |
@@ -20,22 +16,23 @@ We are constantly seeking feedback on how to improve and make this data resource
 | Projection | WGS84 |
 | Date last updated | 10/28/16 |
 
-##Limitations and Disclaimers
-The Capital Projects Explorer is only as good as the source data it aggregates.  Currently, the Capital Projects Explorer is the most comprehensive spatial data resource of past, present, or planned City capital construction sites, but it does claim to capture all historic, current, or future City capital construction sites.  
+###Limitations and Disclaimers
 
-<b>Duplicates.</b>  Cases of duplicate records exist within the Capital Projects Explorer because some of the source datasets have overlapping content, but different unique identifiers making it difficult to systematically identify and reconcile duplicate records.
+The Capital Projects Explorer is only as good as the source data it aggregates. Currently, there is no data standard for capital project mapping and agencies are not required to map their capital projects; therefore, the Capital Projects Explorer makes some assumptions to aggregate and normalize the data into one data table. As a result, this data source has some major limitations.
 
-<b>Inconsistent data standards.</b>  Capital agencies manage their capital projects data separately and have varying data standards to meet their needs.  Different data standards across source datasets can become problematic when integrating datasets, especially when some key data points are missing from records because these data are not captured in the source data.  Furthermore, source data may have common fields but the values within these fields may be very different.  Therefore, data are reconciled and assumptions are made to normalize data into one data table.  Read more about the data normalization process within the Methodology.
+<b>Duplicates</b> This version of the Capital Projects Explorer includes some duplicate records for the same capital project because some of the source datasets have overlapping content, but different unique identifiers for a project, making it difficult to systematically identify and reconcile duplicate records.
 
-<b>What is a project?</b>  As a result of inconsistent data standards and different project management systems, capital agencies define project differently.  For example, one capital project can span multiple sites across several boroughs based on one agency's system, while another project management system considers a bathroom renovation at one site a capital project.  The inconsistent definition of a capital project and the varying sizes, scopes, and impacts of capital projects has the potential to skew analyses generated from these data.
+<b>Inconsistent data standards</b> Capital agencies manage their capital projects data separately and have varying data standards that meet their needs; therefore, the Capital Projects Explorer makes some assumptions to reconcile key common attributes across datasets and integrate the data into one database.
 
-<b>Completeness.</b>  This dataset does not capture the entirety of NYC's Capital Budget.  The Capital Projects Explorer is built using records from agencies' project management systems, which do not always maintain a link to budget lines, making it impossible to account for the whole Capital Budget.
+<b>Project definition</b> Capital agencies define capital projects differently; therefore, the projects in this explorer vary in size, scope, and impact. The inconsistent definition of a capital project has the potential to skew analyses generated from these data - e.g. comparing the number of capital projects in or amount of funding dedicated to a neighborhood to another con produce misleading results.
 
-<b>Different update frequencies</b>  As a result of the different project management systems the data feeding the Capital Projects Explorer are updated at various frequencies, ranging from daily to unknown.  As a result, the freshness of the data in the Capital Projects Explorer varies depending on the data source.
+<b>Completeness</b> This dataset does not capture the entirety of NYC's Capital Budget. The Capital Projects Explorer is built using records from agencies' project management systems, which do not always maintain a link to budget lines, making it impossible to account for the whole Capital Budget.
 
-As a result of these data limitations and inconsistencies the Capital Projects Explorer is not an analysis tool.  It does not report any metrics, and the data should not be used for quantitative analyses.
+<b>Different update frequencies</b> Data from source agencies are updated at various frequencies, ranging from daily updates to infrequent updates. As a result, the freshness of the data in the Capital Projects Explorer varies depending on the data source.
 
-If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov).  For more detailed information on a specific capital project please reach out to the respective managing agency.
+As a result of these data limitations and inconsistencies, the Capital Projects Explorer is not an analysis tool, it does not report any metrics, and the data should not be used for quantitative analyses - it is built for planning coordination purposes only.
+
+Please consult NYC Planning’s Capital Planning Docs for more details about these data limitations.
 
 
 ##Methodology
