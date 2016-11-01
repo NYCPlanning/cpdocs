@@ -68,9 +68,9 @@ In addition, there is a "Full data dictionary" which defines every field in the 
 |DOB | dob permit job type | Construction type listed in permits data: new building (NB) vs. major alteration (A1) | |
 |DOB | dob proposed occupancy | Proposed occupancy type listed in initial permit application e.g., single vs. mutli-family dwelling | pr-occ|
 |DOB | dob permit proposed units | Proposed number of dwelling units listed in initial permit application | pr-dwell-units|
-|DOB | dob permit status | Most recent permit status, listed in DOB permit data | current job status |
+|DOB | dob permit status | Most recent permit status, listed in DOB permit data | Current Job Status Doc 01 |
 |DCP/DOB | dob permit status decode | Translates DOB status code to either Permitted (status codes Q, R, X) or Permit pending (status codes (D, E, F, G, H, I, J, K, L, M, P) |  |
-|DOB | dob permit status update | Date of most recent status update of job/work listed in permit data | current job status |
+|DOB | dob permit status update | Date of most recent status update of job/work listed in permit data | Job Status Date Doc 01 |
 |DOB | dob bbl | BBL concatenated from fields in permits data | boro, block, lot  |
 |DOB | cofo units | Number of units listed in most recent DOB CofO | # of residential units  |
 |HPD | hpd address | Concatenation of house number and street name listed in HPD data | House Number, Street Name |
