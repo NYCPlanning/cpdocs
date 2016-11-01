@@ -2,8 +2,8 @@
 
 The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across six domains:
 
-* Health Care and Human Services
-* Youth, Education, and Child Welfare
+* Health and Human Services
+* Education, Child Welfare, and Youth
 * Public Safety, Emergency Services, and Administration of Justice
 * Core Infrastructure and Transportation
 * Parks, Cultural, and Other Community Facilities
