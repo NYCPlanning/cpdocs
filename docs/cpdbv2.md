@@ -52,7 +52,6 @@ The fields <b>project type</b>, <b>sponsor agency acronym</b>, and <b>sponsor ag
 
 A <b>total cost field</b> was added to each of the three tables and the sum of the city dollars and non-city dollars was used to generate each of the total cost fields in the Project, Commitments, and Budgets tables.
 
-
 One goal of the Capital Planning Database is to map capital projects; therefore, spatial data needed to be created for each project where possible.  To distinguish between data attributes that were directly derived from the 2017 Capital Commitment Plan and data attributes that were created by NYC Planning the table <b>DCP Attributes</b> was created by extracting the managing agency, project ID, MA Project ID, and description from the Projects table.  The following fields were added to the DCP Attributes table:
 
 * Location Status
@@ -88,59 +87,56 @@ The third method required a lot of <u>research</u> to be done to add geometries 
 More work needs to be done to verify geometries created for projects and clean up erroneous geometries; additionally,geometries for projects with a ‘non-discrete’ or ‘tbd’ Location Status need to be generated where possible.	
 
 ## Data Dictionary
-The following tables list and define each of the data tables and associated fields in the Capital Projects Database.
+The following lists and defines each of the data tables and associated fields in the Capital Projects Database.
 
-Projects
+<b>Projects</b>
+Distinct capital investments, which are identified by having a unique Managing Agency and Project ID in FMS.
 
 | Field Alias | Field Name | Description | Data Type | Source
 | :------------------- | :------------------- | :------------------------------------------------------ | :------------------- | :------------------- |
 | Managing Agency | managingagency | Three digit agency code that indicates what NY City agency is managing the project | text | Capital Commitment Plan |
 | Project ID | projectid |  Alphanumeric ID for the project as defined by the managing agency | text | Capital Commitment Plan |
-| Description | description | Description of the project according to the managing agency | text | Capital Commitment Plan |
-| Location Status | locationstatus | Description of the location of the project.  Possible values are: Single site: the project is located at one location; Multi-site: the project spans multiple locations; Sites TBD: The location(s) of the projects have yet to be identified but a general area where the project may take place may be known; Non-spatial: The project is not assoicated with one or many locations | text | DCP | 
-| Geometry | geom | The geometry of the project. Can be multipoint or multipolygon | geometry | Agency or DCP | 
-| Geom Source | geomsource | Note about how the geometry was created | text | DCP |
-| Source Dataset | sourcedataset | If the geometry was not created by DCP the source dataset where the geometry was derived from is noted | text | DCP |
-Source Agency | sourceagency | If the geometry was not created by DCP and came from a spatial dataset created by another agency the agency where the geometry came from is noted | text | DCP |
-| BBL | bbl | The ID(s) of the NYC tax lot(s) where the project is taking place | text | DCP |
-| BIN | bin | The ID(s) of the NYC building(s) where the project is taking place | text | DCP |
-| Segment ID | segmentid | The ID(s) of the NYC LION segment(s) where the roadway project is taking place | text | DCP |
-| Park ID | parkid | The ID(s) of the NYC park(s) where the project is taking place | text | DCP |
 | MA Project ID | maprojid | The primary key and unique identifier for the projects table, which is a concatenation of Managing Agency and Project ID | text | DCP | 
-| Agency | agency | The acronym of the managing agency | text | DCP |
-| Agency Name | agencyname | The full name of the managing agency | text | DCP |
+| Description | description | Description of the project according to the managing agency | text | Capital Commitment Plan |
+| Managing Agency Acronym | magency | The acronym of the managing agency | text | DCP |
+| Managing Agency Name | magencyname | The full name of the managing agency | text | DCP |
 | City Cost | citycost | The total of city funds committed for the project, which is the sum of the city cost field in the commitment table for the MA Project ID | double precision | Capital Commitment Plan | 
 | Non-City Cost | noncitycost | The total of non-city funds committed for the project, which is the sum of the non-city cost field in the commitment table for the MA Project ID | double precision | Capital Commitment Plan | 
 | Total Cost | totalcost | The total amount of funds committed to the project, which is the sum of City Cost and Non-City Cost | DCP | 
 
-Commitments
+<b>Commitments</b>
+An individual amount of money that funds a project that draws from one budget and has a planned commit date.  The Commitments table has a many-to-one relationship with Projects, and is linked by MA Project ID, which means that many commitments are associated with one project.
 
 | Field Alias | Field Name | Description | Data Type | Source
 | :------------------- | :------------------- | :------------------------------------------------------ | :------------------- | :------------------- |
 | Managing Agency | managingagency | Three digit agency code that indicates what NY City agency is managing the project | text | Capital Commitment Plan |
 | Project ID | projectid |  Alphanumeric ID for the project as defined by the managing agency | text | Capital Commitment Plan |
-| Budget Line | budgetline | Alphanumeric ID for the budget from which funds are drawn to fund the commitment | text | Capital Commitment Plan |
 | MA Project ID | maprojid | The secondary key, which is a concatenation of Managing Agency and Project ID | text | DCP | 
+| Budget Line | budgetline | Alphanumeric ID for the budget from which funds are drawn to fund the commitment | text | Capital Commitment Plan |
 | Planned Commit Date | plancommdate | The month and year the funds will be commited to the managing agency | text | Capital Commitment Plan |
 | Cost Description | costdescription | Description of the what the planned commitment will be spent on in relation to the project | text | Capital Commitment Plan |
 | City Cost | citycost | The amount of city funds committed to the commitment | double precision | Capital Commitment Plan | 
 | Non-City Cost | noncitycost | The amount of non-city funds committed to the commitment | double precision | Capital Commitment Plan | 
 | Total Cost | totalcost | The total amount of funds committed to the commitment, which is the sum of City Cost and Non-City Cost | double precision | DCP | 
 
-Budget
+<b>Budgets</b>
+A budget is large sum of money from which funds are drawn and allocated towards projects via commitments.  The Budgets table has a many-to-one relationship with Projects, and is linked by MA Project ID, meaning that many budgets can fund one project.
 
 | Field Alias | Field Name | Description | Data Type | Source
 | :------------------- | :------------------- | :------------------------------------------------------ | :------------------- | :------------------- |
 | Managing Agency | managingagency | Three digit agency code that indicates what NY City agency is managing the project | text | Capital Commitment Plan |
 | Project ID | projectid |  Alphanumeric ID for the project as defined by the managing agency | text | Capital Commitment Plan |
-| Budget Line | budgetline | Alphanumeric ID for the budget from which funds are drawn to fund the commitment | text | Capital Commitment Plan |
 | MA Project ID | maprojid | The secondary key, which is a concatenation of Managing Agency and Project ID | text | DCP |  
+| Budget Line | budgetline | Alphanumeric ID for the budget from which funds are drawn to fund the commitment | text | Capital Commitment Plan |
 | City Cost | citycost | The total amount of city funds committed to the project from the budget line | double precision | Capital Commitment Plan | 
 | Non-City Cost | noncitycost | The total amount of non-city funds committed to the project from the budget line | double precision | Capital Commitment Plan | 
 | Total Cost | totalcost | The total amount of funds committed to the project from the budget line, which is the sum of City Cost and Non-City Cost | double precision | DCP | 
 | Project Type | projecttype | The budget category, which is defined by the first one or two letters of a budget line | text | Capital Commitment Plan | 
+| Sponsor Agency Acronym | sagency | The acronym of the sponsor agency, which is based off of the Project Type | text | DCP |
+| Sponsor Agency Name | sagencyname | The full name of the sponsor agency | text | DCP |
 
-DCP Attributes
+<b>DCP Attributes</b>
+Data created by NYC Planning to add value to data derived from the Capital Commitment Plan and other published sources.  This table contains the spatial data.
 
 | Field Alias | Field Name | Description | Data Type | Source
 | :------------------- | :------------------- | :------------------------------------------------------ | :------------------- | :------------------- |
@@ -149,7 +145,6 @@ DCP Attributes
 | MA Project ID | maprojid | The primary key and unique identifier for the projects table, which is a concatenation of Managing Agency and Project ID | text | DCP | 
 | Description | description | Description of the project according to the managing agency | text | Capital Commitment Plan |
 | Location Status | locationstatus | Description of the location of the project.  Possible values are: Single site: the project is located at one location; Multi-site: the project spans multiple locations; Sites TBD: The location(s) of the projects have yet to be identified but a general area where the project may take place may be known; Non-spatial: The project is not assoicated with one or many locations | text | DCP | 
-| Geometry | geom | The geometry of the project. Can be multipoint or multipolygon | geometry | Agency or DCP | 
 | Geom Source | geomsource | Note about how the geometry was created | text | DCP |
 | Source Dataset | sourcedataset | If the geometry was not created by DCP the source dataset where the geometry was derived from is noted | text | DCP |
 Source Agency | sourceagency | If the geometry was not created by DCP and came from a spatial dataset created by another agency the agency where the geometry came from is noted | text | DCP |
@@ -157,6 +152,8 @@ Source Agency | sourceagency | If the geometry was not created by DCP and came f
 | BIN | bin | The ID(s) of the NYC building(s) where the project is taking place | text | DCP |
 | Segment ID | segmentid | The ID(s) of the NYC LION segment(s) where the roadway project is taking place | text | DCP |
 | Park ID | parkid | The ID(s) of the NYC park(s) where the project is taking place | text | DCP |
+| Geometry | geom | The geometry of the project. Can be multipoint or multipolygon | geometry | Agency or DCP | 
+
 
 Data attribute definitions
 DCP Attributes, Location Status
