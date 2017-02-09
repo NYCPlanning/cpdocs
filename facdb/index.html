@@ -99,7 +99,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../cpdbv2/">Capital Projects Database</a>
+        <a class="" href="../cpdbv1/">Capital Projects Explorer</a>
         
     </li>
 <li>
@@ -148,15 +148,16 @@
 <ul>
 <li>Health and Human Services</li>
 <li>Education, Child Welfare, and Youth</li>
+<li>Parks, Gardens, and Historical Sites</li>
+<li>Libraries and Cultural Programs</li>
 <li>Public Safety, Emergency Services, and Administration of Justice</li>
 <li>Core Infrastructure and Transportation</li>
-<li>Parks, Cultural, and Other Community Facilities</li>
 <li>Administration of Government</li>
 </ul>
 <p>This database and interactive map build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces, and capture the location, type, and capacity of public and private facilities in order to inform holistic neighborhood planning, strategic site selection and service delivery planning, opportunities for interagency and public-private partnerships, community outreach activities, and many other functions across City agencies.
 One goal of this database is to provide a consolidated, authoritative dataset that can serve as a one-stop-shop to planners. More broadly, the intent is to provide the foundation for a more robust data-integration initiative, ensuring interoperability between disparate agencies’ datasets.</p>
-<p>City Planning has grouped these facilities according to the following six domains, each with a set of groups, subgroups, and facility types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.</p>
-<p>Currently, FacDB aggregates and synthesizes data sourced from 42 agencies, recording more than 45,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the <a href="https://nycplanning.github.io/cpdocs/facilitiesdb/#overview">Overview</a>.</p>
+<p>City Planning has grouped these facilities according to the seven domains bulleted above, each with a set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.</p>
+<p>Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the <a href="https://nycplanning.github.io/cpdocs/facilitiesdb/#overview">Overview</a>.</p>
 <p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a> with any suggestions.</p>
 <h3 id="overview">Overview</h3>
 <table>
@@ -177,7 +178,7 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 </tr>
 <tr>
 <td>Data format</td>
-<td><a href="http://cpp.capitalplanning.nyc/facilities">Webmap</a>, <a href="">Shapefile</a>, <a href="">CSV</a></td>
+<td><a href="http://capitalplanning.nyc/facilities">Webmap</a>, <a href="">Shapefile</a>, <a href="">CSV</a></td>
 </tr>
 <tr>
 <td>Projection</td>
@@ -185,7 +186,7 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 </tr>
 <tr>
 <td>Date last updated</td>
-<td>11/01/16</td>
+<td>02/04/16</td>
 </tr>
 </tbody>
 </table>
@@ -600,7 +601,7 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 </table>
 <h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
 <p>FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
-<p><strong>Duplicates.</strong> Please be aware that this beta version of the database also includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these duplicate records and retain the most up-to-date and detailed record.</p>
+<p><strong>Duplicates.</strong> Please be aware that this beta version of the database also includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.</p>
 <p><strong>Analysis Limitations.</strong> As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.</p>
 <p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a>.</p>
 <h2 id="methodology">Methodology</h2>
@@ -609,8 +610,8 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 <p><strong>Assembly.</strong>
 First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.</p>
 <p><strong>Geoprocessing.</strong>
-Many of the source datasets only provide addresses, no coordinates, and visa versa. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the coordinates and the BIN and BBL. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN. There are also many cases where the coordinates provided by the agency fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the coordinates were left as provided, and the BBL was joined on according to which BBL edge was closest to the point coordinates. This closest BBL was used to fill in any other missing location information. Each record in the database is flagged in the with a code for the geoprocessing technique that was used to complete all of its information.</p>
-<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BBL as a record with the same Facility Group. The contents of this subset is this examined for similarities in the Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database.</p>
+Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record has a BIN value, the BIN's centroid is used as the point geometry. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.</p>
+<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup and same Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database.</p>
 <p>The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.</p>
 <table>
 <thead>
@@ -695,12 +696,12 @@ Many of the source datasets only provide addresses, no coordinates, and visa ver
 <tr>
 <td>Address</td>
 <td>address</td>
-<td>The concatenated value of AddressNum and StreetName of where the facility is located.</td>
+<td>The concatenated value of AddressNumber and StreetName of where the facility is located.</td>
 </tr>
 <tr>
 <td>City</td>
 <td>city</td>
-<td>The name of the addressed city where the facility is located. Generated by GeoSupport.</td>
+<td>The USPS prefeered name of the addressed city where the facility is located. Generated by GeoSupport and spatial joins.</td>
 </tr>
 <tr>
 <td>Borough</td>
@@ -2995,7 +2996,7 @@ Many of the source datasets only provide addresses, no coordinates, and visa ver
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cpdbv2/" class="btn btn-neutral float-right" title="Capital Projects Database">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cpdbv1/" class="btn btn-neutral float-right" title="Capital Projects Explorer">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -3027,7 +3028,7 @@ Many of the source datasets only provide addresses, no coordinates, and visa ver
         <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../cpdbv2/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../cpdbv1/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
