@@ -1,6 +1,8 @@
 # City Planning Facilities Database
 
-The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across six domains:
+### Overview
+
+The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across seven domains:
 
 * Health and Human Services
 * Education, Child Welfare, and Youth
@@ -10,103 +12,137 @@ The City Planning Facilities Database (FacDB) aggregates information about facil
 * Core Infrastructure and Transportation
 * Administration of Government
 
-This database and interactive map build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces, and capture the location, type, and capacity of public and private facilities in order to inform holistic neighborhood planning, strategic site selection and service delivery planning, opportunities for interagency and public-private partnerships, community outreach activities, and many other functions across City agencies.
+This database and its [interactive map](http://capitalplanning.nyc/facilities) build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces. It captures the location, type, and capacity of public and private facilities in order to inform holistic neighborhood planning, strategic site selection and service delivery planning, opportunities for interagency and public-private partnerships, community outreach activities, and many other functions across City agencies.
 One goal of this database is to provide a consolidated, authoritative dataset that can serve as a one-stop-shop to planners. More broadly, the intent is to provide the foundation for a more robust data-integration initiative, ensuring interoperability between disparate agencies’ datasets.
 
-City Planning has grouped these facilities according to the seven domains bulleted above, each with a set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.
+City Planning has grouped these facilities according to the seven domains bulleted above. Within each domain, each record is further categorized into a subsequent set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.
 
-Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the [Overview](https://nycplanning.github.io/cpdocs/facilitiesdb/#overview).
+Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the [Contents and Classification Heirarchy](https://nycplanning.github.io/cpdocs/facilitiesdb/#contents-and-facilities-classification-heirarchy) section.
 
 We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions.
-
-### Overview
 
 | General information |
 | :------------: | ------------- |
 | Dataset Name | "Facilities Database "|
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
-| Data format | [Webmap](http://capitalplanning.nyc/facilities), [Shapefile](), [CSV]() |
+| Data format | [Webmap](http://capitalplanning.nyc/facilities), [Shapefile](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=shp&filename=facilities_all_2017-02-09), [CSV](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=csv&filename=facilities_all_2017-02-09) |
 | Projection | WGS84 |
 | Date last updated | 02/04/16 |
 
-**Facilities Classification Heirarchy**. The following table summarizes the categories of facilities that are included in the database. Within each Facility Subgroup, there are more granular Facility Types.
+### Contents and Classification Heirarchy
 
-| Domain | Facility Group | Facility Subgroup | Description |
-| :-- | :-- | :-- | :-- |
-| Administration of Government | Offices, Training, and Testing | Offices | Offices used by City agencies |
-| Administration of Government | Offices, Training, and Testing | Training and Testing | Training and testing sites used by City agencies |
-| Administration of Government | Other Property | Miscellaneous Use | City property without a categorized use |
-| Administration of Government | Other Property | Properties Leased or Licensed to Non-public Entities | Properties Leased or Licensed to Non-public Entities |
-| Administration of Government | Other Property | Undeveloped or No Use | City property and structures without a designated use |
-| Administration of Government | Parking, Maintenance, and Storage | Custodial | City agency custodial sites |
-| Administration of Government | Parking, Maintenance, and Storage | Maintenance and Garages | City agency garages and vehicle maintenance sites |
-| Administration of Government | Parking, Maintenance, and Storage | Parking | City agency parking lots |
-| Administration of Government | Parking, Maintenance, and Storage | Storage | City agency storage sites |
-| Core Infrastructure and Transportation | Material Supplies and Markets | Material Supplies | Asphalt plants and other materials processing |
-| Core Infrastructure and Transportation | Material Supplies and Markets | Wholesale Markets | Wholesale food and commercial markets |
-| Core Infrastructure and Transportation | Solid Waste | Solid Waste Processing | Material recovery, composting, landfill gas recovery, and scrap metal processing facilities |
-| Core Infrastructure and Transportation | Solid Waste | Solid Waste Transfer and Carting | Waste carter sites and transfer stations |
-| Core Infrastructure and Transportation | Telecommunications | Telecommunications | Antennas and other telecommunications sites |
-| Core Infrastructure and Transportation | Transportation | Airports and Heliports | Publicly and privately operated airports, heliports, and seaplane bases |
-| Core Infrastructure and Transportation | Transportation | Bus Depots and Terminals | School bus depots, MTA bus depots, and Port Authority bus terminals |
-| Core Infrastructure and Transportation | Transportation | Public Parking Lots and Garages | Public parking lots and garages |
-| Core Infrastructure and Transportation | Transportation | Commercial Parking Lots and Garages | Commercial parking lots and garages |
-| Core Infrastructure and Transportation | Transportation | Other Transportation | Other transportation sites |
-| Core Infrastructure and Transportation | Transportation | Ports and Ferry Landings | Ferry landings, cruise terminals, and ports |
-| Core Infrastructure and Transportation | Transportation | Rail Yards and Maintenance | Rail yards and maintenance facilities |
-| Core Infrastructure and Transportation | Water and Wastewater | Wastewater and Pollution Control | Wastewater treatment plants and other wastewater conveyance and pollution control sites |
-| Core Infrastructure and Transportation | Water and Wastewater | Water Supply | Reservoirs and other water supply related sites |
-| Education, Child Welfare, and Youth | Camps | Camps | Preschool age and all age camps |
-| Education, Child Welfare, and Youth | Child Welfare | Child Nutrition | Summer and year-round child feeding sites |
-| Education, Child Welfare, and Youth | Childcare | Childcare | Group and school-based child care centers for infants, toddlers, and preschoolers |
-| Education, Child Welfare, and Youth | Childrens Services | Childrens Services | Foster care services, preventative care, and juvenile non-secure placement |
-| Education, Child Welfare, and Youth | Schools | Non-public Schools | Private elementary, middle, and high schools |
-| Education, Child Welfare, and Youth | Schools | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
-| Education, Child Welfare, and Youth | Schools | Preschools | Early Learn NYC and Universal Pre-K sites |
-| Education, Child Welfare, and Youth | Schools | Public Schools | Public elementary, middle, and high schools |
-| Education, Child Welfare, and Youth | Youth Services | Youth Services | COMPASS Programs, youth literacy, and youth employment programs |
-| Education, Child Welfare, and Youth | Higher Education | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
-| Education, Child Welfare, and Youth | Vocational and Proprietary Schools | Proprietary Schools | Trade schools and ESL programs |
-| Health and Human Services | Health Care | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
-| Health and Human Services | Health Care | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
-| Health and Human Services | Health Care | Mental Health | Inpatient, outpatient, and emergency mental health services |
-| Health and Human Services | Health Care | Residential Health Care | Nursing homes, hospice care, and supportive housing |
-| Health and Human Services | Health Care | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
-| Health and Human Services | Human Services | Community Centers | Community centers that provide multiple social services at one site |
-| Health and Human Services | Human Services | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
-| Health and Human Services | Human Services | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
-| Health and Human Services | Human Services | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
-| Health and Human Services | Human Services | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
-| Health and Human Services | Human Services | Shelters and Transitional Housing | Homeless shelters and transitional houseing |
-| Health and Human Services | Human Services | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
-| Health and Human Services | Human Services | Workforce Development | Workforce 1 Centers and other vocational services for adults |
-| Parks, Cultural, and Other Community Facilities | Cemeteries | Cemeteries | Cemeteries operated by NYC Parks |
-| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Historical Societies | Historical societies |
-| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Museums | Publicly and privately operated museums |
-| Parks, Cultural, and Other Community Facilities | Cultural Institutions | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers |
-| Parks, Cultural, and Other Community Facilities | Historical Sites | Historical Sites | Historic house parks, State historic places, national monuments, and national memorials |
-| Parks, Cultural, and Other Community Facilities | Libraries | Academic Libraries | Libraries operated by academic institutions |
-| Parks, Cultural, and Other Community Facilities | Libraries | Public Libraries | All public libaries |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Cemeteries | Cemeteries operated by NYC Parks |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Gardens | Community gardens |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Parks | Flagship parks, community parks, state parks, and city-state parks |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Preserves and Conservation Areas | Nature areas, preserves, wetlands, and state forests |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
-| Parks, Cultural, and Other Community Facilities | Parks and Plazas | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
-| Public Safety, Emergency Services, and Administration of Justice | Emergency Services | Fire Services | Firehouses |
-| Public Safety, Emergency Services, and Administration of Justice | Emergency Services | Other Emergency Services | Ambulance and Emergency Medical Stations |
-| Public Safety, Emergency Services, and Administration of Justice | Justice and Corrections | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
-| Public Safety, Emergency Services, and Administration of Justice | Justice and Corrections | Detention and Correctional | Correctional and dentention centers |
-| Public Safety, Emergency Services, and Administration of Justice | Public Safety | Other Public Safety | Other public safety related support centers |
-| Public Safety, Emergency Services, and Administration of Justice | Public Safety | Police Services | NYPD and NYCHA police stations |
+In order of increasing granularity, each record that is included in the database is classified by DCP into a **Domain > Facility Group > Facility Subgroup > Facility Type**. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.
+
+**Administration of Government Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Offices, Training, and Testing | Offices | Offices used by City agencies |
+| Offices, Training, and Testing | Training and Testing | Training and testing sites used by City agencies |
+| Other Property | Miscellaneous Use | City property without a categorized use |
+| Other Property | Properties Leased or Licensed to Non-public Entities | Properties Leased or Licensed to Non-public Entities |
+| Other Property | Undeveloped or No Use | City property and structures without a designated use |
+| Parking, Maintenance, and Storage | Custodial | City agency custodial sites |
+| Parking, Maintenance, and Storage | Maintenance and Garages | City agency garages and vehicle maintenance sites |
+| Parking, Maintenance, and Storage | Parking | City agency parking lots |
+| Parking, Maintenance, and Storage | Storage | City agency storage sites |
+
+**Core Infrastructure and Transportation Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Material Supplies and Markets | Material Supplies | Asphalt plants and other materials processing |
+| Material Supplies and Markets | Wholesale Markets | Wholesale food and commercial markets |
+| Solid Waste | Solid Waste Processing | Material recovery, composting, landfill gas recovery, and scrap metal processing facilities |
+| Solid Waste | Solid Waste Transfer and Carting | Waste carter sites and transfer stations |
+| Telecommunications | Telecommunications | Antennas and other telecommunications sites |
+| Transportation | Airports and Heliports | Publicly and privately operated airports, heliports, and seaplane bases |
+| Transportation | Bus Depots and Terminals | School bus depots, MTA bus depots, and Port Authority bus terminals |
+| Transportation | Public Parking Lots and Garages | Public parking lots and garages |
+| Transportation | Commercial Parking Lots and Garages | Commercial parking lots and garages |
+| Transportation | Other Transportation | Other transportation sites |
+| Transportation | Ports and Ferry Landings | Ferry landings, cruise terminals, and ports |
+| Transportation | Rail Yards and Maintenance | Rail yards and maintenance facilities |
+| Water and Wastewater | Wastewater and Pollution Control | Wastewater treatment plants and other wastewater conveyance and pollution control sites |
+| Water and Wastewater | Water Supply | Reservoirs and other water supply related sites |
+
+**Education, Child Welfare, and Youth Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Camps | Camps | Preschool age and all age camps |
+| Child Welfare | Child Nutrition | Summer and year-round child feeding sites |
+| Childcare | Childcare | Group and school-based child care centers for infants, toddlers, and preschoolers |
+| Childrens Services | Childrens Services | Foster care services, preventative care, and juvenile non-secure placement |
+| Schools | Non-public Schools | Private elementary, middle, and high schools |
+| Schools | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
+| Schools | Preschools | Early Learn NYC and Universal Pre-K sites |
+| Schools | Public Schools | Public elementary, middle, and high schools |
+| Youth Services | Youth Services | COMPASS Programs, youth literacy, and youth employment programs |
+| Higher Education | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
+| Vocational and Proprietary Schools | Proprietary Schools | Trade schools and ESL programs |
+
+**Health and Human Services Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Health Care | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
+| Health Care | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
+| Health Care | Mental Health | Inpatient, outpatient, and emergency mental health services |
+| Health Care | Residential Health Care | Nursing homes, hospice care, and supportive housing |
+| Health Care | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
+| Human Services | Community Centers | Community centers that provide multiple social services at one site |
+| Human Services | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
+| Human Services | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
+| Human Services | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
+| Human Services | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
+| Human Services | Shelters and Transitional Housing | Homeless shelters and transitional houseing |
+| Human Services | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
+| Human Services | Workforce Development | Workforce 1 Centers and other vocational services for adults |
+
+**Parks, Gardens, and Historical Sites Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Cemeteries | Cemeteries | Cemeteries operated by NYC Parks |
+| Historical Sites | Historical Sites | Historic house parks, State historic places, national monuments, and national memorials |
+| Parks and Plazas | Cemeteries | Cemeteries operated by NYC Parks |
+| Parks and Plazas | Gardens | Community gardens |
+| Parks and Plazas | Parks | Flagship parks, community parks, state parks, and city-state parks |
+| Parks and Plazas | Preserves and Conservation Areas | Nature areas, preserves, wetlands, and state forests |
+| Parks and Plazas | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
+| Parks and Plazas | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
+
+**Libraries and Cultural Programs Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Libraries | Academic Libraries | Libraries operated by academic institutions |
+| Libraries | Public Libraries | All public libaries |
+| Cultural Institutions | Historical Societies | Historical societies |
+| Cultural Institutions | Museums | Publicly and privately operated museums |
+| Cultural Institutions | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers |
+
+**Public Safety, Emergency Services, and Administration of Justice Domain**
+
+| Facility Group | Facility Subgroup | Subgroup Description |
+| :------ | :-- | :-- |
+| Emergency Services | Fire Services | Firehouses |
+| Emergency Services | Other Emergency Services | Ambulance and Emergency Medical Stations |
+| Justice and Corrections | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
+| Justice and Corrections | Detention and Correctional | Correctional and dentention centers |
+| Public Safety | Other Public Safety | Other public safety related support centers |
+| Public Safety | Police Services | NYPD and NYCHA police stations |
 
 
 
 ## Limitations and Disclaimers
 
-FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
+FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#methodology).
 
-**Duplicates.** Please be aware that this beta version of the database also includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.
+**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.
+
+**Administrative Addresses.** There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
 
 **Analysis Limitations.** As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.
 
@@ -118,15 +154,15 @@ If you have any questions about or comments on these data please contact the NYC
 
 ### Data Processing
 
-Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page](https://github.com/NYCPlanning/scripts/tree/master/facilities-database/assembly).
+Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page](https://github.com/NYCPlanning/facilities-db).
 
 **Assembly.**
 First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
 
 **Geoprocessing.**
-Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record has a BIN value, the BIN's centroid is used as the point geometry. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
+Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
 
-**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup and same Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database.
+**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.
 
 
 The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.
@@ -148,8 +184,9 @@ The following table lists and defines each of the fields presented in the Facili
 
 | Field Alias | Field Name | Description |
 | :------------------- | :------------------- | :------------------------------------------------------ |
-| Global Unique Identifier | guid | Universal Unique Identifier.  When a row is added to the table the guid is automatically generated, enabling database replication. |
-| ID | id | An alpha numeric unique identifier created and maintained by the database admin that is a concatenation of agencysource, oversightabbrev, idagency, facilityname, addressnumber, agencyclass1, and agencyclass2. |
+| Unique Identifier | uid | Universal Unique Identifier.  When a row is added to the table the uid is automatically generated, enabling database replication. |
+| Hash | id | An encrypted version of the row from the source data table. |
+| Geom | geom | How the feature is spatially represented. |
 | Old ID | idold | Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD. |
 | Agency ID | idagency | Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset. |
 | Facility Name | facilityname | The name of the facility in proper case. |
@@ -162,64 +199,31 @@ The following table lists and defines each of the fields presented in the Facili
 | ZIP Code | zipcode | The ZIP Code the facility is within. |
 | BBL | bbl | The BBL(s) the facility is located on. |
 | BIN | bin | The BIN(s) the facility is located on. |
-| Park ID | parkid | The Park ID(s) associated with the facility. |
 | X Coordinate | xcoord | The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
 | Y Coordinate | ycoord | The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
 | Latitude | latitude | The latitude of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
 | Longitude | longitude | The longitude of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
-| Facility Type | facilitytype | The value representing the facility type, the most granular category of facilities. |
 | Domain | domain | The value representing the facility domain, the broadest category. |
 | Facility Group | facilitygroup | The value representing the group type, the second broadest category. |
 | Facility Sub-Group | facilitysubgroup | The value representing the subgroup type. |
-| Agency Classification 1 | agencyclass1 | The unmodified classification or descriptor of the facility record provided in the source data. Depending on the user's needs, these descriptors may provide additional details not captured in the Facility Type. |
-| Agency Classification 2 | agencyclass2 | An additional unmodified classification or descriptor of the facility record provided in the source data. |
-| COLP Primary Use Type | colpusetype | The Primary Use Type provided for the facility in the City Owned and Leased Properties (COLP) dataset. |
+| Facility Type | facilitytype | The value representing the facility type, the most granular category of facilities. |
 | Capacity | capacity | How many of capacity type/unit the facility is intended to hold. |
-| Utilization | utilization | How many of capacity type/unit are being utilized at the facility. |
 | Capacity Type | capacitytype | The value representing the unit type of capacity, such as beds, visitors, seats, etc. |
+| Utilization | utilization | How many of capacity type/unit are being utilized at the facility. |
 | Utilization Rate | utilizationrate | The ratio of the of utilization over the total facility capacity. |
 | Area | area | The total area of the site measured in the Area Type unit. |
 | Area Type | areatype | The unit of measurement for Area. |
-| Service Area | servicearea | Indicates if the facility serves a regional or local population, which is determined by the Facility Type of facility according to Fair Share guidelines.  Value is calculated based on Facility Type. |
 | Operator Type | operatortype | Indicates whether the operating entity is public or non-public. |
 | Operator Name | operatorname | The name of the operating entity. |
 | Operator Abbreviation | operatorabbrev | Abbreviation for the operating entity. |
 | Oversight Agency | oversightagency | The name of the agency overseeing the facility. |
-| Overight Abbreviation | oversightabbrev | Abbreviation for the oversight agency. |
-| Date Active | dateactive | The date the facility became active in the database. |
-| Date Inactive | dateinactive | The date the facility became inactive in the database. |
-| Inactive Status | inactivestatus | The value indicating the status of the facility, whether it is in operation or not in operation.  Value is calculated based on DateInactive.  If DateInactive is not NULL then Status is Inactive. |
-| Tags | tags | A series of tags classifying the facility. |
-| Data Link |  |
-| Notes | notes | A space for the database admin to include any freestyle notes about the record. |
-| Date Source Data Received | datesourcereceived | The date the source data was received from the parent agency. |
+| Oversight Abbreviation | oversightabbrev | Abbreviation for the oversight agency. |
+| Oversight Level | oversightagency | The level of government of the oversight agency: City, State, City-State, Federal, or Non-public Oversight. |
 | Date Source Data Updated | datesourceupdated | The date the source data was updated within the parent database. |
-| Date Created | datecreated | The date the record was created. |
-| Date Edited | dateedited | The date the record was edited. |
-| Creator | creator | The user who created the record. |
-| Editor | editor | The user who last edited the record. |
-| Geom | geom | How the feature is spatially represented. |
 | Agency Source | agencysource | The Agency whose data was used as the source for the record. |
 | Source Dataset Name | sourcedatasetname | The name of the dataset the record came from. |
 | Link to Data | linkdata | Link to view and/or description of data. |
-| Link to Direct Download | linkdownload | Link to directly download data. |
-| Data Type | datatype | Format of the raw data received from the source. Examples: Shapefile, List of Addresses, or CSV with Coordinates. |
-| Data Refresh Means | refreshmeans | The method for updating the records from this source dataset. |
-| Data Refresh Frequency | refreshfrequency | The frequency of scheduled updates based on how frequently the source data is updated. |
 | Processing Flag | processingflag | A text flag which indicates how the record was geoprocessed to fill in all required information, including geocoding and spatial joins. |
-| Building ID | buildingid | The ID of the building that the school is within. |
-| Building Name | buildingname | The name of the school(s) within the building. |
-| Organization Level | schoolorganizationlevel | The Organization Level of the school. |
-| Children | children | Indicates if the facility serves children, which are persons that are 12 years old or younger. |
-| Youth | youth | Indicates if the facility serves youth, which are persons that are 13 years old or less than 18 years old. |
-| Seniors | senior | Indicates if the facility serves seniors, which are persons that are 65 years old or older. |
-| Families | family | Indicates if the facility serves familes, which are groups of persons that span multiple age cohorts. |
-| Disabilities | disabilities | Indicates if the facility serves persons with disabilities. |
-| Dropouts | dropouts | Indicates if the facility serves dropouts. |
-| Unemployed | unemployed | Indicates if the facility serves unemployed persons. |
-| Homeless | homeless | Indicates if the facility serves homeless persons. |
-| Immigrants | immigrants | Indicates if the facility serves immigrants. |
-| Group Quarters | groupquarters | Indicates if the facility contains group living quarters. |
 
 
 

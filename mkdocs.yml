@@ -1,7 +1,7 @@
 site_name: Capital Planning Docs
 pages:
 - Home: index.md
-- Facilities Database (FacDB): facdb.md
+- Facilities Database: facdb.md
 - Capital Projects Database: cpdbv2.md
 - Residential Pipeline: pipeline.md
 theme: readthedocs
