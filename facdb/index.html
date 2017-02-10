@@ -7,19 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
-  <title>Facilities Database (FacDB) - Capital Planning Docs</title>
-  
-
   <link rel="shortcut icon" href="../img/favicon.ico">
-
-  
+  <title>Facilities Database (FacDB) - Capital Planning Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
-
   
   <script>
     // Current page data
@@ -30,9 +24,7 @@
   
   <script src="../js/jquery-2.1.1.min.js"></script>
   <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script>
-  <script src="../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -62,7 +54,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
           
             <li>
     <li class="toctree-l1 ">
@@ -99,7 +91,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../cpdbv1/">Capital Projects Explorer</a>
+        <a class="" href="../cpdbv2/">Capital Projects Database</a>
         
     </li>
 <li>
@@ -163,29 +155,29 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 <table>
 <thead>
 <tr>
-<th>General information</th>
+<th align="center">General information</th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Dataset Name</td>
+<td align="center">Dataset Name</td>
 <td>"Facilities Database "</td>
 </tr>
 <tr>
-<td>Description</td>
+<td align="center">Description</td>
 <td>The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management</td>
 </tr>
 <tr>
-<td>Data format</td>
-<td><a href="http://capitalplanning.nyc/facilities">Webmap</a>, <a href="">Shapefile</a>, <a href="">CSV</a></td>
+<td align="center">Data format</td>
+<td><a href="http://capitalplanning.nyc/facilities">Webmap</a>, <a href="https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&amp;format=shp&amp;filename=facilities_all_2017-02-09">Shapefile</a>, <a href="https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&amp;format=csv&amp;filename=facilities_all_2017-02-09">CSV</a></td>
 </tr>
 <tr>
-<td>Projection</td>
+<td align="center">Projection</td>
 <td>WGS84</td>
 </tr>
 <tr>
-<td>Date last updated</td>
+<td align="center">Date last updated</td>
 <td>02/04/16</td>
 </tr>
 </tbody>
@@ -194,456 +186,457 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 <table>
 <thead>
 <tr>
-<th>Domain</th>
-<th>Facility Group</th>
-<th>Facility Subgroup</th>
-<th>Description</th>
+<th align="left">Domain</th>
+<th align="left">Facility Group</th>
+<th align="left">Facility Subgroup</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Administration of Government</td>
-<td>Offices, Training, and Testing</td>
-<td>Offices</td>
-<td>Offices used by City agencies</td>
+<td align="left">Administration of Government</td>
+<td align="left">Offices, Training, and Testing</td>
+<td align="left">Offices</td>
+<td align="left">Offices used by City agencies</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Offices, Training, and Testing</td>
-<td>Training and Testing</td>
-<td>Training and testing sites used by City agencies</td>
+<td align="left">Administration of Government</td>
+<td align="left">Offices, Training, and Testing</td>
+<td align="left">Training and Testing</td>
+<td align="left">Training and testing sites used by City agencies</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Other Property</td>
-<td>Miscellaneous Use</td>
-<td>City property without a categorized use</td>
+<td align="left">Administration of Government</td>
+<td align="left">Other Property</td>
+<td align="left">Miscellaneous Use</td>
+<td align="left">City property without a categorized use</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Other Property</td>
-<td>Properties Leased or Licensed to Non-public Entities</td>
-<td>Properties Leased or Licensed to Non-public Entities</td>
+<td align="left">Administration of Government</td>
+<td align="left">Other Property</td>
+<td align="left">Properties Leased or Licensed to Non-public Entities</td>
+<td align="left">Properties Leased or Licensed to Non-public Entities</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Other Property</td>
-<td>Undeveloped or No Use</td>
-<td>City property and structures without a designated use</td>
+<td align="left">Administration of Government</td>
+<td align="left">Other Property</td>
+<td align="left">Undeveloped or No Use</td>
+<td align="left">City property and structures without a designated use</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Parking, Maintenance, and Storage</td>
-<td>Custodial</td>
-<td>City agency custodial sites</td>
+<td align="left">Administration of Government</td>
+<td align="left">Parking, Maintenance, and Storage</td>
+<td align="left">Custodial</td>
+<td align="left">City agency custodial sites</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Parking, Maintenance, and Storage</td>
-<td>Maintenance and Garages</td>
-<td>City agency garages and vehicle maintenance sites</td>
+<td align="left">Administration of Government</td>
+<td align="left">Parking, Maintenance, and Storage</td>
+<td align="left">Maintenance and Garages</td>
+<td align="left">City agency garages and vehicle maintenance sites</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Parking, Maintenance, and Storage</td>
-<td>Parking</td>
-<td>City agency parking lots</td>
+<td align="left">Administration of Government</td>
+<td align="left">Parking, Maintenance, and Storage</td>
+<td align="left">Parking</td>
+<td align="left">City agency parking lots</td>
 </tr>
 <tr>
-<td>Administration of Government</td>
-<td>Parking, Maintenance, and Storage</td>
-<td>Storage</td>
-<td>City agency storage sites</td>
+<td align="left">Administration of Government</td>
+<td align="left">Parking, Maintenance, and Storage</td>
+<td align="left">Storage</td>
+<td align="left">City agency storage sites</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Material Supplies and Markets</td>
-<td>Material Supplies</td>
-<td>Asphalt plants and other materials processing</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Material Supplies and Markets</td>
+<td align="left">Material Supplies</td>
+<td align="left">Asphalt plants and other materials processing</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Material Supplies and Markets</td>
-<td>Wholesale Markets</td>
-<td>Wholesale food and commercial markets</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Material Supplies and Markets</td>
+<td align="left">Wholesale Markets</td>
+<td align="left">Wholesale food and commercial markets</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Solid Waste</td>
-<td>Solid Waste Processing</td>
-<td>Material recovery, composting, landfill gas recovery, and scrap metal processing facilities</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Solid Waste</td>
+<td align="left">Solid Waste Processing</td>
+<td align="left">Material recovery, composting, landfill gas recovery, and scrap metal processing facilities</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Solid Waste</td>
-<td>Solid Waste Transfer and Carting</td>
-<td>Waste carter sites and transfer stations</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Solid Waste</td>
+<td align="left">Solid Waste Transfer and Carting</td>
+<td align="left">Waste carter sites and transfer stations</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Telecommunications</td>
-<td>Telecommunications</td>
-<td>Antennas and other telecommunications sites</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Telecommunications</td>
+<td align="left">Telecommunications</td>
+<td align="left">Antennas and other telecommunications sites</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Airports and Heliports</td>
-<td>Publicly and privately operated airports, heliports, and seaplane bases</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Airports and Heliports</td>
+<td align="left">Publicly and privately operated airports, heliports, and seaplane bases</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Bus Depots and Terminals</td>
-<td>School bus depots, MTA bus depots, and Port Authority bus terminals</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Bus Depots and Terminals</td>
+<td align="left">School bus depots, MTA bus depots, and Port Authority bus terminals</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Public Parking Lots and Garages</td>
-<td>Public parking lots and garages</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Public Parking Lots and Garages</td>
+<td align="left">Public parking lots and garages</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Commercial Parking Lots and Garages</td>
-<td>Commercial parking lots and garages</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Commercial Parking Lots and Garages</td>
+<td align="left">Commercial parking lots and garages</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Other Transportation</td>
-<td>Other transportation sites</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Other Transportation</td>
+<td align="left">Other transportation sites</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Ports and Ferry Landings</td>
-<td>Ferry landings, cruise terminals, and ports</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Ports and Ferry Landings</td>
+<td align="left">Ferry landings, cruise terminals, and ports</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Transportation</td>
-<td>Rail Yards and Maintenance</td>
-<td>Rail yards and maintenance facilities</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Transportation</td>
+<td align="left">Rail Yards and Maintenance</td>
+<td align="left">Rail yards and maintenance facilities</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Water and Wastewater</td>
-<td>Wastewater and Pollution Control</td>
-<td>Wastewater treatment plants and other wastewater conveyance and pollution control sites</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Water and Wastewater</td>
+<td align="left">Wastewater and Pollution Control</td>
+<td align="left">Wastewater treatment plants and other wastewater conveyance and pollution control sites</td>
 </tr>
 <tr>
-<td>Core Infrastructure and Transportation</td>
-<td>Water and Wastewater</td>
-<td>Water Supply</td>
-<td>Reservoirs and other water supply related sites</td>
+<td align="left">Core Infrastructure and Transportation</td>
+<td align="left">Water and Wastewater</td>
+<td align="left">Water Supply</td>
+<td align="left">Reservoirs and other water supply related sites</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Camps</td>
-<td>Camps</td>
-<td>Preschool age and all age camps</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Camps</td>
+<td align="left">Camps</td>
+<td align="left">Preschool age and all age camps</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Child Welfare</td>
-<td>Child Nutrition</td>
-<td>Summer and year-round child feeding sites</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Child Welfare</td>
+<td align="left">Child Nutrition</td>
+<td align="left">Summer and year-round child feeding sites</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Childcare</td>
-<td>Childcare</td>
-<td>Group and school-based child care centers for infants, toddlers, and preschoolers</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Childcare</td>
+<td align="left">Childcare</td>
+<td align="left">Group and school-based child care centers for infants, toddlers, and preschoolers</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Childrens Services</td>
-<td>Childrens Services</td>
-<td>Foster care services, preventative care, and juvenile non-secure placement</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Childrens Services</td>
+<td align="left">Childrens Services</td>
+<td align="left">Foster care services, preventative care, and juvenile non-secure placement</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Schools</td>
-<td>Non-public Schools</td>
-<td>Private elementary, middle, and high schools</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Schools</td>
+<td align="left">Non-public Schools</td>
+<td align="left">Private elementary, middle, and high schools</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Schools</td>
-<td>Other Schools Serving Students with Disabilities</td>
-<td>Specialized schools and educational services for students with disabilities</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Schools</td>
+<td align="left">Other Schools Serving Students with Disabilities</td>
+<td align="left">Specialized schools and educational services for students with disabilities</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Schools</td>
-<td>Preschools</td>
-<td>Early Learn NYC and Universal Pre-K sites</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Schools</td>
+<td align="left">Preschools</td>
+<td align="left">Early Learn NYC and Universal Pre-K sites</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Schools</td>
-<td>Public Schools</td>
-<td>Public elementary, middle, and high schools</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Schools</td>
+<td align="left">Public Schools</td>
+<td align="left">Public elementary, middle, and high schools</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Youth Services</td>
-<td>Youth Services</td>
-<td>COMPASS Programs, youth literacy, and youth employment programs</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Youth Services</td>
+<td align="left">Youth Services</td>
+<td align="left">COMPASS Programs, youth literacy, and youth employment programs</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Higher Education</td>
-<td>Colleges or Universities</td>
-<td>Public and privately operated 2 and 4 year colleges and universities</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Higher Education</td>
+<td align="left">Colleges or Universities</td>
+<td align="left">Public and privately operated 2 and 4 year colleges and universities</td>
 </tr>
 <tr>
-<td>Education, Child Welfare, and Youth</td>
-<td>Vocational and Proprietary Schools</td>
-<td>Proprietary Schools</td>
-<td>Trade schools and ESL programs</td>
+<td align="left">Education, Child Welfare, and Youth</td>
+<td align="left">Vocational and Proprietary Schools</td>
+<td align="left">Proprietary Schools</td>
+<td align="left">Trade schools and ESL programs</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Health Care</td>
-<td>Chemical Dependency</td>
-<td>Monitored support, inpatient, outpatient, and crisis services</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Health Care</td>
+<td align="left">Chemical Dependency</td>
+<td align="left">Monitored support, inpatient, outpatient, and crisis services</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Health Care</td>
-<td>Hospitals and Clinics</td>
-<td>Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Health Care</td>
+<td align="left">Hospitals and Clinics</td>
+<td align="left">Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Health Care</td>
-<td>Mental Health</td>
-<td>Inpatient, outpatient, and emergency mental health services</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Health Care</td>
+<td align="left">Mental Health</td>
+<td align="left">Inpatient, outpatient, and emergency mental health services</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Health Care</td>
-<td>Residential Health Care</td>
-<td>Nursing homes, hospice care, and supportive housing</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Health Care</td>
+<td align="left">Residential Health Care</td>
+<td align="left">Nursing homes, hospice care, and supportive housing</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Health Care</td>
-<td>Other Health Care</td>
-<td>Rehab, respite servies, vaccination services, AIDS counseling, and home health centers</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Health Care</td>
+<td align="left">Other Health Care</td>
+<td align="left">Rehab, respite servies, vaccination services, AIDS counseling, and home health centers</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Community Centers</td>
-<td>Community centers that provide multiple social services at one site</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Community Centers</td>
+<td align="left">Community centers that provide multiple social services at one site</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Legal and Intervention Services</td>
-<td>Early intervention, criminal defense, and mediation services</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Legal and Intervention Services</td>
+<td align="left">Early intervention, criminal defense, and mediation services</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Non-residential Housing and Homeless Services</td>
-<td>Non-residential homelessness prevention services</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Non-residential Housing and Homeless Services</td>
+<td align="left">Non-residential homelessness prevention services</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Programs for People with Disabilities</td>
-<td>Specialized child care, caregiver support, and recreational services</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Programs for People with Disabilities</td>
+<td align="left">Specialized child care, caregiver support, and recreational services</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Senior Services</td>
-<td>Neighborhood senior centers, meal delivery programs, and other services for seniors</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Senior Services</td>
+<td align="left">Neighborhood senior centers, meal delivery programs, and other services for seniors</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Shelters and Transitional Housing</td>
-<td>Homeless shelters and transitional houseing</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Shelters and Transitional Housing</td>
+<td align="left">Homeless shelters and transitional houseing</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Soup Kitchens and Food Pantries</td>
-<td>Soup kitchens and food pantries</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Soup Kitchens and Food Pantries</td>
+<td align="left">Soup kitchens and food pantries</td>
 </tr>
 <tr>
-<td>Health and Human Services</td>
-<td>Human Services</td>
-<td>Workforce Development</td>
-<td>Workforce 1 Centers and other vocational services for adults</td>
+<td align="left">Health and Human Services</td>
+<td align="left">Human Services</td>
+<td align="left">Workforce Development</td>
+<td align="left">Workforce 1 Centers and other vocational services for adults</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Cemeteries</td>
-<td>Cemeteries</td>
-<td>Cemeteries operated by NYC Parks</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Cemeteries</td>
+<td align="left">Cemeteries</td>
+<td align="left">Cemeteries operated by NYC Parks</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Cultural Institutions</td>
-<td>Historical Societies</td>
-<td>Historical societies</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Cultural Institutions</td>
+<td align="left">Historical Societies</td>
+<td align="left">Historical societies</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Cultural Institutions</td>
-<td>Museums</td>
-<td>Publicly and privately operated museums</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Cultural Institutions</td>
+<td align="left">Museums</td>
+<td align="left">Publicly and privately operated museums</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Cultural Institutions</td>
-<td>Other Cultural Institutions</td>
-<td>Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Cultural Institutions</td>
+<td align="left">Other Cultural Institutions</td>
+<td align="left">Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Historical Sites</td>
-<td>Historical Sites</td>
-<td>Historic house parks, State historic places, national monuments, and national memorials</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Historical Sites</td>
+<td align="left">Historical Sites</td>
+<td align="left">Historic house parks, State historic places, national monuments, and national memorials</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Libraries</td>
-<td>Academic Libraries</td>
-<td>Libraries operated by academic institutions</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Libraries</td>
+<td align="left">Academic Libraries</td>
+<td align="left">Libraries operated by academic institutions</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Libraries</td>
-<td>Public Libraries</td>
-<td>All public libaries</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Libraries</td>
+<td align="left">Public Libraries</td>
+<td align="left">All public libaries</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Parks and Plazas</td>
-<td>Cemeteries</td>
-<td>Cemeteries operated by NYC Parks</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Parks and Plazas</td>
+<td align="left">Cemeteries</td>
+<td align="left">Cemeteries operated by NYC Parks</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Parks and Plazas</td>
-<td>Gardens</td>
-<td>Community gardens</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Parks and Plazas</td>
+<td align="left">Gardens</td>
+<td align="left">Community gardens</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Parks and Plazas</td>
-<td>Parks</td>
-<td>Flagship parks, community parks, state parks, and city-state parks</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Parks and Plazas</td>
+<td align="left">Parks</td>
+<td align="left">Flagship parks, community parks, state parks, and city-state parks</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Parks and Plazas</td>
-<td>Preserves and Conservation Areas</td>
-<td>Nature areas, preserves, wetlands, and state forests</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Parks and Plazas</td>
+<td align="left">Preserves and Conservation Areas</td>
+<td align="left">Nature areas, preserves, wetlands, and state forests</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Parks and Plazas</td>
-<td>Recreation and Waterfront Sites</td>
-<td>Playgrounds, waterfront facilities, and recreation fields and courts</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Parks and Plazas</td>
+<td align="left">Recreation and Waterfront Sites</td>
+<td align="left">Playgrounds, waterfront facilities, and recreation fields and courts</td>
 </tr>
 <tr>
-<td>Parks, Cultural, and Other Community Facilities</td>
-<td>Parks and Plazas</td>
-<td>Streetscapes, Plazas, and Malls</td>
-<td>Pedestrian plazas, malls, triangle plazas, and parkways</td>
+<td align="left">Parks, Cultural, and Other Community Facilities</td>
+<td align="left">Parks and Plazas</td>
+<td align="left">Streetscapes, Plazas, and Malls</td>
+<td align="left">Pedestrian plazas, malls, triangle plazas, and parkways</td>
 </tr>
 <tr>
-<td>Public Safety, Emergency Services, and Administration of Justice</td>
-<td>Emergency Services</td>
-<td>Fire Services</td>
-<td>Firehouses</td>
+<td align="left">Public Safety, Emergency Services, and Administration of Justice</td>
+<td align="left">Emergency Services</td>
+<td align="left">Fire Services</td>
+<td align="left">Firehouses</td>
 </tr>
 <tr>
-<td>Public Safety, Emergency Services, and Administration of Justice</td>
-<td>Emergency Services</td>
-<td>Other Emergency Services</td>
-<td>Ambulance and Emergency Medical Stations</td>
+<td align="left">Public Safety, Emergency Services, and Administration of Justice</td>
+<td align="left">Emergency Services</td>
+<td align="left">Other Emergency Services</td>
+<td align="left">Ambulance and Emergency Medical Stations</td>
 </tr>
 <tr>
-<td>Public Safety, Emergency Services, and Administration of Justice</td>
-<td>Justice and Corrections</td>
-<td>Courthouses and Judicial</td>
-<td>Courthouses, clerk offices, and court librarians</td>
+<td align="left">Public Safety, Emergency Services, and Administration of Justice</td>
+<td align="left">Justice and Corrections</td>
+<td align="left">Courthouses and Judicial</td>
+<td align="left">Courthouses, clerk offices, and court librarians</td>
 </tr>
 <tr>
-<td>Public Safety, Emergency Services, and Administration of Justice</td>
-<td>Justice and Corrections</td>
-<td>Detention and Correctional</td>
-<td>Correctional and dentention centers</td>
+<td align="left">Public Safety, Emergency Services, and Administration of Justice</td>
+<td align="left">Justice and Corrections</td>
+<td align="left">Detention and Correctional</td>
+<td align="left">Correctional and dentention centers</td>
 </tr>
 <tr>
-<td>Public Safety, Emergency Services, and Administration of Justice</td>
-<td>Public Safety</td>
-<td>Other Public Safety</td>
-<td>Other public safety related support centers</td>
+<td align="left">Public Safety, Emergency Services, and Administration of Justice</td>
+<td align="left">Public Safety</td>
+<td align="left">Other Public Safety</td>
+<td align="left">Other public safety related support centers</td>
 </tr>
 <tr>
-<td>Public Safety, Emergency Services, and Administration of Justice</td>
-<td>Public Safety</td>
-<td>Police Services</td>
-<td>NYPD and NYCHA police stations</td>
+<td align="left">Public Safety, Emergency Services, and Administration of Justice</td>
+<td align="left">Public Safety</td>
+<td align="left">Police Services</td>
+<td align="left">NYPD and NYCHA police stations</td>
 </tr>
 </tbody>
 </table>
 <h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
-<p>FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
-<p><strong>Duplicates.</strong> Please be aware that this beta version of the database also includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.</p>
+<p>FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded.</p>
+<p><strong>Duplicates.</strong> Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.</p>
+<p><strong>Administrative Addresses.</strong> There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
 <p><strong>Analysis Limitations.</strong> As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.</p>
 <p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a>.</p>
 <h2 id="methodology">Methodology</h2>
 <h3 id="data-processing">Data Processing</h3>
-<p>Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the <a href="https://github.com/NYCPlanning/scripts/tree/master/facilities-database/assembly">NYC Planning GitHub page</a>.</p>
+<p>Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the <a href="https://github.com/NYCPlanning/facilities-db">NYC Planning GitHub page</a>.</p>
 <p><strong>Assembly.</strong>
 First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.</p>
 <p><strong>Geoprocessing.</strong>
-Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record has a BIN value, the BIN's centroid is used as the point geometry. Records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.</p>
-<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup and same Facility Name. The record with the most complete or most updated information was kept and other duplicate record is removed from the database.</p>
+Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.</p>
+<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.</p>
 <p>The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.</p>
 <table>
 <thead>
 <tr>
-<th>Data Processing Flag</th>
-<th>Definition</th>
+<th align="left">Data Processing Flag</th>
+<th align="left">Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>address2geom_borough</td>
-<td>Geometry, BBL, BIN, and zipcode were generated by NYC GeoClient using address and county or borough provided by agency.</td>
+<td align="left">address2geom_borough</td>
+<td align="left">Geometry, BBL, BIN, and zipcode were generated by NYC GeoClient using address and county or borough provided by agency.</td>
 </tr>
 <tr>
-<td>address2geom_zipcode</td>
-<td>Geometry, BBL, BIN, and borough were generated by NYC GeoClient using address and zip code provided by agency.</td>
+<td align="left">address2geom_zipcode</td>
+<td align="left">Geometry, BBL, BIN, and borough were generated by NYC GeoClient using address and zip code provided by agency.</td>
 </tr>
 <tr>
-<td>bbljoin</td>
-<td>Geometry and address were provided by agency but without a BBL. BBL was obtained by doing a spatial join with MapPLUTO</td>
+<td align="left">bbljoin</td>
+<td align="left">Geometry and address were provided by agency but without a BBL. BBL was obtained by doing a spatial join with MapPLUTO</td>
 </tr>
 <tr>
-<td>bbljoin2address</td>
-<td>Geometry was provided by agency but without an address or BBL. BBL and address were obtained by doing a spatial join with MapPLUTO</td>
+<td align="left">bbljoin2address</td>
+<td align="left">Geometry was provided by agency but without an address or BBL. BBL and address were obtained by doing a spatial join with MapPLUTO</td>
 </tr>
 <tr>
-<td>bbljoin_closest</td>
-<td>Geometry was provided by agency without a BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record.</td>
+<td align="left">bbljoin_closest</td>
+<td align="left">Geometry was provided by agency without a BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record.</td>
 </tr>
 <tr>
-<td>bbljoin2address_closest</td>
-<td>Geometry was provided by agency without an address or BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record.</td>
+<td align="left">bbljoin2address_closest</td>
+<td align="left">Geometry was provided by agency without an address or BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record.</td>
 </tr>
 </tbody>
 </table>
@@ -652,371 +645,371 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <table>
 <thead>
 <tr>
-<th>Field Alias</th>
-<th>Field Name</th>
-<th>Description</th>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Global Unique Identifier</td>
-<td>guid</td>
-<td>Universal Unique Identifier.  When a row is added to the table the guid is automatically generated, enabling database replication.</td>
+<td align="left">Unique Identifier</td>
+<td align="left">uid</td>
+<td align="left">Universal Unique Identifier.  When a row is added to the table the uid is automatically generated, enabling database replication.</td>
 </tr>
 <tr>
-<td>ID</td>
-<td>id</td>
-<td>An alpha numeric unique identifier created and maintained by the database admin that is a concatenation of agencysource, oversightabbrev, idagency, facilityname, addressnumber, agencyclass1, and agencyclass2.</td>
+<td align="left">Hash</td>
+<td align="left">id</td>
+<td align="left">An encrypted version of the row from the source data table.</td>
 </tr>
 <tr>
-<td>Old ID</td>
-<td>idold</td>
-<td>Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD.</td>
+<td align="left">Old ID</td>
+<td align="left">idold</td>
+<td align="left">Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD.</td>
 </tr>
 <tr>
-<td>Agency ID</td>
-<td>idagency</td>
-<td>Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset.</td>
+<td align="left">Agency ID</td>
+<td align="left">idagency</td>
+<td align="left">Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset.</td>
 </tr>
 <tr>
-<td>Facility Name</td>
-<td>facilityname</td>
-<td>The name of the facility in proper case.</td>
+<td align="left">Facility Name</td>
+<td align="left">facilityname</td>
+<td align="left">The name of the facility in proper case.</td>
 </tr>
 <tr>
-<td>Address Number</td>
-<td>addressnumber</td>
-<td>The address number of where the facility is located. Generated by GeoSupport when not provided in the source data.</td>
+<td align="left">Address Number</td>
+<td align="left">addressnumber</td>
+<td align="left">The address number of where the facility is located. Generated by GeoSupport when not provided in the source data.</td>
 </tr>
 <tr>
-<td>Street Name</td>
-<td>streetname</td>
-<td>The name of the street where the facility is located. Generated by GeoSupport.</td>
+<td align="left">Street Name</td>
+<td align="left">streetname</td>
+<td align="left">The name of the street where the facility is located. Generated by GeoSupport.</td>
 </tr>
 <tr>
-<td>Address</td>
-<td>address</td>
-<td>The concatenated value of AddressNumber and StreetName of where the facility is located.</td>
+<td align="left">Address</td>
+<td align="left">address</td>
+<td align="left">The concatenated value of AddressNumber and StreetName of where the facility is located.</td>
 </tr>
 <tr>
-<td>City</td>
-<td>city</td>
-<td>The USPS prefeered name of the addressed city where the facility is located. Generated by GeoSupport and spatial joins.</td>
+<td align="left">City</td>
+<td align="left">city</td>
+<td align="left">The USPS prefeered name of the addressed city where the facility is located. Generated by GeoSupport and spatial joins.</td>
 </tr>
 <tr>
-<td>Borough</td>
-<td>borough</td>
-<td>The full name the borough the facility is within.</td>
+<td align="left">Borough</td>
+<td align="left">borough</td>
+<td align="left">The full name the borough the facility is within.</td>
 </tr>
 <tr>
-<td>Borough Code</td>
-<td>boroughcode</td>
-<td>The number value representing the borough the facility is within.</td>
+<td align="left">Borough Code</td>
+<td align="left">boroughcode</td>
+<td align="left">The number value representing the borough the facility is within.</td>
 </tr>
 <tr>
-<td>ZIP Code</td>
-<td>zipcode</td>
-<td>The ZIP Code the facility is within.</td>
+<td align="left">ZIP Code</td>
+<td align="left">zipcode</td>
+<td align="left">The ZIP Code the facility is within.</td>
 </tr>
 <tr>
-<td>BBL</td>
-<td>bbl</td>
-<td>The BBL(s) the facility is located on.</td>
+<td align="left">BBL</td>
+<td align="left">bbl</td>
+<td align="left">The BBL(s) the facility is located on.</td>
 </tr>
 <tr>
-<td>BIN</td>
-<td>bin</td>
-<td>The BIN(s) the facility is located on.</td>
+<td align="left">BIN</td>
+<td align="left">bin</td>
+<td align="left">The BIN(s) the facility is located on.</td>
 </tr>
 <tr>
-<td>Park ID</td>
-<td>parkid</td>
-<td>The Park ID(s) associated with the facility.</td>
+<td align="left">Park ID</td>
+<td align="left">parkid</td>
+<td align="left">The Park ID(s) associated with the facility.</td>
 </tr>
 <tr>
-<td>X Coordinate</td>
-<td>xcoord</td>
-<td>The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">X Coordinate</td>
+<td align="left">xcoord</td>
+<td align="left">The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
 </tr>
 <tr>
-<td>Y Coordinate</td>
-<td>ycoord</td>
-<td>The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">Y Coordinate</td>
+<td align="left">ycoord</td>
+<td align="left">The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
 </tr>
 <tr>
-<td>Latitude</td>
-<td>latitude</td>
-<td>The latitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">Latitude</td>
+<td align="left">latitude</td>
+<td align="left">The latitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
 </tr>
 <tr>
-<td>Longitude</td>
-<td>longitude</td>
-<td>The longitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">Longitude</td>
+<td align="left">longitude</td>
+<td align="left">The longitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
 </tr>
 <tr>
-<td>Facility Type</td>
-<td>facilitytype</td>
-<td>The value representing the facility type, the most granular category of facilities.</td>
+<td align="left">Facility Type</td>
+<td align="left">facilitytype</td>
+<td align="left">The value representing the facility type, the most granular category of facilities.</td>
 </tr>
 <tr>
-<td>Domain</td>
-<td>domain</td>
-<td>The value representing the facility domain, the broadest category.</td>
+<td align="left">Domain</td>
+<td align="left">domain</td>
+<td align="left">The value representing the facility domain, the broadest category.</td>
 </tr>
 <tr>
-<td>Facility Group</td>
-<td>facilitygroup</td>
-<td>The value representing the group type, the second broadest category.</td>
+<td align="left">Facility Group</td>
+<td align="left">facilitygroup</td>
+<td align="left">The value representing the group type, the second broadest category.</td>
 </tr>
 <tr>
-<td>Facility Sub-Group</td>
-<td>facilitysubgroup</td>
-<td>The value representing the subgroup type.</td>
+<td align="left">Facility Sub-Group</td>
+<td align="left">facilitysubgroup</td>
+<td align="left">The value representing the subgroup type.</td>
 </tr>
 <tr>
-<td>Agency Classification 1</td>
-<td>agencyclass1</td>
-<td>The unmodified classification or descriptor of the facility record provided in the source data. Depending on the user's needs, these descriptors may provide additional details not captured in the Facility Type.</td>
+<td align="left">Agency Classification 1</td>
+<td align="left">agencyclass1</td>
+<td align="left">The unmodified classification or descriptor of the facility record provided in the source data. Depending on the user's needs, these descriptors may provide additional details not captured in the Facility Type.</td>
 </tr>
 <tr>
-<td>Agency Classification 2</td>
-<td>agencyclass2</td>
-<td>An additional unmodified classification or descriptor of the facility record provided in the source data.</td>
+<td align="left">Agency Classification 2</td>
+<td align="left">agencyclass2</td>
+<td align="left">An additional unmodified classification or descriptor of the facility record provided in the source data.</td>
 </tr>
 <tr>
-<td>COLP Primary Use Type</td>
-<td>colpusetype</td>
-<td>The Primary Use Type provided for the facility in the City Owned and Leased Properties (COLP) dataset.</td>
+<td align="left">COLP Primary Use Type</td>
+<td align="left">colpusetype</td>
+<td align="left">The Primary Use Type provided for the facility in the City Owned and Leased Properties (COLP) dataset.</td>
 </tr>
 <tr>
-<td>Capacity</td>
-<td>capacity</td>
-<td>How many of capacity type/unit the facility is intended to hold.</td>
+<td align="left">Capacity</td>
+<td align="left">capacity</td>
+<td align="left">How many of capacity type/unit the facility is intended to hold.</td>
 </tr>
 <tr>
-<td>Utilization</td>
-<td>utilization</td>
-<td>How many of capacity type/unit are being utilized at the facility.</td>
+<td align="left">Utilization</td>
+<td align="left">utilization</td>
+<td align="left">How many of capacity type/unit are being utilized at the facility.</td>
 </tr>
 <tr>
-<td>Capacity Type</td>
-<td>capacitytype</td>
-<td>The value representing the unit type of capacity, such as beds, visitors, seats, etc.</td>
+<td align="left">Capacity Type</td>
+<td align="left">capacitytype</td>
+<td align="left">The value representing the unit type of capacity, such as beds, visitors, seats, etc.</td>
 </tr>
 <tr>
-<td>Utilization Rate</td>
-<td>utilizationrate</td>
-<td>The ratio of the of utilization over the total facility capacity.</td>
+<td align="left">Utilization Rate</td>
+<td align="left">utilizationrate</td>
+<td align="left">The ratio of the of utilization over the total facility capacity.</td>
 </tr>
 <tr>
-<td>Area</td>
-<td>area</td>
-<td>The total area of the site measured in the Area Type unit.</td>
+<td align="left">Area</td>
+<td align="left">area</td>
+<td align="left">The total area of the site measured in the Area Type unit.</td>
 </tr>
 <tr>
-<td>Area Type</td>
-<td>areatype</td>
-<td>The unit of measurement for Area.</td>
+<td align="left">Area Type</td>
+<td align="left">areatype</td>
+<td align="left">The unit of measurement for Area.</td>
 </tr>
 <tr>
-<td>Service Area</td>
-<td>servicearea</td>
-<td>Indicates if the facility serves a regional or local population, which is determined by the Facility Type of facility according to Fair Share guidelines.  Value is calculated based on Facility Type.</td>
+<td align="left">Service Area</td>
+<td align="left">servicearea</td>
+<td align="left">Indicates if the facility serves a regional or local population, which is determined by the Facility Type of facility according to Fair Share guidelines.  Value is calculated based on Facility Type.</td>
 </tr>
 <tr>
-<td>Operator Type</td>
-<td>operatortype</td>
-<td>Indicates whether the operating entity is public or non-public.</td>
+<td align="left">Operator Type</td>
+<td align="left">operatortype</td>
+<td align="left">Indicates whether the operating entity is public or non-public.</td>
 </tr>
 <tr>
-<td>Operator Name</td>
-<td>operatorname</td>
-<td>The name of the operating entity.</td>
+<td align="left">Operator Name</td>
+<td align="left">operatorname</td>
+<td align="left">The name of the operating entity.</td>
 </tr>
 <tr>
-<td>Operator Abbreviation</td>
-<td>operatorabbrev</td>
-<td>Abbreviation for the operating entity.</td>
+<td align="left">Operator Abbreviation</td>
+<td align="left">operatorabbrev</td>
+<td align="left">Abbreviation for the operating entity.</td>
 </tr>
 <tr>
-<td>Oversight Agency</td>
-<td>oversightagency</td>
-<td>The name of the agency overseeing the facility.</td>
+<td align="left">Oversight Agency</td>
+<td align="left">oversightagency</td>
+<td align="left">The name of the agency overseeing the facility.</td>
 </tr>
 <tr>
-<td>Overight Abbreviation</td>
-<td>oversightabbrev</td>
-<td>Abbreviation for the oversight agency.</td>
+<td align="left">Overight Abbreviation</td>
+<td align="left">oversightabbrev</td>
+<td align="left">Abbreviation for the oversight agency.</td>
 </tr>
 <tr>
-<td>Date Active</td>
-<td>dateactive</td>
-<td>The date the facility became active in the database.</td>
+<td align="left">Date Active</td>
+<td align="left">dateactive</td>
+<td align="left">The date the facility became active in the database.</td>
 </tr>
 <tr>
-<td>Date Inactive</td>
-<td>dateinactive</td>
-<td>The date the facility became inactive in the database.</td>
+<td align="left">Date Inactive</td>
+<td align="left">dateinactive</td>
+<td align="left">The date the facility became inactive in the database.</td>
 </tr>
 <tr>
-<td>Inactive Status</td>
-<td>inactivestatus</td>
-<td>The value indicating the status of the facility, whether it is in operation or not in operation.  Value is calculated based on DateInactive.  If DateInactive is not NULL then Status is Inactive.</td>
+<td align="left">Inactive Status</td>
+<td align="left">inactivestatus</td>
+<td align="left">The value indicating the status of the facility, whether it is in operation or not in operation.  Value is calculated based on DateInactive.  If DateInactive is not NULL then Status is Inactive.</td>
 </tr>
 <tr>
-<td>Tags</td>
-<td>tags</td>
-<td>A series of tags classifying the facility.</td>
+<td align="left">Tags</td>
+<td align="left">tags</td>
+<td align="left">A series of tags classifying the facility.</td>
 </tr>
 <tr>
-<td>Data Link</td>
-<td></td>
-<td></td>
+<td align="left">Data Link</td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>notes</td>
-<td>A space for the database admin to include any freestyle notes about the record.</td>
+<td align="left">Notes</td>
+<td align="left">notes</td>
+<td align="left">A space for the database admin to include any freestyle notes about the record.</td>
 </tr>
 <tr>
-<td>Date Source Data Received</td>
-<td>datesourcereceived</td>
-<td>The date the source data was received from the parent agency.</td>
+<td align="left">Date Source Data Received</td>
+<td align="left">datesourcereceived</td>
+<td align="left">The date the source data was received from the parent agency.</td>
 </tr>
 <tr>
-<td>Date Source Data Updated</td>
-<td>datesourceupdated</td>
-<td>The date the source data was updated within the parent database.</td>
+<td align="left">Date Source Data Updated</td>
+<td align="left">datesourceupdated</td>
+<td align="left">The date the source data was updated within the parent database.</td>
 </tr>
 <tr>
-<td>Date Created</td>
-<td>datecreated</td>
-<td>The date the record was created.</td>
+<td align="left">Date Created</td>
+<td align="left">datecreated</td>
+<td align="left">The date the record was created.</td>
 </tr>
 <tr>
-<td>Date Edited</td>
-<td>dateedited</td>
-<td>The date the record was edited.</td>
+<td align="left">Date Edited</td>
+<td align="left">dateedited</td>
+<td align="left">The date the record was edited.</td>
 </tr>
 <tr>
-<td>Creator</td>
-<td>creator</td>
-<td>The user who created the record.</td>
+<td align="left">Creator</td>
+<td align="left">creator</td>
+<td align="left">The user who created the record.</td>
 </tr>
 <tr>
-<td>Editor</td>
-<td>editor</td>
-<td>The user who last edited the record.</td>
+<td align="left">Editor</td>
+<td align="left">editor</td>
+<td align="left">The user who last edited the record.</td>
 </tr>
 <tr>
-<td>Geom</td>
-<td>geom</td>
-<td>How the feature is spatially represented.</td>
+<td align="left">Geom</td>
+<td align="left">geom</td>
+<td align="left">How the feature is spatially represented.</td>
 </tr>
 <tr>
-<td>Agency Source</td>
-<td>agencysource</td>
-<td>The Agency whose data was used as the source for the record.</td>
+<td align="left">Agency Source</td>
+<td align="left">agencysource</td>
+<td align="left">The Agency whose data was used as the source for the record.</td>
 </tr>
 <tr>
-<td>Source Dataset Name</td>
-<td>sourcedatasetname</td>
-<td>The name of the dataset the record came from.</td>
+<td align="left">Source Dataset Name</td>
+<td align="left">sourcedatasetname</td>
+<td align="left">The name of the dataset the record came from.</td>
 </tr>
 <tr>
-<td>Link to Data</td>
-<td>linkdata</td>
-<td>Link to view and/or description of data.</td>
+<td align="left">Link to Data</td>
+<td align="left">linkdata</td>
+<td align="left">Link to view and/or description of data.</td>
 </tr>
 <tr>
-<td>Link to Direct Download</td>
-<td>linkdownload</td>
-<td>Link to directly download data.</td>
+<td align="left">Link to Direct Download</td>
+<td align="left">linkdownload</td>
+<td align="left">Link to directly download data.</td>
 </tr>
 <tr>
-<td>Data Type</td>
-<td>datatype</td>
-<td>Format of the raw data received from the source. Examples: Shapefile, List of Addresses, or CSV with Coordinates.</td>
+<td align="left">Data Type</td>
+<td align="left">datatype</td>
+<td align="left">Format of the raw data received from the source. Examples: Shapefile, List of Addresses, or CSV with Coordinates.</td>
 </tr>
 <tr>
-<td>Data Refresh Means</td>
-<td>refreshmeans</td>
-<td>The method for updating the records from this source dataset.</td>
+<td align="left">Data Refresh Means</td>
+<td align="left">refreshmeans</td>
+<td align="left">The method for updating the records from this source dataset.</td>
 </tr>
 <tr>
-<td>Data Refresh Frequency</td>
-<td>refreshfrequency</td>
-<td>The frequency of scheduled updates based on how frequently the source data is updated.</td>
+<td align="left">Data Refresh Frequency</td>
+<td align="left">refreshfrequency</td>
+<td align="left">The frequency of scheduled updates based on how frequently the source data is updated.</td>
 </tr>
 <tr>
-<td>Processing Flag</td>
-<td>processingflag</td>
-<td>A text flag which indicates how the record was geoprocessed to fill in all required information, including geocoding and spatial joins.</td>
+<td align="left">Processing Flag</td>
+<td align="left">processingflag</td>
+<td align="left">A text flag which indicates how the record was geoprocessed to fill in all required information, including geocoding and spatial joins.</td>
 </tr>
 <tr>
-<td>Building ID</td>
-<td>buildingid</td>
-<td>The ID of the building that the school is within.</td>
+<td align="left">Building ID</td>
+<td align="left">buildingid</td>
+<td align="left">The ID of the building that the school is within.</td>
 </tr>
 <tr>
-<td>Building Name</td>
-<td>buildingname</td>
-<td>The name of the school(s) within the building.</td>
+<td align="left">Building Name</td>
+<td align="left">buildingname</td>
+<td align="left">The name of the school(s) within the building.</td>
 </tr>
 <tr>
-<td>Organization Level</td>
-<td>schoolorganizationlevel</td>
-<td>The Organization Level of the school.</td>
+<td align="left">Organization Level</td>
+<td align="left">schoolorganizationlevel</td>
+<td align="left">The Organization Level of the school.</td>
 </tr>
 <tr>
-<td>Children</td>
-<td>children</td>
-<td>Indicates if the facility serves children, which are persons that are 12 years old or younger.</td>
+<td align="left">Children</td>
+<td align="left">children</td>
+<td align="left">Indicates if the facility serves children, which are persons that are 12 years old or younger.</td>
 </tr>
 <tr>
-<td>Youth</td>
-<td>youth</td>
-<td>Indicates if the facility serves youth, which are persons that are 13 years old or less than 18 years old.</td>
+<td align="left">Youth</td>
+<td align="left">youth</td>
+<td align="left">Indicates if the facility serves youth, which are persons that are 13 years old or less than 18 years old.</td>
 </tr>
 <tr>
-<td>Seniors</td>
-<td>senior</td>
-<td>Indicates if the facility serves seniors, which are persons that are 65 years old or older.</td>
+<td align="left">Seniors</td>
+<td align="left">senior</td>
+<td align="left">Indicates if the facility serves seniors, which are persons that are 65 years old or older.</td>
 </tr>
 <tr>
-<td>Families</td>
-<td>family</td>
-<td>Indicates if the facility serves familes, which are groups of persons that span multiple age cohorts.</td>
+<td align="left">Families</td>
+<td align="left">family</td>
+<td align="left">Indicates if the facility serves familes, which are groups of persons that span multiple age cohorts.</td>
 </tr>
 <tr>
-<td>Disabilities</td>
-<td>disabilities</td>
-<td>Indicates if the facility serves persons with disabilities.</td>
+<td align="left">Disabilities</td>
+<td align="left">disabilities</td>
+<td align="left">Indicates if the facility serves persons with disabilities.</td>
 </tr>
 <tr>
-<td>Dropouts</td>
-<td>dropouts</td>
-<td>Indicates if the facility serves dropouts.</td>
+<td align="left">Dropouts</td>
+<td align="left">dropouts</td>
+<td align="left">Indicates if the facility serves dropouts.</td>
 </tr>
 <tr>
-<td>Unemployed</td>
-<td>unemployed</td>
-<td>Indicates if the facility serves unemployed persons.</td>
+<td align="left">Unemployed</td>
+<td align="left">unemployed</td>
+<td align="left">Indicates if the facility serves unemployed persons.</td>
 </tr>
 <tr>
-<td>Homeless</td>
-<td>homeless</td>
-<td>Indicates if the facility serves homeless persons.</td>
+<td align="left">Homeless</td>
+<td align="left">homeless</td>
+<td align="left">Indicates if the facility serves homeless persons.</td>
 </tr>
 <tr>
-<td>Immigrants</td>
-<td>immigrants</td>
-<td>Indicates if the facility serves immigrants.</td>
+<td align="left">Immigrants</td>
+<td align="left">immigrants</td>
+<td align="left">Indicates if the facility serves immigrants.</td>
 </tr>
 <tr>
-<td>Group Quarters</td>
-<td>groupquarters</td>
-<td>Indicates if the facility contains group living quarters.</td>
+<td align="left">Group Quarters</td>
+<td align="left">groupquarters</td>
+<td align="left">Indicates if the facility contains group living quarters.</td>
 </tr>
 </tbody>
 </table>
@@ -2996,7 +2989,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cpdbv1/" class="btn btn-neutral float-right" title="Capital Projects Explorer">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cpdbv2/" class="btn btn-neutral float-right" title="Capital Projects Database">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -3018,20 +3011,21 @@ Many of the source datasets only provide addresses without no coordinates. Recor
       </div>
 
     </section>
-
+    
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
         <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../cpdbv1/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../cpdbv2/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+    <script src="../js/theme.js"></script>
 
 </body>
 </html>

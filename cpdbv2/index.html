@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Capital Projects Database - Capital Planning Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Capital Projects Database";
+    var mkdocs_page_input_path = "cpdbv2.md";
+    var mkdocs_page_url = "/cpdbv2/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-84250233-3', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Capital Planning Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../facdb/">Facilities Database (FacDB)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Capital Projects Database</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#capital-projects-database">Capital Projects Database</a></li>
+                
+                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
+                
+                    <li><a class="toctree-l4" href="#methodology">Methodology</a></li>
+                
+                    <li><a class="toctree-l4" href="#data-dictionary">Data Dictionary</a></li>
+                
+                    <li><a class="toctree-l4" href="#source-data">Source Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#database-structure">Database structure</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../pipeline/">Residential Pipeline</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Capital Planning Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Capital Projects Database</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="capital-projects-database">Capital Projects Database</h1>
+<p>The Capital Projects Database, a data product produced by the New York City Department of City Planning (NYC Planning) Capital Planning team, is based on data published in the <a href="http://www1.nyc.gov/site/omb/publications/fy17-accp.page">FY 17 NYC Capital Commitment Plan</a> published in October 2016.  NYC Planning adds value to the data extracted from the Capital Commitment Plan by linking these projects to data from the <a href="http://www1.nyc.gov/assets/omb/downloads/pdf/cb6-16.pdf">FY 17 Capital Budget</a> and <a href="http://checkbooknyc.com/spending_landing/yeartype/B/year/118">Checkbook NYC</a>, and making geometries where possible for projects within the Capital Commitment Plan creating a map of the City's planned capital investments footprint.</p>
+<p>The Capital Projects Explorer is a starting point for planners exploring what capital projects are taking place within an area, means to identify potential conflicts and synergies among capital projects, and resource for all City agencies to learn more about capital projects by providing easy access to high level information on planned capital projects.  This tool and associated data can help to foster interagency coordination and advance neighborhood-based planning, reducing situations of project conflicts and increasing opportunities to capitalize on project synderies, and support strategic capital investment planning across City agencies.</p>
+<p>The primary function of the Capital Projects Explorer is to enable a user to easily access information about the capital budget, view all of the capital projects with spatial data on one map, explore key data points associated with a capital project.</p>
+<p>This document provides key information about the Capital Projects Database, the data resource powering the Capital Projects Explorer.</p>
+<p>We are constantly seeking feedback on how to improve and make this data resource most valuable.  Please reach out to the NYC Planning Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a> with any suggestions or comments.</p>
+<h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th align="center">General information</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Dataset name</td>
+<td>"Capital Projects Database"</td>
+</tr>
+<tr>
+<td align="center">Description</td>
+<td>The Capital Projects Database captures high-level information on planned capital projects that appear in the FY 17 NYC Capital Commitment Plan published in October 2016, links these projects to data from the FY 17 Capital Budget and Checkbook NYC, and if possible spatially references the capital projects</td>
+</tr>
+<tr>
+<td align="center">Data format</td>
+<td>Webmap, GeoJSON, Shapefile, CSV</td>
+</tr>
+<tr>
+<td align="center">Projection</td>
+<td>WGS84</td>
+</tr>
+<tr>
+<td align="center">Date last updated</td>
+<td>10/28/16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
+<p>The Capital Projects Database is only as good as the source data it extracts and aggregates.  Currently, the Capital Projects Database is the most comprehensive spatial data resource of planned City capital construction sites, but it does claim to capture all historic, current, or future City capital construction sites.  Many capital projects could not be spatially referenced because of limited discriptions; therefore, the map of capital projects is incomplete.  Also, there are known cases of projects being geocoded to office headquarters, rather than the site where the capital investment is being made; unfortunately, these records could not by systematically verified and corrected.  Through user feedback we look to resolve these limitation over time.</p>
+<p><b>Analyses Limitations:</b> As a result of these data limitations users should be careful in how they use these data in any analysis, espically spatial analyses.
+For example: An analysis or comparision of number of projects planned for an area or total dollars planned to be spent in across neighborhoods should recgonize that not all of the projects are spatially referenced, projects may be incorrectly spatially referenced, one project can span across many locations, and this database is not authoritatively comprehensive.</p>
+<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a>.  For more detailed information on a specific capital project please reach out to the respective managing agency.</p>
+<h2 id="methodology">Methodology</h2>
+<p>The Capital Projects Database is based on data extracted from the fiscal year 2017 Capital Commitment Plan released in October 2016, which is published by the NYC Office of Management and Budget (OMB) in a .pdf format in four volumes.  To transform a .pdf into a spatial database several steps need to be taken to extract the data from the pdfs, link the data to other datasets, and georeference captial projects.  Each of the data processing scripts used to create the Capital Projects Database as well as instructions on how to build the database are available on <a href="https://github.com/NYCPlanning/capitalprojects_db">NYC Planning's GitHub</a>.</p>
+<h3 id="data-scraping">Data scraping</h3>
+<p>A JavaScript script was written and used to extract the budget line, FMS number, managing agency, project ID, description, cost description, city dollars committed, non-city dollars committed, and the planned commit date for each commitment in each volume of the fiscal year 2017 Capital Commitment Plan and write these key data points to an output .csv file.  The four .csv files outputted by the data scraping script were merged into a single .csv file, which was then loaded into PostGIS, which will be known as the commitments master table</p>
+<h3 id="creating-the-database-tables">Creating the database tables</h3>
+<p><b>Projects:</b>  A project is defined as being a distinct capital investment, which is identified by having a unique managing agency and project ID in FMS.  The combination of managing agency and project ID will be referred to as MA Project ID.  The Projects table reports information at the project level.  To create the project table unique MA Project ID were extracted from the commitments master table, along with the longest description associated with each unique MA Project ID, as well as the sum of city dollars committed and the sum of non-city dollars committed for each MA Project ID.</p>
+<p>Since the three digit managing agency is not intuitive <b>managing agency acronym</b> and <b>managing agency name</b> fields were added to the Projects table.  The two fields were populated via a lookup table that contains the agency acronym and agency name associated with each agency code.</p>
+<p><b>Commitments:</b>  A commitment is defined as an individual amount of money that funds a project that draws from one budget and has a planned commit date.  The Commitments table has a many-to-one relationship with Projects, and is linked by MA Project ID, which means that many commitments are associated with one project.</p>
+<p>To create the Commitments table unique MA Project ID, budget line, cost description, planned commit date were extracted from the commitments master table, along with the sum of city dollars committed and the sum of non-city dollars committed for each of the commitments.</p>
+<p><b>Budgets:</b>  A budget is defined as a large sum of money in which funds are drawn from and allocated towards projects via commitments.  The Budget table has a many-to-one relationship with Projects, and is linked by MA Project ID, meaning that many budgets can fund one project.</p>
+<p>To create the Budgets table unique MA Project ID and budget line were extracted from the commitments master table, along with the sum of city dollars committed and the sum of non-city dollars committed for each of the MA Project ID and budget lines.</p>
+<p>The fields <b>project type</b>, <b>sponsor agency acronym</b>, and <b>sponsor agency name</b> were added to the Budgets table.  The three fields were populated via a lookup table that contains the agency acronym, agency name, and project type associated with each project type code, which is the first one or two letters of the budget line.</p>
+<p>A <b>total cost field</b> was added to each of the three tables and the sum of the city dollars and non-city dollars was used to generate each of the total cost fields in the Project, Commitments, and Budgets tables.</p>
+<p>One goal of the Capital Planning Database is to map capital projects; therefore, spatial data needed to be created for each project where possible.  To distinguish between data attributes that were directly derived from the 2017 Capital Commitment Plan and data attributes that were created by NYC Planning the table <b>DCP Attributes</b> was created by extracting the managing agency, project ID, MA Project ID, and description from the Projects table.  The following fields were added to the DCP Attributes table:</p>
+<ul>
+<li>Location Status</li>
+<li>Geometry</li>
+<li>Geom Source</li>
+<li>Geom Source Dataset</li>
+<li>Geom Source Agency</li>
+<li>BBL</li>
+<li>BIN</li>
+<li>Segment ID</li>
+<li>Park ID</li>
+<li>Date Edited</li>
+</ul>
+<p>A description of each of these fields as well as attribute values can be found in the Data Dictionary section of this document.  The purpose of these fields is to store geographic data points and track where the geographic came from or how the spatial data were generated.</p>
+<h3 id="adding-geographic-data">Adding geographic data</h3>
+<p>To track what projects could / could not be georeferenced capital projects were classified as having one of four different location statuses: single site (discrete), multi-site (nondiscrete), sites tbd (tbd), and nonspatial (nonspatial).  A single site project is an investment that is taking place at one location, while a multi-site project is an investment that spans two or more locations.  If specific sites are not yet known for the investment then the project is classified as 'sites tbd,' while projects that do not have any site specific investments are designated as being nonspatial.</p>
+<p>Each record was assigned a Location Status.  Some projects had their Location Status value populated systematically by pulling out key words from the description field, such as projects that contained “city wide” or “multi-site” in the description were marked as ‘non-discrete,’ or joining the Projects table to other datasets as described below.  Still, many of the records were populated manually, which required a person to read the description of the project, determine what the Location Status should be, and update the Location Status value accordingly.</p>
+<p>Next, several methods were used to generate geographic data.</p>
+<p>The first and simplest method involved <u>joining on geometries from existing datasets published by other City agencies</u> via MA Project ID or an exact match with the project description.  The name of the dataset and the agency that supplied the dataset from which the geometry was derived is noted in the Source Dataset and Source Agency fields in the DCP Attributes table, and the Geom Source field was marked as ‘Agency.’</p>
+<p>To enable better rendering of geometries in Mapbox GL all line geometries were converted to polygons by adding a 15m buffer around each line segment.</p>
+<p>For projects where the geometry was derived from an exisitng dataset using this first method, if the geometry associated with a project was one point or one polygon the Location Status was updated to be ‘discrete;’ if the geometry for the project was two or more points or two or more polygons the location status was set to ‘non-discrete.’</p>
+<p>The second method to match geographic data with projects involved several iterations of <u>fuzzy string matching</u>, a technique of finding texts that approximately match a pattern.  This method looked to match park IDs, park names, and facility names from the parks properties dataset or facilities database, which have associated geometries, with the project description of projects with a Locaton Status of single site that were still missing a geometry.  If a match was found between the Projects table and another source using fuzzy string matching the match was manually verified before the geometry of the project in the Projects table was updated.  In these cases the Location Status was set to ‘discrete,’ the Geom Source was set to ‘algorithm,’ and the Source Dataset and Source Agency fields were updated with name of the dataset and name of the agency that supplied the data from which the geometry was derived.</p>
+<p>The third method required a lot of <u>research</u> to be done to add geometries to the remaining projects marked as having a single site Location Status but no geometry.  The geometries of these records were populated manually and involved a DCP team member reading the description of the project and to the best of his/her ability give that project a spatial location by assigning it a bbl, bin, segment ID, or park ID.  After, the geometries associated with these spatial identifiers (i.e. bbl) were used to update the geometry for these projects DCP Attributes table.  If a project could not be tied to an exisiting geometry (i.e. bbl) or the existing geometry was errenous (i.e. a large park) then a DCP team member created a new geometry to represent the project.  At this point, all projects with a Location Status of single site have a geometry where it was possible to map that project.  Examples of descriptions for ‘discrete’ projects that were not spatially referenced include “Roof Replacement” and “Bio swale #12;” these sites exist but based on the information given the site could not be georeferenced.</p>
+<p>More work needs to be done to verify geometries created for projects and clean up erroneous geometries; additionally,geometries for projects with a ‘non-discrete’ or ‘tbd’ Location Status need to be generated where possible.    </p>
+<h2 id="data-dictionary">Data Dictionary</h2>
+<p>The following lists and defines each of the data tables and associated fields in the Capital Projects Database.</p>
+<p><b>Projects</b>
+Distinct capital investments, which are identified by having a unique Managing Agency and Project ID in FMS.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+<th align="left">Data Type</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">managingagency</td>
+<td align="left">Three digit agency code that indicates what NY City agency is managing the project</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric ID for the project as defined by the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">MA Project ID</td>
+<td align="left">maprojid</td>
+<td align="left">The primary key and unique identifier for the projects table, which is a concatenation of Managing Agency and Project ID</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">description</td>
+<td align="left">Description of the project according to the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Acronym</td>
+<td align="left">magency</td>
+<td align="left">The acronym of the managing agency</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Name</td>
+<td align="left">magencyname</td>
+<td align="left">The full name of the managing agency</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">City Cost</td>
+<td align="left">citycost</td>
+<td align="left">The total of city funds committed for the project, which is the sum of the city cost field in the commitment table for the MA Project ID</td>
+<td align="left">double precision</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Non-City Cost</td>
+<td align="left">noncitycost</td>
+<td align="left">The total of non-city funds committed for the project, which is the sum of the non-city cost field in the commitment table for the MA Project ID</td>
+<td align="left">double precision</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Total Cost</td>
+<td align="left">totalcost</td>
+<td align="left">The total amount of funds committed to the project, which is the sum of City Cost and Non-City Cost</td>
+<td align="left">DCP</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><b>Commitments</b>
+An individual amount of money that funds a project that draws from one budget and has a planned commit date.  The Commitments table has a many-to-one relationship with Projects, and is linked by MA Project ID, which means that many commitments are associated with one project.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+<th align="left">Data Type</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">managingagency</td>
+<td align="left">Three digit agency code that indicates what NY City agency is managing the project</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric ID for the project as defined by the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">MA Project ID</td>
+<td align="left">maprojid</td>
+<td align="left">The secondary key, which is a concatenation of Managing Agency and Project ID</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Budget Line</td>
+<td align="left">budgetline</td>
+<td align="left">Alphanumeric ID for the budget from which funds are drawn to fund the commitment</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Planned Commit Date</td>
+<td align="left">plancommdate</td>
+<td align="left">The month and year the funds will be commited to the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Cost Description</td>
+<td align="left">costdescription</td>
+<td align="left">Description of the what the planned commitment will be spent on in relation to the project</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">City Cost</td>
+<td align="left">citycost</td>
+<td align="left">The amount of city funds committed to the commitment</td>
+<td align="left">double precision</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Non-City Cost</td>
+<td align="left">noncitycost</td>
+<td align="left">The amount of non-city funds committed to the commitment</td>
+<td align="left">double precision</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Total Cost</td>
+<td align="left">totalcost</td>
+<td align="left">The total amount of funds committed to the commitment, which is the sum of City Cost and Non-City Cost</td>
+<td align="left">double precision</td>
+<td align="left">DCP</td>
+</tr>
+</tbody>
+</table>
+<p><b>Budgets</b>
+A budget is large sum of money from which funds are drawn and allocated towards projects via commitments.  The Budgets table has a many-to-one relationship with Projects, and is linked by MA Project ID, meaning that many budgets can fund one project.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+<th align="left">Data Type</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">managingagency</td>
+<td align="left">Three digit agency code that indicates what NY City agency is managing the project</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric ID for the project as defined by the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">MA Project ID</td>
+<td align="left">maprojid</td>
+<td align="left">The secondary key, which is a concatenation of Managing Agency and Project ID</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Budget Line</td>
+<td align="left">budgetline</td>
+<td align="left">Alphanumeric ID for the budget from which funds are drawn to fund the commitment</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">City Cost</td>
+<td align="left">citycost</td>
+<td align="left">The total amount of city funds committed to the project from the budget line</td>
+<td align="left">double precision</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Non-City Cost</td>
+<td align="left">noncitycost</td>
+<td align="left">The total amount of non-city funds committed to the project from the budget line</td>
+<td align="left">double precision</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Total Cost</td>
+<td align="left">totalcost</td>
+<td align="left">The total amount of funds committed to the project from the budget line, which is the sum of City Cost and Non-City Cost</td>
+<td align="left">double precision</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Project Type</td>
+<td align="left">projecttype</td>
+<td align="left">The budget category, which is defined by the first one or two letters of a budget line</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Sponsor Agency Acronym</td>
+<td align="left">sagency</td>
+<td align="left">The acronym of the sponsor agency, which is based off of the Project Type</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Sponsor Agency Name</td>
+<td align="left">sagencyname</td>
+<td align="left">The full name of the sponsor agency</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+</tbody>
+</table>
+<p><b>DCP Attributes</b>
+Data created by NYC Planning to add value to data derived from the Capital Commitment Plan and other published sources.  This table contains the spatial data.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+<th align="left">Data Type</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">managingagency</td>
+<td align="left">Three digit agency code that indicates what NY City agency is managing the project</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric ID for the project as defined by the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">MA Project ID</td>
+<td align="left">maprojid</td>
+<td align="left">The primary key and unique identifier for the projects table, which is a concatenation of Managing Agency and Project ID</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">description</td>
+<td align="left">Description of the project according to the managing agency</td>
+<td align="left">text</td>
+<td align="left">Capital Commitment Plan</td>
+</tr>
+<tr>
+<td align="left">Location Status</td>
+<td align="left">locationstatus</td>
+<td align="left">Description of the location of the project.  Possible values are: Single site: the project is located at one location; Multi-site: the project spans multiple locations; Sites TBD: The location(s) of the projects have yet to be identified but a general area where the project may take place may be known; Non-spatial: The project is not assoicated with one or many locations</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Geom Source</td>
+<td align="left">geomsource</td>
+<td align="left">Note about how the geometry was created</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Source Dataset</td>
+<td align="left">sourcedataset</td>
+<td align="left">If the geometry was not created by DCP the source dataset where the geometry was derived from is noted</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Source Agency</td>
+<td align="left">sourceagency</td>
+<td align="left">If the geometry was not created by DCP and came from a spatial dataset created by another agency the agency where the geometry came from is noted</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">BBL</td>
+<td align="left">bbl</td>
+<td align="left">The ID(s) of the NYC tax lot(s) where the project is taking place</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">BIN</td>
+<td align="left">bin</td>
+<td align="left">The ID(s) of the NYC building(s) where the project is taking place</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Segment ID</td>
+<td align="left">segmentid</td>
+<td align="left">The ID(s) of the NYC LION segment(s) where the roadway project is taking place</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Park ID</td>
+<td align="left">parkid</td>
+<td align="left">The ID(s) of the NYC park(s) where the project is taking place</td>
+<td align="left">text</td>
+<td align="left">DCP</td>
+</tr>
+<tr>
+<td align="left">Geometry</td>
+<td align="left">geom</td>
+<td align="left">The geometry of the project. Can be multipoint or multipolygon</td>
+<td align="left">geometry</td>
+<td align="left">Agency or DCP</td>
+</tr>
+</tbody>
+</table>
+<p>Data attribute definitions
+DCP Attributes, Location Status
+| Attribute | Alias | Definition |
+| :------------------- | :------------------- | :------------------- | :------------------- |
+| discrete | Single Site | The project is at one site, which is a building, tax lot, contigious street segment, intersection or park |
+| nondiscrete | Multi Site | The project spans multiple sites |
+| tbd | Sites TBD | The specific site(s) have not yet been identified, but a general area where the project will take place many have been identified |
+| nonspatial | Non Spatial | The project is not tied to a physical location |</p>
+<h2 id="source-data">Source Data</h2>
+<p>The following datasets were used to populate the Capital Projects Explorer.  The data sources that are publisehd online as open data are automatically downloaded and integrated at regular intervals.  The database is regularly checked thoroughly to identify problems with the update processes or major changes to the source data. </p>
+<h3 id="department-of-design-and-construction-ddc">Department of Design and Construction (DDC)</h3>
+<p>DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.</p>
+<h5 id="infrastructure-projects">Infrastructure projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name</td>
+<td>"DDC Capital Projects Infrastructure Projects"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DDC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Data exchange with DDC</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>2/19/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>2/22/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>http://maps.nyc.gov/doitt/nycitymap/</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>This dataset acts as a primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources</td>
+</tr>
+</tbody>
+</table>
+<h5 id="public-buildings-projects">Public buildings projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DDC Capital Projects Public Buildings"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DDC</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Data exchange with DDC</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>2/19/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>2/22/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>http://maps.nyc.gov/doitt/nycitymap/</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>This dataset acts as a primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources</td>
+</tr>
+</tbody>
+</table>
+<h3 id="department-of-transportation-dot">Department of Transportation (DOT)</h3>
+<h5 id="street-reconstruction-projects">Street reconstruction projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DOT Capital Projects Street Reconstruction"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Three times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pulls from DOT's capital projects map</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="intersection-projects">Intersection projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DOT Capital Projects Intersections"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Three times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pulls from DOT's capital projects map</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>3/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="bridge-projects">Bridge projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DOT Capital Projects Bridges"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DOT</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Three times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Request file from agency</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>3/18/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>3/18/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="department-of-parks-and-recreation-dpr">Department of Parks and Recreation (DPR)</h3>
+<h5 id="parks-projects">Parks projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"DPR Capital Project Tracker"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>DPR</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>XML</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Pulls from DPR's Capital Projects Tracker</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>4/9/2015</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>2/10/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>https://www.nycgovparks.org/bigapps/DPR_CapitalProjectTracker_001.xml</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-construction-authority-sca">School Construction Authority (SCA)</h3>
+<p>SCA plans, manages, and executes all capital projects related to NYC public schools including the construction of new schools and the renovations of existing schools.</p>
+<h5 id="capacity-projects">Capacity projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"SCA Capital Projects Capacity"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>SCA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Systematic transformation of SCA data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV</td>
+</tr>
+</tbody>
+</table>
+<h5 id="investment-projects">Investment projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"SCA Capital Projects Investments"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>SCA</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Annually</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Systematic transformation of SCA data</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>7/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV</td>
+</tr>
+</tbody>
+</table>
+<h3 id="office-of-recovery-and-resiliency-orr">Office of Recovery and Resiliency (ORR)</h3>
+<p>ORR works with agencies, partners, advocates, and industries to advance long-term plans for growth and resiliency by improving the City's physical infrastructure, economy, and quality of life.</p>
+<h5 id="capital-projects">Capital projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>"ORR Capital Projects"</td>
+</tr>
+<tr>
+<td>Agency Abbreviation</td>
+<td>ORR</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td></td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Automatic data pulls from ORR's capital projects map</td>
+</tr>
+<tr>
+<td>Date Updated</td>
+<td></td>
+</tr>
+<tr>
+<td>Date Received</td>
+<td>8/1/2016</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>https://maps.nyc.gov/resiliency/</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="database-structure">Database structure</h2>
+<p>Currently, the Capital Projects Explorer consists of one table.  Each record in the table represents one capital "project."  One "project" can have one or multiple geometries represting the site(s) where the capital project is occurring, but a record can only have one geometry type (MultiPoint or MultiPolygon).  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pipeline/" class="btn btn-neutral float-right" title="Residential Pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../facdb/" class="btn btn-neutral" title="Facilities Database (FacDB)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../facdb/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pipeline/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
