@@ -165,7 +165,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 **Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.
 
 
-The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.
+<!-- The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.
 
 | Data Processing Flag | Definition |
 | :-- | :-- |
@@ -176,7 +176,7 @@ The processing steps and assumptions used for each record are indicated in the P
 | bbljoin_closest | Geometry was provided by agency without a BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record. |
 | bbljoin2address_closest | Geometry was provided by agency without an address or BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record. |
 
-
+ -->
 
 ## Data Dictionary
 

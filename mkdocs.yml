@@ -2,8 +2,8 @@ site_name: Capital Planning Docs
 pages:
 - Home: index.md
 - Facilities Database: facdb.md
-- Capital Projects Database: cpdbv2.md
-- Residential Pipeline: pipeline.md
+# - Capital Projects Database: cpdbv2.md
+# - Residential Pipeline: pipeline.md
 theme: readthedocs
 theme_dir: custom_theme
 google_analytics: ['UA-84250233-3', 'auto']
