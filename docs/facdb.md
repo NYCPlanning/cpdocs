@@ -75,9 +75,10 @@ In order of increasing granularity, each record that is included in the database
 | Child Care and Pre-Kindergarten | DOE Universal Pre-Kindergarten | Universal Pre-Kindergarten programs registered by DOE as [Pre-K for All](http://schools.nyc.gov/ChoicesEnrollment/PreK/default.htm) providers |
 | Child Care and Pre-Kindergarten | Dual Child Care and Universal Pre-K | Centers that operate as both DOE registered Universal Pre-K and general child care |
 | Child Care and Pre-Kindergarten | Child Care | Group and school-based child care centers for infants, toddlers, and preschoolers that have no association with DOE's Universal Pre-K program |
+| Child Care and Pre-Kindergarten | Preschools for Students with Disabilities | Preschools programs specifically designed for students with disabilities |
 | Childrens Services | Foster Care Services and Residential Care | Foster care services and residential placement programs for children |
 | Childrens Services | Preventative Care, Evaluation Services, and Respite | Programs that provide preventative care, evaluation services, and respite for caretakers of children |
-| Schools (K-12) | Public Schools | Public elementary, middle, and high schools |
+| Schools (K-12) | Public Schools | Public and charter elementary, middle, and high schools |
 | Schools (K-12) | Non-public Schools | Private elementary, middle, and high schools |
 | Schools (K-12) | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
 | Youth Services | Comprehensive After School System (COMPASS) Sites | Comprehensive After School System of NYC [(COMPASS)](https://www1.nyc.gov/site/dycd/services/after-school/comprehensive-after-school-system-of-new-york-city-compass.page) Programs |
@@ -125,7 +126,7 @@ In order of increasing granularity, each record that is included in the database
 | Libraries | Public Libraries | All public libaries |
 | Cultural Institutions | Historical Societies | Historical societies |
 | Cultural Institutions | Museums | Publicly and privately operated museums |
-| Cultural Institutions | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers |
+| Cultural Institutions | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers. NOTE: Many records in this category could not be geocoded because they did not have valid addresses. |
 
 **Public Safety, Emergency Services, and Administration of Justice Domain**
 
@@ -359,6 +360,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | Dataset Name: | [DCLA Cultural Organizations](https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32) |
 | Last updated: | 3/22/16 |
 | Refresh Method: | Pull from NYC Open Data - Annually |
+| Notes: | Many records in this dataset could not be geocoded because they had invalid addresses, such as P.O. Boxes. |
 
 
 ### New York City Department of Education (NYCDOE)
