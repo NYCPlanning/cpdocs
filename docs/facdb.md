@@ -689,7 +689,8 @@ In the future, some supplemental information which is specific to certain facili
 
 ## Appendix I. Deduping
 
-When duplicate records are identified in the data, 
+More details on the methodology and data structure coming soon!
+<!-- When duplicate records are identified in the data,  -->
 
 **Table of Datasets with Overlapping Content:**
 
