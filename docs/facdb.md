@@ -44,7 +44,7 @@ In order of increasing granularity, each record that is included in the database
 | Other Property | Undeveloped or No Use | City property and structures without a designated use |
 | Parking, Maintenance, and Storage | Custodial | City agency custodial sites |
 | Parking, Maintenance, and Storage | Maintenance and Garages | City agency garages and vehicle maintenance sites |
-| Parking, Maintenance, and Storage | Parking | City agency parking lots |
+| Parking, Maintenance, and Storage | Parking | City agency parking lots sued for their operational and client needs |
 | Parking, Maintenance, and Storage | Storage | City agency storage sites |
 
 **Core Infrastructure and Transportation Domain**
@@ -58,8 +58,7 @@ In order of increasing granularity, each record that is included in the database
 | Telecommunications | Telecommunications | Antennas and other telecommunications sites |
 | Transportation | Airports and Heliports | Publicly and privately operated airports, heliports, and seaplane bases |
 | Transportation | Bus Depots and Terminals | School bus depots, MTA bus depots, and Port Authority bus terminals |
-| Transportation | Public Parking Lots and Garages | Public parking lots and garages |
-| Transportation | Commercial Parking Lots and Garages | Commercial parking lots and garages |
+| Transportation | Parking Lots and Garages | Publically and commercially operated parking lots and garages |
 | Transportation | Other Transportation | Other transportation sites |
 | Transportation | Ports and Ferry Landings | Ferry landings, cruise terminals, and ports |
 | Transportation | Rail Yards and Maintenance | Rail yards and maintenance facilities |
@@ -72,13 +71,17 @@ In order of increasing granularity, each record that is included in the database
 | :------ | :-- | :-- |
 | Camps | Camps | Preschool age and all age camps |
 | Child Welfare | Child Nutrition | Summer and year-round child feeding sites |
-| Childcare | Childcare | Group and school-based child care centers for infants, toddlers, and preschoolers |
-| Childrens Services | Childrens Services | Foster care services, preventative care, and juvenile non-secure placement |
-| Schools | Non-public Schools | Private elementary, middle, and high schools |
-| Schools | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
-| Schools | Preschools | Early Learn NYC and Universal Pre-K sites |
-| Schools | Public Schools | Public elementary, middle, and high schools |
-| Youth Services | Youth Services | COMPASS Programs, youth literacy, and youth employment programs |
+| Child Welfare | School-Based Food Services | Food programs for children based on school campuses |
+| Child Care and Pre-Kindergarten | DOE Universal Pre-Kindergarten | Universal Pre-Kindergarten programs registered by DOE as [Pre-K for All](http://schools.nyc.gov/ChoicesEnrollment/PreK/default.htm) providers |
+| Child Care and Pre-Kindergarten | Dual Child Care and Universal Pre-K | Centers that operate as both DOE registered Universal Pre-K and general child care |
+| Child Care and Pre-Kindergarten | Child Care | Group and school-based child care centers for infants, toddlers, and preschoolers that have no association with DOE's Universal Pre-K program |
+| Childrens Services | Foster Care Services and Residential Care | Foster care services and residential placement programs for children |
+| Childrens Services | Preventative Care, Evaluation Services, and Respite | Programs that provide preventative care, evaluation services, and respite for caretakers of children |
+| Schools (K-12) | Public Schools | Public elementary, middle, and high schools |
+| Schools (K-12) | Non-public Schools | Private elementary, middle, and high schools |
+| Schools (K-12) | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
+| Youth Services | Comprehensive After School System (COMPASS) Sites | Comprehensive After School System of NYC [(COMPASS)](https://www1.nyc.gov/site/dycd/services/after-school/comprehensive-after-school-system-of-new-york-city-compass.page) Programs |
+| Youth Services | Youth Centers, Literacy Programs, Job Training, and Immigrant Services | Youth literacy, employment, and other support programs |
 | Higher Education | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
 | Vocational and Proprietary Schools | Proprietary Schools | Trade schools and ESL programs |
 
@@ -87,13 +90,14 @@ In order of increasing granularity, each record that is included in the database
 | Facility Group | Facility Subgroup | Subgroup Description |
 | :------ | :-- | :-- |
 | Health Care | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
+| Health Care | Health Promotion and Disease Prevention | Programs focused on improving health through education and disease prevention |
 | Health Care | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
 | Health Care | Mental Health | Inpatient, outpatient, and emergency mental health services |
 | Health Care | Residential Health Care | Nursing homes, hospice care, and supportive housing |
 | Health Care | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
-| Human Services | Community Centers | Community centers that provide multiple social services at one site |
+| Human Services | Community Centers and Community School Programs | Community centers and [Community School](http://www1.nyc.gov/site/communityschools/index.page) programs that provide multiple social services at one site |
 | Human Services | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
-| Human Services | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
+| Human Services | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services, including drop-in and intake centers for the homeless |
 | Human Services | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
 | Human Services | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
 | Human Services | Shelters and Transitional Housing | Homeless shelters and transitional houseing |
@@ -131,18 +135,18 @@ In order of increasing granularity, each record that is included in the database
 | Emergency Services | Other Emergency Services | Ambulance and Emergency Medical Stations |
 | Justice and Corrections | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
 | Justice and Corrections | Detention and Correctional | Correctional and dentention centers |
-| Public Safety | Other Public Safety | Other public safety related support centers |
 | Public Safety | Police Services | NYPD and NYCHA police stations |
-
+| Public Safety | School-Based Safety Program | Public safety programs on school campuses |
+| Public Safety | Other Public Safety | Other public safety related support centers |
 
 
 ## III. Limitations and Disclaimers
 
 FacDB is only as good as the source data it aggregates. 
 
-**Missing Records.** Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records also could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#methodology).
+**Missing Records.** Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded in the data that source agencies provide in order to protect the safety and privacy of their clients. Many records also could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#methodology).
 
-**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain all useful attributes from each record. To read about how values from duplicate records that have been merged are structured in the data, please review [Appendix I. Deduping](http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy).
+**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain all useful attributes from each record. To read about datasets that overlap and how merged values from duplicate records are structured in the data, please review [Appendix I. Deduping](http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy).
 
 **Administrative Addresses.** There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately, these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
 
