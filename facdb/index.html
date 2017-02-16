@@ -71,19 +71,23 @@
             
                 <li class="toctree-l3"><a href="#city-planning-facilities-database">City Planning Facilities Database</a></li>
                 
-                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
+                    <li><a class="toctree-l4" href="#i-overview">I. Overview</a></li>
                 
-                    <li><a class="toctree-l4" href="#contents-and-classification-heirarchy">Contents and Classification Heirarchy</a></li>
+                    <li><a class="toctree-l4" href="#ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</a></li>
                 
-                    <li><a class="toctree-l4" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
+                    <li><a class="toctree-l4" href="#iii-limitations-and-disclaimers">III. Limitations and Disclaimers</a></li>
                 
-                    <li><a class="toctree-l4" href="#methodology">Methodology</a></li>
+                    <li><a class="toctree-l4" href="#iv-methodology">IV. Methodology</a></li>
                 
-                    <li><a class="toctree-l4" href="#data-dictionary">Data Dictionary</a></li>
+                    <li><a class="toctree-l4" href="#v-data-dictionary">V. Data Dictionary</a></li>
                 
-                    <li><a class="toctree-l4" href="#source-data">Source Data</a></li>
+                    <li><a class="toctree-l4" href="#vi-source-data">VI. Source Data</a></li>
                 
-                    <li><a class="toctree-l4" href="#database-structure">Database structure</a></li>
+                    <li><a class="toctree-l4" href="#vii-database-structure">VII. Database structure</a></li>
+                
+                    <li><a class="toctree-l4" href="#appendix-i-deduping">Appendix I. Deduping</a></li>
+                
+                    <li><a class="toctree-l4" href="#appendix-ii-full-classification-hierarchy">Appendix II. Full Classification Hierarchy</a></li>
                 
             
             </ul>
@@ -124,7 +128,7 @@
             <div class="section">
               
                 <h1 id="city-planning-facilities-database">City Planning Facilities Database</h1>
-<h3 id="overview">Overview</h3>
+<h2 id="i-overview">I. Overview</h2>
 <p>The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across seven domains:</p>
 <ul>
 <li>Health and Human Services</li>
@@ -138,7 +142,7 @@
 <p>This database and its <a href="http://capitalplanning.nyc/facilities">interactive map</a> build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces. It captures the location, type, and capacity of public and private facilities in order to inform holistic neighborhood planning, strategic site selection and service delivery planning, opportunities for interagency and public-private partnerships, community outreach activities, and many other functions across City agencies.
 One goal of this database is to provide a consolidated, authoritative dataset that can serve as a one-stop-shop to planners. More broadly, the intent is to provide the foundation for a more robust data-integration initiative, ensuring interoperability between disparate agencies’ datasets.</p>
 <p>City Planning has grouped these facilities according to the seven domains bulleted above. Within each domain, each record is further categorized into a subsequent set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.</p>
-<p>Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the <a href="http://docs.capitalplanning.nyc/facdb/#contents-and-classification-heirarchy">Contents and Classification Heirarchy</a> section.</p>
+<p>Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the <a href="http://docs.capitalplanning.nyc/facdb/#contents-and-classification-Hierarchy">Contents and Classification Hierarchy</a> section.</p>
 <p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a> with any suggestions.</p>
 <table>
 <thead>
@@ -170,7 +174,7 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 </tr>
 </tbody>
 </table>
-<h3 id="contents-and-classification-heirarchy">Contents and Classification Heirarchy</h3>
+<h2 id="ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</h2>
 <p>In order of increasing granularity, each record that is included in the database is classified by DCP into a <strong>Domain &gt; Facility Group &gt; Facility Subgroup &gt; Facility Type</strong>. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.</p>
 <p><strong>Administration of Government Domain</strong></p>
 <table>
@@ -586,25 +590,27 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 </tr>
 </tbody>
 </table>
-<h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
-<p>FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. To learn more about how the data is processed, please review the <a href="http://docs.capitalplanning.nyc/facdb/#methodology">Methodology</a>.</p>
-<p><strong>Duplicates.</strong> Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.</p>
-<p><strong>Administrative Addresses.</strong> There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
+<h2 id="iii-limitations-and-disclaimers">III. Limitations and Disclaimers</h2>
+<p>FacDB is only as good as the source data it aggregates. </p>
+<p><strong>Missing Records.</strong> Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records also could not be geocoded. To learn more about how the data is processed, please review the <a href="http://docs.capitalplanning.nyc/facdb/#methodology">Methodology</a>.</p>
+<p><strong>Duplicates.</strong> Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain all useful attributes from each record. To read about how values from duplicate records that have been merged are structured in the data, please review <a href="http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy">Appendix I. Deduping</a>.</p>
+<p><strong>Administrative Addresses.</strong> There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately, these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.</p>
+<p><strong>Public Accessibility of Sites.</strong> DCP is unable to verify the public accessibility of all sites. For example, some playgrounds or playing fields may only be accessible to participants in certain programs.</p>
 <p><strong>Analysis Limitations.</strong> As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.</p>
 <p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a>.</p>
-<h2 id="methodology">Methodology</h2>
+<h2 id="iv-methodology">IV. Methodology</h2>
 <h3 id="data-processing">Data Processing</h3>
 <p>Since the facility records are aggregated from many datasets designed for different purposes, the data has to undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the <a href="https://github.com/NYCPlanning/facilities-db">NYC Planning GitHub page</a>.</p>
 <p><strong>Assembly.</strong>
 First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.</p>
 <p><strong>Geoprocessing.</strong>
-Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.</p>
-<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.</p>
+Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid, if a BIN could not be assigned and used for the geometry instead. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.</p>
+<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database. More detail on this process is provided in <a href="http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy">Appendix I. Deduping</a>.</p>
 <!-- The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.
 
 | Data Processing Flag | Definition |
 | :-- | :-- |
-| address2geom_borough | Geometry, BBL, BIN, and zipcode were generated by NYC GeoClient using address and county or borough provided by agency. |
+| address2geom_borough | Geometry, BBL, BIN, and Zip Code were generated by NYC GeoClient using address and county or borough provided by agency. |
 | address2geom_zipcode | Geometry, BBL, BIN, and borough were generated by NYC GeoClient using address and zip code provided by agency. |
 | bbljoin | Geometry and address were provided by agency but without a BBL. BBL was obtained by doing a spatial join with MapPLUTO |
 | bbljoin2address | Geometry was provided by agency but without an address or BBL. BBL and address were obtained by doing a spatial join with MapPLUTO |
@@ -613,7 +619,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 
  -->
 
-<h2 id="data-dictionary">Data Dictionary</h2>
+<h2 id="v-data-dictionary">V. Data Dictionary</h2>
 <p>The following table lists and defines each of the fields presented in the Facilities Database as they are organized in the database from left to right.</p>
 <table>
 <thead>
@@ -657,22 +663,22 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td align="left">Address Number</td>
 <td align="left">addressnumber</td>
-<td align="left">The address number of where the facility is located. Generated by GeoSupport when not provided in the source data.</td>
+<td align="left">The address number of where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank.</td>
 </tr>
 <tr>
 <td align="left">Street Name</td>
 <td align="left">streetname</td>
-<td align="left">The name of the street where the facility is located. Generated by GeoSupport.</td>
+<td align="left">The name of the street where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank.</td>
 </tr>
 <tr>
 <td align="left">Address</td>
 <td align="left">address</td>
-<td align="left">The concatenated value of AddressNumber and StreetName of where the facility is located.</td>
+<td align="left">The concatenated value of AddressNumber and StreetName of where the facility is located. If there is not a valid, complete address available, any location description that was provided is included in this field.</td>
 </tr>
 <tr>
 <td align="left">City</td>
 <td align="left">city</td>
-<td align="left">The USPS prefeered name of the addressed city where the facility is located. Generated by GeoSupport and spatial joins.</td>
+<td align="left">The USPS preferred name of the addressed city where the facility is located. Generated by GeoClient and spatial joins. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries.</td>
 </tr>
 <tr>
 <td align="left">Borough</td>
@@ -687,37 +693,57 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td align="left">ZIP Code</td>
 <td align="left">zipcode</td>
-<td align="left">The ZIP Code the facility is within.</td>
-</tr>
-<tr>
-<td align="left">BBL</td>
-<td align="left">bbl</td>
-<td align="left">The BBL(s) the facility is located on.</td>
-</tr>
-<tr>
-<td align="left">BIN</td>
-<td align="left">bin</td>
-<td align="left">The BIN(s) the facility is located on.</td>
-</tr>
-<tr>
-<td align="left">X Coordinate</td>
-<td align="left">xcoord</td>
-<td align="left">The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
-</tr>
-<tr>
-<td align="left">Y Coordinate</td>
-<td align="left">ycoord</td>
-<td align="left">The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">The ZIP Code the facility is within. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries.</td>
 </tr>
 <tr>
 <td align="left">Latitude</td>
 <td align="left">latitude</td>
-<td align="left">The latitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">The latitude of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
 </tr>
 <tr>
 <td align="left">Longitude</td>
 <td align="left">longitude</td>
-<td align="left">The longitude of the location either calculated using the coordinates in the source data or provided by GeoSupport.</td>
+<td align="left">The longitude of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+</tr>
+<tr>
+<td align="left">X Coordinate</td>
+<td align="left">xcoord</td>
+<td align="left">The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+</tr>
+<tr>
+<td align="left">Y Coordinate</td>
+<td align="left">ycoord</td>
+<td align="left">The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+</tr>
+<tr>
+<td align="left">BIN</td>
+<td align="left">bin</td>
+<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bin">BIN</a> values for the buildings the facility is located in. This field contains blanks, because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data.</td>
+</tr>
+<tr>
+<td align="left">BBL</td>
+<td align="left">bbl</td>
+<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bbl">BBL</a> values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas are not located on tax lots.</td>
+</tr>
+<tr>
+<td align="left">Community Board</td>
+<td align="left">communityboard</td>
+<td align="left">The Community District the facility is within. This field contains blanks because the Community District boundaries do not capture facilities beyond the shoreline.</td>
+</tr>
+<tr>
+<td align="left">Council District</td>
+<td align="left">councildistrict</td>
+<td align="left">The City Council District the facility is within</td>
+</tr>
+<tr>
+<td align="left">Census Tract</td>
+<td align="left">censustract</td>
+<td align="left">The U.S. Census Tract the facility is within</td>
+</tr>
+<tr>
+<td align="left">NTA</td>
+<td align="left">censustract</td>
+<td align="left">The Neighborhood Tabulation Area (NTA) the facility is within. This field contains blanks because the NTA boundaries do not capture facilities beyond the shoreline.</td>
 </tr>
 <tr>
 <td align="left">Domain</td>
@@ -742,7 +768,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td align="left">Capacity</td>
 <td align="left">capacity</td>
-<td align="left">How many of capacity type/unit the facility is intended to hold.</td>
+<td align="left">How many of capacity type/unit the facility is intended to hold. For many types of facilities, no capacity information was available. The capacity-related fields are blank when no information was provided in the source data.</td>
 </tr>
 <tr>
 <td align="left">Capacity Type</td>
@@ -762,7 +788,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td align="left">Area</td>
 <td align="left">area</td>
-<td align="left">The total area of the site measured in the Area Type unit.</td>
+<td align="left">The total area of the site measured in the Area Type unit. For many types of facilities, no area information was available. The area-related fields are blank when no information was provided in the source data.</td>
 </tr>
 <tr>
 <td align="left">Area Type</td>
@@ -796,7 +822,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td align="left">Oversight Level</td>
-<td align="left">oversightagency</td>
+<td align="left">oversightlevel</td>
 <td align="left">The level of government of the oversight agency: City, State, City-State, Federal, or Non-public Oversight.</td>
 </tr>
 <tr>
@@ -826,7 +852,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 </tbody>
 </table>
-<h2 id="source-data">Source Data</h2>
+<h2 id="vi-source-data">VI. Source Data</h2>
 <p>The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.</p>
 <h3 id="amtrak-amtrak">Amtrak (Amtrak)</h3>
 <table>
@@ -1580,7 +1606,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 </tbody>
 </table>
-<h3 id="new-york-state-department-of-evironmental-conservation-nysdec">New York State Department of Evironmental Conservation (NYSDEC)</h3>
+<h3 id="new-york-state-department-of-environmental-conservation-nysdec">New York State Department of Environmental Conservation (NYSDEC)</h3>
 <table>
 <thead>
 <tr>
@@ -2015,9 +2041,30 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 </tbody>
 </table>
-<h2 id="database-structure">Database structure</h2>
+<h2 id="vii-database-structure">VII. Database structure</h2>
 <p>Currently the database consists of two tables. One table contains all the geocoded records with spatial data, and one with the records which could not be geocoded.</p>
-<p>In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For exmaple, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.</p>
+<p>In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For example, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.</p>
+<h2 id="appendix-i-deduping">Appendix I. Deduping</h2>
+<p>When duplicate records are identified in the data, </p>
+<p><strong>Table of Datasets with Overlapping Content:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Facility Subgroup</th>
+<th>Primary Dataset</th>
+<th>Secondary Dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-ii-full-classification-hierarchy">Appendix II. Full Classification Hierarchy</h2>
+<p>Interactive visualization of all 450+ facility types coming soon!</p>
               
             </div>
           </div>
