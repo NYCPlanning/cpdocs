@@ -1,6 +1,6 @@
 # City Planning Facilities Database
 
-### Overview
+## I. Overview
 
 The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across seven domains:
 
@@ -17,7 +17,7 @@ One goal of this database is to provide a consolidated, authoritative dataset th
 
 City Planning has grouped these facilities according to the seven domains bulleted above. Within each domain, each record is further categorized into a subsequent set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.
 
-Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the [Contents and Classification Heirarchy](http://docs.capitalplanning.nyc/facdb/#contents-and-classification-heirarchy) section.
+Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the [Contents and Classification Hierarchy](http://docs.capitalplanning.nyc/facdb/#contents-and-classification-Hierarchy) section.
 
 We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions.
 
@@ -29,7 +29,7 @@ We are constantly looking for ways to improve and add additional value to the da
 | Projection | WGS84 |
 | Date last updated | 02/04/16 |
 
-### Contents and Classification Heirarchy
+## II. Contents and Classification Hierarchy
 
 In order of increasing granularity, each record that is included in the database is classified by DCP into a **Domain > Facility Group > Facility Subgroup > Facility Type**. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.
 
@@ -136,13 +136,17 @@ In order of increasing granularity, each record that is included in the database
 
 
 
-## Limitations and Disclaimers
+## III. Limitations and Disclaimers
 
-FacDB is only as good as the source data it aggregates. Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#methodology).
+FacDB is only as good as the source data it aggregates. 
 
-**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain atrributes from the most up-to-date and detailed record.
+**Missing Records.** Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Many records also could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#methodology).
 
-**Administrative Addresses.** There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
+**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain all useful attributes from each record. To read about how values from duplicate records that have been merged are structured in the data, please review [Appendix I. Deduping](http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy).
+
+**Administrative Addresses.** There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately, these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
+
+**Public Accessibility of Sites.** DCP is unable to verify the public accessibility of all sites. For example, some playgrounds or playing fields may only be accessible to participants in certain programs.
 
 **Analysis Limitations.** As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.
 
@@ -150,7 +154,7 @@ If you have any questions about or comments on these data please contact the NYC
 
 
 
-## Methodology
+## IV. Methodology
 
 ### Data Processing
 
@@ -160,16 +164,16 @@ Since the facility records are aggregated from many datasets designed for differ
 First, the desired columns in the source data get mapped to the columns in FacDB schema. Many values also need to be recoded and the facility records then need to be classified. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
 
 **Geoprocessing.**
-Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
+Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid, if a BIN could not be assigned and used for the geometry instead. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
 
-**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.
+**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database. More detail on this process is provided in [Appendix I. Deduping](http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy).
 
 
 <!-- The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.
 
 | Data Processing Flag | Definition |
 | :-- | :-- |
-| address2geom_borough | Geometry, BBL, BIN, and zipcode were generated by NYC GeoClient using address and county or borough provided by agency. |
+| address2geom_borough | Geometry, BBL, BIN, and Zip Code were generated by NYC GeoClient using address and county or borough provided by agency. |
 | address2geom_zipcode | Geometry, BBL, BIN, and borough were generated by NYC GeoClient using address and zip code provided by agency. |
 | bbljoin | Geometry and address were provided by agency but without a BBL. BBL was obtained by doing a spatial join with MapPLUTO |
 | bbljoin2address | Geometry was provided by agency but without an address or BBL. BBL and address were obtained by doing a spatial join with MapPLUTO |
@@ -178,47 +182,51 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 
  -->
 
-## Data Dictionary
+## V. Data Dictionary
 
 The following table lists and defines each of the fields presented in the Facilities Database as they are organized in the database from left to right.
 
 | Field Alias | Field Name | Description |
-| :------------------- | :------------------- | :------------------------------------------------------ |
+| :------------------- | :------------------- | :-------------------- |
 | Unique Identifier | uid | Universal Unique Identifier.  When a row is added to the table the uid is automatically generated, enabling database replication. |
 | Hash | id | An encrypted version of the row from the source data table. |
 | Geom | geom | How the feature is spatially represented. |
 | Old ID | idold | Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD. |
 | Agency ID | idagency | Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset. |
 | Facility Name | facilityname | The name of the facility in proper case. |
-| Address Number | addressnumber | The address number of where the facility is located. Generated by GeoSupport when not provided in the source data. |
-| Street Name | streetname | The name of the street where the facility is located. Generated by GeoSupport. |
-| Address | address | The concatenated value of AddressNumber and StreetName of where the facility is located. |
-| City | city | The USPS prefeered name of the addressed city where the facility is located. Generated by GeoSupport and spatial joins. |
+| Address Number | addressnumber | The address number of where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank. |
+| Street Name | streetname | The name of the street where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank. |
+| Address | address | The concatenated value of AddressNumber and StreetName of where the facility is located. If there is not a valid, complete address available, any location description that was provided is included in this field. |
+| City | city | The USPS preferred name of the addressed city where the facility is located. Generated by GeoClient and spatial joins. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries. |
 | Borough | borough | The full name the borough the facility is within. |
 | Borough Code | boroughcode | The number value representing the borough the facility is within. |
-| ZIP Code | zipcode | The ZIP Code the facility is within. |
-| BBL | bbl | The BBL(s) the facility is located on. |
-| BIN | bin | The BIN(s) the facility is located on. |
-| X Coordinate | xcoord | The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
-| Y Coordinate | ycoord | The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
-| Latitude | latitude | The latitude of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
-| Longitude | longitude | The longitude of the location either calculated using the coordinates in the source data or provided by GeoSupport. |
+| ZIP Code | zipcode | The ZIP Code the facility is within. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries. |
+| Latitude | latitude | The latitude of the location either calculated using the coordinates in the source data or provided by GeoClient. |
+| Longitude | longitude | The longitude of the location either calculated using the coordinates in the source data or provided by GeoClient. |
+| X Coordinate | xcoord | The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient. |
+| Y Coordinate | ycoord | The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient. |
+| BIN | bin | The [BIN](http://a030-goat.nyc.gov/goat/glossary.aspx#bin) values for the buildings the facility is located in. This field contains blanks, because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data. |
+| BBL | bbl | The [BBL](http://a030-goat.nyc.gov/goat/glossary.aspx#bbl) values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas are not located on tax lots. |
+| Community Board | communityboard | The Community District the facility is within. This field contains blanks because the Community District boundaries do not capture facilities beyond the shoreline. |
+| Council District | councildistrict | The City Council District the facility is within |
+| Census Tract | censustract | The U.S. Census Tract the facility is within |
+| NTA | censustract | The Neighborhood Tabulation Area (NTA) the facility is within. This field contains blanks because the NTA boundaries do not capture facilities beyond the shoreline. |
 | Domain | domain | The value representing the facility domain, the broadest category. |
 | Facility Group | facilitygroup | The value representing the group type, the second broadest category. |
 | Facility Sub-Group | facilitysubgroup | The value representing the subgroup type. |
 | Facility Type | facilitytype | The value representing the facility type, the most granular category of facilities. |
-| Capacity | capacity | How many of capacity type/unit the facility is intended to hold. |
+| Capacity | capacity | How many of capacity type/unit the facility is intended to hold. For many types of facilities, no capacity information was available. The capacity-related fields are blank when no information was provided in the source data. |
 | Capacity Type | capacitytype | The value representing the unit type of capacity, such as beds, visitors, seats, etc. |
 | Utilization | utilization | How many of capacity type/unit are being utilized at the facility. |
 | Utilization Rate | utilizationrate | The ratio of the of utilization over the total facility capacity. |
-| Area | area | The total area of the site measured in the Area Type unit. |
+| Area | area | The total area of the site measured in the Area Type unit. For many types of facilities, no area information was available. The area-related fields are blank when no information was provided in the source data. |
 | Area Type | areatype | The unit of measurement for Area. |
 | Operator Type | operatortype | Indicates whether the operating entity is public or non-public. |
 | Operator Name | operatorname | The name of the operating entity. |
 | Operator Abbreviation | operatorabbrev | Abbreviation for the operating entity. |
 | Oversight Agency | oversightagency | The name of the agency overseeing the facility. |
 | Oversight Abbreviation | oversightabbrev | Abbreviation for the oversight agency. |
-| Oversight Level | oversightagency | The level of government of the oversight agency: City, State, City-State, Federal, or Non-public Oversight. |
+| Oversight Level | oversightlevel | The level of government of the oversight agency: City, State, City-State, Federal, or Non-public Oversight. |
 | Date Source Data Updated | datesourceupdated | The date the source data was updated within the parent database. |
 | Agency Source | agencysource | The Agency whose data was used as the source for the record. |
 | Source Dataset Name | sourcedatasetname | The name of the dataset the record came from. |
@@ -227,7 +235,7 @@ The following table lists and defines each of the fields presented in the Facili
 
 
 
-## Source Data
+## VI. Source Data
 
 The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.
 
@@ -508,7 +516,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | Refresh Method: | Manual copy and paste - Annually |
 
 
-### New York State Department of Evironmental Conservation (NYSDEC)
+### New York State Department of Environmental Conservation (NYSDEC)
 
 | | |
 | -- | -- |
@@ -673,10 +681,25 @@ The following datasets were used to populate the Facilities Database. The data s
 | Refresh Method: | Pull from USNPS - Annually |
 
 
-## Database structure
+## VII. Database structure
 
 Currently the database consists of two tables. One table contains all the geocoded records with spatial data, and one with the records which could not be geocoded.
 
-In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For exmaple, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.
+In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For example, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.
+
+## Appendix I. Deduping
+
+When duplicate records are identified in the data, 
+
+**Table of Datasets with Overlapping Content:**
+
+| Facility Subgroup | Primary Dataset | Secondary Dataset |
+| -- | -- | -- |
+| | | | 
+
+
+## Appendix II. Full Classification Hierarchy
+
+Interactive visualization of all 450+ facility types coming soon!
 
 
