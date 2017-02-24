@@ -147,7 +147,7 @@ FacDB is only as good as the source data it aggregates.
 
 **Missing Records.** Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded in the data that source agencies provide in order to protect the safety and privacy of their clients. Many records also could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#iv-methodology).
 
-**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain all useful attributes from each record. To read about datasets that overlap and how merged values from duplicate records are structured in the data, please review [Appendix I. Deduping](http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy).
+**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility. This is because several of the source datasets have content that overlaps with other datasets. We are working to systematically identify these remaining duplicate records and retain all useful attributes from each record.
 
 **Administrative Addresses.** There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately, these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
 
@@ -171,7 +171,7 @@ First, the desired columns in the source data get mapped to the columns in FacDB
 **Geoprocessing.**
 Many of the source datasets only provide addresses without no coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Records that are provided in the source data with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are also many cases where an agency provides coordinates but the coordinates they provided fall in the road bed, rather than inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid, if a BIN could not be assigned and used for the geometry instead. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
 
-**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database. More detail on this process is provided in [Appendix I. Deduping](http://docs.capitalplanning.nyc/facdb/#appendix-ii-full-classification-hierachy).
+**Duplicate Record Removal.** Several of the source datasets have content which overlaps with other datasets. Duplicate records were identified by querying for all the records which fall on the same BIN or BBL as a record with the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.
 
 
 <!-- The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags are defined in the table below.
@@ -693,10 +693,10 @@ Currently the database consists of two tables. One table contains all the geocod
 
 In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For example, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.
 
-## Appendix I. Deduping
+<!-- ## Appendix I. Deduping
 
 More details on the methodology and data structure coming soon!
-<!-- When duplicate records are identified in the data,  -->
+
 
 **Table of Datasets with Overlapping Content:**
 
@@ -709,4 +709,4 @@ More details on the methodology and data structure coming soon!
 
 Interactive visualization of all 450+ facility types coming soon!
 
-
+ -->
