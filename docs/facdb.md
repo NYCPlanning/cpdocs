@@ -2,7 +2,7 @@
 
 ## I. Overview
 
-The City Planning Facilities Database (FacDB) aggregates information about facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York. These facilities generally impact the quality of the city’s neighborhoods, and they range across seven domains:
+The City Planning Facilities Database aggregates more than 35,000 records from 43 different public data sources provided by City, State, and Federal agencies. While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:
 
 * Health and Human Services
 * Education, Child Welfare, and Youth
@@ -12,138 +12,169 @@ The City Planning Facilities Database (FacDB) aggregates information about facil
 * Core Infrastructure and Transportation
 * Administration of Government
 
-This database and its [interactive map](http://capitalplanning.nyc/facilities) build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces. It captures the location, type, and capacity of public and private facilities in order to inform holistic neighborhood planning, strategic site selection and service delivery planning, opportunities for interagency and public-private partnerships, community outreach activities, and many other functions across City agencies.
-One goal of this database is to provide a consolidated, authoritative dataset that can serve as a one-stop-shop to planners. More broadly, the intent is to provide the foundation for a more robust data-integration initiative, ensuring interoperability between disparate agencies’ datasets.
+Within each of these domains, each record is further categorized into a set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names appear as they do in source datasets, wherever possible. A full listing of the facility categories is provided in the [Contents and Classification Hierarchy](http://docs.capitalplanning.nyc/facdb/#ii-contents-and-classification-hierarchy) section.
 
-City Planning has grouped these facilities according to the seven domains bulleted above. Within each domain, each record is further categorized into a subsequent set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names are pulled directly from source datasets, wherever possible.
+This database and its [interactive map](http://capitalplanning.nyc.gov/facilities) build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces. Improvements include more facility types, improved data quality, and a restructured the database for easier use. We have also automated our means of refreshing the data from the majority of sources – we anticipate that the data will be refreshed on at least a quarterly basis (although source datasets may be refreshed less frequently). Please read more about the [limitations](http://docs.capitalplanning.nyc/facdb/#iii-limitations-and-disclaimers) of this data product below.
 
-Currently, FacDB aggregates and synthesizes data sourced from 43 agencies, recording almost 40,000 facilities throughout NYC. More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis. A full listing of the facility categories is provided in the [Contents and Classification Hierarchy](http://docs.capitalplanning.nyc/facdb/#ii-contents-and-classification-hierarchy) section.
+More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis.
 
-We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions.
+We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov with any suggestions.
 
 | General information |
 | :------------: | ------------- |
 | Dataset Name | "Facilities Database "|
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
-| Data format | [Webmap](http://capitalplanning.nyc/facilities), [Shapefile](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=shp&filename=facilities_all_2017-02-09), [CSV](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=csv&filename=facilities_all_2017-02-09) |
+| Data format | [Webmap](http://capitalplanning.nyc.gov/facilities), [Shapefile](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=shp&filename=facilities_all_2017-02-24), [CSV](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=csv&filename=facilities_all_2017-02-24) |
 | Projection | WGS84 |
-| Date last updated | 02/04/16 |
+| Date last updated | 02/24/16 |
 
 ## II. Contents and Classification Hierarchy
 
 In order of increasing granularity, each record that is included in the database is classified by DCP into a **Domain > Facility Group > Facility Subgroup > Facility Type**. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.
 
-**Administration of Government Domain**
+####Education, Child Welfare, and Youth Domain####
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Offices, Training, and Testing | Offices | Offices used by City agencies |
-| Offices, Training, and Testing | Training and Testing | Training and testing sites used by City agencies |
-| Other Property | Miscellaneous Use | City property without a categorized use |
-| Other Property | Properties Leased or Licensed to Non-public Entities | Properties Leased or Licensed to Non-public Entities |
-| Other Property | Undeveloped or No Use | City property and structures without a designated use |
-| Parking, Maintenance, and Storage | Custodial | City agency custodial sites |
-| Parking, Maintenance, and Storage | Maintenance and Garages | City agency garages and vehicle maintenance sites |
-| Parking, Maintenance, and Storage | Parking | City agency parking lots sued for their operational and client needs |
-| Parking, Maintenance, and Storage | Storage | City agency storage sites |
+| Schools (K-12) | ----------- | Preschools, K-12 schools, and higher education overseen by NYC Dept. of Education and NYS Education Department |
+| | Public Schools | Public and charter elementary, middle, and high schools |
+| | Non-public Schools | Private elementary, middle, and high schools |
+| | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
+| Child Care and Pre-Kindergarten | ----------- | Childcare centers overseen by NYC Administration for Childrens Services and NYC Dept. of Mental Health and Hygiene |
+| | DOE Universal Pre-Kindergarten | NYC DOE designated Universal Pre-K center |
+| | Dual Child Care and Universal Pre-K | Center that offers both a NYC DOE desgiated Universal Pre-K services and other child care services |
+| | Child Care | Group and school-based child care centers for infants, toddlers, and preschoolers |
+| | Preschools for Students with Disabilities | Center specialized on preschool students with disabilities |
+| Children's Services | ----------- | Services overseen by NYC Health and Human Services and NYC Administration for Children's Services |
+| | Foster Care Services and Residential Care | Foster care services and juvenile non-secure placement |
+| | Preventative Care, Evaluation Services, and Respite | Preventative care and intervention services |
+| Child Welfare | ----------- | Child feeding centers tracked by New York State Education Department |
+| | Child Nutrition | Summer and year-round child feeding sites |
+| | School-Based Food Services | Feed services located at schools |
+| Youth Services | ----------- | Services overseen by NYC Dept. of Youth and Community Development |
+| | Comprehensive After School System (COMPASS) Sites | Comprehensive After School System (COMPASS) Sites |
+| | Youth Centers, Literacy Programs, Job Training, and Immigrant Services | Youth Centers, Literacy Programs, Job Training, and Immigrant Services |
+| Camps | ----------- | Camps overseen by NYC Dept. of Mental Health and Hygiene |
+| | Camps | Preschool age and all age camps |
+| Higher Education | ----------- | Public and privately operated 2 and 4 year colleges and universities |
+| | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
+| Vocational and Proprietary Schools | ----------- | ESL schools and trade colleges |
+| | Proprietary Schools | ESL schools and trade colleges |
 
-**Core Infrastructure and Transportation Domain**
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+####Parks, Gardens, and Historical Sites Domain####
+
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Material Supplies and Markets | Material Supplies | Asphalt plants and other materials processing |
-| Material Supplies and Markets | Wholesale Markets | Wholesale food and commercial markets |
-| Solid Waste | Solid Waste Processing | Material recovery, composting, landfill gas recovery, and scrap metal processing facilities |
-| Solid Waste | Solid Waste Transfer and Carting | Waste carter sites and transfer stations |
-| Telecommunications | Telecommunications | Antennas and other telecommunications sites |
-| Transportation | Airports and Heliports | Publicly and privately operated airports, heliports, and seaplane bases |
-| Transportation | Bus Depots and Terminals | School bus depots, MTA bus depots, and Port Authority bus terminals |
-| Transportation | Parking Lots and Garages | Publically and commercially operated parking lots and garages |
-| Transportation | Other Transportation | Other transportation sites |
-| Transportation | Ports and Ferry Landings | Ferry landings, cruise terminals, and ports |
-| Transportation | Rail Yards and Maintenance | Rail yards and maintenance facilities |
-| Water and Wastewater | Wastewater and Pollution Control | Wastewater treatment plants and other wastewater conveyance and pollution control sites |
-| Water and Wastewater | Water Supply | Reservoirs and other water supply related sites |
+| Parks and Plazas | ----------- | Properties operated by NYC Parks, NYC Dept. of Transportation, NYS Office of Parks, Recreation and Historic Preservation, NYS Dept. of Conservation, and City-State corporations and trusts |
+| | Parks | Flagship parks, community parks, state parks, and city-state parks |
+| | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
+| | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
+| | Gardens | Community gardens |
+| | Preserves and Conservation Areas | Nature areas, preserves, wetlands, and state forests |
+| | Cemeteries | Cemeteries operated by NYC Parks |
+| Historical Sites | ----------- | Sites operated by NYC Parks, NYS Office of Parks, Recreation and Historic Preservation, and US National Park Service |
+| | Historical Sites | Historic house parks, State historic places, national monuments, and national memorials |
 
-**Education, Child Welfare, and Youth Domain**
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+####Libraries and Cultural Programs Domain####
+
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Camps | Camps | Preschool age and all age camps |
-| Child Welfare | Child Nutrition | Summer and year-round child feeding sites |
-| Child Welfare | School-Based Food Services | Food programs for children based on school campuses |
-| Child Care and Pre-Kindergarten | DOE Universal Pre-Kindergarten | Universal Pre-Kindergarten programs registered by DOE as [Pre-K for All](http://schools.nyc.gov/ChoicesEnrollment/PreK/default.htm) providers |
-| Child Care and Pre-Kindergarten | Dual Child Care and Universal Pre-K | Centers that operate as both DOE registered Universal Pre-K and general child care |
-| Child Care and Pre-Kindergarten | Child Care | Group and school-based child care centers for infants, toddlers, and preschoolers that have no association with DOE's Universal Pre-K program |
-| Child Care and Pre-Kindergarten | Preschools for Students with Disabilities | Preschools programs specifically designed for students with disabilities |
-| Childrens Services | Foster Care Services and Residential Care | Foster care services and residential placement programs for children |
-| Childrens Services | Preventative Care, Evaluation Services, and Respite | Programs that provide preventative care, evaluation services, and respite for caretakers of children |
-| Schools (K-12) | Public Schools | Public and charter elementary, middle, and high schools |
-| Schools (K-12) | Non-public Schools | Private elementary, middle, and high schools |
-| Schools (K-12) | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
-| Youth Services | Comprehensive After School System (COMPASS) Sites | Comprehensive After School System of NYC [(COMPASS)](https://www1.nyc.gov/site/dycd/services/after-school/comprehensive-after-school-system-of-new-york-city-compass.page) Programs |
-| Youth Services | Youth Centers, Literacy Programs, Job Training, and Immigrant Services | Youth literacy, employment, and other support programs |
-| Higher Education | Colleges or Universities | Public and privately operated 2 and 4 year colleges and universities |
-| Vocational and Proprietary Schools | Proprietary Schools | Trade schools and ESL programs |
+| Libraries | ----------- | Libraries operated by New York Public Libraries, Queens Public Libraries, and Brooklyn Public Libraries and academic institutions |
+| | Public Libraries | All public libaries |
+| | Academic and Special Libraries | Libraries operated by academic institutions or other specialized organizations |
+| Cultural Institutions | ----------- | Institutions licensed or funded by the NYC Dept. of Cultural Affairs |
+| | Museums | Publicly and privately operated museums |
+| | Historical Societies | Historical societies |
+| | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers |
 
-**Health and Human Services Domain**
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+####Public Safety, Emergency Services, and Administration of Justice Domain####
+
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Health Care | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
-| Health Care | Health Promotion and Disease Prevention | Programs focused on improving health through education and disease prevention |
-| Health Care | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
-| Health Care | Mental Health | Inpatient, outpatient, and emergency mental health services |
-| Health Care | Residential Health Care | Nursing homes, hospice care, and supportive housing |
-| Health Care | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
-| Human Services | Community Centers and Community School Programs | Community centers and [Community School](http://www1.nyc.gov/site/communityschools/index.page) programs that provide multiple social services at one site |
-| Human Services | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
-| Human Services | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services, including drop-in and intake centers for the homeless |
-| Human Services | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
-| Human Services | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
-| Human Services | Shelters and Transitional Housing | Homeless shelters and transitional houseing |
-| Human Services | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
-| Human Services | Workforce Development | Workforce 1 Centers and other vocational services for adults |
+| Emergency Services | ----------- | Services provided by Fire Dept. of New York |
+| | Fire Services | Firehouses |
+| | Other Emergency Services | Ambulance and Emergency Medical Stations |
+| Public Safety | ----------- | Services provided by New York Police Dept. and New York Housing Authority Police |
+| | Police Services | NYPD and NYCHA police stations |
+| | School-Based Safety Program | Public safety program on a school campus |
+| | Other Public Safety | Other public safety related support centers |
+| Justice and Corrections | ----------- | Courts and correctional facilities operated by NYC. Dept. of Correction, NYS Unified Court System, NYS Dept. of Corrections and Community Supervision, US Courts, and Federal Bureau of Prisons |
+| | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
+| | Detention and Correctional | Correctional and dentention centers |
 
-**Parks, Gardens, and Historical Sites Domain**
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+####Health and Human Services Domain####
+
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Cemeteries | Cemeteries | Cemeteries operated by NYC Parks |
-| Historical Sites | Historical Sites | Historic house parks, State historic places, national monuments, and national memorials |
-| Parks and Plazas | Cemeteries | Cemeteries operated by NYC Parks |
-| Parks and Plazas | Gardens | Community gardens |
-| Parks and Plazas | Parks | Flagship parks, community parks, state parks, and city-state parks |
-| Parks and Plazas | Preserves and Conservation Areas | Nature areas, preserves, wetlands, and state forests |
-| Parks and Plazas | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
-| Parks and Plazas | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
+| Health Care | ----------- | Health facilities overseen by NYC Health and Hospitals Corporation, NYC Health and Human Services, NYS Dept. of Health, NYS Office of Mental Health, and NYS Office of Alcoholism and Substance Abuse Services |
+| | Hospitals and Clinics | Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities |
+| | Mental Health | Inpatient, outpatient, and emergency mental health services |
+| | Residential Health Care | Nursing homes, hospice care, and supportive housing |
+| | Chemical Dependency | Monitored support, inpatient, outpatient, and crisis services |
+| | Health Promotion and Disease Prevention | Programs focused on improving health through education and disease prevention |
+| | Other Health Care | Rehab, respite servies, vaccination services, AIDS counseling, and home health centers |
+| Human Services | ----------- | Services overseen by NYC Dept. of Homeless Services, NYC Dept. of Human Resources, NYC Mayorality, and others |
+| | Senior Services | Neighborhood senior centers, meal delivery programs, and other services for seniors |
+| | Community Centers and Community School Programs | Community centers that provide multiple social services at one site |
+| | Financial Assistance and Social Services | SNAP, Child Support, and Medicaid Centers operated by NYC Human Resources Administration |
+| | Workforce Development | Workforce 1 Centers and other vocational services for adults |
+| | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
+| | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
+| | Shelters and Transitional Housing | NOTE: These records will be incorporated soon, once the data is finished being assembled for inclusion in the database. |
+| | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
+| | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
 
-**Libraries and Cultural Programs Domain**
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+####Core Infrastructure and Transportation Domain####
+
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Libraries | Academic Libraries | Libraries operated by academic institutions |
-| Libraries | Public Libraries | All public libaries |
-| Cultural Institutions | Historical Societies | Historical societies |
-| Cultural Institutions | Museums | Publicly and privately operated museums |
-| Cultural Institutions | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers. NOTE: Many records in this category could not be geocoded because they did not have valid addresses. |
+| Solid Waste | ----------- | Sites overseen and operated by NYC Dept. of Sanitation, NYC Business Integrity Commission, and NYS Dept. of Conservation |
+| | Solid Waste Processing | Material recovery, composting, landfill gas recovery, and scrap metal processing facilities |
+| | Solid Waste Transfer and Carting | Waste carter sites and transfer stations |
+| Water and Wastewater | ----------- | Sites overseen and operated by NYC Dept. of Environmental Protection |
+| | Wastewater and Pollution Control | Wastewater treatment plants and other sites related to wastewater conveyance and pollution control |
+| | Water Supply | Sites related to water supply |
+| Transportation | ----------- | Sites operated or overseen by Metropolitan Transportation Authority, Port Authority of NY and NJ, NYC Dept. of Transportation, NYC Dept. of Consumer Affairs, US Dept. of Transportation, and others |
+| | Parking Lots and Garages | Publicly and commerially operated parking lots and garages |
+| | Bus Depots and Terminals | School bus depots, MTA bus depots, and Port Authority bus terminals |
+| | Rail Yards and Maintenance | Rail yards and maintenance facilities |
+| | Ports and Ferry Landings | Ferry landings, cruise terminals, and ports |
+| | Airports and Heliports | Publicly and privately operated airports, heliports, and seaplane bases |
+| | Other Transportation | Uncategorized transportation related sites |
+| Telecommunications | ----------- | Sites operated or overseen by Dept. of Information Technology and Telecommunications and other City telecommunications services |
+| | Telecommunications | Antennas and other telecommunications sites |
+| Material Supplies and Markets | ----------- | Sites operated or overseen by Dept. of Information Technology and Telecommunications and other City telecommunications services |
+| | Material Supplies | Asphalt plants and other material processing facilities |
+| | Wholesale Markets | Wholesale food and commercial markets |
 
-**Public Safety, Emergency Services, and Administration of Justice Domain**
 
-| Facility Group | Facility Subgroup | Subgroup Description |
+####Administration of Government Domain####
+
+| Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Emergency Services | Fire Services | Firehouses |
-| Emergency Services | Other Emergency Services | Ambulance and Emergency Medical Stations |
-| Justice and Corrections | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
-| Justice and Corrections | Detention and Correctional | Correctional and dentention centers |
-| Public Safety | Police Services | NYPD and NYCHA police stations |
-| Public Safety | School-Based Safety Program | Public safety programs on school campuses |
-| Public Safety | Other Public Safety | Other public safety related support centers |
+| Offices, Training, and Testing | ----------- | All City owned or leased offices overseen by Dept. of Citywide Administrative Services |
+| | Offices | Offices used by City agencies |
+| | Training and Testing | Training and testing sites used by City agencies |
+| City Agency Parking, Maintenance, and Storage | ----------- | City owned or leased properites used for City vehicle and equipment-related operations by Dept. of Citywide Administrative Services |
+| | Custodial | City agency custodial sites |
+| | Maintenance and Garages | City agency vehicle maintenance sites |
+| | City Agency Parking | City agency parking lots |
+| | Storage | City agency storage sites |
+| Other Property | ----------- | City owned or leased property without a categorized use overseen by Dept. of Citywide Administrative Services |
+| | Miscellaneous Use | Property without a categorized use |
+| | Properties Leased or Licensed to Non-public Entities | Properties Leased or Licensed to Non-public Entities |
 
 
 ## III. Limitations and Disclaimers
 
-FacDB is only as good as the source data it aggregates. 
+The City Planning Facilities Database (FacDB) is only as good as the source data it aggregates, and the Department of City Planning cannot verify the accuracy of all records. Please read more about specific data and analysis limitations before using this data.
+
+**Analysis Limitations.** As a result of these data limitations and inconsistencies listed below, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive. In addition, we rely on source data from other agencies to populate the database, and some of these sources may fall out-of-date. Users can find the date of each source dataset’s latest update in the [Source Data](http://docs.capitalplanning.nyc/facdb/#vi-source-data) section.
 
 **Missing Records.** Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded in the data that source agencies provide in order to protect the safety and privacy of their clients. Many records also could not be geocoded. To learn more about how the data is processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#iv-methodology).
 
@@ -152,8 +183,6 @@ FacDB is only as good as the source data it aggregates.
 **Administrative Addresses.** There are also known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately, these could not be systematically verified. We hope to resolve as many of these limitations as possible over time, and seek feedback from the user community on potential approaches to improving the data. For more detailed information on a specific facility please reach out to the respective oversight agency.
 
 **Public Accessibility of Sites.** DCP is unable to verify the public accessibility of all sites. For example, some playgrounds or playing fields may only be accessible to participants in certain programs.
-
-**Analysis Limitations.** As a result of these data limitations and inconsistencies, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites, and that this database is not authoritatively comprehensive.
 
 If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov).
 
@@ -245,254 +274,341 @@ The following table lists and defines each of the fields presented in the Facili
 The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.
 
 
-### Amtrak (Amtrak)
 
-| | |
-| -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
-
-
-### Brooklyn Bridge Park Corporation (BBPC)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
-
-
-### Federal Bureau of Prisons (FBOP)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Our Locations](https://www.bop.gov/locations/map.jsp#) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
-
-
-### Food Bank of New York City (FBNYC)
-
-| | |
-| -- | -- |
-| Dataset Name:  | FBNYC Food Pantry Soup Kitchen List 8-5-16 |
-| Last updated: | 8/5/16 |
-| Refresh Method: | Request file from agency - Quarterly |
-
-
-### Hudson River Park Trust (HRPT)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
-
-
-### Metropolitan Transportation Authority (MTA)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
-
-
-### New York City Administration for Childrens Services (NYCACS)
+### NYC Administration for Children's Services (NYCACS)
 
 | | |
 | -- | -- |
 | Dataset Name:  | Contractor Data |
-| Last updated: | 1/3/17 |
-| Refresh Method: | Request file from agency - Annually |
+| Last Updated: | 1/3/17 |
+| Refresh Method: | Request file from agency |
 
 
-### New York City Business Integrity Commission (NYCBIC)
+### NYC Business Integrity Commission (NYCBIC)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Approved licensees and registrants for trade waste](https://data.cityofnewyork.us/Business/Approved-licensees/7atx-5a3s) |
-| Last updated: | 9/5/14 |
-| Refresh Method: | Pull from NYC Open Data - Annually |
+| Last Updated: | 9/5/14 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department for the Aging (NYCDFTA)
+### NYC Department for the Aging (NYCDFTA)
 
 | | |
 | -- | -- |
 | Dataset Name: | [DFTA Contracts](https://data.cityofnewyork.us/Social-Services/DFTA-Contracts/6j6t-3ixh) |
-| Last updated: | 1/20/17 |
-| Refresh Method: | Pull from NYC Open Data - Weekly |
+| Last Updated: | 1/20/17 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Citywide Administrative Services (NYCDCAS)
+### NYC Department of Citywide Administrative Services (NYCDCAS)
 
 | | |
 | -- | -- |
-| Dataset Name:  | [City Owned and Leased Properties](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-colp.page) |
-| Last updated: | 10/20/16 |
-| Refresh Method: | Pull from NYC Open Data - Biennially |
+| Dataset Name: | [City Owned and Leased Properties](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-colp.page) |
+| Last Updated: | 10/20/16 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Consumer Affairs (NYCDCA)
+### NYC Department of Consumer Affairs (NYCDCA)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Legally Operating Businesses](https://data.cityofnewyork.us/Business/Legally-Operating-Businesses/w7w3-xahh) |
-| Last updated: | 1/20/17 |
-| Refresh Method: | Pull from NYC Open Data - Weekly |
+| Last Updated: | 1/20/17 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Correction (NYCDOC)
+### NYC Department of Correction (NYCDOC)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Correction Facilities Locations](http://www1.nyc.gov/site/doc/about/facilities-locations.page) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
+| Last Updated: | 7/1/16 |
+| Refresh Method: | Confirm on agency's website |
 
 
-### New York City Department of Cultural Affairs (NYCDCLA)
+### NYC Department of Cultural Affairs (NYCDCLA)
 
 | | |
 | -- | -- |
 | Dataset Name: | [DCLA Cultural Organizations](https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32) |
-| Last updated: | 3/22/16 |
-| Refresh Method: | Pull from NYC Open Data - Annually |
-| Notes: | Many records in this dataset could not be geocoded because they had invalid addresses, such as P.O. Boxes. |
+| Last Updated: | 3/22/16 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Education (NYCDOE)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Universal Pre-K (UPK) School Locations](https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f) |
-| Last updated: | 1/15/16 |
-| Refresh Method: | Pull from NYC Open Data - Monthly |
+### NYC Department of Education (NYCDOE)
 
 | | |
 | -- | -- |
 | Dataset Name:  | [2015-2016 Blue Book](https://dnnhh5cc1.blob.core.windows.net/portals/0/Capital_Plan/Utilization_Reports/Blue%20Book%202015-2016.pdf?sr=b&si=DNNFileManagerPolicy&sig=AExrFIUz%2BQDwk%2FlptyHq0ZkW2Ur9J69SJuy4MgQ%2BAp4%3D) |
-| Last updated: | 7/20/16 |
-| Refresh Method: | Request file from agency - Annually |
+| Last Updated: | 11/1/16 |
+| Refresh Method: | Request file from agency |
 
 | | |
 | -- | -- |
 | Dataset Name: | [Routes](https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm) |
-| Last updated: | 1/1/17 |
-| Refresh Method: | Pull from NYC Open Data - Monthly |
+| Last Updated: | 1/1/17 |
+| Refresh Method: | Pull from NYC Open Data |
+
+| | |
+| -- | -- |
+| Dataset Name: | [Universal Pre-K (UPK) School Locations](https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f) |
+| Last Updated: | 1/15/16 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Environmental Protection (NYCDEP)
+### NYC Department of Environmental Protection (NYCDEP)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
 
 
-### New York City Department of Health and Mental Hygiene (NYCDOHMH)
+### NYC Department of Health and Mental Hygiene (NYCDOHMH)
 
 | | |
 | -- | -- |
 | Dataset Name: | [DOHMH Childcare Center Inspections](https://data.cityofnewyork.us/Health/DOHMH-Childcare-Center-Inspections/dsg6-ifza) |
-| Last updated: | 1/23/17 |
-| Refresh Method: | Pull from NYC Open Data - Daily |
+| Last Updated: | 1/23/17 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Homeless Services (NYCDHS)
-
-| | |
-| -- | -- |
-| Dataset Name:  | DHS Shelter Listing |
-| Last updated: | 11/21/16 |
-| Refresh Method: | Request file from agency - Monthly |
-
-
-### New York City Department of Parks and Recreation (NYCDPR)
+### NYC Department of Parks and Recreation (NYCDPR)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Parks Properties](https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7) |
-| Last updated: | 8/27/16 |
-| Refresh Method: | Pull from NYC Open Data - Monthly |
+| Last Updated: | 8/27/16 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
-### New York City Department of Sanitation (NYCDSNY)
+### NYC Department of Sanitation (NYCDSNY)
 
 | | |
 | -- | -- |
 | Dataset Name:  | DSNY_select_facs_07262916 |
-| Last updated: | 7/26/16 |
-| Refresh Method: | Request file from agency - Annually |
+| Last Updated: | 7/26/16 |
+| Refresh Method: | Request file from agency |
 
 
-### New York City Department of Small Business Services (NYCSBS)
+### NYC Department of Small Business Services (NYCSBS)
 
 | | |
 | -- | -- |
 | Dataset Name:  | SBS Workforce1 Career Center Locations |
-| Last updated: | 11/17/16 |
-| Refresh Method: | Request file from agency - Annually |
+| Last Updated: | 11/17/16 |
+| Refresh Method: | Request file from agency |
 
 
-### New York City Department of Transportation (NYCDOT)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Municipal Parking Facilities](http://www.nyc.gov/html/dot/html/motorist/parkinglist.shtml) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
+### NYC Department of Transportation (NYCDOT)
 
 | | |
 | -- | -- |
 | Dataset Name:  | Plaza Program |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Request file from agency - Annually |
+| Last Updated: | 2/24/17 |
+| Refresh Method: | Request file from agency |
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
+| Dataset Name:  | Facilities Data - Bridge Houses |
+| Last Updated: | 2/23/17 |
+| Refresh Method: | Request file from agency |
+
+| | |
+| -- | -- |
+| Dataset Name:  | Facilities Data - Ferry Terminals and Landings |
+| Last Updated: | 2/23/17 |
+| Refresh Method: | Request file from agency |
+
+| | |
+| -- | -- |
+| Dataset Name:  | Facilities Data - Parking Facilities |
+| Last Updated: | 2/23/17 |
+| Refresh Method: | Request file from agency |
+
+| | |
+| -- | -- |
+| Dataset Name:  | Facilities Data - Manned Facilities |
+| Last Updated: | 2/23/17 |
+| Refresh Method: | Request file from agency |
 
 
-### New York City Department of Youth and Community Development (NYCDYCD)
+### NYC Department of Youth and Community Development (NYCDYCD)
 
 | | |
 | -- | -- |
 | Dataset Name:  | COMPASS Program Locations |
-| Last updated: | 12/19/16 |
-| Refresh Method: | Request file from agency - Monthly |
+| Last Updated: | 12/19/16 |
+| Refresh Method: | Request file from agency |
 
 | | |
 | -- | -- |
 | Dataset Name:  | DYCD Other Program Locations |
-| Last updated: | 12/19/16 |
-| Refresh Method: | Request file from agency - Monthly |
+| Last Updated: | 12/19/16 |
+| Refresh Method: | Request file from agency |
 
 
-### New York City HHS Accelerator (NYCHHS)
-
-| | |
-| -- | -- |
-| Dataset Name:  | HHS Accelerator - Contracts |
-| Last updated: | 7/26/16 |
-| Refresh Method: | Request file from agency - Annually |
+### NYC HHS Accelerator (NYCHHS)
 
 | | |
 | -- | -- |
-| Dataset Name:  | HHS Accelerator - Proposals |
-| Last updated: | 7/26/16 |
-| Refresh Method: | Request file from agency - Annually |
+| Dataset Name:  | HHS Accelerator - Financials Contracts |
+| Last Updated: | 7/26/16 |
+| Refresh Method: | Request file from agency |
 
 | | |
 | -- | -- |
-| Dataset Name:  | HHS Accelerator - Financials |
-| Last updated: | 7/26/16 |
-| Refresh Method: | Request file from agency - Annually |
+| Dataset Name:  | Financial Management System - Human Services Contracts |
+| Last Updated: | 7/26/16 |
+| Refresh Method: | Request file from agency |
+
+| | |
+| -- | -- |
+| Dataset Name:  | HHS Accelerator - Selected Proposals |
+| Last Updated: | 7/26/16 |
+| Refresh Method: | Request file from agency |
+
+
+### NYC Human Resources Administration/Department of Social Services (NYCHRA/DSS)
+
+| | |
+| -- | -- |
+| Dataset Name: | [HRA Locations](https://www1.nyc.gov/site/hra/locations/locations.page) |
+| Last Updated: | 2/27/17 |
+| Refresh Method: | Manual copy and paste |
+
+
+### NYC Mayors Office of Management and Budget (NYCOMB)
+
+| | |
+| -- | -- |
+| Dataset Name:  | District Resource Statement |
+| Last Updated: | 6/30/16 |
+| Refresh Method: | Request file from agency |
+
+
+### NYS Department of Correction and Community Supervision (NYSDOCCS)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Facility Listing](http://www.doccs.ny.gov/faclist.html) |
+| Last Updated: | 7/1/16 |
+| Refresh Method: | Confirm on agency's website |
+
+
+### NYS Department of Evironmental Conservation (NYSDEC)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Solid Waste Management Facilities](https://data.ny.gov/Energy-Environment/Solid-Waste-Management-Facilities/2fni-raj8) |
+| Last Updated: | 1/9/17 |
+| Refresh Method: | Pull from NYState Open Data |
+
+| | |
+| -- | -- |
+| Dataset Name: | [Lands - Under the Care, Custody, and Control of DEC](http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1114) |
+| Last Updated: | 3/1/16 |
+| Refresh Method: | Pull from NYState GIS Clearinghouse |
+
+
+### NYS Department of Health (NYSDOH)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Health Facility General Information](https://health.data.ny.gov/Health/Health-Facility-General-Information/vn5v-hh5r) |
+| Last Updated: | 1/20/17 |
+| Refresh Method: | Pull from NYState Open Data |
+
+
+### NYS Department of Transportation (NYSDOT)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
+
+
+### NYS Education Department (NYSED)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Listings - Active Institutions with GIS coordinates and OITS Accuracy Code](https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&bi_cPath=dvtb&numberLocale=en_US&source=dvtb&gotoNthPage=1&bi_tool=rt&event=bi_showTool&bi_rownavdv=s25&stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNNayFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D) |
+| Last Updated: | 1/23/17 |
+| Refresh Method: | Manual download |
+
+
+### NYS Office for People With Developmental Disabilities (NYSOPWDD)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Directory of Developmental Disabilities Service Provider Agencies](https://data.ny.gov/Human-Services/Directory-of-Developmental-Disabilities-Service-Pr/ieqx-cqyk) |
+| Last Updated: | 12/22/15 |
+| Refresh Method: | Pull from NYState Open Data |
+
+
+### NYS Office of Alcoholism and Substance Abuse Services (NYSOASAS)
+
+| | |
+| -- | -- |
+| Dataset Name:  | List of NYC Programs |
+| Last Updated: | 1/3/17 |
+| Refresh Method: | Receive scheduled email transfer from agency |
+
+
+### NYS Office of Children and Family Services (NYSOCFS)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Facilities](http://ocfs.ny.gov/main/rehab/regionalListing1.asp) |
+| Last Updated: | 7/1/16 |
+| Refresh Method: | Confirm on agency's website |
+
+
+### NYS Office of Mental Health (NYSOMH)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Local Mental Health Programs](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
+| Last Updated: | 10/24/16 |
+| Refresh Method: | Pull from NYState Open Data |
+
+
+### NYS Office of Parks, Recreation and Historic Preservation (NYSOPRHP)
+
+| | |
+| -- | -- |
+| Dataset Name: | [National Register of Historic Places](https://data.ny.gov/Recreation/National-Register-of-Historic-Places/iisn-hnyv) |
+| Last Updated: | 12/18/15 |
+| Refresh Method: | Pull from NYState Open Data |
+
+| | |
+| -- | -- |
+| Dataset Name: | [State Park Facility Points](https://data.ny.gov/Recreation/State-Park-Facility-Points/9uuk-x7vh) |
+| Last Updated: | 2/4/16 |
+| Refresh Method: | Pull from NYState Open Data |
+
+
+### NYS Unified Court System (NYCOURTS)
+
+| | |
+| -- | -- |
+| Dataset Name: | [The Courts](http://www.nycourts.gov/courts/index.shtml) |
+| Last Updated: | 7/1/16 |
+| Refresh Method: | Confirm on agency's website |
+
+
+### National Park Service (USNPS)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Administrative Boundaries of National Park System Units](https://irma.nps.gov/DataStore/Reference/Profile/2225713) |
+| Last Updated: | 9/30/16 |
+| Refresh Method: | Pull from USNPS |
 
 
 ### New York City Housing Authority (NYCHA)
@@ -500,128 +616,8 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [NYCHA PSA (Police Service Areas)](https://data.cityofnewyork.us/Housing-Development/NYCHA-PSA-Police-Service-Areas-/72wx-vdjr) |
-| Last updated: | 9/5/14 |
-| Refresh Method: | Pull from NYC Open Data - Annually |
-
-
-### New York City Mayors Office of Management and Budget (NYCOMB)
-
-| | |
-| -- | -- |
-| Dataset Name:  | District Resource Statement |
-| Last updated: | 6/30/16 |
-| Refresh Method: | Request file from agency - Annually |
-
-
-### New York State Department of Correction and Community Supervision (NYSDOCCS)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Facility Listing](http://www.doccs.ny.gov/faclist.html) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
-
-
-### New York State Department of Environmental Conservation (NYSDEC)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Solid Waste Management Facilities](https://data.ny.gov/Energy-Environment/Solid-Waste-Management-Facilities/2fni-raj8) |
-| Last updated: | 1/9/17 |
-| Refresh Method: | Pull from NYState Open Data - Annually |
-
-| | |
-| -- | -- |
-| Dataset Name: | [Lands - Under the Care, Custody, and Control of DEC](http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1114) |
-| Last updated: | 3/1/16 |
-| Refresh Method: | Pull from NYState GIS Clearinghouse - Annually |
-
-
-### New York State Department of Health (NYSDOH)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Health Facility General Information](https://health.data.ny.gov/Health/Health-Facility-General-Information/vn5v-hh5r) |
-| Last updated: | 1/20/17 |
-| Refresh Method: | Pull from NYState Open Data - Weekly |
-
-
-### New York State Department of Transportation (NYSDOT)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
-
-
-### New York State Education Department (NYSED)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Listings - Active Institutions with GIS coordinates and OITS Accuracy Code](https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&bi_cPath=dvtb&numberLocale=en_US&source=dvtb&gotoNthPage=1&bi_tool=rt&event=bi_showTool&bi_rownavdv=s25&stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNNayFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D) |
-| Last updated: | 1/23/17 |
-| Refresh Method: | Manual download - Weekly |
-
-
-### New York State Office for People With Developmental Disabilities (NYSOPWDD)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Directory of Developmental Disabilities Service Provider Agencies](https://data.ny.gov/Human-Services/Directory-of-Developmental-Disabilities-Service-Pr/ieqx-cqyk) |
-| Last updated: | 12/22/15 |
-| Refresh Method: | Pull from NYState Open Data - Annually |
-
-
-### New York State Office of Alcoholism and Substance Abuse Services (NYSOASAS)
-
-| | |
-| -- | -- |
-| Dataset Name:  | List of NYC Programs |
-| Last updated: | 1/3/17 |
-| Refresh Method: | Receive scheduled email transfer from agency - Monthly |
-
-
-### New York State Office of Children and Family Services (NYSOCFS)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Facilities](http://ocfs.ny.gov/main/rehab/regionalListing1.asp) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
-
-
-### New York State Office of Mental Health (NYSOMH)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Local Mental Health Programs](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
-| Last updated: | 10/24/16 |
-| Refresh Method: | Pull from NYState Open Data - Annually |
-
-
-### New York State Office of Parks, Recreation and Historic Preservation (NYSOPRHP)
-
-| | |
-| -- | -- |
-| Dataset Name: | [National Register of Historic Places](https://data.ny.gov/Recreation/National-Register-of-Historic-Places/iisn-hnyv) |
-| Last updated: | 12/18/15 |
-| Refresh Method: | Pull from NYState Open Data - Annually |
-
-| | |
-| -- | -- |
-| Dataset Name: | [State Park Facility Points](https://data.ny.gov/Recreation/State-Park-Facility-Points/9uuk-x7vh) |
-| Last updated: | 2/4/16 |
-| Refresh Method: | Pull from NYState Open Data - Annually |
-
-
-### New York State Unified Court System (NYCOURTS)
-
-| | |
-| -- | -- |
-| Dataset Name: | [The Courts](http://www.nycourts.gov/courts/index.shtml) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
+| Last Updated: | 9/5/14 |
+| Refresh Method: | Pull from NYC Open Data |
 
 
 ### Port Authority of New York and New Jersey (PANYNJ)
@@ -629,8 +625,8 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
 
 
 ### Roosevelt Island Operating Corporation (RIOC)
@@ -638,8 +634,8 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
 
 
 ### Trust for Governors Island (TGI)
@@ -647,51 +643,88 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last updated: | 3/1/15 |
-| Refresh Method: | Confirm with agency - Annually |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
 
 
-### United States Courts (USCOURTS)
+### US Courts (USCOURTS)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Court Locator Results](http://www.uscourts.gov/court-locator/city/New%20York/state/NY) |
-| Last updated: | 7/1/16 |
-| Refresh Method: | Manual copy and paste - Annually |
+| Last Updated: | 7/1/16 |
+| Refresh Method: | Confirm on agency's website |
 
 
-### United States Department of Transportation (USDOT)
-
-| | |
-| -- | -- |
-| Dataset Name: | [U.S. Army Corps of Engineers Ports](http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point) |
-| Last updated: | 8/1/15 |
-| Refresh Method: | Pull from US DOT - Annually |
-
-
-### United States Department of Transportation (USDOT)
+### US Department of Transportation (USDOT)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Airports](http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point) |
-| Last updated: | 8/1/15 |
-| Refresh Method: | Pull from US DOT - Annually |
-
-
-### United States National Park Service (USNPS)
+| Last Updated: | 8/1/15 |
+| Refresh Method: | Pull from US DOT |
 
 | | |
 | -- | -- |
-| Dataset Name: | [Administrative Boundaries of National Park System Units](https://irma.nps.gov/DataStore/Reference/Profile/2225713) |
-| Last updated: | 9/30/16 |
-| Refresh Method: | Pull from USNPS - Annually |
+| Dataset Name: | [U.S. Army Corps of Engineers Ports](http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point) |
+| Last Updated: | 8/1/15 |
+| Refresh Method: | Pull from US DOT |
 
 
-## VII. Database structure
+### Amtrak (Amtrak)
 
-Currently the database consists of two tables. One table contains all the geocoded records with spatial data, and one with the records which could not be geocoded.
+| | |
+| -- | -- |
+| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
 
-In the future, some supplemental information which is specific to certain facility types will also be included in the database package as relational tables. For example, a table of park attributes or a table with a more granular breakdown of school enrollment by grade could be joined onto the main table using a unique ID.
+
+### Brooklyn Bridge Park Corporation (BBPC)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
+
+
+### Federal Bureau of Prisons (FBOP)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Our Locations](https://www.bop.gov/locations/map.jsp#) |
+| Last Updated: | 7/1/16 |
+| Refresh Method: | Confirm on agency's website |
+
+
+### Food Bank of NYC (FBNYC)
+
+| | |
+| -- | -- |
+| Dataset Name:  | FBNYC Food Pantry Soup Kitchen List 8-5-16 |
+| Last Updated: | 8/5/16 |
+| Refresh Method: | Request file from agency |
+
+
+### Hudson River Park Trust (HRPT)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
+
+
+### Metropolitan Transportation Authority (MTA)
+
+| | |
+| -- | -- |
+| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
+| Last Updated: | 3/1/15 |
+| Refresh Method: | Confirm with agency |
+
+
 
 <!-- ## Appendix I. Deduping
 
