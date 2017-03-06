@@ -800,12 +800,12 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td align="left">Facility Name</td>
-<td align="left">facilityname</td>
+<td align="left">facname</td>
 <td align="left">The name of the facility in proper case.</td>
 </tr>
 <tr>
 <td align="left">Address Number</td>
-<td align="left">addressnumber</td>
+<td align="left">addressnum</td>
 <td align="left">The address number of where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank.</td>
 </tr>
 <tr>
@@ -825,12 +825,12 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td align="left">Borough</td>
-<td align="left">borough</td>
+<td align="left">boro</td>
 <td align="left">The full name the borough the facility is within.</td>
 </tr>
 <tr>
 <td align="left">Borough Code</td>
-<td align="left">boroughcode</td>
+<td align="left">borocode</td>
 <td align="left">The number value representing the borough the facility is within.</td>
 </tr>
 <tr>
@@ -870,42 +870,42 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td align="left">Community Board</td>
-<td align="left">communityboard</td>
+<td align="left">commboard</td>
 <td align="left">The Community District the facility is within. This field contains blanks because the Community District boundaries do not capture facilities beyond the shoreline.</td>
 </tr>
 <tr>
 <td align="left">Council District</td>
-<td align="left">councildistrict</td>
+<td align="left">council</td>
 <td align="left">The City Council District the facility is within</td>
 </tr>
 <tr>
 <td align="left">Census Tract</td>
-<td align="left">censustract</td>
+<td align="left">censtract</td>
 <td align="left">The U.S. Census Tract the facility is within</td>
 </tr>
 <tr>
 <td align="left">NTA</td>
-<td align="left">censustract</td>
+<td align="left">nta</td>
 <td align="left">The Neighborhood Tabulation Area (NTA) the facility is within. This field contains blanks because the NTA boundaries do not capture facilities beyond the shoreline.</td>
 </tr>
 <tr>
-<td align="left">Domain</td>
-<td align="left">domain</td>
+<td align="left">Facility Domain</td>
+<td align="left">facdomain</td>
 <td align="left">The value representing the facility domain, the broadest category.</td>
 </tr>
 <tr>
 <td align="left">Facility Group</td>
-<td align="left">facilitygroup</td>
+<td align="left">facgroup</td>
 <td align="left">The value representing the group type, the second broadest category.</td>
 </tr>
 <tr>
 <td align="left">Facility Sub-Group</td>
-<td align="left">facilitysubgroup</td>
+<td align="left">facsubgrp</td>
 <td align="left">The value representing the subgroup type.</td>
 </tr>
 <tr>
 <td align="left">Facility Type</td>
-<td align="left">facilitytype</td>
+<td align="left">factype</td>
 <td align="left">The value representing the facility type, the most granular category of facilities.</td>
 </tr>
 <tr>
@@ -915,17 +915,17 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td align="left">Capacity Type</td>
-<td align="left">capacitytype</td>
+<td align="left">captype</td>
 <td align="left">The value representing the unit type of capacity, such as beds, visitors, seats, etc.</td>
 </tr>
 <tr>
 <td align="left">Utilization</td>
-<td align="left">utilization</td>
+<td align="left">util</td>
 <td align="left">How many of capacity type/unit are being utilized at the facility.</td>
 </tr>
 <tr>
 <td align="left">Utilization Rate</td>
-<td align="left">utilizationrate</td>
+<td align="left">utilrate</td>
 <td align="left">The ratio of the of utilization over the total facility capacity.</td>
 </tr>
 <tr>
@@ -939,59 +939,59 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td align="left">The unit of measurement for Area.</td>
 </tr>
 <tr>
+<td align="left">Property Type</td>
+<td align="left">proptype</td>
+<td align="left">Indicates whether the property is owned or leased by the City.</td>
+</tr>
+<tr>
 <td align="left">Operator Type</td>
-<td align="left">operatortype</td>
+<td align="left">optype</td>
 <td align="left">Indicates whether the operating entity is public or non-public.</td>
 </tr>
 <tr>
 <td align="left">Operator Name</td>
-<td align="left">operatorname</td>
+<td align="left">opname</td>
 <td align="left">The name of the operating entity.</td>
 </tr>
 <tr>
 <td align="left">Operator Abbreviation</td>
-<td align="left">operatorabbrev</td>
+<td align="left">opabbrev</td>
 <td align="left">Abbreviation for the operating entity.</td>
 </tr>
 <tr>
 <td align="left">Oversight Agency</td>
-<td align="left">oversightagency</td>
+<td align="left">overagency</td>
 <td align="left">The name of the agency overseeing the facility.</td>
 </tr>
 <tr>
 <td align="left">Oversight Abbreviation</td>
-<td align="left">oversightabbrev</td>
+<td align="left">overabbrev</td>
 <td align="left">Abbreviation for the oversight agency.</td>
 </tr>
 <tr>
 <td align="left">Oversight Level</td>
-<td align="left">oversightlevel</td>
+<td align="left">overlevel</td>
 <td align="left">The level of government of the oversight agency: City, State, City-State, Federal, or Non-public Oversight.</td>
 </tr>
 <tr>
 <td align="left">Date Source Data Updated</td>
-<td align="left">datesourceupdated</td>
+<td align="left">datadate</td>
 <td align="left">The date the source data was updated within the parent database.</td>
 </tr>
 <tr>
 <td align="left">Agency Source</td>
-<td align="left">agencysource</td>
+<td align="left">datasource</td>
 <td align="left">The Agency whose data was used as the source for the record.</td>
 </tr>
 <tr>
 <td align="left">Source Dataset Name</td>
-<td align="left">sourcedatasetname</td>
+<td align="left">dataname</td>
 <td align="left">The name of the dataset the record came from.</td>
 </tr>
 <tr>
 <td align="left">Link to Data</td>
-<td align="left">linkdata</td>
+<td align="left">datalink</td>
 <td align="left">Link to view and/or description of data.</td>
-</tr>
-<tr>
-<td align="left">Processing Flag</td>
-<td align="left">processingflag</td>
-<td align="left">A text flag which indicates how the record was geoprocessed to fill in all required information, including geocoding and spatial joins.</td>
 </tr>
 </tbody>
 </table>
