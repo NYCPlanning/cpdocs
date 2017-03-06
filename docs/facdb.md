@@ -18,7 +18,7 @@ This database and its [interactive map](http://capitalplanning.nyc.gov/facilitie
 
 More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis.
 
-We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov with any suggestions.
+We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov with any suggestions).
 
 | General information |
 | :------------: | ------------- |
@@ -479,7 +479,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | -- | -- |
 | Dataset Name: | [HRA Locations](https://www1.nyc.gov/site/hra/locations/locations.page) |
 | Last Updated: | 2/27/17 |
-| Refresh Method: | Manual copy and paste |
+| Refresh Method: | Pull from agency's webmap |
 
 
 ### NYC Mayors Office of Management and Budget (NYCOMB)
