@@ -554,9 +554,10 @@ The following datasets were used to populate the Facilities Database. The data s
 
 | | |
 | -- | -- |
-| Dataset Name:  | List of NYC Programs |
+| Dataset Name:  | [NYS OASAS-Certified Chemical Dependence Treatment Programs Located in NYC](https://www.oasas.ny.gov/providerDirectory/index.cfm?search_type=2) |
 | Last Updated: | 2/4/17 |
 | Refresh Method: | Receive scheduled email transfer from agency |
+| Notes: | OASAS's records are updated more frequently than may be reflected in this database. Users are encouraged to confirm program locations on OASAS's website (link above). |
 
 
 ### NYS Office of Children and Family Services (NYSOCFS)
