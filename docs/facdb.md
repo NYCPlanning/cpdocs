@@ -265,7 +265,7 @@ The following table lists and defines each of the fields presented in the Facili
 | Date Source Data Updated | datadate | The date the source data was updated within the parent database. |
 | Agency Source | datasource | The Agency whose data was used as the source for the record. |
 | Source Dataset Name | dataname | The name of the dataset the record came from. |
-| Link to Data | datalink | Link to view and/or description of data. |
+| Link to Data | dataurl | Link to view and/or description of data. |
 
 
 ## VI. Source Data
