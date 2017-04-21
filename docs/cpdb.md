@@ -1,3 +1,5 @@
+#DRAFT - need to update
+
 #Capital Planning Database
 The Capital Planning Database (CPDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division, captures key data points on past, present, and planned capital projects in and around NYC sponsored or managed by a capital agency. By capturing the location and timeline for capital projects CPDB enables citywide analyses of investments over time and space, and provides a central data source for agencies to evaluate synergies among projects.
 
