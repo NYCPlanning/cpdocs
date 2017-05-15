@@ -1,0 +1,221 @@
+Notes
+use cases
+1) Communications: understand what's going on in a given place - communications - community board budget register - sit down w/ Lester - (AA)
+2) Conflict Resulution: inform investment decisions on specific projects right now, (i.e. where there are overlapping jurisdictions of land - DOT and DEP - do analysis now and figure out how to present it) - maybe parks and DOT - buildings that have multile projects going on (how many geometries were created by us for DOT and DEP - by project type geom breakdown - have we mapped DEP stuff before it got to DDC)
+3) long term capital planning strategy - equity ananlyses, location status by program
+
+Put together list of examples and location statuses and send to Danny for review and send around for democritization - reagree
+
+1) location status
+2) conflict resolution DEP after DOT
+3) Communications - what projects are planned for community district
+
+
+Slides: 
+How people are interested in using this thing 
+1) communication
+2) conflict
+3) strategy
+
+what we did with your data 
+
+Discussion items
+1) fix our geoms
+2) add additional attribues
+3) make geoms earlier in the process
+
+
+-- table view / landing page
+-- symbology
+-- sponsor agency
+
+
+Action items
+-- tell us how we can make this most valuable to you -- how explorer can add value to them
+-- start giving feedback on data work
+-- discuss potential sustainability of product / data
+
+Meeting with Danny 02/21/17
+-- game plan w/ Simon and Jessica for interagency engagement and analyses for us (sample neighborhood capital projects profile, what do we have in poor neighborhood in city) and other priorties gaining persoecive of other tasks (SCA, historical, MTA) schedule meeting with Danny for early next week 
+
+
+-- send Danny link to Simpson thing
+-- process map to distributed data editing - How to now and ideal state
+-- combine footprint dataset into simple geom editor 
+-- link simple geom editor to map
+
+-- Meeting with Regional Planning 
+-- SCA / MTA, NYMTC (what is the state of NYMTC layer and how easily can we make Jane layer?), - low hanging fruit
+-- ConEd map - Kate Asher map -- high friut
+-- Amtrak
+-- port authority - can link projects to fixed assets from budget via ID 
+-- proposed priorities: 1) data cleaning 2) reports 3) priortize other captial data
+-- list from Carloyn??
+-- Use case of incorporating MTA data - Nostrand avenue 
+-- Bill gets housing data on counties
+
+-- Breau of Enviro planning and analysis
+-- Call with Margot - manages green infrastracture capital budget
+-- Everything in map is in design, constuction. or complete
+-- Green Hub - 3.5 years - asset tracking - track and map all green infrastructure assets - updated monthly - project design and inconstruction assets
+-- 100 + project IDs w/ various managing agencies for professional services, design, CM, or construction
+-- Project green hub data - YES
+-- Internally - map at very early stage - systemmatic way of eliminating projects (90% of projects only go to design)
+-- Ken Roze
+-- FMS ID associated - Contract #s 
+-- Carlonia - GIS & Data person
+
+-- whiteboarding with Simon 
+-- put together one pages for Jon comparing goals w/ new and old approach (compare two approaches)
+-- Ch1 compare old and new data source
+-- Ch 2 how we created new data source
+--    Call out why pdf is scrapable on pic of pdf slide
+-- slide 10 - give example for each challenge (might be more challenges)
+-- in appendix slide of database structure
+-- sude 14 is current slide 24 in deck	
+-- divide and conquor - 
+
+-- tell people that we're attending 
+-- drink after pannel
+-- strategize who goes to what talk and where
+-- data table - Amanda.  UIUX table Chris.  Hannah - use cases.
+
+-- Same metadata format 
+-- using as a discovery tool
+-- nominate data set
+-- timeline anayses
+-- data standards - metadata 
+-- when download include metadata in download
+-- make it very apparent which 
+
+-- call with Adreinne 
+-- no questions 10min and 10min
+-- solutions for immigrants, youths, and senior centers
+
+
+-- Meeting with DEP 
+-- subcatchment areas about 100
+		specific paths into wastewater treatment plant
+-- DEP has poor data on capacity
+-- 2011 - 2017
+Projections - every 5 years starting at 2010 and going out to 2050
+
+
+-- Some agencies will be better than others
+-- NYPD will be easy to locate construction projects
+-- Go to OMB and work with analysts and not agencies
+-- Ten year plan categories
+-- Opportunity: Open up communication amoung analysts at OMB
+-- DDC - big managing agencies - work with
+-- pagu - potentially longer descriptions can be provided by OMB 
+-- Easy thing to ask OMB: when a project ID is created, please put an address
+-- map of projects for EDC
+
+-- Meeting with Ops 
+-- Useful thing: Dan "Mapping iniciatives" - desire and resources to map current data
+-- mapping infrastructure disparity index against capital investments
+-- Consumers of data from Capital Projects Dashboard
+-- Get forms from Kristi for projects
+-- No expectation for forms to match w/ budget 
+-- Add Capital Projects Dashboard as a Jane layer
+1) get data in Jane 2) share data 3) map disparity index
+
+Witney
+-- How may we use technology to better empower the community to make their needs known and become more informed?
+-- Narrow down functions and / or area? 
+-- Submit a challenge to Corenell Tech larger challenge.
+-- DOHMH - reproductive services. 
+-- Show what a community board budget requests looks like
+
+Jon meeting
+-- Cross divisioal understanding; 
+-- how much will it improve a decision?
+
+
+-- users 1) DCP 2) OMB 3) Capital agencies 4) City Hall
+
+-- Danny wants to review a comphrensive project work plan for CPDB and Capital Planning Platform product
+   - CPDB Database development and other resources
+-- Set up twice a week 30min checkin meetings
+-- 90 min monthly projects review (idea)
+-- Slide on recogonizing sentivity and risk of CPDB 
+
+-- call with Justin (DDC)
+-- 18 new people for capital front end planning groups 
+-- next step - 3 agency collobration before it goes into the budget
+-- PIMS 
+-- Eric associate commisioner 
+-- meetings
+	Danny brief Justin on platform - me and Simon
+	Eric - capital front end planning team
+	Kevin and CIO - capital project data and CIO strategic plan
+
+-- product manager program - turn tech into managers
+-- bridge file 
+-- intra agency
+Question: completed projects or projects are in construction 
+Funded, under funded, or new need
+Each project has an FMS ID that is funded - can map all funded projects
+Shape file at BIN
+Two stage lookup - FMS then BIN 
+Want project desriptions for bridges - resource and how up-to-date?
+If there is a conflict project would want to know the type of project
+Can give us commitment data 
+Can consume as Feature service from DOT
+Green has FMS ID
+BIN for red and yellow
+800 bridges - about 1/2 have projects
+Get bridges from Chris' map
+Discuss with all the entities
+Table view is helpful 
+Number of projects in each boro by department - 
+Vision zero, OneNYC ca
+Economic justice
+Contact info more accessible
+
+
+Milestones
+	1) Update scraper
+	2) Create 4 tables for January plan w/ empty fields
+	3) Documenting assumptions for autmating DCP attributes 1 - 4
+	3) First pass of filling in DCP attribute fields 1 - 4 - build queries
+	3) Share agency spcific assumptions with agencies for review and confirming it
+
+
+Miachel and Kara
+1) does IFA get captured in checkbook NYC?
+- incorporate 4 letter codes to know if it's IFA or...?
+- mapping aspect is most useful 
+- get regular requests for what's going on in x neighborhood -> current process sucks
+- would use capital commitment plan as base
+- historical data
+- legend by sponsor agency
+- indicate funding breakdown (federal, council)
+- inform if underfunded
+- get preliminary cpi data / opportunity to get info via CPI -> have to influence agencies
+
+
+-- check 100 gold street
+-- DOB on my block - sucks
+-- DDC near me - terrible idea don't go near this
+-- Front end planning has checklist 
+-- Follow-up meeting - how they can help, how they can use it, will use capital project map
+-- DDC Comissioner has asked to geocode projects 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
