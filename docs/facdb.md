@@ -223,7 +223,6 @@ The following table lists and defines each of the fields presented in the Facili
 | Field Alias | Field Name | Description |
 | :------------------- | :------------------- | :-------------------- |
 | Unique Identifier | uid | Universal Unique Identifier.  When a row is added to the table the uid is automatically generated, enabling database replication. |
-| Hash | id | An encrypted version of the row from the source data table. |
 | Geom | geom | How the feature is spatially represented. |
 | Old ID | idold | Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD. |
 | Agency ID | idagency | Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset. |
