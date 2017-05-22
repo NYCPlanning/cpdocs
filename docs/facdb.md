@@ -2,7 +2,7 @@
 
 ## I. Overview
 
-The City Planning Facilities Database aggregates more than 35,000 records from 43 different public data sources provided by City, State, and Federal agencies. While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:
+The City Planning Facilities Database aggregates more than 35,000 records from 45 different [public data sources](http://docs.capitalplanning.nyc/facdb/#vi-source-data) provided by City, State, and Federal agencies. While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:
 
 * Health and Human Services
 * Education, Child Welfare, and Youth
