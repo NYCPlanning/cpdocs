@@ -863,12 +863,12 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td align="left">BIN</td>
 <td align="left">bin</td>
-<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bin">BIN</a> values for the buildings the facility is located in. This field contains blanks, because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data.</td>
+<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bin">BIN</a> values for the buildings the facility is located in. This field contains blanks, because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data. There may also be cases where a facility is actually comprised by multiple BINs but only one is recorded in FacDB because the others were not be provided in the source data and could not be reliably assumed based on the single address provided for the facility.</td>
 </tr>
 <tr>
 <td align="left">BBL</td>
 <td align="left">bbl</td>
-<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bbl">BBL</a> values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas are not located on tax lots.</td>
+<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bbl">BBL</a> values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas are not located on tax lots. There may also be cases where a facility is actually comprised by multiple BBLs but only one is recorded in FacDB because the others were not be provided in the source data and could not be reliably assumed based on the single address provided for the facility.</td>
 </tr>
 <tr>
 <td align="left">Community Board</td>
@@ -999,7 +999,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </table>
 <h2 id="vi-source-data">VI. Source Data</h2>
 <p>The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated to capture any updates provided by the source agency. The aggregated database is thoroughly checked through once per year to identify any problems with the process or major changes in the source data and how it's structured.</p>
-<h3 id="nyc-administration-for-childrens-services-nycacs">NYC Administration for Children's Services (NYCACS)</h3>
+<h3 id="nyc-administration-for-childrens-services-nycacs">NYC Administration for Childrens Services (NYCACS)</h3>
 <table>
 <thead>
 <tr>
@@ -1014,11 +1014,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>1/3/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2017-01-03</td>
 </tr>
 </tbody>
 </table>
@@ -1037,11 +1033,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>9/5/14</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>8/27/16</td>
 </tr>
 </tbody>
 </table>
@@ -1060,11 +1052,26 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>1/20/17</td>
+<td>5/5/17</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nyc-department-of-city-planning-nycdcp">NYC Department of City Planning (NYCDCP)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td><a href="https://nycopendata.socrata.com/Housing-Development/Privately-Owned-Public-Spaces/fum3-ejky">New York City Privately Owned Public Space Database</a></td>
 </tr>
 <tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>Last Updated:</td>
+<td>2000-01-01</td>
 </tr>
 </tbody>
 </table>
@@ -1085,10 +1092,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>10/20/16</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
-</tr>
 </tbody>
 </table>
 <h3 id="nyc-department-of-consumer-affairs-nycdca">NYC Department of Consumer Affairs (NYCDCA)</h3>
@@ -1106,11 +1109,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>1/20/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>5/5/17</td>
 </tr>
 </tbody>
 </table>
@@ -1129,11 +1128,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm on agency's website</td>
+<td>2016-07-01</td>
 </tr>
 </tbody>
 </table>
@@ -1152,11 +1147,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>3/22/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>4/7/17</td>
 </tr>
 </tbody>
 </table>
@@ -1175,33 +1166,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>11/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm">Routes</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>1/1/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>2016-11-01</td>
 </tr>
 </tbody>
 </table>
@@ -1221,9 +1186,23 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>1/15/16</td>
 </tr>
+</tbody>
+</table>
+<table>
+<thead>
 <tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td><a href="https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm">Routes</a></td>
+</tr>
+<tr>
+<td>Last Updated:</td>
+<td>5/1/17</td>
 </tr>
 </tbody>
 </table>
@@ -1244,10 +1223,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="nyc-department-of-health-and-mental-hygiene-nycdohmh">NYC Department of Health and Mental Hygiene (NYCDOHMH)</h3>
@@ -1265,11 +1240,26 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>1/23/17</td>
+<td>5/12/17</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nyc-department-of-homeless-services-nycdhs">NYC Department of Homeless Services (NYCDHS)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td>DHS CARES Facility Listing</td>
 </tr>
 <tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>Last Updated:</td>
+<td>2017-03-21</td>
 </tr>
 </tbody>
 </table>
@@ -1284,15 +1274,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7">Parks Properties</a></td>
+<td><a href="https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7/data">Parks Properties</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
 <td>8/27/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
 </tr>
 </tbody>
 </table>
@@ -1311,11 +1297,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/26/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-07-26</td>
 </tr>
 </tbody>
 </table>
@@ -1334,11 +1316,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>11/17/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-11-17</td>
 </tr>
 </tbody>
 </table>
@@ -1357,55 +1335,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>2/24/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Facilities Data - Bridge Houses</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>2/23/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Facilities Data - Ferry Terminals and Landings</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>2/23/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2017-02-24</td>
 </tr>
 </tbody>
 </table>
@@ -1423,11 +1353,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>2/23/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2017-02-23</td>
 </tr>
 </tbody>
 </table>
@@ -1445,11 +1371,43 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>2/23/17</td>
+<td>2017-02-23</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td>Facilities Data - Bridge Houses</td>
 </tr>
 <tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>Last Updated:</td>
+<td>2017-02-23</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td>Facilities Data - Ferry Terminals and Landings</td>
+</tr>
+<tr>
+<td>Last Updated:</td>
+<td>2017-02-23</td>
 </tr>
 </tbody>
 </table>
@@ -1468,11 +1426,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>12/19/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-12-19</td>
 </tr>
 </tbody>
 </table>
@@ -1490,11 +1444,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>12/19/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-12-19</td>
 </tr>
 </tbody>
 </table>
@@ -1513,11 +1463,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/26/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-07-26</td>
 </tr>
 </tbody>
 </table>
@@ -1535,11 +1481,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/26/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-07-26</td>
 </tr>
 </tbody>
 </table>
@@ -1557,11 +1499,26 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/26/16</td>
+<td>2016-07-26</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nyc-health-and-hospitals-corporation-nychhc">NYC Health and Hospitals Corporation (NYCHHC)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td><a href="https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3">Health and Hospitals Corporation (HHC) Facilities</a></td>
 </tr>
 <tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>Last Updated:</td>
+<td>9/5/14</td>
 </tr>
 </tbody>
 </table>
@@ -1580,11 +1537,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>2/27/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from agency's webmap</td>
+<td>2017-02-27</td>
 </tr>
 </tbody>
 </table>
@@ -1603,11 +1556,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>6/30/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-06-30</td>
 </tr>
 </tbody>
 </table>
@@ -1626,11 +1575,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm on agency's website</td>
+<td>2016-07-01</td>
 </tr>
 </tbody>
 </table>
@@ -1645,15 +1590,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Energy-Environment/Solid-Waste-Management-Facilities/2fni-raj8">Solid Waste Management Facilities</a></td>
+<td><a href="https://data.ny.gov/Energy-Environment/Solid-Waste-Magement-Facilities/2fni-raj8">Solid Waste Management Facilities</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
 <td>1/9/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState Open Data</td>
 </tr>
 </tbody>
 </table>
@@ -1671,11 +1612,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>3/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState GIS Clearinghouse</td>
+<td>4/1/17</td>
 </tr>
 </tbody>
 </table>
@@ -1694,11 +1631,25 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>1/20/17</td>
+<td>5/11/17</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td><a href="https://health.data.ny.gov/Health/Nursing-Home-Weekly-Bed-Census-Last-Submission/izta-vnpq/data">Nursing Home Weekly Bed Census: Last Submission</a></td>
 </tr>
 <tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState Open Data</td>
+<td>Last Updated:</td>
+<td>2017-03-13</td>
 </tr>
 </tbody>
 </table>
@@ -1719,10 +1670,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="nys-education-department-nysed">NYS Education Department (NYSED)</h3>
@@ -1736,15 +1683,29 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&amp;bi_cPath=dvtb&amp;numberLocale=en_US&amp;source=dvtb&amp;gotoNthPage=1&amp;bi_tool=rt&amp;event=bi_showTool&amp;bi_rownavdv=s25&amp;stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNNayFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D">Listings - Active Institutions with GIS coordinates and OITS Accuracy Code</a></td>
+<td><a href="https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&amp;bi_cPath=dvtb&amp;numberLocale=en_US&amp;source=dvtb&amp;gotoNthPage=1&amp;bi_tool=rt&amp;event=bi_showTool&amp;bi_rowvdv=s25&amp;stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNyFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D">Listings - Active Institutions with GIS coordinates and OITS Accuracy Code</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>1/23/17</td>
+<td>2017-01-23</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset Name:</td>
+<td><a href="http://www.p12.nysed.gov/irs/statistics/nonpublic/">2016-2017 Nonpublic Enrollment by Grade</a></td>
 </tr>
 <tr>
-<td>Refresh Method:</td>
-<td>Manual download</td>
+<td>Last Updated:</td>
+<td>2017-05-05</td>
 </tr>
 </tbody>
 </table>
@@ -1765,10 +1726,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>12/22/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState Open Data</td>
-</tr>
 </tbody>
 </table>
 <h3 id="nys-office-of-alcoholism-and-substance-abuse-services-nysoasas">NYS Office of Alcoholism and Substance Abuse Services (NYSOASAS)</h3>
@@ -1786,15 +1743,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>2/4/17</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Receive scheduled email transfer from agency</td>
+<td>2017-05-08</td>
 </tr>
 <tr>
 <td>Notes:</td>
-<td>OASAS's records are updated more frequently than may be reflected in this database. Users are encouraged to confirm program locations on OASAS's website (link above).</td>
+<td>OASAS records are updated more frequently than may be reflected in this database. Users are encouraged to confirm program locations on the OASAS website (link above).</td>
 </tr>
 </tbody>
 </table>
@@ -1809,15 +1762,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="http://ocfs.ny.gov/main/rehab/regionalListing1.asp">Facilities</a></td>
+<td><a href="http://ocfs.ny.gov/main/rehab/regiolListing1.asp">Facilities</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm on agency's website</td>
+<td>2016-07-01</td>
 </tr>
 </tbody>
 </table>
@@ -1836,11 +1785,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>10/24/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState Open Data</td>
+<td>5/5/17</td>
 </tr>
 </tbody>
 </table>
@@ -1855,15 +1800,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Recreation/National-Register-of-Historic-Places/iisn-hnyv">National Register of Historic Places</a></td>
+<td><a href="https://data.ny.gov/Recreation/tiol-Register-of-Historic-Places/iisn-hnyv">National Register of Historic Places</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
 <td>12/18/15</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState Open Data</td>
 </tr>
 </tbody>
 </table>
@@ -1883,10 +1824,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>2/4/16</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYState Open Data</td>
-</tr>
 </tbody>
 </table>
 <h3 id="nys-unified-court-system-nycourts">NYS Unified Court System (NYCOURTS)</h3>
@@ -1904,11 +1841,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm on agency's website</td>
+<td>2016-07-01</td>
 </tr>
 </tbody>
 </table>
@@ -1927,11 +1860,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>9/30/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from USNPS</td>
+<td>3/31/17</td>
 </tr>
 </tbody>
 </table>
@@ -1950,11 +1879,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>9/5/14</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from NYC Open Data</td>
+<td>9/15/16</td>
 </tr>
 </tbody>
 </table>
@@ -1975,10 +1900,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="roosevelt-island-operating-corporation-rioc">Roosevelt Island Operating Corporation (RIOC)</h3>
@@ -1997,10 +1918,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td>Last Updated:</td>
 <td>3/1/15</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
 </tr>
 </tbody>
 </table>
@@ -2021,10 +1938,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="us-courts-uscourts">US Courts (USCOURTS)</h3>
@@ -2042,11 +1955,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm on agency's website</td>
+<td>2016-07-01</td>
 </tr>
 </tbody>
 </table>
@@ -2061,15 +1970,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point">Airports</a></td>
+<td><a href="https://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point">U.S. Army Corps of Engineers Ports</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
 <td>8/1/15</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from US DOT</td>
 </tr>
 </tbody>
 </table>
@@ -2083,15 +1988,11 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tbody>
 <tr>
 <td>Dataset Name:</td>
-<td><a href="http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point">U.S. Army Corps of Engineers Ports</a></td>
+<td><a href="https://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point">Airports</a></td>
 </tr>
 <tr>
 <td>Last Updated:</td>
 <td>8/1/15</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Pull from US DOT</td>
 </tr>
 </tbody>
 </table>
@@ -2112,10 +2013,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="brooklyn-bridge-park-corporation-bbpc">Brooklyn Bridge Park Corporation (BBPC)</h3>
@@ -2135,10 +2032,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="federal-bureau-of-prisons-fbop">Federal Bureau of Prisons (FBOP)</h3>
@@ -2156,11 +2049,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>7/1/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm on agency's website</td>
+<td>2016-07-01</td>
 </tr>
 </tbody>
 </table>
@@ -2179,11 +2068,7 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 <tr>
 <td>Last Updated:</td>
-<td>8/5/16</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Request file from agency</td>
+<td>2016-08-05</td>
 </tr>
 </tbody>
 </table>
@@ -2204,10 +2089,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <td>Last Updated:</td>
 <td>3/1/15</td>
 </tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
-</tr>
 </tbody>
 </table>
 <h3 id="metropolitan-transportation-authority-mta">Metropolitan Transportation Authority (MTA)</h3>
@@ -2226,10 +2107,6 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 <tr>
 <td>Last Updated:</td>
 <td>3/1/15</td>
-</tr>
-<tr>
-<td>Refresh Method:</td>
-<td>Confirm with agency</td>
 </tr>
 </tbody>
 </table>
