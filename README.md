@@ -1,9 +1,9 @@
 
-#Capital Planning Docs Site: 
+# Capital Planning Docs Site: 
 
 http://docs.capitalplanning.nyc/
 
-#How to use:
+# How to use:
 
 1. Install mkdocs on your computer with `brew install mkdocs`
 2. Clone repo
@@ -13,6 +13,6 @@ http://docs.capitalplanning.nyc/
 6. After testing the edits, **push the changes to the GitHub master origin** repo.
 7. Finally, deploy the updates to the public site using the command `mkdocs gh-deploy`.
 
-#Guide from MkDocs:
+# Guide from MkDocs:
 
 http://www.mkdocs.org/user-guide/deploying-your-docs/
