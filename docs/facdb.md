@@ -36,21 +36,21 @@ In order of increasing granularity, each record that is included in the database
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
-| Schools (K-12) | ----------- | Preschools, K-12 schools, and higher education overseen by NYC Dept. of Education and NYS Education Department |
-| | Public Schools | Public and charter elementary, middle, and high schools |
-| | Non-public Schools | Private elementary, middle, and high schools |
-| | Other Schools Serving Students with Disabilities | Specialized schools and educational services for students with disabilities |
+| Schools (K-12) | ----------- | K-12 and alternative equivalency programs overseen by NYC Dept. of Education and NYS Education Department |
+| | Public K-12 Schools | Public elementary, middle, and high schools |
+| | Charter K-12 Schools | Publically funded charter elementary, middle, and high schools |
+| | Non-Public K-12 Schools | Private elementary, middle, and high schools |
+| | Special Ed and Schools for Students with Disabilities | Specialized schools and educational services for students with disabilities |
+| | GED and Alternative High School Equivalency | Alternative programs for obtaining high school equivalency degree |
 | Child Care and Pre-Kindergarten | ----------- | Childcare centers overseen by NYC Administration for Childrens Services and NYC Dept. of Mental Health and Hygiene |
 | | DOE Universal Pre-Kindergarten | NYC DOE designated Universal Pre-K center |
 | | Dual Child Care and Universal Pre-K | Center that offers both a NYC DOE desgiated Universal Pre-K services and other child care services |
 | | Child Care | Group and school-based child care centers for infants, toddlers, and preschoolers |
 | | Preschools for Students with Disabilities | Center specialized on preschool students with disabilities |
-| Children's Services | ----------- | Services overseen by NYC Health and Human Services and NYC Administration for Children's Services |
+| Child Services and Welfare | ----------- | Services overseen by NYC Administration for Children's Services and NYS Education Department and NYC Department of Education |
 | | Foster Care Services and Residential Care | Foster care services and juvenile non-secure placement |
 | | Preventative Care, Evaluation Services, and Respite | Preventative care and intervention services |
-| Child Welfare | ----------- | Child feeding centers tracked by New York State Education Department |
-| | Child Nutrition | Summer and year-round child feeding sites |
-| | School-Based Food Services | Feed services located at schools |
+| | Child Nutrition | Summer and year-round child feeding centers, either based at NYC Dept of Education schools or tracked by New York State Education Department |
 | Youth Services | ----------- | Services overseen by NYC Dept. of Youth and Community Development |
 | | Comprehensive After School System (COMPASS) Sites | Comprehensive After School System (COMPASS) Sites |
 | | Youth Centers, Literacy Programs, Job Training, and Immigrant Services | Youth Centers, Literacy Programs, Job Training, and Immigrant Services |
@@ -71,6 +71,7 @@ In order of increasing granularity, each record that is included in the database
 | | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
 | | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
 | | Gardens | Community gardens |
+| | Privately Owned Public Space | Plazas, arcades, and other open space provided for public use by a private office or residential building owner |
 | | Preserves and Conservation Areas | Nature areas, preserves, wetlands, and state forests |
 | | Cemeteries | Cemeteries operated by NYC Parks |
 | Historical Sites | ----------- | Sites operated by NYC Parks, NYS Office of Parks, Recreation and Historic Preservation, and US National Park Service |
@@ -124,6 +125,7 @@ In order of increasing granularity, each record that is included in the database
 | | Workforce Development | Workforce 1 Centers and other vocational services for adults |
 | | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
 | | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
+| | Permanent Supportive SRO Housing | Permanent supportive SRO housing contracted by DHS |
 | | Shelters and Transitional Housing | NOTE: These records will be incorporated soon, once the data is finished being assembled for inclusion in the database. |
 | | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
 | | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
