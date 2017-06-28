@@ -718,22 +718,17 @@ The following datasets were used to populate the Facilities Database. The data s
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
 | Last Updated: | 3/1/15 |
 
+## VII. API Instructions
 
+The FacDB data which powers the [NYC Facilities Explorer](capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
 
-<!-- ## Appendix I. Deduping
+#### Sample URL for downloading FacDB:
+`https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
+sql?q=SELECT * FROM facdb_facilities&format=shp&filename=facilities_download`
 
-More details on the methodology and data structure coming soon!
+The `format` options are shp, csv, and geojson. The `filename` can be substituted according to the user's preference.
 
+#### Sample URL for querying subsets of FacDB:
 
-**Table of Datasets with Overlapping Content:**
-
-| Facility Subgroup | Primary Dataset | Secondary Dataset |
-| -- | -- | -- |
-| | | | 
-
-
-## Appendix II. Full Classification Hierarchy
-
-Interactive visualization of all 450+ facility types coming soon!
-
- -->
+`https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
+sql?q=SELECT * FROM facdb_facilities WHERE facgroup LIKE '%Youth%'`
