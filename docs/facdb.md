@@ -720,7 +720,7 @@ The following datasets were used to populate the Facilities Database. The data s
 
 ## VII. API Instructions
 
-The FacDB data which powers the [NYC Facilities Explorer](capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
+The FacDB data that powers the [NYC Facilities Explorer](capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
 
 #### Sample URL for downloading FacDB:
 `https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
