@@ -55,49 +55,47 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="..">Home</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../facdb/">Facilities Database</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../facdb/">Facilities Database</a>
+	    </li>
           
-            <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Capital Projects Database</a>
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Capital Projects Database</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#draft-need-to-update">DRAFT - need to update</a></li>
+    
+
+    <li class="toctree-l2"><a href="#capital-planning-database">Capital Planning Database</a></li>
+    
+        <ul>
         
-            <ul>
-            
-                <li class="toctree-l3"><a href="#draft-need-to-update">DRAFT - need to update</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#capital-planning-database">Capital Planning Database</a></li>
-                
-                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
-                
-                    <li><a class="toctree-l4" href="#database-structure">Database structure</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-dictionary">Data Dictionary</a></li>
-                
-                    <li><a class="toctree-l4" href="#methodology">Methodology</a></li>
-                
-                    <li><a class="toctree-l4" href="#source-data">Source Data</a></li>
-                
-                    <li><a class="toctree-l4" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
-                
-            
-            </ul>
+            <li><a class="toctree-l3" href="#overview">Overview</a></li>
         
-    </li>
-<li>
+            <li><a class="toctree-l3" href="#database-structure">Database structure</a></li>
+        
+            <li><a class="toctree-l3" href="#data-dictionary">Data Dictionary</a></li>
+        
+            <li><a class="toctree-l3" href="#methodology">Methodology</a></li>
+        
+            <li><a class="toctree-l3" href="#source-data">Source Data</a></li>
+        
+            <li><a class="toctree-l3" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -136,32 +134,12 @@
 <p>The Capital Planning Database (CPDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division, captures key data points on past, present, and planned capital projects in and around NYC sponsored or managed by a capital agency. By capturing the location and timeline for capital projects CPDB enables citywide analyses of investments over time and space, and provides a central data source for agencies to evaluate synergies among projects.</p>
 <p>Currently, CPDB aggregates and synthesizes spatial data from five NYC capital agencies, recording more than 10,000 past, present, and planned NYC capital projects occurring throughout NYC.  As new data become available these data will be processes and integrated into CPDB.</p>
 <h2 id="overview">Overview</h2>
-<table>
-<thead>
-<tr>
-<th align="center">General information</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Description</td>
-<td>The Capital Planning Database (CPDB) captures key data points on past, present, and planned capital projects in and around New York City (NYC) sponsored or managed by a capital agency</td>
-</tr>
-<tr>
-<td align="center">Data format</td>
-<td>GeoJSON, shapefile, csv</td>
-</tr>
-<tr>
-<td align="center">Projection</td>
-<td>WGS84</td>
-</tr>
-<tr>
-<td align="center">Date last updated</td>
-<td>08/15/16</td>
-</tr>
-</tbody>
-</table>
+<p>| General information |
+| :------------: | ------------- |
+| Description | The Capital Planning Database (CPDB) captures key data points on past, present, and planned capital projects in and around New York City (NYC) sponsored or managed by a capital agency |
+| Data format | GeoJSON, shapefile, csv |
+| Projection | WGS84 |
+| Date last updated | 08/15/16 |</p>
 <h2 id="database-structure">Database structure</h2>
 <p>Three tables compose CPDB: Projects, Sites, and Budget.</p>
 <p>A project is defined as an investment or series of investments made by a capital agency.  A project can span multiple sites and can be funded by multiple funding sources, but all other attributes, such as cost and timeline, remain constant.  The projects data is composed of data derived from the source datasets.</p>

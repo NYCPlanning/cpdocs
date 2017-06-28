@@ -55,46 +55,46 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="..">Home</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
           
-            <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Facilities Database</a>
-        
-            <ul>
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Facilities Database</a>
+    <ul class="subnav">
             
-                <li class="toctree-l3"><a href="#city-planning-facilities-database">City Planning Facilities Database</a></li>
-                
-                    <li><a class="toctree-l4" href="#i-overview">I. Overview</a></li>
-                
-                    <li><a class="toctree-l4" href="#ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</a></li>
-                
-                    <li><a class="toctree-l4" href="#iii-limitations-and-disclaimers">III. Limitations and Disclaimers</a></li>
-                
-                    <li><a class="toctree-l4" href="#iv-methodology">IV. Methodology</a></li>
-                
-                    <li><a class="toctree-l4" href="#v-data-dictionary">V. Data Dictionary</a></li>
-                
-                    <li><a class="toctree-l4" href="#vi-source-data">VI. Source Data</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l2"><a href="#city-planning-facilities-database">City Planning Facilities Database</a></li>
+    
+        <ul>
         
-    </li>
-<li>
+            <li><a class="toctree-l3" href="#i-overview">I. Overview</a></li>
+        
+            <li><a class="toctree-l3" href="#ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</a></li>
+        
+            <li><a class="toctree-l3" href="#iii-limitations-and-disclaimers">III. Limitations and Disclaimers</a></li>
+        
+            <li><a class="toctree-l3" href="#iv-methodology">IV. Methodology</a></li>
+        
+            <li><a class="toctree-l3" href="#v-data-dictionary">V. Data Dictionary</a></li>
+        
+            <li><a class="toctree-l3" href="#vi-source-data">VI. Source Data</a></li>
+        
+            <li><a class="toctree-l3" href="#vii-api-instructions">VII. API Instructions</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../cpdb/">Capital Projects Database</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../cpdb/">Capital Projects Database</a>
+	    </li>
           
         </ul>
       </div>
@@ -144,36 +144,13 @@
 <p>This database and its <a href="http://capitalplanning.nyc.gov/facilities">interactive map</a> build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces. Improvements include more facility types, improved data quality, and a restructured database for easier use. We have also automated our means of refreshing the data from the majority of sources – we anticipate that the data will be refreshed on at least a quarterly basis (although source datasets may be refreshed less frequently). Please read more about the <a href="http://docs.capitalplanning.nyc/facdb/#iii-limitations-and-disclaimers">limitations</a> of this data product below.</p>
 <p>More facilities will be added as the data become available to the Department of City Planning. Special thanks goes to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis.</p>
 <p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov with any suggestions">Capital@planning.nyc.gov</a>.</p>
-<table>
-<thead>
-<tr>
-<th align="center">General information</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Dataset Name</td>
-<td>"Facilities Database "</td>
-</tr>
-<tr>
-<td align="center">Description</td>
-<td>The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management</td>
-</tr>
-<tr>
-<td align="center">Data format</td>
-<td><a href="http://capitalplanning.nyc.gov/facilities">Webmap</a>, <a href="https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&amp;format=shp&amp;filename=facilities_all_2017-05-22">Shapefile</a>, <a href="https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&amp;format=csv&amp;filename=facilities_all_2017-05-22">CSV</a></td>
-</tr>
-<tr>
-<td align="center">Projection</td>
-<td>WGS84</td>
-</tr>
-<tr>
-<td align="center">Date last updated</td>
-<td>05/22/17</td>
-</tr>
-</tbody>
-</table>
+<p>| General information |
+| :------------: | ------------- |
+| Dataset Name | "Facilities Database "|
+| Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
+| Data format | <a href="http://capitalplanning.nyc.gov/facilities">Webmap</a>, <a href="https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&amp;format=shp&amp;filename=facilities_all_2017-05-22">Shapefile</a>, <a href="https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&amp;format=csv&amp;filename=facilities_all_2017-05-22">CSV</a> |
+| Projection | WGS84 |
+| Date last updated | 05/22/17 |</p>
 <h2 id="ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</h2>
 <p>In order of increasing granularity, each record that is included in the database is classified by DCP into a <strong>Domain &gt; Facility Group &gt; Facility Subgroup &gt; Facility Type</strong>. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.</p>
 <h4 id="education-child-welfare-and-youth-domain">Education, Child Welfare, and Youth Domain</h4>
@@ -2120,23 +2097,15 @@ Many of the source datasets only provide addresses without no coordinates. Recor
 </tr>
 </tbody>
 </table>
-<!-- ## Appendix I. Deduping
-
-More details on the methodology and data structure coming soon!
-
-
-**Table of Datasets with Overlapping Content:**
-
-| Facility Subgroup | Primary Dataset | Secondary Dataset |
-| -- | -- | -- |
-| | | | 
-
-
-## Appendix II. Full Classification Hierarchy
-
-Interactive visualization of all 450+ facility types coming soon!
-
- -->
+<h2 id="vii-api-instructions">VII. API Instructions</h2>
+<p>The FacDB data that powers the <a href="../capitalplanning.nyc.gov/facilities">NYC Facilities Explorer</a> is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is <a href="https://carto.com/docs/carto-engine/sql-api/making-calls">available here</a>. Please refer to the <a href="http://docs.capitalplanning.nyc/facdb/#v-data-dictionary">Data Dictionary</a> for the field names in the <code>facdb_facilities</code> table.</p>
+<h4 id="sample-url-for-downloading-facdb">Sample URL for downloading FacDB:</h4>
+<p><code>https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
+sql?q=SELECT * FROM facdb_facilities&amp;format=shp&amp;filename=facilities_download</code></p>
+<p>The <code>format</code> options are shp, csv, and geojson. The <code>filename</code> can be substituted according to the user's preference.</p>
+<h4 id="sample-url-for-querying-subsets-of-facdb">Sample URL for querying subsets of FacDB:</h4>
+<p><code>https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
+sql?q=SELECT * FROM facdb_facilities WHERE facgroup LIKE '%Youth%'</code></p>
               
             </div>
           </div>
