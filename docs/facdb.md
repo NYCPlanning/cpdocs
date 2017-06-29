@@ -723,12 +723,10 @@ The following datasets were used to populate the Facilities Database. The data s
 The FacDB data that powers the [NYC Facilities Explorer](capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
 
 #### Sample URL for downloading FacDB:
-`https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
-sql?q=SELECT * FROM facdb_facilities&format=shp&filename=facilities_download`
+`https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?q=SELECT * FROM facdb_facilities&format=shp&filename=facilities_download`
 
 The `format` options are shp, csv, and geojson. The `filename` can be substituted according to the user's preference.
 
 #### Sample URL for querying subsets of FacDB:
 
-`https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
-sql?q=SELECT * FROM facdb_facilities WHERE facgroup LIKE '%Youth%'`
+`https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?q=SELECT * FROM facdb_facilities WHERE facgroup = 'Libraries'`
