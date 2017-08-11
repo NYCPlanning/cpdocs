@@ -20,7 +20,9 @@ More facilities will be added as the data become available to the Department of 
 
 We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov with any suggestions).
 
-| General information |
+###  General information ###
+
+| | |
 | :------------: | ------------- |
 | Dataset Name | "Facilities Database "|
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
@@ -32,7 +34,7 @@ We are constantly looking for ways to improve and add additional value to the da
 
 In order of increasing granularity, each record that is included in the database is classified by DCP into a **Domain > Facility Group > Facility Subgroup > Facility Type**. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.
 
-####Education, Child Welfare, and Youth Domain####
+#### Education, Child Welfare, and Youth Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -62,7 +64,7 @@ In order of increasing granularity, each record that is included in the database
 | | Proprietary Schools | ESL schools and trade colleges |
 
 
-####Parks, Gardens, and Historical Sites Domain####
+#### Parks, Gardens, and Historical Sites Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -78,7 +80,7 @@ In order of increasing granularity, each record that is included in the database
 | | Historical Sites | Historic house parks, State historic places, national monuments, and national memorials |
 
 
-####Libraries and Cultural Programs Domain####
+#### Libraries and Cultural Programs Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -91,7 +93,7 @@ In order of increasing granularity, each record that is included in the database
 | | Other Cultural Institutions | Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers |
 
 
-####Public Safety, Emergency Services, and Administration of Justice Domain####
+#### Public Safety, Emergency Services, and Administration of Justice Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -107,7 +109,7 @@ In order of increasing granularity, each record that is included in the database
 | | Detention and Correctional | Correctional and dentention centers |
 
 
-####Health and Human Services Domain####
+#### Health and Human Services Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -131,7 +133,7 @@ In order of increasing granularity, each record that is included in the database
 | | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
 
 
-####Core Infrastructure and Transportation Domain####
+#### Core Infrastructure and Transportation Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -155,7 +157,7 @@ In order of increasing granularity, each record that is included in the database
 | | Wholesale Markets | Wholesale food and commercial markets |
 
 
-####Administration of Government Domain####
+#### Administration of Government Domain ####
 
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
@@ -722,13 +724,13 @@ The following datasets were used to populate the Facilities Database. The data s
 
 The FacDB data that powers the [NYC Facilities Explorer](capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
 
-#### Sample URL for downloading FacDB:
+####  Sample URL for downloading FacDB:
 `https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
 sql?q=SELECT * FROM facdb_facilities&format=shp&filename=facilities_download`
 
 The `format` options are shp, csv, and geojson. The `filename` can be substituted according to the user's preference.
 
-#### Sample URL for querying subsets of FacDB:
+####  Sample URL for querying subsets of FacDB:
 
 `https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/
 sql?q=SELECT * FROM facdb_facilities WHERE facgroup = 'Libraries'`
