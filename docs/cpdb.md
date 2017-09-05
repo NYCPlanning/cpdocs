@@ -1,7 +1,6 @@
-#DRAFT - need to update
+# The Capital Projects Database
 
-#Capital Planning Database
-The Capital Planning Database (CPDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division, captures key data points on past, present, and planned capital projects in and around NYC sponsored or managed by a capital agency. By capturing the location and timeline for capital projects CPDB enables citywide analyses of investments over time and space, and provides a central data source for agencies to evaluate synergies among projects.
+The Capital Projects Database (CPDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division, captures key data points on past, present, and planned capital projects in and around NYC sponsored or managed by a capital agency. By capturing the location and timeline for capital projects CPDB enables citywide analyses of investments over time and space, and provides a central data source for agencies to evaluate synergies among projects.
 
 Currently, CPDB aggregates and synthesizes spatial data from five NYC capital agencies, recording more than 10,000 past, present, and planned NYC capital projects occurring throughout NYC.  As new data become available these data will be processes and integrated into CPDB.
 
@@ -13,16 +12,133 @@ Currently, CPDB aggregates and synthesizes spatial data from five NYC capital ag
 | Projection | WGS84 |
 | Date last updated | 08/15/16 |
 
+## Methodology
+## Building CPDB
+
+### Loading data dependencies
+
+Numerous datasets are required to build CPDB, so these are loaded into the database first.  Most of these datasets are public.
+
+### Get raw data and choose primary data source
+
+CPDB can be built using the public data obtained from the Capital Commitments Plans published by OMB or the data from FMS supplied by FISA.
+
+**Capital Commitments Plan PDFs**
+
+1. Download PDFs
+2. Scrape data from PDFs
+3. Load raw data table in to database as omb_capitalcommitments
+
+**FMS data from FISA**
+
+1. Download data from FISA FTP
+2. Transform .asc file to .csv file
+3. Upload .csv to DCP FTP
+4. Load raw data table into database as fisa_capitalcommitments
+
+Specify the primary data source in the *cpdb.config.json* file.  The defulat primary data source is *omb_capitalcommitments*.
+
+**Create the CPDB base tables**
+
+* **cpdb_projects**
+	
+	A project is defined as a unique FMSID
+
+* **cpdb_budgets**
+	
+	A budget is a unique budget line.  Many budgets can fund one one project and many projects are funded by one budget.
+
+
+* **cpdb_commitments**
+	
+	A commitment is an individual planned commitment.  Multiple planned commitments funs one project.
+
+These base tables report the data at the three differnt levels.
+
+### Developing the *cpdb_dcpattributes* table
+
+This table contains all of DCP's value adds to the raw data, such as classifying and mapping the projects.
+
+**Categorize the projects**
+
+By matching words in the project's short description to a list of ~600 keywords group the projects into 3 categories:
+
+* **IT, Vehicles, and Equipment**
+
+	Any project that can be included in this group is added to this category.
+
+* **Lump Sum**
+
+	For allocations of funds that will be drawn from to create new projects.
+
+* **Fixed Asset**
+	
+	For projects where the work will take place at one or many fixed locations.
+
+Projects that can not be classifed into any of these three categories based on keywords in the short description are left as **Unknown**.
+
+**Mapping the projects**
+
+Projects were mapped using three methods:
+
+1.	**Agency data**
+
+	The Department of Design and Construction (DDC), Department of Transportation (DOT), and Department of Parks and Recreation (DPR) all publish spatial data of their captial projects, and each geometry includes the associated FMDID(s).  Therefore, we aggregate the geometries from these data sources to the FMSID and then add these geometries by joinin on FMDID.
+
+
+2.	**Algorithms**
+
+	Often the location of the project is specified in the project's short description.  Using a series of algorithms we are able to extract the specified location, such as a park id or park name, and join on geometries from an exisiting public data source, such as park properties or the facilities database.
+
+
+3.	**Research**
+
+	For many projects the location(s) of the project is/are specified in the project's short description, but a geometry cannot be assocaited with the project by joining to an existing dataset on FMS ID or mapping the project algorithmically.  Therefore, many projects were mapped via manual research, which involved a DCP team member reading the short description of the project and creating a geometry for that projects representing where that project is taking place.
+
+	New geometries can be added to CPDB by adding a BIN with the assocaited FMSID to the [id_bin_map.csv](https://github.com/NYCPlanning/capitalprojects_db/blob/master/capitalprojects_build/attributes/id_bin_map.csv), which works best for building based projects, or by creating a geometry using [DCP's Simple Geom Editor](https://nycplanning.github.io/simple-geom-editor/) and adding the outputted .json file to the [geometries folder](https://github.com/NYCPlanning/capitalprojects_db/tree/master/capitalprojects_build/attributes/geometries).
+
+	We focus mapping projects that have be categorized as a "Fixed Asset."
+
+	**Agency verified**
+
+	During the Summer of 2017 we with the support of OMB worked with each captial agency to verify the locations of the projects that we mapped and correct them if they were incorrect, and to map where possible projects that we were not able to map and that we've classifed as a "Fixed Asset" or "Unknown" type of project.
+
+	The agency projected new or corrected location information by providing the address, bin, bbl, or other id or the location(s) where that project was taking place
+
+	1. Format table for database consumption
+	2. Load .csv onto DCP FTP
+	3. Load into databae
+	4. Create geometries based on BIN, BBL, or bridge id
+	5. Create geometries by geocoding addresses
+	6. Aggregate geometries to the FMS ID.
+	7. Append new or corrected geometries from the *dcp_cpdb_agencyverified* onto the *cpdb_dcpattributes* table and overwrite any existing geometries.
+
+**Removing geometries**
+
+We make mistakes.  As we've QA/QCed and worked with CPDB if we noticed any project mapped incorrectly we've added the FMSID to the [cpdb_geomsremove.csv](https://github.com/NYCPlanning/capitalprojects_db/blob/master/capitalprojects_build/cpdb_geomsremove.csv).  At the end of the build process geometries for these projects are removed as long as the geometry did not come directly from an agency.
+
+If an agency indicated that a project cannot be mapped now or ever the geometries for these projects were removed.
+
+**Standardizing geometries**  
+
+* All buildings are represented as points
+* Lines are turned into polygons
+* All geometries are made into multi-geometries
+
+**Create master flat file**
+
+Run a final .sql script to create the master flat file w/ array fields that drives the Captial Projects Explorer.
+
+### Updating the production data tables for the Captial Projects Explorer
+
+1. 	Output 4 .csv files and 2 .shp files from the database.
+2.	Upload these tables to the CartoProd server
+3. 	Swap out old production tables for the new data tables
+	Data should update automatically in the Captial Projects Explorer
+	Explorer goes down briefly while updating the data tables
 
 ## Database structure
 Three tables compose CPDB: Projects, Sites, and Budget.
-
-A project is defined as an investment or series of investments made by a capital agency.  A project can span multiple sites and can be funded by multiple funding sources, but all other attributes, such as cost and timeline, remain constant.  The projects data is composed of data derived from the source datasets.
-
-A site is a single location where a project or portion of a project is taking place.  Many sites can makeup one project, but each project occurring at a single site is reflected as an individual record in the sites table.
-
-The budget is each line item from the City's Financial Management System (FMS).  FMS tracks the City's budget and spend.  If an FMS ID is provided for a project it can be linked an FMS line item.
-
 
 ## Data Dictionary
 ##### Projects
@@ -62,7 +178,6 @@ The budget is each line item from the City's Financial Management System (FMS). 
 | Estimated Costs At Location | estimatedcostatlocation | Evenly attributed estimated costs calculated by dividing fundingamount by the total number of sites| 
 | Geometry | geom | The geometry of the site. Can be point, line, or polygon |
 
-##Methodology
 
 
 
