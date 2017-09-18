@@ -72,24 +72,19 @@
     <a class="current" href="./">Capital Projects Database</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#draft-need-to-update">DRAFT - need to update</a></li>
-    
-
-    <li class="toctree-l2"><a href="#capital-planning-database">Capital Planning Database</a></li>
+    <li class="toctree-l2"><a href="#the-capital-projects-database">The Capital Projects Database</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#overview">Overview</a></li>
+            <li><a class="toctree-l3" href="#i-overview">I. Overview</a></li>
         
-            <li><a class="toctree-l3" href="#database-structure">Database structure</a></li>
+            <li><a class="toctree-l3" href="#ii-limitations-and-disclaimers">II. Limitations and Disclaimers</a></li>
         
-            <li><a class="toctree-l3" href="#data-dictionary">Data Dictionary</a></li>
+            <li><a class="toctree-l3" href="#iii-methodology">III. Methodology</a></li>
         
-            <li><a class="toctree-l3" href="#methodology">Methodology</a></li>
+            <li><a class="toctree-l3" href="#iv-data-dictionary">IV. Data Dictionary</a></li>
         
-            <li><a class="toctree-l3" href="#source-data">Source Data</a></li>
-        
-            <li><a class="toctree-l3" href="#limitations-and-disclaimers">Limitations and Disclaimers</a></li>
+            <li><a class="toctree-l3" href="#v-source-data">V. Source Data</a></li>
         
         </ul>
     
@@ -129,24 +124,178 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="draft-need-to-update">DRAFT - need to update</h1>
-<h1 id="capital-planning-database">Capital Planning Database</h1>
-<p>The Capital Planning Database (CPDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division, captures key data points on past, present, and planned capital projects in and around NYC sponsored or managed by a capital agency. By capturing the location and timeline for capital projects CPDB enables citywide analyses of investments over time and space, and provides a central data source for agencies to evaluate synergies among projects.</p>
-<p>Currently, CPDB aggregates and synthesizes spatial data from five NYC capital agencies, recording more than 10,000 past, present, and planned NYC capital projects occurring throughout NYC.  As new data become available these data will be processes and integrated into CPDB.</p>
-<h2 id="overview">Overview</h2>
-<p>| General information |
-| :------------: | ------------- |
-| Description | The Capital Planning Database (CPDB) captures key data points on past, present, and planned capital projects in and around New York City (NYC) sponsored or managed by a capital agency |
-| Data format | GeoJSON, shapefile, csv |
-| Projection | WGS84 |
-| Date last updated | 08/15/16 |</p>
-<h2 id="database-structure">Database structure</h2>
-<p>Three tables compose CPDB: Projects, Sites, and Budget.</p>
-<p>A project is defined as an investment or series of investments made by a capital agency.  A project can span multiple sites and can be funded by multiple funding sources, but all other attributes, such as cost and timeline, remain constant.  The projects data is composed of data derived from the source datasets.</p>
-<p>A site is a single location where a project or portion of a project is taking place.  Many sites can makeup one project, but each project occurring at a single site is reflected as an individual record in the sites table.</p>
-<p>The budget is each line item from the City's Financial Management System (FMS).  FMS tracks the City's budget and spend.  If an FMS ID is provided for a project it can be linked an FMS line item.</p>
-<h2 id="data-dictionary">Data Dictionary</h2>
-<h5 id="projects">Projects</h5>
+                <h1 id="the-capital-projects-database">The Capital Projects Database</h1>
+<p>The Capital Projects Database (CPDB), a data product produced by the New York City (NYC) Department of City Planning (DCP) Capital Planning division, captures key data points on potential, planned, and ongoing capital projects sponsored or managed by a capital agency in and around NYC.</p>
+<p>Information reported in the Capital Commitment Plan published by the NYC Office of Management and Budget (OMB) three times per year is the foundation that CPDB is then built off of; therefore, only the capital projects that appear in the Capital Commitment Plan are reflected in CPDB.  Other open data resources are also leveraged to map the capital projects.</p>
+<p>CPDB supports the most comprehensive map of potential, planned, and ongoing capital projects taking place across NYC enabling Planners to better understand and communicate New York City’s capital project portfolio within and across particular agencies. This integrated but not exhaustive view provides a broad understanding of what projects are taking place within a certain area, and a starting point to discovering opportunities for strategic neighborhood planning.</p>
+<h2 id="i-overview">I. Overview</h2>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Dataset Name</td>
+<td>"Capital Projects Database"</td>
+</tr>
+<tr>
+<td align="center">Description</td>
+<td>The Capital Projects Database (CPDB) captures key data points on, including spatial data, potential, planned, and ongoing capital projects reported in the Capital Commitment Plan published by the NYC Office of Management and Budget (OMB)</td>
+</tr>
+<tr>
+<td align="center">Data format</td>
+<td><a href="https://capitalplanning.nyc.gov/capitalprojects/explorer#13.62/40.7094/-74.0058">Webmap</a>, Shapefile: <a href="https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&amp;q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_pts%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&amp;format=shp&amp;filename=projects-points_complete_2017-09-15">Points</a> &amp; <a href="https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&amp;q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_poly%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&amp;format=shp&amp;filename=projects-polygons_complete_2017-09-15">Polygons</a>, GeoJSON: <a href="https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&amp;q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_pts%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&amp;format=geojson&amp;filename=projects-points_complete_2017-09-15">Points</a> &amp; <a href="https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&amp;q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_poly%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&amp;format=geojson&amp;filename=projects-polygons_complete_2017-09-15">Polygons</a>, <a href="https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&amp;q=SELECT%20*%20FROM%20cpdb_projects_combined&amp;format=csv&amp;filename=projects_complete_2017-09-15">CSV</a></td>
+</tr>
+<tr>
+<td align="center">Projection</td>
+<td>WGS84</td>
+</tr>
+<tr>
+<td align="center">Date last updated</td>
+<td>September 2017</td>
+</tr>
+<tr>
+<td align="center">Capital Commitment Plan version</td>
+<td>April 2017</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ii-limitations-and-disclaimers">II. Limitations and Disclaimers</h2>
+<p>CPDB is only as good as the source data it extracts and aggregates; therefore, CPDB includes data on current and planned NYC capital projects reported in OMB's Capital Commitment Plan and it does not capture all historic, current, or future capital projects.  </p>
+<p><strong>CPDB is not a project or financial management system</strong>.  Data on project timeline may be incorrect and budgetary information may be incomplete since all monies committed to or spent on a project may not be captured.  CPDB does capture planned commitments allocated to projects that may never come to fruition; these instances are most frequent for projects funded by discretionary funding sources, such as council member funding.</p>
+<p>Currently, CPDB is the most comprehensive spatial data resource of current and planned City capital projects, but the <strong>spatial data are not 100% reliable, accurate, or exhaustive</strong>.</p>
+<ul>
+<li>
+<p>The <strong>map of capital projects is incomplete</strong> because many capital projects could not be spatially referenced due to vague descriptions not including the name of a site.  </p>
+</li>
+<li>
+<p><strong>Some projects are mapped incorrectly</strong>.  Some projects are geocoded to agency's headquarters rather than the site where the capital investment and construction is taking place.  Other projects are mapped to the wrong site as a result of two places having the same name or similar names. Unfortunately, these records cannot be systematically verified and corrected.</p>
+</li>
+</ul>
+<p>Through user feedback we look to resolve these limitation over time.</p>
+<p><strong>For more detailed information on a specific capital project please reach out to the respective managing or sponsor agency.</strong></p>
+<p>As a result of these limitations and inconsistencies, <strong>CPDB should not be used for quantitative analyses</strong>.  CPDB should be used for planning coordination and information purposes only.
+If CPDB is used for any spatial analyses it is crucial to recognize that not all of the projects are spatially referenced, projects may be incorrectly spatially referenced, one project can span across many locations, and this database is not authoritatively comprehensive.</p>
+<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a>.</p>
+<h2 id="iii-methodology">III. Methodology</h2>
+<p><strong>Building CPDB</strong></p>
+<h3 id="loading-data-dependencies">Loading data dependencies</h3>
+<p>Numerous datasets are required to build CPDB, so these are loaded into the database first.  Most of these datasets are public.</p>
+<h3 id="get-raw-data-and-choose-primary-data-source">Get raw data and choose primary data source</h3>
+<p>CPDB can be built using the public data obtained from the Capital Commitments Plans published by OMB or the data from FMS supplied by FISA.</p>
+<p><strong>Capital Commitments Plan PDFs</strong></p>
+<ol>
+<li>Download PDFs</li>
+<li>Scrape data from PDFs</li>
+<li>Load raw data table into database as omb_capitalcommitments</li>
+</ol>
+<p><strong>FMS data from FISA</strong></p>
+<ol>
+<li>Download data from FISA FTP</li>
+<li>Transform .asc file to .csv file</li>
+<li>Upload .csv to DCP FTP</li>
+<li>Load raw data table into database as fisa_capitalcommitments</li>
+</ol>
+<p>Specify the primary data source in the <em>cpdb.config.json</em> file.  The default primary data source is <em>omb_capitalcommitments</em>.</p>
+<p><strong>Create the CPDB base tables</strong></p>
+<ul>
+<li>
+<p><strong>cpdb_projects</strong></p>
+<p>A project is defined as a unique FMSID</p>
+</li>
+<li>
+<p><strong>cpdb_budgets</strong></p>
+<p>A budget is a unique budget line.  Many budgets can fund one one project and many projects are funded by one budget.</p>
+</li>
+<li>
+<p><strong>cpdb_commitments</strong></p>
+<p>A commitment is an individual planned commitment.  Multiple planned commitments fund one project.</p>
+</li>
+</ul>
+<p>These base tables report the data at the three different levels.</p>
+<h3 id="developing-the-cpdb_dcpattributes-table">Developing the <em>cpdb_dcpattributes</em> table</h3>
+<p>This table contains all of DCP's value adds to the raw data, such as classifying and mapping the projects.</p>
+<p><strong>Categorize the projects</strong></p>
+<p>By matching words in the project's short description to a list of ~600 keywords group the projects into 3 categories:</p>
+<ul>
+<li>
+<p><strong>IT, Vehicles, and Equipment</strong></p>
+<p>Any project that can be included in this group is added to this category.</p>
+</li>
+<li>
+<p><strong>Lump Sum</strong></p>
+<p>For allocations of funds that will be drawn from to create new projects.</p>
+</li>
+<li>
+<p><strong>Fixed Asset</strong></p>
+<p>For projects where the work will take place at one or many fixed locations.</p>
+</li>
+</ul>
+<p>Projects that can not be classified into any of these three categories based on keywords in the short description are left as <strong>Unknown</strong>.</p>
+<p><strong>Mapping the projects</strong></p>
+<p>Projects were mapped using three methods:</p>
+<ol>
+<li>
+<p><strong>Agency data</strong></p>
+<p>The Department of Design and Construction (DDC), Department of Transportation (DOT), and Department of Parks and Recreation (DPR) all publish spatial data of their capital projects, and each geometry includes the associated FMDID(s).  Therefore, we aggregate the geometries from these data sources to the FMSID and then add these geometries by joining on FMDID.</p>
+</li>
+<li>
+<p><strong>Algorithms</strong></p>
+<p>Often the location of the project is specified in the project's short description.  Using a series of algorithms we are able to extract the specified location, such as a park id or park name, and join on geometries from an existing public data source, such as park properties or the facilities database.</p>
+</li>
+<li>
+<p><strong>Research</strong></p>
+<p>For many projects the location(s) of the project is/are specified in the project's short description, but a geometry cannot be associated with the project by joining to an existing dataset on FMS ID or mapping the project algorithmically.  Therefore, many projects were mapped via manual research, which involved a DCP team member reading the short description of the project and creating a geometry for that projects representing where that project is taking place.</p>
+<p>New geometries can be added to CPDB by adding a BIN with the assocaited FMSID to the <a href="https://github.com/NYCPlanning/capitalprojects_db/blob/master/capitalprojects_build/attributes/id_bin_map.csv">id_bin_map.csv</a>, which works best for building based projects, or by creating a geometry using <a href="https://nycplanning.github.io/simple-geom-editor/">DCP's Simple Geom Editor</a> and adding the outputted .json file to the <a href="https://github.com/NYCPlanning/capitalprojects_db/tree/master/capitalprojects_build/attributes/geometries">geometries folder</a>.</p>
+<p>We focus mapping projects that have be categorized as a "Fixed Asset."</p>
+<p><strong>Agency verified</strong></p>
+<p>During the Summer of 2017 we with the support of OMB worked with each capital agency to verify the locations of the projects that we mapped and correct them if they were incorrect, and to map where possible projects that we were not able to map and that we've classified as a "Fixed Asset" or "Unknown" type of project.</p>
+<p>The agency projected new or corrected location information by providing the address, bin, bbl, or other id or the location(s) where that project was taking place</p>
+<ol>
+<li>Format table for database consumption</li>
+<li>Load .csv onto DCP FTP</li>
+<li>Load into database</li>
+<li>Create geometries based on BIN, BBL, or bridge id</li>
+<li>Create geometries by geocoding addresses</li>
+<li>Aggregate geometries to the FMS ID.</li>
+<li>Append new or corrected geometries from the <em>dcp_cpdb_agencyverified</em> onto the <em>cpdb_dcpattributes</em> table and overwrite any existing geometries.</li>
+</ol>
+</li>
+</ol>
+<p><strong>Removing geometries</strong></p>
+<p>We make mistakes.  As we've QA/QCed and worked with CPDB if we noticed any project mapped incorrectly we've added the FMSID to the <a href="https://github.com/NYCPlanning/capitalprojects_db/blob/master/capitalprojects_build/cpdb_geomsremove.csv">cpdb_geomsremove.csv</a>.  At the end of the build process geometries for these projects are removed as long as the geometry did not come directly from an agency.</p>
+<p>If an agency indicated that a project cannot be mapped now or ever the geometries for these projects were removed.</p>
+<p><strong>Standardizing geometries</strong>  </p>
+<ul>
+<li>All buildings are represented as points</li>
+<li>Lines are turned into polygons</li>
+<li>All geometries are made into multi-geometries</li>
+</ul>
+<p><strong>Create master flat file</strong></p>
+<p>Run a final .sql script to create the master flat file that aggregates information, such as spending data, to the project level.</p>
+<h3 id="updating-the-production-data-tables-for-the-capital-projects-explorer">Updating the production data tables for the Capital Projects Explorer</h3>
+<ol>
+<li>Output 4 .csv files and 2 .shp files from the database.</li>
+<li>Upload the files to the CartoProd server.<ul>
+<li>cpdb_projects.csv</li>
+<li>cpdb_budgets.csv</li>
+<li>cpdb_commitments.csv</li>
+<li>cpdb_projects_combined.csv</li>
+<li>cpdb_dcpattributes_pts.shp</li>
+<li>cpdb_dcpattributes_poly.shp</li>
+</ul>
+</li>
+<li>Run one final SQL script in Carto to create array fields and create new table named cpdb_projects_combined from output.</li>
+<li>Point Explorer to reference latest datasets</li>
+</ol>
+<h2 id="iv-data-dictionary">IV. Data Dictionary</h2>
+<p>The source data used to build CPDB determines what attributes are reported by the final product.  Using FMS data from FISA provides the greatest level of detail and accuracy, and outputs the most attributes.  Attributes marked with a <strong>' * '</strong> are exclusive to FISA source data. </p>
+<p>The tables that compose CPDB are all related by the FMS ID.</p>
+<h5 id="projects-cpdb_projects">Projects (cpdb_projects)</h5>
+<p>Reports information from the Capital Commitment Plan at the project level.  A project is a unique FMS ID. </p>
 <table>
 <thead>
 <tr>
@@ -157,108 +306,84 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">Global Unique Identifier</td>
-<td align="left">guid</td>
-<td align="left">Universal Unique Identifier.  When a row is added to the table the guid is automatically generated, enabling database replication</td>
-</tr>
-<tr>
-<td align="left">Random ID</td>
-<td align="left">rid</td>
-<td align="left">Auto incrementing integer to track projects</td>
-</tr>
-<tr>
-<td align="left">Capital Planning ID</td>
-<td align="left">idcapitalplanning</td>
-<td align="left">Unique capital planning ID - concatenates managing agency acronym and project ID</td>
-</tr>
-<tr>
-<td align="left">Project ID</td>
-<td align="left">idproject</td>
-<td align="left">Project ID as defined by the data source</td>
-</tr>
-<tr>
 <td align="left">FMS ID</td>
-<td align="left">idfms</td>
-<td align="left">FMS ID as defined by the data source or as generated by DCP by appending the managing agency code to the beginning of the project ID.  Valid FMS ID format = three digit agency code, space, project description acronym, project ID.  Example: 805 ARDXYZ123</td>
-</tr>
-<tr>
-<td align="left">Project Name</td>
-<td align="left">projectname</td>
-<td align="left">Name of the project</td>
-</tr>
-<tr>
-<td align="left">Project Description</td>
-<td align="left">projectdescription</td>
-<td align="left">Description of the project</td>
-</tr>
-<tr>
-<td align="left">Project Type</td>
-<td align="left">projecttype</td>
-<td align="left">Type of capital project</td>
-</tr>
-<tr>
-<td align="left">Current Status</td>
-<td align="left">currentstatus</td>
-<td align="left">Current status of the project.  Valid values are: Cancelled, Complete, Construction, Design, Other, Planning</td>
+<td align="left">maprojid</td>
+<td align="left">Unique identifier that defines a discrete project.  The maprojid is a concatenation of <em>magency</em> and <em>projectid</em> and it is the primary key.</td>
 </tr>
 <tr>
 <td align="left">Managing Agency</td>
-<td align="left">managingagency</td>
-<td align="left">Acronym of the government agency managing the project. This field dictates the agency that can view and edit the project information</td>
+<td align="left">magency</td>
+<td align="left">Three digit code of the distinct City agency managing the project.</td>
 </tr>
 <tr>
-<td align="left">Sponsor Agency</td>
-<td align="left">sponsoragency</td>
-<td align="left">Acronym of the government agency sponsoring or funding the project</td>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.</td>
 </tr>
 <tr>
-<td align="left">Funding Amount</td>
-<td align="left">fundingamount</td>
-<td align="left">Total exact or average funding amount allocated to or needed for the project</td>
+<td align="left">Description</td>
+<td align="left">description</td>
+<td align="left">Short description of the project as described by the sponsor agency.  If one FMS ID had many descriptions the longest description is reported by CPDB.</td>
 </tr>
 <tr>
-<td align="left">Minimum Funding</td>
-<td align="left">fundingmin</td>
-<td align="left">Minimum funding amount allocated to or needed for the project.  Only for projects that have a minimum and/or maximum funding amount defined</td>
+<td align="left">$ City Cost (Non-Exempt) *</td>
+<td align="left">ccnonexempt</td>
+<td align="left">Sum of City Cost (Non-Exempt) funding across all commitments associated with the project.</td>
 </tr>
 <tr>
-<td align="left">Maximum Funding</td>
-<td align="left">fundingmax</td>
-<td align="left">Maximum funding amount allocated to or needed for the project.  Only for projects that have a minimum and/or maximum funding amount defined</td>
+<td align="left">$ City Cost (Exempt) *</td>
+<td align="left">ccexempt</td>
+<td align="left">Sum of City Cost (Exempt) funding across all commitments associated with the project.</td>
 </tr>
 <tr>
-<td align="left">Funding Status</td>
-<td align="left">fundingstatus</td>
-<td align="left">Funding status of the project.  Valid values are: Funded, Underfunded, Not Funded</td>
+<td align="left">$ City Cost</td>
+<td align="left">citycost</td>
+<td align="left">Sum of City funding across all commitments associated with the project.  (If FISA is the source data $ City Cost is the sum of $ City Cost (Exempt) and $ City Cost (Non-Exempt)).</td>
 </tr>
 <tr>
-<td align="left">Funding Source</td>
-<td align="left">fundingsource</td>
-<td align="left">Source of any funds for the project</td>
+<td align="left">$ Non-City Cost State *</td>
+<td align="left">nccstate</td>
+<td align="left">Sum of State funding across all commitments associated with the project.</td>
 </tr>
 <tr>
-<td align="left">Construction Start Date</td>
-<td align="left">constructionstart</td>
-<td align="left">Actual or expected date of construction starting.  Valid formats: MM/YYYY, YYYY</td>
+<td align="left">$ Non-City Cost Federal *</td>
+<td align="left">nccfederal</td>
+<td align="left">Sum of Federal funding across all commitments associated with the project.</td>
 </tr>
 <tr>
-<td align="left">Construction End Date</td>
-<td align="left">constructioncomplete</td>
-<td align="left">Actual or expected date of construction ending.  Valid formats: MM/YYYY, YYYY</td>
+<td align="left">$ Non-City Cost Other *</td>
+<td align="left">nccother</td>
+<td align="left">Sum of Other funding across all commitments associated with the project.</td>
 </tr>
 <tr>
-<td align="left">Fiscal Year Construction Complete</td>
-<td align="left">fyconstructioncomplete</td>
-<td align="left">Actual or expected fiscal year of construction ending.  Valid formats: YYYY</td>
+<td align="left">$ Non-City Cost</td>
+<td align="left">noncitycost</td>
+<td align="left">Sum of Non-City funding across all commitments associated with the project. (If FISA is the source data $ Non-City Cost is the sum of $ Non-City Cost State, $ Non-City Cost Federal, and $ Non-City Cost Other).</td>
 </tr>
 <tr>
-<td align="left">Geometry</td>
-<td align="left">geom</td>
-<td align="left">The geometry of the project. Can be multipoint, multiline, or multipoly</td>
+<td align="left">$ Total Planned Commitments</td>
+<td align="left">totalcost</td>
+<td align="left">Sum of $ City Cost and $ Non-City Cost, which reports the total planned commitments for the project allocated in the Capital Commitment Plan.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Acronym</td>
+<td align="left">magencyacro</td>
+<td align="left">Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Name</td>
+<td align="left">magencyname</td>
+<td align="left">Common name for the city agency mananging the project.  This value is derived from the three digit managing agency code.</td>
+</tr>
+<tr>
+<td align="left">Capital Commitment Plan version</td>
+<td align="left">ccpversion</td>
+<td align="left">Reports the version of the Capital Commitment Plan which the record is based on.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="sites">Sites</h5>
+<h5 id="budgets-cpdb_budgets">Budgets (cpdb_budgets)</h5>
+<p>Reports information from the Capital Commitment Plan for projects at the budget level.  One project can be funded by many budgets.</p>
 <table>
 <thead>
 <tr>
@@ -269,52 +394,426 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">Global Unique Identifier</td>
-<td align="left">guid</td>
-<td align="left">Universal Unique Identifier.  When a row is added to the table the guid is automatically generated</td>
+<td align="left">FMS ID</td>
+<td align="left">maprojid</td>
+<td align="left">Unique identifier that defines a discrete project.  The maprojid is a concatenation of <em>magency</em> and <em>projectid</em> and it is the foreign key.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">magency</td>
+<td align="left">Three digit code of the distinct City agency managing the project.</td>
 </tr>
 <tr>
 <td align="left">Project ID</td>
-<td align="left">idproject</td>
-<td align="left">Project ID as defined by the data source, which relates back to the corresponding projects table.  One to many relationship with Projects</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.</td>
 </tr>
 <tr>
-<td align="left">Latitude</td>
-<td align="left">latitude</td>
-<td align="left">Coordinate of the site. Only for point sites</td>
+<td align="left">Budget Line</td>
+<td align="left">budgetline</td>
+<td align="left">Unique identifier of the budget used to fund the project.</td>
 </tr>
 <tr>
-<td align="left">Longitude</td>
-<td align="left">longitude</td>
-<td align="left">Coordinate of the site. Only for point sites</td>
+<td align="left">Project type</td>
+<td align="left">projecttype</td>
+<td align="left">Short description of the type of project based on the budget funding the project.</td>
 </tr>
 <tr>
-<td align="left">Segment ID</td>
-<td align="left">segmentid</td>
-<td align="left">The id of the LION segment where the site is located. Only for line sites</td>
+<td align="left">Sponsor Agency Acronym</td>
+<td align="left">sagencyacro</td>
+<td align="left">Common acronym of the city agency sponsoring the project.  This value is derived from the budget line.</td>
 </tr>
 <tr>
-<td align="left">Borough Block Lot</td>
-<td align="left">bbl</td>
-<td align="left">The building, block, and lot number of the site.  Only for polygon sites</td>
+<td align="left">Sponsor Agency Name</td>
+<td align="left">sagencyname</td>
+<td align="left">Common name for the city agency sponsoring the project.  This value is derived from the budget line.</td>
 </tr>
 <tr>
-<td align="left">Estimated Costs At Location</td>
-<td align="left">estimatedcostatlocation</td>
-<td align="left">Evenly attributed estimated costs calculated by dividing fundingamount by the total number of sites</td>
+<td align="left">$ City Cost (Non-Exempt) *</td>
+<td align="left">ccnonexempt</td>
+<td align="left">Sum of City Cost (Non-Exempt) funding across all commitments associated with the project drawn from the specified budget line.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost (Exempt) *</td>
+<td align="left">ccexempt</td>
+<td align="left">Sum of City Cost (Exempt) funding across all commitments associated with the project drawn from the specified budget line.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost</td>
+<td align="left">citycost</td>
+<td align="left">Sum of City funding across all commitments associated with the project drawn from the specified budget line.  (If FISA is the source data $ City Cost is the sum of $ City Cost (Exempt) and $ City Cost (Non-Exempt)).</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost State *</td>
+<td align="left">nccstate</td>
+<td align="left">Sum of State funding across all commitments associated with the project drawn from the specified budget line.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost Federal *</td>
+<td align="left">nccfederal</td>
+<td align="left">Sum of Federal funding across all commitments associated with the project drawn from the specified budget line.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost Other *</td>
+<td align="left">nccother</td>
+<td align="left">Sum of Other funding across all commitments associated with the project drawn from the specified budget line.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost</td>
+<td align="left">noncitycost</td>
+<td align="left">Sum of Non-City funding across all commitments associated with the project drawn from the specified budget line. (If FISA is the source data $ Non-City Cost is the sum of $ Non-City Cost State, $ Non-City Cost Federal, and $ Non-City Cost Other).</td>
+</tr>
+<tr>
+<td align="left">$ Total Planned Commitments</td>
+<td align="left">totalcost</td>
+<td align="left">Sum of $ City Cost and $ Non-City Cost, which reports the total planned commitments drawn from the specified budget line for the project allocated in the Capital Commitment Plan.</td>
+</tr>
+<tr>
+<td align="left">Capital Commitment Plan version</td>
+<td align="left">ccpversion</td>
+<td align="left">Reports the version of the Capital Commitment Plan which the record is based on.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="commitments-cpdb_commitments">Commitments (cpdb_commitments)</h5>
+<p>Reports information from the Capital Commitment Plan at the commitment level.  Many commitments can fund one project.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">FMS ID</td>
+<td align="left">maprojid</td>
+<td align="left">Unique identifier that defines a discrete project.  The maprojid is a concatenation of <em>magency</em> and <em>projectid</em> and it is the foreign key.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">magency</td>
+<td align="left">Three digit code of the distinct City agency managing the project.</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.</td>
+</tr>
+<tr>
+<td align="left">Budget Line</td>
+<td align="left">budgetline</td>
+<td align="left">Unique identifier of the budget used to fund the project.</td>
+</tr>
+<tr>
+<td align="left">Planned Commit Date</td>
+<td align="left">plancommdate</td>
+<td align="left">Month and year of when the planned commitment is projected to be committed.</td>
+</tr>
+<tr>
+<td align="left">Commitment Description</td>
+<td align="left">commitmentdescription</td>
+<td align="left">Short description of what the planned commtiment will specifically fund.  Not all commitments have descriptions.</td>
+</tr>
+<tr>
+<td align="left">Commitment Code</td>
+<td align="left">commitmentcode</td>
+<td align="left">Four letter or digit code indicating what part of the project the associated funding is for, such as design, construction, or contingency.</td>
+</tr>
+<tr>
+<td align="left">Ten Year Plan Categroy *</td>
+<td align="left">typc</td>
+<td align="left">Three leter code indicating what ten year plan category the planned commitment supports.</td>
+</tr>
+<tr>
+<td align="left">Ten Year Plan Categroy Name *</td>
+<td align="left">typcname</td>
+<td align="left">Ten year plan category the planned commitment supports.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost (Non-Exempt) *</td>
+<td align="left">ccnonexempt</td>
+<td align="left">Amount City Cost (Non-Exempt) funding associated with the commitment.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost (Exempt) *</td>
+<td align="left">ccexempt</td>
+<td align="left">Amount of City Cost (Exempt) funding associated with the commitment.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost</td>
+<td align="left">citycost</td>
+<td align="left">Amount of City funding associated with the commitment.  (If FISA is the source data $ City Cost is the sum of $ City Cost (Exempt) and $ City Cost (Non-Exempt)).</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost State *</td>
+<td align="left">nccstate</td>
+<td align="left">Amount of State funding associated with the commitment.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost Federal *</td>
+<td align="left">nccfederal</td>
+<td align="left">Amount of Federal funding associated with the commitment.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost Other *</td>
+<td align="left">nccother</td>
+<td align="left">Amount of Other funding associated with the commitment.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost</td>
+<td align="left">noncitycost</td>
+<td align="left">Amount of Non-City funding associated with the commitment. (If FISA is the source data $ Non-City Cost is the sum of $ Non-City Cost State, $ Non-City Cost Federal, and $ Non-City Cost Other).</td>
+</tr>
+<tr>
+<td align="left">$ Total Planned Commitments</td>
+<td align="left">totalcost</td>
+<td align="left">Sum of $ City Cost and $ Non-City Cost, which reports the total planned commitments associated with the commitment for the project allocated in the Capital Commitment Plan.</td>
+</tr>
+<tr>
+<td align="left">Capital Commitment Plan version</td>
+<td align="left">ccpversion</td>
+<td align="left">Reports the version of the Capital Commitment Plan which the record is based on.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="dcp-attributes-cpdb_dcpattributes">DCP Attributes (cpdb_dcpattributes)</h5>
+<p>Reports information generated by DPC, including spatial data, at the project level.  These data are published as two tables <em>_pts</em> and <em>_poly</em> where data are separated based on the geometry type.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">FMS ID</td>
+<td align="left">maprojid</td>
+<td align="left">Unique identifier that defines a discrete project.  The maprojid is a concatenation of <em>magency</em> and <em>projectid</em> and it is the primary key.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">magency</td>
+<td align="left">Three digit code of the distinct City agency managing the project.</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Acronym</td>
+<td align="left">magencyacro</td>
+<td align="left">Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code.</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">description</td>
+<td align="left">Short description of the project as described by the sponsor agency.  If one FMS ID had many descriptions the longest description is reported by CPDB.</td>
+</tr>
+<tr>
+<td align="left">Category</td>
+<td align="left">typecategory</td>
+<td align="left">Classification given by DCP based on keywords found in the short description describing if a projects is Fixed Asset, Lump Sum, or ITT, Vehicles, and Equipment.</td>
+</tr>
+<tr>
+<td align="left">Geometry Source</td>
+<td align="left">geomsource</td>
+<td align="left">Description of where the geometry associated with the project came from.</td>
+</tr>
+<tr>
+<td align="left">Data Name</td>
+<td align="left">dataname</td>
+<td align="left">Name of the dataset where the geometry associated with the project came from.</td>
+</tr>
+<tr>
+<td align="left">Data Source</td>
+<td align="left">datasource</td>
+<td align="left">Acronym of the agency that supplied the dataset from which the geometry associated with the project came from.</td>
+</tr>
+<tr>
+<td align="left">Data Date</td>
+<td align="left">datadate</td>
+<td align="left">Date the geometry was updated.</td>
+</tr>
+<tr>
+<td align="left">Capital Commitment Plan version</td>
+<td align="left">ccpversion</td>
+<td align="left">Reports the version of the Capital Commitment Plan which the record is associated with.</td>
 </tr>
 <tr>
 <td align="left">Geometry</td>
 <td align="left">geom</td>
-<td align="left">The geometry of the site. Can be point, line, or polygon</td>
+<td align="left">Spatial data information.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="methodology">Methodology</h2>
-<h2 id="source-data">Source Data</h2>
-<p>The following datasets were used to populate CPDB</p>
+<h5 id="project-combined-cpdb_projects_combined">Project Combined (cpdb_projects_combined)</h5>
+<p>Master flat file used to power the Capital Projects Explorer that aggregates and reports data at the project level.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field Alias</th>
+<th align="left">Field Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">FMS ID</td>
+<td align="left">maprojid</td>
+<td align="left">Unique identifier that defines a discrete project.  The maprojid is a concatenation of <em>magency</em> and <em>projectid</em> and it is the primary key.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency</td>
+<td align="left">magency</td>
+<td align="left">Three digit code of the distinct City agency managing the project.</td>
+</tr>
+<tr>
+<td align="left">Project ID</td>
+<td align="left">projectid</td>
+<td align="left">Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Acronym</td>
+<td align="left">magencyacro</td>
+<td align="left">Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code.</td>
+</tr>
+<tr>
+<td align="left">Managing Agency Name</td>
+<td align="left">magencyname</td>
+<td align="left">Common name for the city agency managing the project.  This value is derived from the three digit managing agency code.</td>
+</tr>
+<tr>
+<td align="left">Description</td>
+<td align="left">description</td>
+<td align="left">Short description of the project as described by the sponsor agency.  If one FMS ID had many descriptions the longest description is reported by CPDB.</td>
+</tr>
+<tr>
+<td align="left">Sponsor Agency Acronym</td>
+<td align="left">sagencyacro</td>
+<td align="left">Array of the common acronyms of the city agency / agencies sponsoring the project.  This value is derived from the budget line(s).</td>
+</tr>
+<tr>
+<td align="left">Project type</td>
+<td align="left">projecttype</td>
+<td align="left">Array of the short description(s) of the project type(s) based on the budget(s) funding the project.</td>
+</tr>
+<tr>
+<td align="left">Ten Year Plan Category *</td>
+<td align="left">typc</td>
+<td align="left">Array of three letter code(s) indicating what ten year plan category / categories the project supports.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost (Non-Exempt) *</td>
+<td align="left">ccnonexempt</td>
+<td align="left">Sum of City Cost (Non-Exempt) funding across all commitments associated with the project.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost (Exempt) *</td>
+<td align="left">ccexempt</td>
+<td align="left">Sum of City Cost (Exempt) funding across all commitments associated with the project.</td>
+</tr>
+<tr>
+<td align="left">$ City Cost</td>
+<td align="left">totalcityplannedcommit</td>
+<td align="left">Sum of City funding across all commitments associated with the project.  (If FISA is the source data $ City Cost is the sum of $ City Cost (Exempt) and $ City Cost (Non-Exempt)).</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost State *</td>
+<td align="left">nccstate</td>
+<td align="left">Sum of State funding across all commitments associated with the project.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost Federal *</td>
+<td align="left">nccfederal</td>
+<td align="left">Sum of Federal funding across all commitments associated with the project.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost Other *</td>
+<td align="left">nccother</td>
+<td align="left">Sum of Other funding across all commitments associated with the project.</td>
+</tr>
+<tr>
+<td align="left">$ Non-City Cost</td>
+<td align="left">totalnoncityplannedcommit</td>
+<td align="left">Sum of Non-City funding across all commitments associated with the project. (If FISA is the source data $ Non-City Cost is the sum of $ Non-City Cost State, $ Non-City Cost Federal, and $ Non-City Cost Other).</td>
+</tr>
+<tr>
+<td align="left">$ Total Planned Commitments</td>
+<td align="left">totalcommit</td>
+<td align="left">Sum of $ City Cost and $ Non-City Cost, which reports the total planned commitments for the project allocated in the Capital Commitment Plan.</td>
+</tr>
+<tr>
+<td align="left">Min Date</td>
+<td align="left">mindate</td>
+<td align="left">Earliest date recorded in relation to the project in either the Capital Commitment Plan or Checkbook NYC.</td>
+</tr>
+<tr>
+<td align="left">Max Date</td>
+<td align="left">maxdate</td>
+<td align="left">Latest <em>Planned Commit Date</em> recorded in the Capital Commitment Plan associated with the project.</td>
+</tr>
+<tr>
+<td align="left">$ Total Spend</td>
+<td align="left">totalspend</td>
+<td align="left">Sum of all liquidations (check amounts) recorded in Checkbook NYC for the associated project.</td>
+</tr>
+<tr>
+<td align="left">$ Total Commit Spend</td>
+<td align="left">totalcommitspend</td>
+<td align="left">Sum of <em>Total Planned Commitments</em> and <em>Total Spend</em></td>
+</tr>
+<tr>
+<td align="left">Capital Commitment Plan version</td>
+<td align="left">ccpversion</td>
+<td align="left">Reports the version of the Capital Commitment Plan which the record is associated with.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v-source-data">V. Source Data</h2>
+<p>The following datasets and resources are used to create CPDB</p>
+<p><strong>Primary base data resource</strong></p>
+<h3 id="capital-commitment-plan-published-by-the-nyc-office-of-management-and-budget-omb">Capital Commitment Plan published by the NYC Office of Management and Budget (OMB)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>OMB's Capital Commitment Plan</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Document published by OMB three times per year reporting all planned commitments for current and planned projects between today and until ten years into the future.</td>
+</tr>
+<tr>
+<td>Agency</td>
+<td>OMB</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>ASC or PDF</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>3 times per year</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Regular data exchange with OMB or scrape latest public Capital Commitment Plan</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Spatial data resources</strong></p>
 <h3 id="department-of-design-and-construction-ddc">Department of Design and Construction (DDC)</h3>
-<p>DDC is the City's primary capital construction manager; therefore, DDC centrally manages much of the City’s capital projects portfolio.</p>
 <h5 id="infrastructure-projects">Infrastructure projects</h5>
 <table>
 <thead>
@@ -347,18 +846,6 @@
 <tr>
 <td>Update Means</td>
 <td>Weekly data exchange with DDC</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2/19/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2/22/2016</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>This dataset acts as the primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources</td>
 </tr>
 </tbody>
 </table>
@@ -394,18 +881,6 @@
 <tr>
 <td>Update Means</td>
 <td>Weekly data exchange with DDC</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>2/19/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2/22/2016</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td>This dataset acts as the primary data source; therefore, if other datasets have the same project CPDB rejects duplicate records from other data sources</td>
 </tr>
 </tbody>
 </table>
@@ -443,18 +918,6 @@
 <td>Update Means</td>
 <td>Automatic data pulls from DOT's capital projects map</td>
 </tr>
-<tr>
-<td>Date Updated</td>
-<td>3/1/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>3/1/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <h5 id="intersection-projects">Intersection projects</h5>
@@ -489,18 +952,6 @@
 <tr>
 <td>Update Means</td>
 <td>Automatic data pulls from DOT's capital projects map</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>3/1/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>3/1/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -537,18 +988,6 @@
 <td>Update Means</td>
 <td>Automatic data pulls from DOT's capital projects map</td>
 </tr>
-<tr>
-<td>Date Updated</td>
-<td>3/18/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>3/18/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <h3 id="department-of-parks-and-recreation-dpr">Department of Parks and Recreation (DPR)</h3>
@@ -567,7 +1006,7 @@
 </tr>
 <tr>
 <td>Description</td>
-<td>XML file from NYC Open Data capturing present and planned locations of DPR sponsored capital projects</td>
+<td>XML file from NYC Open Data capturing present and planned locations of DPR sponsored and managed capital projects</td>
 </tr>
 <tr>
 <td>Agency</td>
@@ -587,25 +1026,11 @@
 </tr>
 <tr>
 <td>Update Means</td>
-<td>Automatic weekly pulls from DPR's Capital Projects Tracker</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>4/9/2015</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>2/10/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td></td>
+<td>Automatic pulls from DPR's Capital Projects Tracker</td>
 </tr>
 </tbody>
 </table>
-<h3 id="school-construction-authority-sca">School Construction Authority (SCA)</h3>
-<p>SCA plans, manages, and executes all capital projects related to NYC public schools including the construction of new school and the renovations of existing schools.</p>
-<h5 id="capacity-projects">Capacity projects</h5>
+<h5 id="parks-properties">Parks properties</h5>
 <table>
 <thead>
 <tr>
@@ -616,46 +1041,116 @@
 <tbody>
 <tr>
 <td>Name</td>
-<td>SCA Capital Projects Capacity</td>
+<td>DPR Parks Properties</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>SCA's capital projects that involve the construction of a school or the expansion of a school to increase the capacity of a school district or school respectively</td>
+<td>Shapefile depicting all properties owned and managed by DPR</td>
 </tr>
 <tr>
 <td>Agency</td>
-<td>SCA</td>
+<td>DPR</td>
 </tr>
 <tr>
 <td>Data Format</td>
-<td>CSV</td>
+<td>Shapefile</td>
 </tr>
 <tr>
 <td>Data Link</td>
-<td></td>
+<td>https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7/data</td>
 </tr>
 <tr>
 <td>Update Frequency</td>
-<td>Annually</td>
+<td>As needed</td>
 </tr>
 <tr>
 <td>Update Means</td>
-<td>Systematic transformation of SCA data</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>7/1/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>7/1/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td>These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV that could later be imported into CPDB</td>
+<td>Automatic pulls from Open Data</td>
 </tr>
 </tbody>
 </table>
+<h3 id="office-of-recovery-and-resiliency-orr">Office of Recovery and Resiliency (ORR)</h3>
+<h5 id="capital-projects">Capital projects</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>ORR Capital Projects Map</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Map of capital projects that support resiliency and recovery efforts</td>
+</tr>
+<tr>
+<td>Agency</td>
+<td>ORR</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>https://maps.nyc.gov/resiliency/</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>As needed</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Automatic data pulls from ORR's capital projects map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="department-of-city-planning-dcp">Department of City Planning (DCP)</h3>
+<h5 id="facilities-database">Facilities Database</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Facilities Database</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The most comprehensive dataset of public and private facilities and program sites that shape the quality of New York City neighborhoods</td>
+</tr>
+<tr>
+<td>Agency</td>
+<td>DCP</td>
+</tr>
+<tr>
+<td>Data Format</td>
+<td>Shapefile</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>https://capitalplanning.nyc.gov/facilities</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>As needed</td>
+</tr>
+<tr>
+<td>Update Means</td>
+<td>Automatic data pulls from DPR's Facilities Explorer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-construction-authority-sca">School Construction Authority (SCA)</h3>
+<p>SCA plans, manages, and executes all capital projects related to NYC public schools including the construction of new schools and the renovation of existing schools.</p>
 <h5 id="investment-projects">Investment projects</h5>
 <table>
 <thead>
@@ -679,11 +1174,7 @@
 </tr>
 <tr>
 <td>Data Format</td>
-<td>CSV</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td></td>
+<td>PDF</td>
 </tr>
 <tr>
 <td>Update Frequency</td>
@@ -691,25 +1182,11 @@
 </tr>
 <tr>
 <td>Update Means</td>
-<td>Systematic transformation of SCA data</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td>7/1/2016</td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>7/1/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td>These data were scraped from static PDF files published by SCA documenting SCA's capital plan and transformed into a CSV that could later be imported into CPDB</td>
+<td>Scrape latest public SCA Capital Plan</td>
 </tr>
 </tbody>
 </table>
-<h3 id="office-of-recovery-and-resiliency-orr">Office of Recovery and Resiliency (ORR)</h3>
-<p>ORR works wit agencies, advocates, partnerships, and industries to advance long-term plans for growth and resiliency by improving the City's physical infrastructure, economy, and quality of life.</p>
-<h5 id="capital-projects">Capital projects</h5>
+<h5 id="capacity-projects">Capacity projects</h5>
 <table>
 <thead>
 <tr>
@@ -720,49 +1197,30 @@
 <tbody>
 <tr>
 <td>Name</td>
-<td>ORR Capital Projects</td>
+<td>SCA Capital Projects Capacity</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>ORR's capital projects that involve the construction of a school or the expansion of a school to increase the capacity of a school district or school respectively</td>
+<td>SCA's capital projects that involve the construction of a school or the expansion of a school to increase the capacity of a school or school district</td>
 </tr>
 <tr>
 <td>Agency</td>
-<td>ORR</td>
+<td>SCA</td>
 </tr>
 <tr>
 <td>Data Format</td>
-<td>Shapefile</td>
-</tr>
-<tr>
-<td>Data Link</td>
-<td>https://maps.nyc.gov/resiliency/</td>
+<td>PDF</td>
 </tr>
 <tr>
 <td>Update Frequency</td>
-<td></td>
+<td>Annually</td>
 </tr>
 <tr>
 <td>Update Means</td>
-<td>Automatic data pulls from ORR's capital projects map</td>
-</tr>
-<tr>
-<td>Date Updated</td>
-<td></td>
-</tr>
-<tr>
-<td>Date Received</td>
-<td>8/1/2016</td>
-</tr>
-<tr>
-<td>notes</td>
-<td></td>
+<td>Scrape latest public SCA Capital Plan</td>
 </tr>
 </tbody>
 </table>
-<h2 id="limitations-and-disclaimers">Limitations and Disclaimers</h2>
-<p>CPDB is only as good as the source data it aggregates.  Currently, CPDB is the most comprehensive spatial data resource, but it does not capture every past, present, or planned capital project within NYC.  For more detailed information on a specific capital project please reach out to the respective managing agency.</p>
-<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:CapitalPlanning_DL@planning.nyc.gov">CapitalPlanning_DL@planning.nyc.gov</a></p>
               
             </div>
           </div>
