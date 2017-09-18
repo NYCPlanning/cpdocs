@@ -4,15 +4,15 @@ The Capital Projects Database (CPDB), a data product produced by the New York Ci
 
 Information reported in the Capital Commitment Plan published by the NYC Office of Management and Budget (OMB) three times per year is the foundation that CPDB is then built off of; therefore, only the capital projects that appear in the Capital Commitment Plan are reflected in CPDB.  Other open data resources are also leveraged to map the capital projects.
 
-CPDB supports the most comprehensive map of potential, planned, and ongoing capital projects taking place across NYC enabling Planners to better understand and communicate New York City’s capital project portfolio within and across particular agencies. This integrated but not exaustive view provides a broad understanding of what projects are taking place within a certain area, and a starting point to discovering opportunities for strategic neighborhood planning.
+CPDB supports the most comprehensive map of potential, planned, and ongoing capital projects taking place across NYC enabling Planners to better understand and communicate New York City’s capital project portfolio within and across particular agencies. This integrated but not exhaustive view provides a broad understanding of what projects are taking place within a certain area, and a starting point to discovering opportunities for strategic neighborhood planning.
 
 
 ## I. Overview
 
 | | |
 | :------------: | ------------- |
-| Dataset Name | "Captial Projects Database"|
-| Description | The Captial Projects Database (CPDB) captures key data points on, including spatial data, potential, planned, and ongoing capital projects reported in the Capital Commitment Plan published by the NYC Office of Management and Budget (OMB)|
+| Dataset Name | "Capital Projects Database"|
+| Description | The Capital Projects Database (CPDB) captures key data points on, including spatial data, potential, planned, and ongoing capital projects reported in the Capital Commitment Plan published by the NYC Office of Management and Budget (OMB)|
 | Data format | [Webmap](https://capitalplanning.nyc.gov/capitalprojects/explorer#13.62/40.7094/-74.0058), Shapefile: [Points](https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_pts%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&format=shp&filename=projects-points_complete_2017-09-15) & [Polygons](https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_poly%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&format=shp&filename=projects-polygons_complete_2017-09-15), GeoJSON: [Points](https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_pts%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&format=geojson&filename=projects-points_complete_2017-09-15) & [Polygons](https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&q=SELECT%20*%20FROM%20(SELECT%20a.the_geom,%20a.the_geom_webmercator,%20magency,%20magencyacro,%20description,%20totalcommit,%20b.maprojid,%20totalspend,%20sagencyacro,%20maxdate,%20mindate,%20projecttype%20FROM%20cpdb_dcpattributes_poly%20a%20LEFT%20JOIN%20cpdb_projects_combined%20b%20ON%20a.maprojid%20=%20b.maprojid)%20x&format=geojson&filename=projects-polygons_complete_2017-09-15), [CSV](https://cartoprod.capitalplanning.nyc/user/cpp/api/v2/sql?skipfields=cartodb_id&q=SELECT%20*%20FROM%20cpdb_projects_combined&format=csv&filename=projects_complete_2017-09-15) |
 | Projection | WGS84 |
 | Date last updated | September 2017 |
@@ -20,22 +20,22 @@ CPDB supports the most comprehensive map of potential, planned, and ongoing capi
 
 ## II. Limitations and Disclaimers
 
-CPDB is only as good as the source data it extracts and aggregates; therefore, CPDB includes data on current and planned NYC capital projects reported in OMB's Capital Commitmnet Plan and it does not capture all historic, current, or future capital projects.  
+CPDB is only as good as the source data it extracts and aggregates; therefore, CPDB includes data on current and planned NYC capital projects reported in OMB's Capital Commitment Plan and it does not capture all historic, current, or future capital projects.  
 
-**CPDB is not a project or financial management system**.  Data on project timeline may be incorrect and budgetary information may be incomplete since all monies committed to or spent on a project may not be captured.  CPDB does capture planned commitments allocated to projects that may never come to fruition; these instances are most frequent for projects funded by discreationary funding sources, such as council memeber funding.
+**CPDB is not a project or financial management system**.  Data on project timeline may be incorrect and budgetary information may be incomplete since all monies committed to or spent on a project may not be captured.  CPDB does capture planned commitments allocated to projects that may never come to fruition; these instances are most frequent for projects funded by discretionary funding sources, such as council member funding.
 
 Currently, CPDB is the most comprehensive spatial data resource of current and planned City capital projects, but the **spatial data are not 100% reliable, accurate, or exhaustive**.
 
-* The **map of capital projects is incomplete** because many capital projects could not be spatially referenced due to vague discriptions not including the name of a site.  
+* The **map of capital projects is incomplete** because many capital projects could not be spatially referenced due to vague descriptions not including the name of a site.  
 
-* **Some projects are mapped incorrectly**.  Some projects are geocoded to agency's headquarters rather than the site where the capital investment and construction is taking place.  Other projects are mapped to the wrong site as a result of two places having the same name or similar names. Unfortunately, these records cannot by systematically verified and corrected.
+* **Some projects are mapped incorrectly**.  Some projects are geocoded to agency's headquarters rather than the site where the capital investment and construction is taking place.  Other projects are mapped to the wrong site as a result of two places having the same name or similar names. Unfortunately, these records cannot be systematically verified and corrected.
 
 Through user feedback we look to resolve these limitation over time.
 
-**For more detailed information on a specific capital project please reach out to the respective managing or sponor agency.**
+**For more detailed information on a specific capital project please reach out to the respective managing or sponsor agency.**
 
 As a result of these limitations and inconsistencies, **CPDB should not be used for quantitative analyses**.  CPDB should be used for planning coordination and information purposes only.
-If CPDB is used for any spatial analyses it is crucial to recgonize that not all of the projects are spatially referenced, projects may be incorrectly spatially referenced, one project can span across many locations, and this database is not authoritatively comprehensive.
+If CPDB is used for any spatial analyses it is crucial to recognize that not all of the projects are spatially referenced, projects may be incorrectly spatially referenced, one project can span across many locations, and this database is not authoritatively comprehensive.
 
 If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at [CapitalPlanning_DL@planning.nyc.gov](mailto:CapitalPlanning_DL@planning.nyc.gov).
 
@@ -54,7 +54,7 @@ CPDB can be built using the public data obtained from the Capital Commitments Pl
 
 1. Download PDFs
 2. Scrape data from PDFs
-3. Load raw data table in to database as omb_capitalcommitments
+3. Load raw data table into database as omb_capitalcommitments
 
 **FMS data from FISA**
 
@@ -63,7 +63,7 @@ CPDB can be built using the public data obtained from the Capital Commitments Pl
 3. Upload .csv to DCP FTP
 4. Load raw data table into database as fisa_capitalcommitments
 
-Specify the primary data source in the *cpdb.config.json* file.  The defulat primary data source is *omb_capitalcommitments*.
+Specify the primary data source in the *cpdb.config.json* file.  The default primary data source is *omb_capitalcommitments*.
 
 **Create the CPDB base tables**
 
@@ -78,9 +78,9 @@ Specify the primary data source in the *cpdb.config.json* file.  The defulat pri
 
 * **cpdb_commitments**
 	
-	A commitment is an individual planned commitment.  Multiple planned commitments funs one project.
+	A commitment is an individual planned commitment.  Multiple planned commitments fund one project.
 
-These base tables report the data at the three differnt levels.
+These base tables report the data at the three different levels.
 
 ### Developing the *cpdb_dcpattributes* table
 
@@ -102,7 +102,7 @@ By matching words in the project's short description to a list of ~600 keywords 
 	
 	For projects where the work will take place at one or many fixed locations.
 
-Projects that can not be classifed into any of these three categories based on keywords in the short description are left as **Unknown**.
+Projects that can not be classified into any of these three categories based on keywords in the short description are left as **Unknown**.
 
 **Mapping the projects**
 
@@ -110,17 +110,17 @@ Projects were mapped using three methods:
 
 1.	**Agency data**
 
-	The Department of Design and Construction (DDC), Department of Transportation (DOT), and Department of Parks and Recreation (DPR) all publish spatial data of their captial projects, and each geometry includes the associated FMDID(s).  Therefore, we aggregate the geometries from these data sources to the FMSID and then add these geometries by joinin on FMDID.
+	The Department of Design and Construction (DDC), Department of Transportation (DOT), and Department of Parks and Recreation (DPR) all publish spatial data of their capital projects, and each geometry includes the associated FMDID(s).  Therefore, we aggregate the geometries from these data sources to the FMSID and then add these geometries by joining on FMDID.
 
 
 2.	**Algorithms**
 
-	Often the location of the project is specified in the project's short description.  Using a series of algorithms we are able to extract the specified location, such as a park id or park name, and join on geometries from an exisiting public data source, such as park properties or the facilities database.
+	Often the location of the project is specified in the project's short description.  Using a series of algorithms we are able to extract the specified location, such as a park id or park name, and join on geometries from an existing public data source, such as park properties or the facilities database.
 
 
 3.	**Research**
 
-	For many projects the location(s) of the project is/are specified in the project's short description, but a geometry cannot be assocaited with the project by joining to an existing dataset on FMS ID or mapping the project algorithmically.  Therefore, many projects were mapped via manual research, which involved a DCP team member reading the short description of the project and creating a geometry for that projects representing where that project is taking place.
+	For many projects the location(s) of the project is/are specified in the project's short description, but a geometry cannot be associated with the project by joining to an existing dataset on FMS ID or mapping the project algorithmically.  Therefore, many projects were mapped via manual research, which involved a DCP team member reading the short description of the project and creating a geometry for that projects representing where that project is taking place.
 
 	New geometries can be added to CPDB by adding a BIN with the assocaited FMSID to the [id_bin_map.csv](https://github.com/NYCPlanning/capitalprojects_db/blob/master/capitalprojects_build/attributes/id_bin_map.csv), which works best for building based projects, or by creating a geometry using [DCP's Simple Geom Editor](https://nycplanning.github.io/simple-geom-editor/) and adding the outputted .json file to the [geometries folder](https://github.com/NYCPlanning/capitalprojects_db/tree/master/capitalprojects_build/attributes/geometries).
 
@@ -128,13 +128,13 @@ Projects were mapped using three methods:
 
 	**Agency verified**
 
-	During the Summer of 2017 we with the support of OMB worked with each captial agency to verify the locations of the projects that we mapped and correct them if they were incorrect, and to map where possible projects that we were not able to map and that we've classifed as a "Fixed Asset" or "Unknown" type of project.
+	During the Summer of 2017 we with the support of OMB worked with each capital agency to verify the locations of the projects that we mapped and correct them if they were incorrect, and to map where possible projects that we were not able to map and that we've classified as a "Fixed Asset" or "Unknown" type of project.
 
 	The agency projected new or corrected location information by providing the address, bin, bbl, or other id or the location(s) where that project was taking place
 
 	1. Format table for database consumption
 	2. Load .csv onto DCP FTP
-	3. Load into databae
+	3. Load into database
 	4. Create geometries based on BIN, BBL, or bridge id
 	5. Create geometries by geocoding addresses
 	6. Aggregate geometries to the FMS ID.
@@ -156,7 +156,7 @@ If an agency indicated that a project cannot be mapped now or ever the geometrie
 
 Run a final .sql script to create the master flat file that aggregates information, such as spending data, to the project level.
 
-### Updating the production data tables for the Captial Projects Explorer
+### Updating the production data tables for the Capital Projects Explorer
 
 1. 	Output 4 .csv files and 2 .shp files from the database.
 2.	Upload the files to the CartoProd server.
@@ -167,13 +167,11 @@ Run a final .sql script to create the master flat file that aggregates informati
 	* cpdb_dcpattributes_pts.shp
 	* cpdb_dcpattributes_poly.shp
 3.	Run one final SQL script in Carto to create array fields and create new table named cpdb_projects_combined from output.
-4. 	Swap out old production tables for the new data tables
-	Data should update automatically in the Captial Projects Explorer
-	Explorer goes down briefly while updating the data tables
+4. 	Point Explorer to reference latest datasets
 
 ## IV. Data Dictionary
 
-The source data used to build CPDB determines what attributes are reported by the final product.  Using FMS data from FISA provides the greatest level of detial and accuracy, and outputs the most attributes.  Attributes marked with a **' * '** are exclusive to FISA source data. 
+The source data used to build CPDB determines what attributes are reported by the final product.  Using FMS data from FISA provides the greatest level of detail and accuracy, and outputs the most attributes.  Attributes marked with a **' * '** are exclusive to FISA source data. 
 
 The tables that compose CPDB are all related by the FMS ID.
 
@@ -182,7 +180,7 @@ Reports information from the Capital Commitment Plan at the project level.  A pr
 
 | Field Alias | Field Name | Description                                             |
 | :------------------- | :------------------- | :------------------------------------------------------ |
-| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concationation of *magency* and *projectid* and it is the primary key.|
+| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concatenation of *magency* and *projectid* and it is the primary key.|
 | Managing Agency | magency | Three digit code of the distinct City agency managing the project.|
 | Project ID | projectid | Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.|
 | Description | description | Short description of the project as described by the sponsor agency.  If one FMS ID had many descriptions the longest description is reported by CPDB. |
@@ -194,7 +192,7 @@ Reports information from the Capital Commitment Plan at the project level.  A pr
 | $ Non-City Cost Other * | nccother | Sum of Other funding across all commitments associated with the project. |
 | $ Non-City Cost | noncitycost | Sum of Non-City funding across all commitments associated with the project. (If FISA is the source data $ Non-City Cost is the sum of $ Non-City Cost State, $ Non-City Cost Federal, and $ Non-City Cost Other). |
 | $ Total Planned Commitments | totalcost | Sum of $ City Cost and $ Non-City Cost, which reports the total planned commitments for the project allocated in the Capital Commitment Plan. |
-| Managing Agecny Acronym | magencyacro | Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code. |
+| Managing Agency Acronym | magencyacro | Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code. |
 | Managing Agency Name | magencyname |  Common name for the city agency mananging the project.  This value is derived from the three digit managing agency code. |
 | Capital Commitment Plan version | ccpversion | Reports the version of the Capital Commitment Plan which the record is based on. |
 
@@ -203,12 +201,12 @@ Reports information from the Capital Commitment Plan for projects at the budget 
 
 | Field Alias | Field Name | Description                                             |
 | :------------------- | :------------------- | :------------------------------------------------------ |
-| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concationation of *magency* and *projectid* and it is the foreign key.|
+| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concatenation of *magency* and *projectid* and it is the foreign key.|
 | Managing Agency | magency | Three digit code of the distinct City agency managing the project.|
 | Project ID | projectid | Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.|
 | Budget Line | budgetline | Unique identifier of the budget used to fund the project. |
 | Project type | projecttype |  Short description of the type of project based on the budget funding the project. |
-| Sponsor Agecny Acronym | sagencyacro | Common acronym of the city agency sponsoring the project.  This value is derived from the budget line. |
+| Sponsor Agency Acronym | sagencyacro | Common acronym of the city agency sponsoring the project.  This value is derived from the budget line. |
 | Sponsor Agency Name | sagencyname |  Common name for the city agency sponsoring the project.  This value is derived from the budget line. |
 | $ City Cost (Non-Exempt) * | ccnonexempt | Sum of City Cost (Non-Exempt) funding across all commitments associated with the project drawn from the specified budget line. |
 | $ City Cost (Exempt) * | ccexempt | Sum of City Cost (Exempt) funding across all commitments associated with the project drawn from the specified budget line. |
@@ -225,7 +223,7 @@ Reports information from the Capital Commitment Plan at the commitment level.  M
 
 | Field Alias | Field Name | Description                                             |
 | :------------------- | :------------------- | :------------------------------------------------------ |
-| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concationation of *magency* and *projectid* and it is the foreign key.|
+| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concatenation of *magency* and *projectid* and it is the foreign key.|
 | Managing Agency | magency | Three digit code of the distinct City agency managing the project.|
 | Project ID | projectid | Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.|
 | Budget Line | budgetline | Unique identifier of the budget used to fund the project. |
@@ -245,37 +243,37 @@ Reports information from the Capital Commitment Plan at the commitment level.  M
 | Capital Commitment Plan version | ccpversion | Reports the version of the Capital Commitment Plan which the record is based on. |
 
 ##### DCP Attributes (cpdb_dcpattributes)
-Reports information generated by DPC, including spatial data, at the project level.  These data are published as two tables *_pts* and *_poly* where data are seperated based on the geometry type.
+Reports information generated by DPC, including spatial data, at the project level.  These data are published as two tables *_pts* and *_poly* where data are separated based on the geometry type.
 
 | Field Alias | Field Name | Description                                             |
 | :------------------- | :------------------- | :------------------------------------------------------ |
-| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concationation of *magency* and *projectid* and it is the primary key.|
+| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concatenation of *magency* and *projectid* and it is the primary key.|
 | Managing Agency | magency | Three digit code of the distinct City agency managing the project.|
 | Project ID | projectid | Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.|
-| Managing Agecny Acronym | magencyacro | Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code. |
+| Managing Agency Acronym | magencyacro | Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code. |
 | Description | description | Short description of the project as described by the sponsor agency.  If one FMS ID had many descriptions the longest description is reported by CPDB. |
-| Category | typecategory | Classification given by DCP based on key words found in the short description describing if a projects is Fixed Asset, Lump Sum, or ITT, Vehicles, and Equipment.| 
+| Category | typecategory | Classification given by DCP based on keywords found in the short description describing if a projects is Fixed Asset, Lump Sum, or ITT, Vehicles, and Equipment.| 
 | Geometry Source | geomsource | Description of where the geometry associated with the project came from.|
 | Data Name | dataname | Name of the dataset where the geometry associated with the project came from.|
 | Data Source | datasource | Acronym of the agency that supplied the dataset from which the geometry associated with the project came from.|
 | Data Date | datadate | Date the geometry was updated. |
-| Capital Commitment Plan version | ccpversion | Reports the version of the Capital Commitment Plan which the record is assocaited with. |
-| Geometry | geom | Spatal data information. |
+| Capital Commitment Plan version | ccpversion | Reports the version of the Capital Commitment Plan which the record is associated with. |
+| Geometry | geom | Spatial data information. |
 
 ##### Project Combined (cpdb_projects_combined)
 Master flat file used to power the Capital Projects Explorer that aggregates and reports data at the project level.
 
 | Field Alias | Field Name | Description                                             |
 | :------------------- | :------------------- | :------------------------------------------------------ |
-| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concationation of *magency* and *projectid* and it is the primary key.|
+| FMS ID | maprojid | Unique identifier that defines a discrete project.  The maprojid is a concatenation of *magency* and *projectid* and it is the primary key.|
 | Managing Agency | magency | Three digit code of the distinct City agency managing the project.|
 | Project ID | projectid | Alphanumeric code created by the sponsor agency that identifies a distinct project. A Project ID must be unique within a managing agency.|
-| Managing Agecny Acronym | magencyacro | Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code. |
-| Managing Agency Name | magencyname |  Common name for the city agency mananging the project.  This value is derived from the three digit managing agency code. |
+| Managing Agency Acronym | magencyacro | Common acronym of the city agency managing the project.  This value is derived from the three digit managing agency code. |
+| Managing Agency Name | magencyname |  Common name for the city agency managing the project.  This value is derived from the three digit managing agency code. |
 | Description | description | Short description of the project as described by the sponsor agency.  If one FMS ID had many descriptions the longest description is reported by CPDB. |
-| Sponsor Agecny Acronym | sagencyacro | Array of the common acronyms of the city agency / agencies sponsoring the project.  This value is derived from the budget line(s). |
+| Sponsor Agency Acronym | sagencyacro | Array of the common acronyms of the city agency / agencies sponsoring the project.  This value is derived from the budget line(s). |
 | Project type | projecttype |  Array of the short description(s) of the project type(s) based on the budget(s) funding the project. |
-| Ten Year Plan Categroy * | typc | Array of three leter code(s) indicating what ten year plan category / categories the project supports. |
+| Ten Year Plan Category * | typc | Array of three letter code(s) indicating what ten year plan category / categories the project supports. |
 | $ City Cost (Non-Exempt) * | ccnonexempt | Sum of City Cost (Non-Exempt) funding across all commitments associated with the project. |
 | $ City Cost (Exempt) * | ccexempt | Sum of City Cost (Exempt) funding across all commitments associated with the project. |
 | $ City Cost | totalcityplannedcommit | Sum of City funding across all commitments associated with the project.  (If FISA is the source data $ City Cost is the sum of $ City Cost (Exempt) and $ City Cost (Non-Exempt)). |
@@ -284,11 +282,11 @@ Master flat file used to power the Capital Projects Explorer that aggregates and
 | $ Non-City Cost Other * | nccother | Sum of Other funding across all commitments associated with the project. |
 | $ Non-City Cost | totalnoncityplannedcommit | Sum of Non-City funding across all commitments associated with the project. (If FISA is the source data $ Non-City Cost is the sum of $ Non-City Cost State, $ Non-City Cost Federal, and $ Non-City Cost Other). |
 | $ Total Planned Commitments | totalcommit | Sum of $ City Cost and $ Non-City Cost, which reports the total planned commitments for the project allocated in the Capital Commitment Plan. |
-| Min Date | mindate | Earliest date recorded in relation to the project in either the Captial Commitment Plan or Checkbook NYC. |
-| Max Date | maxdate | Latest *Planned Commit Date* recorded in the Captial Commitment Plan associated with the project. |
-| $ Total Spend | totalspend | Sum of all liquations (check amounts) recorded in Checkbook NYC for the associated project. |
+| Min Date | mindate | Earliest date recorded in relation to the project in either the Capital Commitment Plan or Checkbook NYC. |
+| Max Date | maxdate | Latest *Planned Commit Date* recorded in the Capital Commitment Plan associated with the project. |
+| $ Total Spend | totalspend | Sum of all liquidations (check amounts) recorded in Checkbook NYC for the associated project. |
 | $ Total Commit Spend | totalcommitspend | Sum of *Total Planned Commitments* and *Total Spend* | 
-| Capital Commitment Plan version | ccpversion | Reports the version of the Capital Commitment Plan which the record is assocaited with. |
+| Capital Commitment Plan version | ccpversion | Reports the version of the Capital Commitment Plan which the record is associated with. |
 
 
 ## V. Source Data
@@ -304,7 +302,7 @@ The following datasets and resources are used to create CPDB
 | Agency | OMB |
 | Data Format | ASC or PDF |
 | Update Frequency | 3 times per year |
-| Update Means | Regular data exchange with OMB or scrape latest public Captial Commitment Plan |
+| Update Means | Regular data exchange with OMB or scrape latest public Capital Commitment Plan |
 
 **Spatial data resources**
 
@@ -423,7 +421,7 @@ SCA plans, manages, and executes all capital projects related to NYC public scho
 | Agency | SCA | 
 | Data Format | PDF |
 | Update Frequency | Annually |
-| Update Means | Scrape latest public SCA Captial Plan |
+| Update Means | Scrape latest public SCA Capital Plan |
 
 
 ##### Capacity projects
@@ -434,7 +432,7 @@ SCA plans, manages, and executes all capital projects related to NYC public scho
 | Agency | SCA | 
 | Data Format | PDF |
 | Update Frequency | Annually |
-| Update Means | Scrape latest public SCA Captial Plan |
+| Update Means | Scrape latest public SCA Capital Plan |
 
 
 
