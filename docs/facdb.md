@@ -28,7 +28,7 @@ We are constantly looking for ways to improve and add additional value to the da
 | Description | The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management|
 | Data format | [Webmap](http://capitalplanning.nyc.gov/facilities), [Shapefile](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=shp&filename=facilities_all_2017-05-22), [CSV](https://carto.capitalplanning.nyc/user/cpadmin/api/v2/sql?q=SELECT%20*%20FROM%20cpadmin.facilities&format=csv&filename=facilities_all_2017-05-22) |
 | Projection | WGS84 |
-| Date last updated | 05/22/17 |
+| Date last updated | 3/15/18 |
 
 ## II. Contents and Classification Hierarchy
 
