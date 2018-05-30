@@ -281,7 +281,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | Contractor Data |
-| Last Updated: | 2017-01-03 |
+| Last Updated: | 1/3/2017 |
 
 
 ### NYC Business Integrity Commission (NYCBIC)
@@ -289,7 +289,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Approved licensees and registrants for trade waste](https://data.cityofnewyork.us/Business/Approved-licensees/7atx-5a3s) |
-| Last Updated: | 8/27/16 |
+| Last Updated: | 3/16/2018 |
 
 
 ### NYC Department for the Aging (NYCDFTA)
@@ -297,7 +297,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [DFTA Contracts](https://data.cityofnewyork.us/Social-Services/DFTA-Contracts/6j6t-3ixh) |
-| Last Updated: | 5/5/17 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYC Department of City Planning (NYCDCP)
@@ -305,7 +305,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [New York City Privately Owned Public Space Database](https://nycopendata.socrata.com/Housing-Development/Privately-Owned-Public-Spaces/fum3-ejky) |
-| Last Updated: | 2000-01-01 |
+| Last Updated: | 12/26/2017 |
 
 
 ### NYC Department of Citywide Administrative Services (NYCDCAS)
@@ -313,7 +313,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [City Owned and Leased Properties](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-colp.page) |
-| Last Updated: | 10/20/16 |
+| Last Updated: | 6/1/2017 |
 
 
 ### NYC Department of Consumer Affairs (NYCDCA)
@@ -321,7 +321,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Legally Operating Businesses](https://data.cityofnewyork.us/Business/Legally-Operating-Businesses/w7w3-xahh) |
-| Last Updated: | 5/5/17 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYC Department of Correction (NYCDOC)
@@ -329,7 +329,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Correction Facilities Locations](http://www1.nyc.gov/site/doc/about/facilities-locations.page) |
-| Last Updated: | 2016-07-01 |
+| Last Updated: | 7/1/2016 |
 
 
 ### NYC Department of Cultural Affairs (NYCDCLA)
@@ -337,35 +337,27 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [DCLA Cultural Organizations](https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32) |
-| Last Updated: | 4/7/17 |
+| Last Updated: | 4/7/2017 |
 
 
 ### NYC Department of Education (NYCDOE)
 
 | | |
 | -- | -- |
-| Dataset Name: | [2015-2016 Blue Book](https://dnnhh5cc1.blob.core.windows.net/portals/0/Capital_Plan/Utilization_Reports/Blue%20Book%202015-2016.pdf?sr=b&si=DNNFileManagerPolicy&sig=AExrFIUz%2BQDwk%2FlptyHq0ZkW2Ur9J69SJuy4MgQ%2BAp4%3D) |
-| Last Updated: | 2016-11-01 |
+| Dataset Name: | Blue Book|
+| Last Updated: | 12/27/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name: | [Universal Pre-K (UPK) School Locations](https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f) |
-| Last Updated: | 1/15/16 |
+| Last Updated: | 3/14/2018 |
 
 
 | | |
 | -- | -- |
 | Dataset Name: | [Routes](https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm) |
-| Last Updated: | 5/1/17 |
-
-
-### NYC Department of Environmental Protection (NYCDEP)
-
-| | |
-| -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Last Updated: | 3/1/2018 |
 
 
 ### NYC Department of Health and Mental Hygiene (NYCDOHMH)
@@ -373,15 +365,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [DOHMH Childcare Center Inspections](https://data.cityofnewyork.us/Health/DOHMH-Childcare-Center-Inspections/dsg6-ifza) |
-| Last Updated: | 5/12/17 |
-
-
-### NYC Department of Homeless Services (NYCDHS)
-
-| | |
-| -- | -- |
-| Dataset Name:  | DHS CARES Facility Listing |
-| Last Updated: | 2017-03-21 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYC Department of Parks and Recreation (NYCDPR)
@@ -389,7 +373,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Parks Properties](https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7/data) |
-| Last Updated: | 8/27/16 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYC Department of Sanitation (NYCDSNY)
@@ -397,7 +381,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | DSNY_select_facs_07262916 |
-| Last Updated: | 2016-07-26 |
+| Last Updated: | 7/26/2016 |
 
 
 ### NYC Department of Small Business Services (NYCSBS)
@@ -405,7 +389,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | SBS Workforce1 Career Center Locations |
-| Last Updated: | 2016-11-17 |
+| Last Updated: | 11/17/2016 |
 
 
 ### NYC Department of Transportation (NYCDOT)
@@ -413,31 +397,31 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | Plaza Program |
-| Last Updated: | 2017-02-24 |
+| Last Updated: | 2/24/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | Facilities Data - Parking Facilities |
-| Last Updated: | 2017-02-23 |
+| Last Updated: | 2/23/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | Facilities Data - Manned Facilities |
-| Last Updated: | 2017-02-23 |
+| Last Updated: | 2/23/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | Facilities Data - Bridge Houses |
-| Last Updated: | 2017-02-23 |
+| Last Updated: | 2/23/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | Facilities Data - Ferry Terminals and Landings |
-| Last Updated: | 2017-02-23 |
+| Last Updated: | 2/23/2017 |
 
 
 ### NYC Department of Youth and Community Development (NYCDYCD)
@@ -445,13 +429,13 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | COMPASS Program Locations |
-| Last Updated: | 2016-12-19 |
+| Last Updated: | 3/14/2018 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | DYCD Other Program Locations |
-| Last Updated: | 2016-12-19 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYC HHS Accelerator (NYCHHS)
@@ -459,19 +443,19 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | HHS Accelerator - Financials Contracts |
-| Last Updated: | 2016-07-26 |
+| Last Updated: | 7/26/2016 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | Financial Management System - Human Services Contracts |
-| Last Updated: | 2016-07-26 |
+| Last Updated: | 7/26/2016 |
 
 
 | | |
 | -- | -- |
 | Dataset Name:  | HHS Accelerator - Selected Proposals |
-| Last Updated: | 2016-07-26 |
+| Last Updated: | 7/26/2016 |
 
 
 ### NYC Health and Hospitals Corporation (NYCHHC)
@@ -479,7 +463,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Health and Hospitals Corporation (HHC) Facilities](https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3) |
-| Last Updated: | 9/5/14 |
+| Last Updated: | 9/8/2017 |
 
 
 ### NYC Human Resources Administration/Department of Social Services (NYCHRA/DSS)
@@ -487,7 +471,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [HRA Locations](https://www1.nyc.gov/site/hra/locations/locations.page) |
-| Last Updated: | 2017-02-27 |
+| Last Updated: | 2/27/2017 |
 
 
 ### NYC Mayors Office of Management and Budget (NYCOMB)
@@ -495,7 +479,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | District Resource Statement |
-| Last Updated: | 2016-06-30 |
+| Last Updated: | 6/30/2016 |
 
 
 ### NYS Department of Correction and Community Supervision (NYSDOCCS)
@@ -503,7 +487,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Facility Listing](http://www.doccs.ny.gov/faclist.html) |
-| Last Updated: | 2016-07-01 |
+| Last Updated: | 7/1/2016 |
 
 
 ### NYS Department of Evironmental Conservation (NYSDEC)
@@ -511,13 +495,13 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Solid Waste Management Facilities](https://data.ny.gov/Energy-Environment/Solid-Waste-Magement-Facilities/2fni-raj8) |
-| Last Updated: | 1/9/17 |
+| Last Updated: | 1/9/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name: | [Lands - Under the Care, Custody, and Control of DEC](http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1114) |
-| Last Updated: | 4/1/17 |
+| Last Updated: | 2/14/2018 |
 
 
 ### NYS Department of Health (NYSDOH)
@@ -525,13 +509,13 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Health Facility General Information](https://health.data.ny.gov/Health/Health-Facility-General-Information/vn5v-hh5r) |
-| Last Updated: | 5/11/17 |
+| Last Updated: | 3/14/2018 |
 
 
 | | |
 | -- | -- |
 | Dataset Name: | [Nursing Home Weekly Bed Census: Last Submission](https://health.data.ny.gov/Health/Nursing-Home-Weekly-Bed-Census-Last-Submission/izta-vnpq/data) |
-| Last Updated: | 2017-03-13 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYS Department of Transportation (NYSDOT)
@@ -539,21 +523,21 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Last Updated: | 3/1/2015 |
 
 
 ### NYS Education Department (NYSED)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Listings - Active Institutions with GIS coordinates and OITS Accuracy Code](https://portal.nysed.gov/discoverer/app/grid;jsessionid=eikT4MZCXS4gnCu4gkga8RxAT-LFQX1XhLGyOQErv16YJWGj_jo8!-214928944?bi_origin=dvtb&bi_cPath=dvtb&numberLocale=en_US&source=dvtb&gotoNthPage=1&bi_tool=rt&event=bi_showTool&bi_rowvdv=s25&stateStr=eNrtVlFzmzgQ%2FjPY0xtPMiBjJ3nwg4vdlGmKe8ZpmnthZEkYJRgIksHOr79Fog71JO1Q957OL9rVov202tWKz2DbLDa65VKOUDdJKRuhq67IRt08TeXI7LKCJXIEi3BCu0JiyUbvhoO%2FDJwZHTSkYac%2FASm0SIiWNyFmyTV5pBEqNbEDkSBe2S5HFEwgBbJjLKRxFJgLNXtAioAAWcnmIRbDvIskxw9RnNWdi5mCJzFuNMKQu8jJnSPqS5knOWpbkU5066SeROmSZMEADDaQkoIY4Fa0JftIYeU1gthLLd8IShJtxl%240g5xImG4Ro8t%24u4CTaowCLGpHKwzmfuwlfqtavlmBAlHSha03HYOoov0U5wgmMNe3BCqyqvqAos880PG%2FUPIrzmtVearLjcUL1ZB11%2466CrpqP9liOWP%2FjdH%2FhZrU%2Fm0%2FjVHKHfRqov1B7pqj1S1UQNiPa3xk1ElSjJ00TZ%2Fc1Se%24wy9lqQV8d0UJ06KUQgqgMff7uU8jmlPOSM6nhVRpw4giFJ8zUsRs73bsX50yu9ax6dNZc269ga7oat6jN5eN2M7DfuVp2Gg1vab5%2FqNNvEOH8tKrv9U0ckL1ijPvs7YB5%2Fn96o9VMW%24CxmRL8MdaFq5%2F5kANM%24DsPwUine9E59v5%2FNP0mw6s%2Fv5zPv28v0k%24td%249V0qKZ%2F306nnpprjLnrfPw88yaykarB0Vdr34gHFUX%2FYffsNxn%24ufAP3hHUvvD%2F8IzQQQPj4s%24%2FdodJRkdv8SVKk%2FovBEO%2FCd4%2FGvw2r%2F7zlIqC5QBmad4Tadpj0wKG7eOZtY57sECA13NpnZtl73G3pUVviZ9LmBABVnRZ7rYZ6RWglw%2477QMtgE3YZVFhAXEyNbRc%2FgRSfd9tl1zEshIkSis8Bbc3rtR4ZnMqo548s55L2zSrJUseMb6K5IHxOseUA2%2Fskeh7aBrkQW%24n4hJrEFWIGc7xWrwk4EQBTxTwRAFPFPBEAU8U8EQBTxTwf0EBY6LpTwlPkl33gv1CC1eKFyrTT%24ncr9ncg1piZDmnxo3rL6rmCIKxs3C%2FTgPXA8PiduHOPD%244cxcfA6AagTObzSeuN15M%2FWDsTYKKh4CHczsfO%2FfwdTLtoA%24WQeQuMwrOSpb%2FCyl4PR4%3D) |
-| Last Updated: | 2017-01-23 |
+| Dataset Name: | [Listings - Active Institutions with GIS coordinates and OITS Accuracy Code](https://data.nysed.gov/downloads.php) |
+| Last Updated: | 9/1/2017 |
 
 
 | | |
 | -- | -- |
 | Dataset Name: | [2016-2017 Nonpublic Enrollment by Grade](http://www.p12.nysed.gov/irs/statistics/nonpublic/) |
-| Last Updated: | 2017-05-05 |
+| Last Updated: | 9/1/2017 |
 
 
 ### NYS Office for People With Developmental Disabilities (NYSOPWDD)
@@ -561,7 +545,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Directory of Developmental Disabilities Service Provider Agencies](https://data.ny.gov/Human-Services/Directory-of-Developmental-Disabilities-Service-Pr/ieqx-cqyk) |
-| Last Updated: | 12/22/15 |
+| Last Updated: | 12/6/2017 |
 
 
 ### NYS Office of Alcoholism and Substance Abuse Services (NYSOASAS)
@@ -569,7 +553,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [NYS OASAS-Certified Chemical Dependence Treatment Programs Located in NYC](https://www.oasas.ny.gov/providerDirectory/index.cfm?search_type=2) |
-| Last Updated: | 2017-05-08 |
+| Last Updated: | 3/14/2018 |
 | Notes: | OASAS records are updated more frequently than may be reflected in this database. Users are encouraged to confirm program locations on the OASAS website (link above). |
 
 
@@ -577,8 +561,8 @@ The following datasets were used to populate the Facilities Database. The data s
 
 | | |
 | -- | -- |
-| Dataset Name: | [Facilities](http://ocfs.ny.gov/main/rehab/regiolListing1.asp) |
-| Last Updated: | 2016-07-01 |
+| Dataset Name: | [Facilities](https://ocfs.ny.gov/main/regionaloffices_main.asp) |
+| Last Updated: | 7/1/2016 |
 
 
 ### NYS Office of Mental Health (NYSOMH)
@@ -586,7 +570,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Local Mental Health Programs](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
-| Last Updated: | 5/5/17 |
+| Last Updated: | 3/14/2018 |
 
 
 ### NYS Office of Parks, Recreation and Historic Preservation (NYSOPRHP)
@@ -594,13 +578,13 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [National Register of Historic Places](https://data.ny.gov/Recreation/tiol-Register-of-Historic-Places/iisn-hnyv) |
-| Last Updated: | 12/18/15 |
+| Last Updated: | 12/18/2015 |
 
 
 | | |
 | -- | -- |
 | Dataset Name: | [State Park Facility Points](https://data.ny.gov/Recreation/State-Park-Facility-Points/9uuk-x7vh) |
-| Last Updated: | 2/4/16 |
+| Last Updated: | 2/4/2016 |
 
 
 ### NYS Unified Court System (NYCOURTS)
@@ -608,7 +592,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [The Courts](http://www.nycourts.gov/courts/index.shtml) |
-| Last Updated: | 2016-07-01 |
+| Last Updated: | 7/1/2016 |
 
 
 ### National Park Service (USNPS)
@@ -616,7 +600,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Administrative Boundaries of National Park System Units](https://irma.nps.gov/DataStore/Reference/Profile/2225713) |
-| Last Updated: | 3/31/17 |
+| Last Updated: | 3/31/2017 |
 
 
 ### New York City Housing Authority (NYCHA)
@@ -624,31 +608,31 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [NYCHA PSA (Police Service Areas)](https://data.cityofnewyork.us/Housing-Development/NYCHA-PSA-Police-Service-Areas-/72wx-vdjr) |
-| Last Updated: | 9/15/16 |
+| Last Updated: | 10/2/2017 |
 
 
 ### Port Authority of New York and New Jersey (PANYNJ)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database |
+| Last Updated: | 3/1/2015 |
 
 
 ### Roosevelt Island Operating Corporation (RIOC)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database |
+| Last Updated: | 3/1/2015 |
 
 
 ### Trust for Governors Island (TGI)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database |
+| Last Updated: | 3/1/2015 |
 
 
 ### US Courts (USCOURTS)
@@ -656,37 +640,37 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Court Locator Results](http://www.uscourts.gov/court-locator/city/New%20York/state/NY) |
-| Last Updated: | 2016-07-01 |
+| Last Updated: | 7/1/2016 |
 
 
 ### US Department of Transportation (USDOT)
 
 | | |
 | -- | -- |
-| Dataset Name: | [U.S. Army Corps of Engineers Ports](https://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point) |
-| Last Updated: | 8/1/15 |
+| Dataset Name: | [U.S. Army Corps of Engineers Ports](http://osav-usdot.opendata.arcgis.com) |
+| Last Updated: | 3/14/2018 |
 
 
 | | |
 | -- | -- |
-| Dataset Name: | [Airports](https://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2015/point) |
-| Last Updated: | 8/1/15 |
+| Dataset Name: | [Airports](http://osav-usdot.opendata.arcgis.com) |
+| Last Updated: | 3/14/2018 |
 
 
 ### Amtrak (Amtrak)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database |
+| Last Updated: | 3/1/2015 |
 
 
 ### Brooklyn Bridge Park Corporation (BBPC)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database|
+| Last Updated: | 3/1/2015 |
 
 
 ### Federal Bureau of Prisons (FBOP)
@@ -694,7 +678,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Our Locations](https://www.bop.gov/locations/map.jsp#) |
-| Last Updated: | 2016-07-01 |
+| Last Updated: | 7/1/2016 |
 
 
 ### Food Bank of NYC (FBNYC)
@@ -702,23 +686,23 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | FBNYC Food Pantry Soup Kitchen List 8-5-16 |
-| Last Updated: | 2016-08-05 |
+| Last Updated: | 8/5/2016 |
 
 
 ### Hudson River Park Trust (HRPT)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database |
+| Last Updated: | 3/1/2015 |
 
 
 ### Metropolitan Transportation Authority (MTA)
 
 | | |
 | -- | -- |
-| Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/15 |
+| Dataset Name: | Selected Facilities and Program Sites Database |
+| Last Updated: | 3/1/2015 |
 
 ## VII. API Instructions
 
