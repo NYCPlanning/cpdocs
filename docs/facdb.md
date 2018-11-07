@@ -2,7 +2,7 @@
 
 ## I. Overview
 
-The City Planning Facilities Database aggregates more than 35,000 records from 45 different [public data sources](http://docs.capitalplanning.nyc/facdb/#vi-source-data) provided by City, State, and Federal agencies. While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:
+The City Planning Facilities Database aggregates more than 35,000 records from 43 different [public data sources](http://docs.capitalplanning.nyc/facdb/#vi-source-data) provided by City, State, and Federal agencies. While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:
 
 * Health and Human Services
 * Education, Child Welfare, and Youth
@@ -14,11 +14,11 @@ The City Planning Facilities Database aggregates more than 35,000 records from 4
 
 Within each of these domains, each record is further categorized into a set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names appear as they do in source datasets, wherever possible. A full listing of the facility categories is provided in the [Contents and Classification Hierarchy](http://docs.capitalplanning.nyc/facdb/#ii-contents-and-classification-hierarchy) section.
 
-This database and its [interactive map](http://capitalplanning.nyc.gov/facilities) build upon City Planning’s decades-old work on the Selected Facilities and Program Sites Database, which this new product replaces. Improvements include more facility types, improved data quality, and a restructured database for easier use. We have also automated our means of refreshing the data from the majority of sources. Please read more about the [limitations](http://docs.capitalplanning.nyc/facdb/#iii-limitations-and-disclaimers) of this data product below.
+This database and its [interactive map](http://capitalplanning.nyc.gov/facilities) build upon and replace City Planning’s decades-old work on the Selected Facilities and Program Sites Database. Improvements include more facility types, improved data quality, and a restructured database for easier use. We have also automated our data-update processes for the majority of sources. Please read more about the [limitations](http://docs.capitalplanning.nyc/facdb/#iii-limitations-and-disclaimers) of this data product below.
 
-Special thanks go to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis.
+Special thanks to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis.
 
-We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov with any suggestions).
+We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at [Capital@planning.nyc.gov](mailto:Capital@planning.nyc.gov) with any suggestions.
 
 ###  General information ###
 
@@ -48,7 +48,7 @@ In order of increasing granularity, each record that is included in the database
 | | DOE Universal Pre-Kindergarten | NYC DOE designated Universal Pre-K center |
 | | Dual Child Care and Universal Pre-K | Center that offers both an NYC DOE designated Universal Pre-K services and other childcare services |
 | | Child Care | Group and school-based child care centers for infants, toddlers, and preschoolers |
-| | Preschools for Students with Disabilities | Center specialized on preschool students with disabilities |
+| | Preschools for Students with Disabilities | Center specialized in preschool students with disabilities |
 | Child Services and Welfare | ----------- | Services overseen by NYC Administration for Children's Services and NYS Education Department and NYC Department of Education |
 | | Foster Care Services and Residential Care | Foster care services and juvenile non-secure placement |
 | | Preventative Care, Evaluation Services, and Respite | Preventative care and intervention services |
@@ -69,7 +69,7 @@ In order of increasing granularity, each record that is included in the database
 | Facility Group | Facility Subgroup | Description |
 | :------ | :-- | :-- |
 | Parks and Plazas | ----------- | Properties operated by NYC Parks, NYC Dept. of Transportation, NYS Office of Parks, Recreation and Historic Preservation, NYS Dept. of Conservation, and City-State corporations and trusts |
-| | Parks | Flagship parks, community parks, state parks, and city-state parks |
+| | Parks | Flagship parks, community parks, state parks, and City-State parks |
 | | Recreation and Waterfront Sites | Playgrounds, waterfront facilities, and recreation fields and courts |
 | | Streetscapes, Plazas, and Malls | Pedestrian plazas, malls, triangle plazas, and parkways |
 | | Gardens | Community gardens |
@@ -104,7 +104,7 @@ In order of increasing granularity, each record that is included in the database
 | | Police Services | NYPD and NYCHA police stations |
 | | School-Based Safety Program | Public safety program on a school campus |
 | | Other Public Safety | Other public safety-related support centers |
-| Justice and Corrections | ----------- | Courts and correctional facilities operated by NYC. Dept. of Correction, NYS Unified Court System, NYS Dept. of Corrections and Community Supervision, US Courts, and the Federal Bureau of Prisons |
+| Justice and Corrections | ----------- | Courts and correctional facilities operated by NYC Dept. of Correction, NYS Unified Court System, NYS Dept. of Corrections and Community Supervision, US Courts, and the Federal Bureau of Prisons |
 | | Courthouses and Judicial | Courthouses, clerk offices, and court librarians |
 | | Detention and Correctional | Correctional and detention centers |
 
@@ -128,7 +128,6 @@ In order of increasing granularity, each record that is included in the database
 | | Legal and Intervention Services | Early intervention, criminal defense, and mediation services |
 | | Programs for People with Disabilities | Specialized child care, caregiver support, and recreational services |
 | | Permanent Supportive SRO Housing | Permanent supportive SRO housing contracted by DHS |
-| | Shelters and Transitional Housing | NOTE: These records will be incorporated soon, once the data is finished being assembled for inclusion in the database. |
 | | Non-residential Housing and Homeless Services | Non-residential homelessness prevention services |
 | | Soup Kitchens and Food Pantries | Soup kitchens and food pantries |
 
@@ -178,13 +177,13 @@ In order of increasing granularity, each record that is included in the database
 
 The City Planning Facilities Database (FacDB) is only as good as the source data it aggregates, and the Department of City Planning cannot verify the accuracy of all records. Please read more about specific data and analysis limitations before using this data.
 
-**Analysis Limitations.** As a result of these data limitations and inconsistencies listed below, users should be careful in their use of this database not to develop analyses that may be suspect. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites and that this database is not authoritatively comprehensive. In addition, we rely on source data from other agencies to populate the database, and some of these sources may fall out-of-date. Users can find the date of each source dataset’s latest update in the [Source Data](http://docs.capitalplanning.nyc/facdb/#vi-source-data) section.
+**Analysis Limitations.** As a result of the data limitations and inconsistencies listed below users should be careful in their use of this database so as to avoid developing suspect analyses. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites and that this database is not authoritatively comprehensive. In addition, we rely on source data from other agencies to populate the database, and some of these sources may fall out-of-date. Users can find the date of each source dataset’s latest update in the [Source Data](http://docs.capitalplanning.nyc/facdb/#vi-source-data) section.
 
-**Missing Records.** Currently, FacDB is the most comprehensive, spatial data resource available of facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded from the data that source agencies provide in order to protect the safety and privacy of their clients. Also, many records could not be geocoded. To learn more about how the data are processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#iv-methodology).
+**Missing Records.** Currently, FacDB is the most comprehensive spatial data resource available for facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded from the data that source agencies provide in order to protect the safety and privacy of their clients. Also, many records could not be geocoded. To learn more about how the data are processed, please review the [Methodology](http://docs.capitalplanning.nyc/facdb/#iv-methodology).
+ 
+**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility because several source datasets have content that overlaps with other datasets.
 
-**Duplicates.** Please be aware that this beta version of the database includes cases of duplicate records for the same facility, because several source datasets have content that overlaps with other datasets.
-
-**Administrative Addresses.** There are known to be cases when the address provided in the source data is for a headquarters office rather the facility site location. Unfortunately, these could not be systematically verified. For more detailed information on a specific facility please reach out to the respective oversight agency.
+**Administrative Addresses.** There are known to be cases when the address provided in the source data is for a headquarters office rather than the facility site location. Unfortunately, these could not be systematically verified. For more detailed information on a specific facility reach out to the respective oversight agency.
 
 **Public Accessibility of Sites.** DCP is unable to verify the public accessibility of all sites. For example, some playgrounds or playing fields may only be accessible to participants in certain programs.
 
@@ -196,13 +195,13 @@ If you have any questions about or comments on these data please contact the NYC
 
 ### Data Processing
 
-Since the facility records are aggregated from many datasets designed for different purposes, the data undergo several stages of transformation to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page](https://github.com/NYCPlanning/db-facilities).
+Since the facility records are aggregated from many datasets designed for different purposes, the data will be transformed over several stages to reach its final state. The stages are described below and all the scripts used are available on the [NYC Planning GitHub page](https://github.com/NYCPlanning/db-facilities).
 
 **Assembly.**
 First, the desired columns in the source data are mapped to the columns in FacDB schema. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.
 
 **Geoprocessing.**
-Many source datasets only provide addresses without coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Source records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are many cases where an agency provides coordinates but the coordinates they provided fall in the roadbed, and not inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid, if a BIN could not be assigned and used for the geometry instead. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
+Many source datasets only provide addresses without coordinates. Records without coordinates are geocoded with the [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) using the Address and either the Borough or ZIP Code to get the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Source records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are many cases where an agency provides coordinates but the coordinates they provided fall in the roadbed, and not inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid if a BIN could not be assigned and used for the geometry instead. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.
 
 **Duplicate Record Removal.** Several of the source datasets have content that overlaps with other datasets. Duplicate records were identified by querying for all the records that fall within the same BIN or BBL and have the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.
 
@@ -235,15 +234,15 @@ The following table lists and defines each of the fields presented in the Facili
 | Street Name | streetname | The name of the street where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank. |
 | Address | address | The concatenated value of AddressNumber and StreetName of where the facility is located. If there is not a valid, complete address available, any location description that was provided is included in this field. |
 | City | city | The USPS preferred the name of the addressed city where the facility is located. Generated by GeoClient and spatial joins. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries. |
-| Borough | boro | The full name the borough the facility is within. |
+| Borough | boro | The full name of the borough the facility is within. |
 | Borough Code | borocode | The number value representing the borough the facility is within. |
 | ZIP Code | zipcode | The ZIP Code the facility is within. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries. |
 | Latitude | latitude | The latitude of the location either calculated using the coordinates in the source data or provided by GeoClient. |
 | Longitude | longitude | The longitude of the location either calculated using the coordinates in the source data or provided by GeoClient. |
 | X Coordinate | xcoord | The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient. |
 | Y Coordinate | ycoord | The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient. |
-| BIN | bin | The [BIN](http://a030-goat.nyc.gov/goat/glossary.aspx#bin) values for the buildings the facility is located in. This field contains blanks because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data. There may also be cases where a facility is actually comprised by multiple BINs but only one is recorded in FacDB because the others were not be provided in the source data and could not be reliably assumed based on the single address provided for the facility. |
-| BBL | bbl | The [BBL](http://a030-goat.nyc.gov/goat/glossary.aspx#bbl) values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas, are not located on tax lots. There may also be cases where a facility is actually comprised by multiple BBLs but only one is recorded in FacDB because the others were not be provided in the source data and could not be reliably assumed based on the single address provided for the facility. |
+| BIN | bin | The [BIN](http://a030-goat.nyc.gov/goat/glossary.aspx#bin) values for the buildings the facility is located in. This field contains blanks because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data. There may also be cases where a facility is actually comprised by multiple BINs but only one is recorded in FacDB because the others were not provided in the source data and could not be reliably assumed based on the single address provided for the facility. |
+| BBL | bbl | The [BBL](http://a030-goat.nyc.gov/goat/glossary.aspx#bbl) values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas, are not located on tax lots. There may also be cases where a facility is actually comprised by multiple BBLs but only one is recorded in FacDB because the others were not provided in the source data and could not be reliably assumed based on the single address provided for the facility. |
 | Community Board | commboard | The Community District the facility is within. This field contains blanks because the Community District boundaries do not capture facilities beyond the shoreline. |
 | Council District | council | The City Council District the facility is within |
 | Census Tract | censtract | The U.S. Census Tract the facility is within |
@@ -329,7 +328,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Correction Facilities Locations](http://www1.nyc.gov/site/doc/about/facilities-locations.page) |
-| Last Updated: | 7/1/2016 |
+| Last Updated: | 10/25/2018 |
 
 
 ### NYC Department of Cultural Affairs (NYCDCLA)
@@ -351,7 +350,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Universal Pre-K (UPK) School Locations](https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f) |
-| Last Updated: | 3/14/2018 |
+| Last Updated: | 10/24/2018 |
 
 
 | | |
@@ -397,45 +396,39 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name:  | Plaza Program |
-| Last Updated: | 2/24/2017 |
-
-
-| | |
-| -- | -- |
-| Dataset Name:  | Facilities Data - Parking Facilities |
 | Last Updated: | 2/23/2017 |
 
 
 | | |
 | -- | -- |
-| Dataset Name:  | Facilities Data - Manned Facilities |
-| Last Updated: | 2/23/2017 |
+| Dataset Name:  | Parking Facilities |
+| Last Updated: | 10/24/2018 |
 
 
 | | |
 | -- | -- |
-| Dataset Name:  | Facilities Data - Bridge Houses |
-| Last Updated: | 2/23/2017 |
+| Dataset Name:  | Manned Facilities |
+| Last Updated: | 10/24/2018 |
 
 
 | | |
 | -- | -- |
-| Dataset Name:  | Facilities Data - Ferry Terminals and Landings |
-| Last Updated: | 2/23/2017 |
+| Dataset Name:  | Bridge Houses |
+| Last Updated: | 10/24/2018 |
+
+
+| | |
+| -- | -- |
+| Dataset Name:  | Ferry Terminals and Landings |
+| Last Updated: | 10/24/2018 |
 
 
 ### NYC Department of Youth and Community Development (NYCDYCD)
 
 | | |
 | -- | -- |
-| Dataset Name:  | COMPASS Program Locations |
-| Last Updated: | 3/14/2018 |
-
-
-| | |
-| -- | -- |
-| Dataset Name:  | DYCD Other Program Locations |
-| Last Updated: | 3/14/2018 |
+| Dataset Name:  | [DYCD After-School Programs](https://data.cityofnewyork.us/Education/DYCD-after-school-programs/mbd7-jfnc) |
+| Last Updated: | 10/24/2018 |
 
 
 ### NYC HHS Accelerator (NYCHHS)
@@ -474,20 +467,12 @@ The following datasets were used to populate the Facilities Database. The data s
 | Last Updated: | 10/24/2018 |
 
 
-### NYC Mayors Office of Management and Budget (NYCOMB)
-
-| | |
-| -- | -- |
-| Dataset Name:  | [District Resource Statement](http://www.doccs.ny.gov/faclist.html) |
-| Last Updated: | 7/1/2016 |
-
-
 ### NYS Department of Correction and Community Supervision (NYSDOCCS)
 
 | | |
 | -- | -- |
 | Dataset Name: | [Facility Listing](http://www.doccs.ny.gov/faclist.html) |
-| Last Updated: | 7/1/2016 |
+| Last Updated: | 10/24/2018 |
 
 
 ### NYS Department of Environmental Conservation (NYSDEC)
@@ -523,7 +508,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | [Selected Facilities and Program Sites Database](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page) |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### NYS Education Department (NYSED)
@@ -616,7 +601,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### Roosevelt Island Operating Corporation (RIOC)
@@ -624,7 +609,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### Trust for Governors Island (TGI)
@@ -632,7 +617,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### US Courts (ESCORTS)
@@ -662,7 +647,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### Brooklyn Bridge Park Corporation (BBPC)
@@ -670,7 +655,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database|
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### Federal Bureau of Prisons (FBOP)
@@ -694,7 +679,7 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 
 ### Metropolitan Transportation Authority (MTA)
@@ -702,8 +687,8 @@ The following datasets were used to populate the Facilities Database. The data s
 | | |
 | -- | -- |
 | Dataset Name: | Selected Facilities and Program Sites Database |
-| Last Updated: | 3/1/2015 |
+| Last Updated: | 10/24/2018 |
 
 ## VII. API Instructions
 
-The FacDB data that powers the [NYC Facilities Explorer](capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
+The FacDB data that powers the [NYC Facilities Explorer](https://capitalplanning.nyc.gov/facilities) is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is [available here](https://carto.com/docs/carto-engine/sql-api/making-calls). Please refer to the [Data Dictionary](http://docs.capitalplanning.nyc/facdb/#v-data-dictionary) for the field names in the `facdb_facilities` table.
