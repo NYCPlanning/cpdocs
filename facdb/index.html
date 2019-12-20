@@ -73,17 +73,17 @@
         
             <li><a class="toctree-l3" href="#i-overview">I. Overview</a></li>
         
-            <li><a class="toctree-l3" href="#ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</a></li>
+            <li><a class="toctree-l3" href="#ii-common-uses">II. Common uses</a></li>
         
-            <li><a class="toctree-l3" href="#iii-limitations-and-disclaimers">III. Limitations and Disclaimers</a></li>
+            <li><a class="toctree-l3" href="#iii-watch-outs">III. Watch-outs</a></li>
         
-            <li><a class="toctree-l3" href="#iv-methodology">IV. Methodology</a></li>
+            <li><a class="toctree-l3" href="#iv-data-sources-and-compilation-process">IV. Data Sources and Compilation Process</a></li>
         
             <li><a class="toctree-l3" href="#v-data-dictionary">V. Data Dictionary</a></li>
         
-            <li><a class="toctree-l3" href="#vi-source-data">VI. Source Data</a></li>
+            <li><a class="toctree-l3" href="#vi-general-constraints-use-limitations">VI. General Constraints Use Limitations</a></li>
         
-            <li><a class="toctree-l3" href="#vii-api-instructions">VII. API Instructions</a></li>
+            <li><a class="toctree-l3" href="#vii-legal-constraints-use-limitations">VII. Legal Constraints Use Limitations</a></li>
         
         </ul>
     
@@ -130,7 +130,8 @@
               
                 <h1 id="city-planning-facilities-database">City Planning Facilities Database</h1>
 <h2 id="i-overview">I. Overview</h2>
-<p>The City Planning Facilities Database aggregates more than 35,000 records from 43 different <a href="http://docs.capitalplanning.nyc/facdb/#vi-source-data">public data sources</a> provided by City, State, and Federal agencies. While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:</p>
+<p>The Department of City Planning aggregates information about 33,000+ facilities and program sites that are owned, operated, funded, licensed, or certified by a City, State, or Federal agency in the City of New York into a central database called the City Planning Facilities Database FacDB). These facilities generally help to shape quality of life in the city’s neighborhoods, and this dataset is the basis for a series of planning activities. This public data resource allows all New Yorkers to understand the breadth of government resources in their neighborhoods.</p>
+<p>While each source agency classifies its facilities according to their own naming systems, we have grouped all facilities and program sites into the following seven categories to help planners navigate the data more easily:</p>
 <ul>
 <li>Health and Human Services</li>
 <li>Education, Child Welfare, and Youth</li>
@@ -140,10 +141,8 @@
 <li>Core Infrastructure and Transportation</li>
 <li>Administration of Government</li>
 </ul>
-<p>Within each of these domains, each record is further categorized into a set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names appear as they do in source datasets, wherever possible. A full listing of the facility categories is provided in the <a href="http://docs.capitalplanning.nyc/facdb/#ii-contents-and-classification-hierarchy">Contents and Classification Hierarchy</a> section.</p>
-<p>This database and its <a href="http://capitalplanning.nyc.gov/facilities">interactive map</a> build upon and replace City Planning’s decades-old work on the Selected Facilities and Program Sites Database. Improvements include more facility types, improved data quality, and a restructured database for easier use. We have also automated our data-update processes for the majority of sources. Please read more about the <a href="http://docs.capitalplanning.nyc/facdb/#iii-limitations-and-disclaimers">limitations</a> of this data product below.</p>
-<p>Special thanks to all the agencies who make their data available for this effort, particularly those who publish their data on a routine basis.</p>
-<p>We are constantly looking for ways to improve and add additional value to the database. Please reach out to the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a> with any suggestions.</p>
+<p>Within each of these domains, each record is further categorized into a set of facility groups, subgroups, and types that are intended to make the data easy to navigate and more useful for specific planning purposes. Facility types and names appear as they do in source datasets, wherever possible. A full listing of the facility categories is provided <a href="https://github.com/NYCPlanning/db-facilities-tmp/blob/dev/referencetables/classification.csv">here</a>.</p>
+<p>If you have any questions or comments about these data please contact the NYC Planning Open Data team at DCPOpendata@planning.nyc.gov</p>
 <h3 id="general-information">General information</h3>
 <table>
 <thead>
@@ -155,1875 +154,210 @@
 <tbody>
 <tr>
 <td align="center">Dataset Name</td>
-<td>"Facilities Database"</td>
+<td>Facilities Database (FacDB)</td>
 </tr>
 <tr>
-<td align="center">Description</td>
-<td>The Facilities Database (FacDB) captures the locations and descriptions of public and private facilities ranging from the provision of social services, recreation, education, to solid waste management</td>
+<td align="center">Agency Name</td>
+<td>Department of City Planning</td>
 </tr>
 <tr>
-<td align="center">Data format</td>
-<td><a href="http://capitalplanning.nyc.gov/facilities">Web-map</a>, Shapefile, CSV, GeoJSON</td>
+<td align="center">Update Frequency</td>
+<td>Quarterly</td>
 </tr>
 <tr>
-<td align="center">Projection</td>
-<td>WGS84</td>
+<td align="center">Dataset Description</td>
+<td>Facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency</td>
 </tr>
 <tr>
-<td align="center">Date last updated</td>
-<td>10/30/18</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ii-contents-and-classification-hierarchy">II. Contents and Classification Hierarchy</h2>
-<p>In order of increasing granularity, each record that is included in the database is classified by DCP into a <strong>Domain &gt; Facility Group &gt; Facility Subgroup &gt; Facility Type</strong>. There are around 450 facility types. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are also cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description. The tables below describe each of the Subgroups in each of the seven Domains; however, the Facility Types within them are not listed.</p>
-<h4 id="education-child-welfare-and-youth-domain">Education, Child Welfare, and Youth Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Schools (K-12)</td>
-<td align="left">-----------</td>
-<td align="left">K-12 and alternative equivalency programs overseen by NYC Dept. of Education and NYS Education Department</td>
+<td align="center">Dataset Keywords</td>
+<td>Facilities, Education, Child Welfare, Parks, Gardens, Historical Sites, Libraries, Cultural Programs, Public Safety, Emergency Services, Administration of Justice, Health Services, Human Services, Infrastructure, Transportation, Government Administration</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left">Public K-12 Schools</td>
-<td align="left">Public elementary, middle, and high schools</td>
+<td align="center">Dataset Category</td>
+<td>City Government</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left">Charter K-12 Schools</td>
-<td align="left">Publicly funded charter elementary, middle, and high schools</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Non-Public K-12 Schools</td>
-<td align="left">Private elementary, middle, and high schools</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Special Ed and Schools for Students with Disabilities</td>
-<td align="left">Specialized schools and educational services for students with disabilities</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">GED and Alternative High School Equivalency</td>
-<td align="left">Alternative programs for obtaining high school equivalency degree</td>
-</tr>
-<tr>
-<td align="left">Child Care and Pre-Kindergarten</td>
-<td align="left">-----------</td>
-<td align="left">Childcare centers are overseen by NYC Administration for Children's Services and NYC Dept. of Mental Health and Hygiene</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">DOE Universal Pre-Kindergarten</td>
-<td align="left">NYC DOE designated Universal Pre-K center</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Dual Child Care and Universal Pre-K</td>
-<td align="left">Center that offers both an NYC DOE designated Universal Pre-K services and other childcare services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Child Care</td>
-<td align="left">Group and school-based child care centers for infants, toddlers, and preschoolers</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Preschools for Students with Disabilities</td>
-<td align="left">Center specialized in preschool students with disabilities</td>
-</tr>
-<tr>
-<td align="left">Child Services and Welfare</td>
-<td align="left">-----------</td>
-<td align="left">Services overseen by NYC Administration for Children's Services and NYS Education Department and NYC Department of Education</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Foster Care Services and Residential Care</td>
-<td align="left">Foster care services and juvenile non-secure placement</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Preventative Care, Evaluation Services, and Respite</td>
-<td align="left">Preventative care and intervention services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Child Nutrition</td>
-<td align="left">Summer and year-round child feeding centers, either based at NYC Dept of Education schools or tracked by New York State Education Department</td>
-</tr>
-<tr>
-<td align="left">Youth Services</td>
-<td align="left">-----------</td>
-<td align="left">Services overseen by NYC Dept. of Youth and Community Development</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Comprehensive After School System (COMPASS) Sites</td>
-<td align="left">Comprehensive After School System (COMPASS) Sites</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Youth Centers, Literacy Programs, Job Training, and Immigrant Services</td>
-<td align="left">Youth Centers, Literacy Programs, Job Training, and Immigrant Services</td>
-</tr>
-<tr>
-<td align="left">Camps</td>
-<td align="left">-----------</td>
-<td align="left">Camps overseen by NYC Dept. of Mental Health and Hygiene</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Camps</td>
-<td align="left">Preschool age and all age camps</td>
-</tr>
-<tr>
-<td align="left">Higher Education</td>
-<td align="left">-----------</td>
-<td align="left">Public and privately operated 2 and 4-year colleges and universities</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Colleges or Universities</td>
-<td align="left">Public and privately operated 2 and 4-year colleges and universities</td>
-</tr>
-<tr>
-<td align="left">Vocational and Proprietary Schools</td>
-<td align="left">-----------</td>
-<td align="left">ESL schools and trade colleges</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Proprietary Schools</td>
-<td align="left">ESL schools and trade colleges</td>
+<td align="center">Additional Information</td>
+<td>The Department of City Planning aggregates information about 33,000+ facilities and program sites that are owned, operated, funded, licensed or certified by a City, State, or Federal agency in the City of New York into a central database called the City Planning Facilities Database FacDB). These facilities generally help to shape quality of life in the city’s neighborhoods, and this dataset is the basis for a series of planning activities. This public data resource allows all New Yorkers to understand the breadth of government resources in their neighborhoods.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="parks-gardens-and-historical-sites-domain">Parks, Gardens, and Historical Sites Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Parks and Plazas</td>
-<td align="left">-----------</td>
-<td align="left">Properties operated by NYC Parks, NYC Dept. of Transportation, NYS Office of Parks, Recreation and Historic Preservation, NYS Dept. of Conservation, and City-State corporations and trusts</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Parks</td>
-<td align="left">Flagship parks, community parks, state parks, and City-State parks</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Recreation and Waterfront Sites</td>
-<td align="left">Playgrounds, waterfront facilities, and recreation fields and courts</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Streetscapes, Plazas, and Malls</td>
-<td align="left">Pedestrian plazas, malls, triangle plazas, and parkways</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Gardens</td>
-<td align="left">Community gardens</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Privately Owned Public Space</td>
-<td align="left">Plazas, arcades, and other open space provided for public use by a private office or residential building owner</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Preserves and Conservation Areas</td>
-<td align="left">Nature areas, preserves, wetlands, and state forests</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Cemeteries</td>
-<td align="left">Cemeteries operated by NYC Parks</td>
-</tr>
-<tr>
-<td align="left">Historical Sites</td>
-<td align="left">-----------</td>
-<td align="left">Sites operated by NYC Parks, NYS Office of Parks, Recreation and Historic Preservation, and US National Park Service</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Historical Sites</td>
-<td align="left">Historic house parks, State historic places, national monuments, and national memorials</td>
-</tr>
-</tbody>
-</table>
-<h4 id="libraries-and-cultural-programs-domain">Libraries and Cultural Programs Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Libraries</td>
-<td align="left">-----------</td>
-<td align="left">Libraries operated by New York Public Libraries, Queens Public Libraries, and Brooklyn Public Libraries and academic institutions</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Public Libraries</td>
-<td align="left">All public libraries</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Academic and Special Libraries</td>
-<td align="left">Libraries operated by academic institutions or other specialized organizations</td>
-</tr>
-<tr>
-<td align="left">Cultural Institutions</td>
-<td align="left">-----------</td>
-<td align="left">Institutions licensed or funded by the NYC Dept. of Cultural Affairs</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Museums</td>
-<td align="left">Publicly and privately operated museums</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Historical Societies</td>
-<td align="left">Historical societies</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Other Cultural Institutions</td>
-<td align="left">Zoos, botanical gardens, performing arts centers, and multi-disciplinary art centers</td>
-</tr>
-</tbody>
-</table>
-<h4 id="public-safety-emergency-services-and-administration-of-justice-domain">Public Safety, Emergency Services, and Administration of Justice Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Emergency Services</td>
-<td align="left">-----------</td>
-<td align="left">Services provided by Fire Dept. of New York</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Fire Services</td>
-<td align="left">Firehouses</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Other Emergency Services</td>
-<td align="left">Ambulance and Emergency Medical Stations</td>
-</tr>
-<tr>
-<td align="left">Public Safety</td>
-<td align="left">-----------</td>
-<td align="left">Services provided by the New York Police Dept. and New York Housing Authority Police</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Police Services</td>
-<td align="left">NYPD and NYCHA police stations</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">School-Based Safety Program</td>
-<td align="left">Public safety program on a school campus</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Other Public Safety</td>
-<td align="left">Other public safety-related support centers</td>
-</tr>
-<tr>
-<td align="left">Justice and Corrections</td>
-<td align="left">-----------</td>
-<td align="left">Courts and correctional facilities operated by NYC Dept. of Correction, NYS Unified Court System, NYS Dept. of Corrections and Community Supervision, US Courts, and the Federal Bureau of Prisons</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Courthouses and Judicial</td>
-<td align="left">Courthouses, clerk offices, and court librarians</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Detention and Correctional</td>
-<td align="left">Correctional and detention centers</td>
-</tr>
-</tbody>
-</table>
-<h4 id="health-and-human-services-domain">Health and Human Services Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Health Care</td>
-<td align="left">-----------</td>
-<td align="left">Health facilities overseen by NYC Health and Hospitals Corporation, NYC Health and Human Services, NYS Dept. of Health, NYS Office of Mental Health, and NYS Office of Alcoholism and Substance Abuse Services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Hospitals and Clinics</td>
-<td align="left">Urgent care hospitals, diagnostic and treatment centers, and school-based health facilities</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Mental Health</td>
-<td align="left">Inpatient, outpatient, and emergency mental health services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Residential Health Care</td>
-<td align="left">Nursing homes, hospice care, and supportive housing</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Chemical Dependency</td>
-<td align="left">Monitored support, inpatient, outpatient, and crisis services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Health Promotion and Disease Prevention</td>
-<td align="left">Programs focused on improving health through education and disease prevention</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Other Health Care</td>
-<td align="left">Rehab, respite services, vaccination services, AIDS counseling, and home health centers</td>
-</tr>
-<tr>
-<td align="left">Human Services</td>
-<td align="left">-----------</td>
-<td align="left">Services overseen by NYC Dept. of Homeless Services, NYC Dept. of Human Resources, NYC Mayoralty, and others</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Senior Services</td>
-<td align="left">Neighborhood senior centers, meal delivery programs, and other services for seniors</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Community Centers and Community School Programs</td>
-<td align="left">Community centers that provide multiple social services at one site</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Financial Assistance and Social Services</td>
-<td align="left">SNAP, Child Support, and Medicaid Centers operated by NYC Human Resources Administration</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Workforce Development</td>
-<td align="left">Workforce 1 Centers and other vocational services for adults</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Legal and Intervention Services</td>
-<td align="left">Early intervention, criminal defense, and mediation services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Programs for People with Disabilities</td>
-<td align="left">Specialized child care, caregiver support, and recreational services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Permanent Supportive SRO Housing</td>
-<td align="left">Permanent supportive SRO housing contracted by DHS</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Non-residential Housing and Homeless Services</td>
-<td align="left">Non-residential homelessness prevention services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Soup Kitchens and Food Pantries</td>
-<td align="left">Soup kitchens and food pantries</td>
-</tr>
-</tbody>
-</table>
-<h4 id="core-infrastructure-and-transportation-domain">Core Infrastructure and Transportation Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Solid Waste</td>
-<td align="left">-----------</td>
-<td align="left">Sites overseen and operated by NYC Dept. of Sanitation, NYC Business Integrity Commission, and NYS Dept. of Conservation</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Solid Waste Processing</td>
-<td align="left">Material recovery, composting, landfill gas recovery, and scrap metal processing facilities</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Solid Waste Transfer and Carting</td>
-<td align="left">Waste carter sites and transfer stations</td>
-</tr>
-<tr>
-<td align="left">Water and Wastewater</td>
-<td align="left">-----------</td>
-<td align="left">Sites overseen and operated by NYC Dept. of Environmental Protection</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Wastewater and Pollution Control</td>
-<td align="left">Wastewater treatment plants and other sites related to wastewater conveyance and pollution control</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Water Supply</td>
-<td align="left">Sites related to water supply</td>
-</tr>
-<tr>
-<td align="left">Transportation</td>
-<td align="left">-----------</td>
-<td align="left">Sites operated or overseen by Metropolitan Transportation Authority, Port Authority of NY and NJ, NYC Dept. of Transportation, NYC Dept. of Consumer Affairs, US Dept. of Transportation, and others</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Parking Lots and Garages</td>
-<td align="left">Publicly and commercially operated parking lots and garages</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Bus Depots and Terminals</td>
-<td align="left">School bus depots, MTA bus depots, and Port Authority bus terminals</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Rail Yards and Maintenance</td>
-<td align="left">Rail yards and maintenance facilities</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Ports and Ferry Landings</td>
-<td align="left">Ferry landings, cruise terminals, and ports</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Airports and Heliports</td>
-<td align="left">Publicly and privately operated airports, heliports, and seaplane bases</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Other Transportation</td>
-<td align="left">Uncategorized transportation-related sites</td>
-</tr>
-<tr>
-<td align="left">Telecommunications</td>
-<td align="left">-----------</td>
-<td align="left">Sites operated or overseen by Dept. of Information Technology and Telecommunications and other City telecommunications services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Telecommunications</td>
-<td align="left">Antennas and other telecommunications sites</td>
-</tr>
-<tr>
-<td align="left">Material Supplies and Markets</td>
-<td align="left">-----------</td>
-<td align="left">Sites operated or overseen by Dept. of Information Technology and Telecommunications and other City telecommunications services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Material Supplies</td>
-<td align="left">Asphalt plants and other material processing facilities</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Wholesale Markets</td>
-<td align="left">Wholesale food and commercial markets</td>
-</tr>
-</tbody>
-</table>
-<h4 id="administration-of-government-domain">Administration of Government Domain</h4>
-<table>
-<thead>
-<tr>
-<th align="left">Facility Group</th>
-<th align="left">Facility Subgroup</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Offices, Training, and Testing</td>
-<td align="left">-----------</td>
-<td align="left">All City owned or leased offices overseen by Dept. of Citywide Administrative Services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Offices</td>
-<td align="left">Offices used by City agencies</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Training and Testing</td>
-<td align="left">Training, and testing sites used by City agencies</td>
-</tr>
-<tr>
-<td align="left">City Agency Parking, Maintenance, and Storage</td>
-<td align="left">-----------</td>
-<td align="left">City owned or leased properties used for City vehicle and equipment-related operations by Dept. of Citywide Administrative Services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Custodial</td>
-<td align="left">City agency custodial sites</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Maintenance and Garages</td>
-<td align="left">City agency vehicle maintenance sites</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">City Agency Parking</td>
-<td align="left">City agency parking lots</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Storage</td>
-<td align="left">City agency storage sites</td>
-</tr>
-<tr>
-<td align="left">Other Property</td>
-<td align="left">-----------</td>
-<td align="left">City owned or leased property without a categorized use overseen by Dept. of Citywide Administrative Services</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Miscellaneous Use</td>
-<td align="left">Property without a categorized use</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Properties Leased or Licensed to Non-public Entities</td>
-<td align="left">Properties Leased or Licensed to Non-public Entities</td>
-</tr>
-</tbody>
-</table>
-<h2 id="iii-limitations-and-disclaimers">III. Limitations and Disclaimers</h2>
-<p>The City Planning Facilities Database (FacDB) is only as good as the source data it aggregates, and the Department of City Planning cannot verify the accuracy of all records. Please read more about specific data and analysis limitations before using this data.</p>
-<p><strong>Analysis Limitations.</strong> As a result of the data limitations and inconsistencies listed below users should be careful in their use of this database so as to avoid developing suspect analyses. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites and that this database is not authoritatively comprehensive. In addition, we rely on source data from other agencies to populate the database, and some of these sources may fall out-of-date. Users can find the date of each source dataset’s latest update in the <a href="http://docs.capitalplanning.nyc/facdb/#vi-source-data">Source Data</a> section.</p>
-<p><strong>Missing Records.</strong> Currently, FacDB is the most comprehensive spatial data resource available for facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded from the data that source agencies provide in order to protect the safety and privacy of their clients. Also, many records could not be geocoded. To learn more about how the data are processed, please review the <a href="http://docs.capitalplanning.nyc/facdb/#iv-methodology">Methodology</a>.</p>
-<p><strong>Duplicates.</strong> Please be aware that this beta version of the database includes cases of duplicate records for the same facility because several source datasets have content that overlaps with other datasets.</p>
+<p>Each record in FacDB represents a facility site. </p>
+<p>FacDB is the most comprehensive spatial data resource available for facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded from the data that source agencies provide in order to protect the safety and privacy of their clients. Also, many records could not be geocoded.</p>
+<p>There are known to be cases when the address provided in the source data is for a headquarters office rather than the facility site location. Unfortunately, these could not be systematically verified. For more detailed information on a specific facility reach out to the respective oversight agency.</p>
+<h2 id="ii-common-uses">II. Common uses</h2>
+<p>Fair Share Analysis, Neighborhood studies, Facilities planning</p>
+<h2 id="iii-watch-outs">III. Watch-outs</h2>
+<p><strong>Analysis Limitations.</strong> As a result of the data limitations and inconsistencies listed below users should be careful in their use of this database so as to avoid developing suspect analyses. For example, a comparison of the density or accessibility of facilities across neighborhoods should recognize that some of the facilities included are organizational headquarters rather than service sites and that this database is not authoritatively comprehensive. In addition, we rely on source data from other agencies to populate the database, and some of these sources may fall out-of-date. Users can find the date of each source dataset’s latest update in the source data dictionary.</p>
+<p><strong>Missing Records.</strong> Currently, FacDB is the most comprehensive spatial data resource available for facilities run by public and non-public entities in NYC, but it does not claim to capture every facility within the specified domains. Some facilities are deliberately excluded from the data that source agencies provide in order to protect the safety and privacy of their clients. Also, many records could not be geocoded. To learn more about how the data are processed, please review the Data Sources and Compilation Process.</p>
+<p><strong>Duplicates.</strong> Please be aware that this dataset may include cases of duplicate records for the same facility because several source datasets have content that overlap.</p>
 <p><strong>Administrative Addresses.</strong> There are known to be cases when the address provided in the source data is for a headquarters office rather than the facility site location. Unfortunately, these could not be systematically verified. For more detailed information on a specific facility reach out to the respective oversight agency.</p>
 <p><strong>Public Accessibility of Sites.</strong> DCP is unable to verify the public accessibility of all sites. For example, some playgrounds or playing fields may only be accessible to participants in certain programs.</p>
-<p>If you have any questions about or comments on these data please contact the NYC DCP Capital Planning team at <a href="mailto:Capital@planning.nyc.gov">Capital@planning.nyc.gov</a>.</p>
-<h2 id="iv-methodology">IV. Methodology</h2>
-<h3 id="data-processing">Data Processing</h3>
-<p>Since the facility records are aggregated from many datasets designed for different purposes, the data will be transformed over several stages to reach its final state. The stages are described below and all the scripts used are available on the <a href="https://github.com/NYCPlanning/db-facilities">NYC Planning GitHub page</a>.</p>
-<p><strong>Assembly.</strong>
-First, the desired columns in the source data are mapped to the columns in FacDB schema. The facilities are classified using categories or descriptions provided by the agency. In general, the final Facility Type categories in FacDB are formatted versions of the original, most granular classification provided by the agency, but there are cases where the source description was too specific and records were grouped together into broader type categories using keywords in the description.</p>
-<p><strong>Geoprocessing.</strong>
-Many source datasets only provide addresses without coordinates. Records without coordinates are geocoded with the <a href="https://developer.cityofnewyork.us/api/geoclient-api">GeoClient API</a> using the Address and either the Borough or ZIP Code to get the BIN, BBL, and other standardized location details. If the record can be assigned a BIN value, the BIN's centroid is used as the point geometry. Source records with only coordinates and no addresses are processed by doing a spatial join with MapPLUTO to get the BBL and other location related details like Address, Borough, ZIP Code, and BIN when there is a 1-1 BIN-BBL relationship. There are many cases where an agency provides coordinates but the coordinates they provided fall in the roadbed, and not inside a BBL boundary, due to the geocoding technique used by the source. In these cases, the geometry was replaced with the BBL centroid if a BIN could not be assigned and used for the geometry instead. Each record in the database is flagged with a code for the geoprocessing technique that was used to complete all of its information.</p>
-<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content that overlaps with other datasets. Duplicate records were identified by querying for all the records that fall within the same BIN or BBL and have the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. The values from the duplicate records were merged before dropping the duplicate records from the database.</p>
-<!-- The processing steps and assumptions used for each record are indicated in the Processing Flag (processingflag) field in the database. Each of the flags is defined in the table below.
-
-| Data Processing Flag | Definition |
-| :-- | :-- |
-| address2geom_borough | Geometry, BBL, BIN, and Zip Code were generated by NYC GeoClient using address and borough provided by an agency. |
-| address2geom_zipcode | Geometry, BBL, BIN, and borough were generated by NYC GeoClient using the address and zip code provided by the agency. |
-| bbljoin | Geometry and address were provided by an agency but without a BBL. BBL was obtained by doing a spatial join with MapPLUTO |
-| bbljoin2address | Geometry was provided by an agency but without an address or BBL. BBL and address were obtained by doing a spatial join with MapPLUTO |
-| bbljoin_closest | Geometry was provided by an agency without a BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record. |
-| bbljoin2address_closest | Geometry was provided by an agency without an address or BBL. No spatial overlap was found with a BBL in MapPLUTO, even though the facility is of a type which should be located on a BBL lot. The closest BBL was assigned to the record. |
-
- -->
-
+<h2 id="iv-data-sources-and-compilation-process">IV. Data Sources and Compilation Process</h2>
+<p>Since the facility records are aggregated from many datasets designed for different purposes, the data will be transformed over several stages to reach its final state. The stages are described below and all the scripts used are available on the NYC Planning GitHub page.</p>
+<p><strong>Data loading.</strong> Since the source datasets have been maintained by various agencies and updated with different frequencies, datasets are loaded into Amazon s3 as a centralized datahub preparing for the downstream data processing.  The list of data sources can be found <a href="https://github.com/NYCPlanning/db-facilities-tmp/blob/dev/referencetables/datasources.csv">here</a>.</p>
+<p><strong>Geoprocessing.</strong> When records have address information, spatial data is assigned by taking the centroid of the BIN returned by Geosupport that matches the DoITT building footprints dataset.  If a BIN is not available, the latitude and longitude returned by Geosupport is used to create the geometry for the record.  If these fields are not available from Geosupport, but the source data has spatial information (i.e. coordinates) the spatial data is created from the source data.  If the source data consisted of polygon geometries, the centroid of the polygon was used to assign the geometry for the records in the database.  There are cases where the coordinates from the source data fall in the roadbed and not inside a BBL boundary due to the geocoding technique used by the source.  Lastly, if a geometry could not be assigned from the BIN, latitude/longitude from Geosupport, or source data, the centroid of the BBL from the clipped MapPLUTO is used.  Other geographic information such as the community district is taken from Geosupport if a value is returned, otherwise administrative districts are assigned via spatial joins where the record has a geometry.</p>
+<p><strong>Duplicate Record Removal.</strong> Several of the source datasets have content that overlaps. Duplicate records were identified by querying for all the records that fall within the same BIN or BBL and have the same Facility Subgroup or Type, same Facility Name, or same Oversight Agency. Where duplicate records were identified all but the primary record was removed from the database.</p>
 <h2 id="v-data-dictionary">V. Data Dictionary</h2>
 <p>The following table lists and defines each of the fields presented in the Facilities Database as they are organized in the database from left to right.</p>
 <table>
 <thead>
 <tr>
-<th align="left">Field Alias</th>
-<th align="left">Field Name</th>
-<th align="left">Description</th>
+<th align="center">Column Name</th>
+<th>Column Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Unique Identifier</td>
-<td align="left">uid</td>
-<td align="left">Universal Unique Identifier.  When a row is added to the table the uid is automatically generated, enabling database replication.</td>
+<td align="center">FACNAME</td>
+<td>Facility name</td>
 </tr>
 <tr>
-<td align="left">Geom</td>
-<td align="left">geom</td>
-<td align="left">How the feature is spatially represented.</td>
+<td align="center">ADDRESSNUM</td>
+<td>Address number for the facility's location</td>
 </tr>
 <tr>
-<td align="left">Old ID</td>
-<td align="left">idold</td>
-<td align="left">Non-unique identifier generated and maintained by the former database admin that relates to old version of SFPSD.</td>
+<td align="center">STREETNAME</td>
+<td>Street name</td>
 </tr>
 <tr>
-<td align="left">Agency ID</td>
-<td align="left">idagency</td>
-<td align="left">Non-unique identifier generated and maintained by the data admin of the parent agency that relates to the record in the source dataset.</td>
+<td align="center">ADDRESS</td>
+<td>Address number and street name for the facility's location</td>
 </tr>
 <tr>
-<td align="left">Facility Name</td>
-<td align="left">facname</td>
-<td align="left">The name of the facility in proper case.</td>
+<td align="center">CITY</td>
+<td>City name</td>
 </tr>
 <tr>
-<td align="left">Address Number</td>
-<td align="left">addressnum</td>
-<td align="left">The address number of where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank.</td>
+<td align="center">ZIPCODE</td>
+<td>ZIP code</td>
 </tr>
 <tr>
-<td align="left">Street Name</td>
-<td align="left">streetname</td>
-<td align="left">The name of the street where the facility is located, validated by GeoClient. If the address that is available for the site is not complete with an address number (only the street name), this field is left blank.</td>
+<td align="center">BORO</td>
+<td>Borough name</td>
 </tr>
 <tr>
-<td align="left">Address</td>
-<td align="left">address</td>
-<td align="left">The concatenated value of AddressNumber and StreetName of where the facility is located. If there is not a valid, complete address available, any location description that was provided is included in this field.</td>
+<td align="center">BOROCODE</td>
+<td>Borough code</td>
 </tr>
 <tr>
-<td align="left">City</td>
-<td align="left">city</td>
-<td align="left">The USPS preferred the name of the addressed city where the facility is located. Generated by GeoClient and spatial joins. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries.</td>
+<td align="center">BIN</td>
+<td>Building identification number</td>
 </tr>
 <tr>
-<td align="left">Borough</td>
-<td align="left">boro</td>
-<td align="left">The full name of the borough the facility is within.</td>
+<td align="center">BBL</td>
+<td>Borough, block, and lot number</td>
 </tr>
 <tr>
-<td align="left">Borough Code</td>
-<td align="left">borocode</td>
-<td align="left">The number value representing the borough the facility is within.</td>
+<td align="center">COMMBOARD</td>
+<td>Community district</td>
 </tr>
 <tr>
-<td align="left">ZIP Code</td>
-<td align="left">zipcode</td>
-<td align="left">The ZIP Code the facility is within. This field contains some blanks for facilities that do not overlap with the shoreline Zip Code boundaries.</td>
+<td align="center">NTA</td>
+<td>Code for the neighborhood tabulation area</td>
 </tr>
 <tr>
-<td align="left">Latitude</td>
-<td align="left">latitude</td>
-<td align="left">The latitude of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+<td align="center">COUNCIL</td>
+<td>City council district</td>
 </tr>
 <tr>
-<td align="left">Longitude</td>
-<td align="left">longitude</td>
-<td align="left">The longitude of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+<td align="center">SCHOOLDIST</td>
+<td>School district</td>
 </tr>
 <tr>
-<td align="left">X Coordinate</td>
-<td align="left">xcoord</td>
-<td align="left">The X coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+<td align="center">POLICEPRCT</td>
+<td>Police precinct</td>
 </tr>
 <tr>
-<td align="left">Y Coordinate</td>
-<td align="left">ycoord</td>
-<td align="left">The Y coordinate of the location either calculated using the coordinates in the source data or provided by GeoClient.</td>
+<td align="center">CENSTRACT</td>
+<td>2010 census tract</td>
 </tr>
 <tr>
-<td align="left">BIN</td>
-<td align="left">bin</td>
-<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bin">BIN</a> values for the buildings the facility is located in. This field contains blanks because 1) some lots do not have buildings on them, and 2) some lots have multiple buildings and a single BIN could not be reliably assigned given the information provided in the source data. There may also be cases where a facility is actually comprised by multiple BINs but only one is recorded in FacDB because the others were not provided in the source data and could not be reliably assumed based on the single address provided for the facility.</td>
+<td align="center">FACTYPE</td>
+<td>Facility type</td>
 </tr>
 <tr>
-<td align="left">BBL</td>
-<td align="left">bbl</td>
-<td align="left">The <a href="http://a030-goat.nyc.gov/goat/glossary.aspx#bbl">BBL</a> values for the tax lots the facility is located on. This field contains blanks, because some facility categories, like pedestrian plazas, are not located on tax lots. There may also be cases where a facility is actually comprised by multiple BBLs but only one is recorded in FacDB because the others were not provided in the source data and could not be reliably assumed based on the single address provided for the facility.</td>
+<td align="center">FACSUBGRP</td>
+<td>Facility subgroup</td>
 </tr>
 <tr>
-<td align="left">Community Board</td>
-<td align="left">commboard</td>
-<td align="left">The Community District the facility is within. This field contains blanks because the Community District boundaries do not capture facilities beyond the shoreline.</td>
+<td align="center">FACGROUP</td>
+<td>Facility group</td>
 </tr>
 <tr>
-<td align="left">Council District</td>
-<td align="left">council</td>
-<td align="left">The City Council District the facility is within</td>
+<td align="center">FACDOMAIN</td>
+<td>Facility domain</td>
 </tr>
 <tr>
-<td align="left">Census Tract</td>
-<td align="left">censtract</td>
-<td align="left">The U.S. Census Tract the facility is within</td>
+<td align="center">SERVAREA</td>
+<td>Service area, which may be local or regional</td>
 </tr>
 <tr>
-<td align="left">NTA</td>
-<td align="left">nta</td>
-<td align="left">The Neighborhood Tabulation Area (NTA) the facility is within. This field contains blanks because the NTA boundaries do not capture facilities beyond the shoreline.</td>
+<td align="center">OPNAME</td>
+<td>Name of the operating entity</td>
 </tr>
 <tr>
-<td align="left">Facility Domain</td>
-<td align="left">facdomain</td>
-<td align="left">The value representing the facility domain, the broadest category.</td>
+<td align="center">OPABBREV</td>
+<td>Abbreviation for the operating entity</td>
 </tr>
 <tr>
-<td align="left">Facility Group</td>
-<td align="left">facgroup</td>
-<td align="left">The value representing the group type, the second broadest category.</td>
+<td align="center">OPTYPE</td>
+<td>Indicates whether the operating entity is public or non-public</td>
 </tr>
 <tr>
-<td align="left">Facility Sub-Group</td>
-<td align="left">facsubgrp</td>
-<td align="left">The value representing the subgroup type.</td>
+<td align="center">OVERAGENCY</td>
+<td>The name of the agency overseeing the facility</td>
 </tr>
 <tr>
-<td align="left">Facility Type</td>
-<td align="left">factype</td>
-<td align="left">The value representing the facility type, the most granular category of facilities.</td>
+<td align="center">OVERABBREV</td>
+<td>Abbreviation for the oversight agency</td>
 </tr>
 <tr>
-<td align="left">Capacity</td>
-<td align="left">capacity</td>
-<td align="left">How many of capacity type/unit the facility is intended to hold. For many types of facilities, no capacity information was available. The capacity-related fields are blank when no information was provided in the source data.</td>
+<td align="center">OVERLEVEL</td>
+<td>The level of government of the oversight agency</td>
 </tr>
 <tr>
-<td align="left">Capacity Type</td>
-<td align="left">captype</td>
-<td align="left">The value representing the unit type of capacity, such as beds, visitors, seats, etc.</td>
+<td align="center">CAPACITY</td>
+<td>The capacity of the facility. CAPTYPE contains the units in which capacity is measured.</td>
 </tr>
 <tr>
-<td align="left">Utilization</td>
-<td align="left">util</td>
-<td align="left">How many of capacity type/unit are being utilized at the facility.</td>
+<td align="center">CAPTYPE</td>
+<td>The unit type for capacity, such as beds, seats, etc.</td>
 </tr>
 <tr>
-<td align="left">Utilization Rate</td>
-<td align="left">utilrate</td>
-<td align="left">The ratio of the of utilization over the total facility capacity.</td>
+<td align="center">PROPTYPE</td>
+<td>Indicates whether the property is owned or leased by the City</td>
 </tr>
 <tr>
-<td align="left">Area</td>
-<td align="left">area</td>
-<td align="left">The total area of the site measured in the Area Type unit. For many types of facilities, no area information was available. The area-related fields are blank when no information was provided in the source data.</td>
+<td align="center">LATITUDE</td>
+<td>Latitude</td>
 </tr>
 <tr>
-<td align="left">Area Type</td>
-<td align="left">areatype</td>
-<td align="left">The unit of measurement for Area.</td>
+<td align="center">LONGITUDE</td>
+<td>Longitude</td>
 </tr>
 <tr>
-<td align="left">Property Type</td>
-<td align="left">proptype</td>
-<td align="left">Indicates whether the property is owned or leased by the City.</td>
+<td align="center">XCOORD</td>
+<td>X coordinate in NAD 1983 State Plane New York Long Island FIPS 3104 (US Feet)</td>
 </tr>
 <tr>
-<td align="left">Operator Type</td>
-<td align="left">optype</td>
-<td align="left">Indicates whether the operating entity is public or non-public.</td>
+<td align="center">YCOORD</td>
+<td>Y coordinate in NAD 1983 State Plane New York Long Island FIPS 3104 (US Feet)</td>
 </tr>
 <tr>
-<td align="left">Operator Name</td>
-<td align="left">opname</td>
-<td align="left">The name of the operating entity.</td>
+<td align="center">DATASOURCE</td>
+<td>Date source file name</td>
 </tr>
 <tr>
-<td align="left">Operator Abbreviation</td>
-<td align="left">opabbrev</td>
-<td align="left">Abbreviation for the operating entity.</td>
-</tr>
-<tr>
-<td align="left">Oversight Agency</td>
-<td align="left">overagency</td>
-<td align="left">The name of the agency overseeing the facility.</td>
-</tr>
-<tr>
-<td align="left">Oversight Abbreviation</td>
-<td align="left">overabbrev</td>
-<td align="left">Abbreviation for the oversight agency.</td>
-</tr>
-<tr>
-<td align="left">Oversight Level</td>
-<td align="left">overlevel</td>
-<td align="left">The level of government of the oversight agency: City, State, City-State, Federal, or Non-public Oversight.</td>
-</tr>
-<tr>
-<td align="left">Date Source Data Updated</td>
-<td align="left">datadate</td>
-<td align="left">The date the source data was updated within the parent database.</td>
-</tr>
-<tr>
-<td align="left">Agency Source</td>
-<td align="left">datasource</td>
-<td align="left">The Agency whose data was used as the source for the record.</td>
-</tr>
-<tr>
-<td align="left">Source Dataset Name</td>
-<td align="left">dataname</td>
-<td align="left">The name of the dataset the record came from.</td>
-</tr>
-<tr>
-<td align="left">Link to Data</td>
-<td align="left">dataurl</td>
-<td align="left">Link to view and/or description of data.</td>
+<td align="center">UID</td>
+<td>Universal Unique Identifier. When a row is added to the table the uid is automatically generated, enabling database replication.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="vi-source-data">VI. Source Data</h2>
-<p>The following datasets were used to populate the Facilities Database. The data sources that are published online as open data are automatically downloaded and aggregated to capture any updates provided by the source agency.</p>
-<h3 id="nyc-administration-for-childrens-services-nycacs">NYC Administration for Children's Services (NYCACS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Contractor Data</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-business-integrity-commission-nycbic">NYC Business Integrity Commission (NYCBIC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Business/Approved-licensees-and-registrants-for-trade-waste/hsjb-p5ky/data">Approved licensees and registrants for trade waste</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/18</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-for-the-aging-nycdfta">NYC Department for the Aging (NYCDFTA)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Social-Services/DFTA-Contracts/6j6t-3ixh">DFTA Contracts</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-city-planning-nycdcp">NYC Department of City Planning (NYCDCP)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://nycopendata.socrata.com/Housing-Development/Privately-Owned-Public-Spaces/fum3-ejky">New York City Privately Owned Public Space Database</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-citywide-administrative-services-nycdcas">NYC Department of Citywide Administrative Services (NYCDCAS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-colp.page">City Owned and Leased Properties</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/25/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-consumer-affairs-nycdca">NYC Department of Consumer Affairs (NYCDCA)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Business/Legally-Operating-Businesses/w7w3-xahh">Legally Operating Businesses</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-correction-nycdoc">NYC Department of Correction (NYCDOC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://www1.nyc.gov/site/doc/about/facilities-locations.page">Correction Facilities Locations</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/25/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-cultural-affairs-nycdcla">NYC Department of Cultural Affairs (NYCDCLA)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32">DCLA Cultural Organizations</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-education-nycdoe">NYC Department of Education (NYCDOE)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Blue Book</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>12/27/2017</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Education/Universal-Pre-K-UPK-School-Locations/kiyv-ks3f">Universal Pre-K (UPK) School Locations</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Transportation/Routes/8yac-vygm">Routes</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-health-and-mental-hygiene-nycdohmh">NYC Department of Health and Mental Hygiene (NYCDOHMH)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Health/DOHMH-Childcare-Center-Inspections/dsg6-ifza">DOHMH Childcare Center Inspections</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-parks-and-recreation-nycdpr">NYC Department of Parks and Recreation (NYCDPR)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7/data">Parks Properties</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-sanitation-nycdsny">NYC Department of Sanitation (NYCDSNY)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>DSNY Facilities</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-small-business-services-nycsbs">NYC Department of Small Business Services (NYCSBS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/dataset/Center-Service-Locations/6smc-7mk6">SBS Workforce1 Career Center Locations</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-transportation-nycdot">NYC Department of Transportation (NYCDOT)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Plaza Program</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>2/23/2017</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Parking Facilities</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Manned Facilities</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Bridge Houses</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Ferry Terminals and Landings</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-department-of-youth-and-community-development-nycdycd">NYC Department of Youth and Community Development (NYCDYCD)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Education/DYCD-after-school-programs/mbd7-jfnc">DYCD After-School Programs</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-hhs-accelerator-nychhs">NYC HHS Accelerator (NYCHHS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>HHS Accelerator - Financials Contracts</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>7/26/2016</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Financial Management System - Human Services Contracts</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>7/26/2016</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>HHS Accelerator - Selected Proposals</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>7/26/2016</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-health-and-hospitals-corporation-nychhc">NYC Health and Hospitals Corporation (NYCHHC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3">Health and Hospitals Corporation (HHC) Facilities</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nyc-human-resources-administrationdepartment-of-social-services-nychradss">NYC Human Resources Administration/Department of Social Services (NYCHRA/DSS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://www1.nyc.gov/site/hra/locations/locations.page">HRA Locations</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-department-of-correction-and-community-supervision-nysdoccs">NYS Department of Correction and Community Supervision (NYSDOCCS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://www.doccs.ny.gov/faclist.html">Facility Listing</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-department-of-environmental-conservation-nysdec">NYS Department of Environmental Conservation (NYSDEC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Energy-Environment/Solid-Waste-Magement-Facilities/2fni-raj8">Solid Waste Management Facilities</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=1114">Lands - Under the Care, Custody, and Control of DEC</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-department-of-health-nysdoh">NYS Department of Health (NYSDOH)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://health.data.ny.gov/Health/Health-Facility-General-Information/vn5v-hh5r">Health Facility General Information</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://health.data.ny.gov/Health/Nursing-Home-Weekly-Bed-Census-Last-Submission/izta-vnpq/data">Nursing Home Weekly Bed Census: Last Submission</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-department-of-transportation-nysdot">NYS Department of Transportation (NYSDOT)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-selfac.page">Selected Facilities and Program Sites Database</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-education-department-nysed">NYS Education Department (NYSED)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.nysed.gov/downloads.php">Listings - Active Institutions with GIS coordinates and OITS Accuracy Code</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://www.p12.nysed.gov/irs/statistics/nonpublic/">2017-2018 Nonpublic Enrollment by Grade</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-office-for-people-with-developmental-disabilities-nysopwdd">NYS Office for People With Developmental Disabilities (NYSOPWDD)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Human-Services/Directory-of-Developmental-Disabilities-Service-Pr/ieqx-cqyk">Directory of Developmental Disabilities Service Provider Agencies</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-office-of-alcoholism-and-substance-abuse-services-nysoasas">NYS Office of Alcoholism and Substance Abuse Services (NYSOASAS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://www.oasas.ny.gov/providerDirectory/index.cfm?search_type=2">NYS OASAS-Certified Chemical Dependence Treatment Programs Located in NYC</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-<tr>
-<td>Notes:</td>
-<td>OASAS records are updated more frequently than may be reflected in this database. Users are encouraged to confirm program locations on the OASAS website (link above).</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-office-of-children-and-family-services-nysocfs">NYS Office of Children and Family Services (NYSOCFS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://ocfs.ny.gov/main/regionaloffices_main.asp">Facilities</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-office-of-mental-health-nysomh">NYS Office of Mental Health (NYSOMH)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8">Local Mental Health Programs</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-office-of-parks-recreation-and-historic-preservation-nysoprhp">NYS Office of Parks, Recreation and Historic Preservation (NYSOPRHP)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Recreation/tiol-Register-of-Historic-Places/iisn-hnyv">National Register of Historic Places</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.ny.gov/Recreation/State-Park-Facility-Points/9uuk-x7vh">State Park Facility Points</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="nys-unified-court-system-nycourts">NYS Unified Court System (NYCOURTS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://www.nycourts.gov/courts/index.shtml">The Courts</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="national-park-service-usnps">National Park Service (USNPS)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://irma.nps.gov/DataStore/Reference/Profile/2225713">Administrative Boundaries of National Park System Units</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="new-york-city-housing-authority-nycha">New York City Housing Authority (NYCHA)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://data.cityofnewyork.us/Housing-Development/NYCHA-PSA-Police-Service-Areas-/72wx-vdjr">NYCHA PSA (Police Service Areas)</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="port-authority-of-new-york-and-new-jersey-panynj">Port Authority of New York and New Jersey (PANYNJ)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="roosevelt-island-operating-corporation-rioc">Roosevelt Island Operating Corporation (RIOC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="trust-for-governors-island-tgi">Trust for Governors Island (TGI)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="us-department-of-transportation-usdot">US Department of Transportation (USDOT)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://osav-usdot.opendata.arcgis.com">U.S. Army Corps of Engineers Ports</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="http://osav-usdot.opendata.arcgis.com">Airports</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="amtrak-amtrak">Amtrak (Amtrak)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="brooklyn-bridge-park-corporation-bbpc">Brooklyn Bridge Park Corporation (BBPC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="federal-bureau-of-prisons-fbop">Federal Bureau of Prisons (FBOP)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td><a href="https://www.bop.gov/locations/map.jsp#">Our Locations</a></td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="food-bank-of-nyc-fbnyc">Food Bank of NYC (FBNYC)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>FBNYC Food Pantry Soup Kitchen List 8-5-16</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>8/5/2016</td>
-</tr>
-</tbody>
-</table>
-<h3 id="hudson-river-park-trust-hrpt">Hudson River Park Trust (HRPT)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h3 id="metropolitan-transportation-authority-mta">Metropolitan Transportation Authority (MTA)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dataset Name:</td>
-<td>Selected Facilities and Program Sites Database</td>
-</tr>
-<tr>
-<td>Last Updated:</td>
-<td>10/24/2018</td>
-</tr>
-</tbody>
-</table>
-<h2 id="vii-api-instructions">VII. API Instructions</h2>
-<p>The FacDB data that powers the <a href="https://capitalplanning.nyc.gov/facilities">NYC Facilities Explorer</a> is hosted on Carto. Carto's API uses SQL syntax for accessing and querying data tables. The documentation for their API is <a href="https://carto.com/docs/carto-engine/sql-api/making-calls">available here</a>. Please refer to the <a href="http://docs.capitalplanning.nyc/facdb/#v-data-dictionary">Data Dictionary</a> for the field names in the <code>facdb_facilities</code> table.</p>
+<h2 id="vi-general-constraints-use-limitations">VI. General Constraints Use Limitations</h2>
+<p>The facilities database is being provided by the Department of City Planning (DCP) for informational purposes only. DCP does not warrant the completeness, accuracy, content, or fitness for any particular purpose or use of the dataset, nor are any such warranties to be implied or inferred with respect to the dataset as furnished on the website</p>
+<h2 id="vii-legal-constraints-use-limitations">VII. Legal Constraints Use Limitations</h2>
+<p>DCP and the City are not liable for any deficiencies in the completeness, accuracy, content, or fitness for any particular purpose or use of the dataset, or applications utilizing Dataset, provided by any third party. The City Planning Facilities Database (FacDB) is only as good as the source data it aggregates, and the Department of City Planning cannot verify the accuracy of all records. Please read more about specific data and analysis limitations before using this data.</p>
               
             </div>
           </div>
